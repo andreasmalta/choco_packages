@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>acc5client</id>
+    <version>5.10.24.2</version>
+    <owners>aa.malta</owners>
+    <title>acc5client (Install)</title>
+    <authors>Avigilon</authors>
+    <projectUrl>http://avigilon.com/support-and-downloads/for-software/acc5/downloads/</projectUrl>
+    <iconUrl>http://4a54f0271b66873b1ef4-ddc094ae70b29d259d46aa8a44a90623.r7.cf2.rackcdn.com/assets/Uploads/ACC-Mobile-Icon-Image.jpg</iconUrl>
+    <docsUrl>http://avigilon.com/support-and-downloads/for-software/acc5/documentation/</docsUrl>
+    <tags>avigilon cctv control center cctv client acc</tags>
+    <summary>Avigilon Control Center Client 5</summary>
+    <description>Avigilon Control Center (ACC) video management software gives you control over your workstation with a simplified screen layout, intuitive controls, and customizable features that improve multi-person interactions.</description>
+    <dependencies>
+      <dependency id="directx" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
