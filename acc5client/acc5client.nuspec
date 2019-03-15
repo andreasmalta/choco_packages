@@ -15,7 +15,7 @@
     <summary>Avigilon Control Center Client 5</summary>
     <description>Avigilon Control Center (ACC) video management software gives you control over your workstation with a simplified screen layout, intuitive controls, and customizable features that improve multi-person interactions.</description>
     <dependencies>
-      <dependency id="directx" />
+      <dependency id="dotnet3.5" />
     </dependencies>
   </metadata>
   <files>
