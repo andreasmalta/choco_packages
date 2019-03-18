@@ -4,18 +4,20 @@
   <metadata>
     <id>acc5client</id>
     <version>5.10.24.2</version>
-	<packageSourceUrl>https://github.com/andreasmalta/choco_acc5client</packageSourceUrl>
+	<packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/acc5client</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>acc5client (Install)</title>
     <authors>Avigilon</authors>
     <projectUrl>http://avigilon.com/support-and-downloads/for-software/acc5/downloads/</projectUrl>
     <iconUrl>http://4a54f0271b66873b1ef4-ddc094ae70b29d259d46aa8a44a90623.r7.cf2.rackcdn.com/assets/Uploads/ACC-Mobile-Icon-Image.jpg</iconUrl>
+    <licenseUrl>http://4a54f0271b66873b1ef4-ddc094ae70b29d259d46aa8a44a90623.r7.cf2.rackcdn.com/assets/Uploads/ACC-5-End-User-License-Agreement-EULA.pdf</licenseUrl>
     <docsUrl>http://avigilon.com/support-and-downloads/for-software/acc5/documentation/</docsUrl>
     <tags>avigilon cctv control center cctv client acc</tags>
     <summary>Avigilon Control Center Client 5</summary>
     <description>Avigilon Control Center (ACC) video management software gives you control over your workstation with a simplified screen layout, intuitive controls, and customizable features that improve multi-person interactions.</description>
+    <releaseNotes>http://avigilon.com/support-and-downloads/for-software/acc5/downloads/</releaseNotes>
     <dependencies>
-      <dependency id="dotnet3.5" />
+      <dependency id="dotnet3.5" version="3.5" />
     </dependencies>
   </metadata>
   <files>
