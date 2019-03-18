@@ -17,7 +17,7 @@
     <description>Avigilon Control Center (ACC) video management software gives you control over your workstation with a simplified screen layout, intuitive controls, and customizable features that improve multi-person interactions.</description>
     <releaseNotes>http://avigilon.com/support-and-downloads/for-software/acc5/downloads/</releaseNotes>
     <dependencies>
-      <dependency id="dotnet3.5" version="3.5" />
+      <dependency id="dotnet3.5" />
     </dependencies>
   </metadata>
   <files>
