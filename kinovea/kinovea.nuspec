@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kinovea</id>
+    <version>0.8.27</version>
+	<owners>aa.malta</owners>
+    <title>kinovea (Install)</title>
+    <authors>kinovea.org</authors>
+    <projectUrl>http://www.kinovea.org/</projectUrl>
+    <licenseUrl>https://www.kinovea.org/help/en/003.html</licenseUrl>
+    <projectSourceUrl>https://bitbucket.org/kinovea/kinovea</projectSourceUrl>
+    <tags>kinovea video player sport analysis</tags>
+    <summary>Kinovea Video Player - Experimental Version</summary>
+    <description>Kinovea is a video player for all sport enthusiasts. Slow down, study and comment the technique of your athletes or of yourself. It is 100% free and open source.</description>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>

@@ -1,0 +1,7 @@
+cd c:\temp
+choco new kinovea packageversion="0.8.27" maintainername="aa.malta" installertype="'exe'" url="'https://www.kinovea.org/setup/kinovea.0.8.27/Kinovea-0.8.27-x64.exe'" silentargs="'/S'"
+
+cd kinovea
+choco pack
+choco install kinovea -s .
+choco push kinovea.0.8.27.nupkg -s https://push.chocolatey.org/
