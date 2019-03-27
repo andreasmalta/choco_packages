@@ -1,0 +1,12 @@
+cd c:\temp
+choco new dwgtrueview2.install packageversion="2019.03.27" maintainername="aa.malta" installertype="'exe'" file="'http://download.autodesk.com/esd/dwgtrueview/2019/DWGTrueView_2019_Enu_64bit.sfx.exe'" silentargs="'/s'"
+
+checksum -t sha256 -f c:\temp\DWGTrueView_2019_Enu_32bit.sfx.exe
+checksum -t sha256 -f c:\temp\DWGTrueView_2019_Enu_64bit.sfx.exe
+
+cd dwgtrueview.install
+choco pack
+choco install dwgtrueview.install -s .
+choco uninstall dwgtrueview.install
+
+choco push dwgtrueview.install.2019.03.27.nupkg -s https://push.chocolatey.org/
