@@ -4,7 +4,6 @@ $url        = 'https://download.autodesk.com/esd/dwgtrueview/2019/DWGTrueView_20
 $url64      = 'https://download.autodesk.com/esd/dwgtrueview/2019/DWGTrueView_2019_Enu_64bit.sfx.exe'
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
   fileType      = 'exe'
   url           = $url
   url64bit      = $url64
