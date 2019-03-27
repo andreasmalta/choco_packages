@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vstor2010</id>
+    <version>10.0.60724</version>
+    <title>vstor2010 (Install)</title>
+    <authors>microsoft</authors>
+    <projectUrl>http://go.microsoft.com/fwlink/?LinkId=140384</projectUrl>
+    <tags>vstor 2010 visual studio tools</tags>
+    <summary>Microsoft Visual Studio 2010 Tools for Office Runtime</summary>
+    <description>This download installs the Visual Studio 2010 Tools for Office Runtime, which is required to run Microsoft Office based solutions built using Microsoft Visual Studio 2010, 2012, 2013 and 2015.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

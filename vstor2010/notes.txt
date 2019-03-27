@@ -1,0 +1,7 @@
+cd c:\temp
+choco new vstor2010 packageversion="10.0.60724" maintainername="aa.malta" installertype="'exe'" url="'https://download.microsoft.com/download/7/A/F/7AFA5695-2B52-44AA-9A2D-FC431C231EDC/vstor_redist.exe'" silentargs="'/quiet /norestart'"
+
+cd vstor2010
+choco pack
+choco install vstor2010 -s .
+choco push vstor2010.10.0.60724.nupkg -s https://push.chocolatey.org/
