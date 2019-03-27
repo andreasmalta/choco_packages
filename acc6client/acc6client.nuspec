@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>acc6client</id>
+    <version>6.14.4.6</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/acc6client</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>acc6client (Install)</title>
+    <authors>Avigilon</authors>
+    <projectUrl>http://avigilon.com/support-and-downloads/for-software/acc/downloads/</projectUrl>
+    <iconUrl>https://github.com/andreasmalta/choco_packages/raw/master/acc6client/acc.jpg</iconUrl>
+    <licenseUrl>https://github.com/andreasmalta/choco_packages/raw/master/acc6client/ACC-6-End-User-License-Agreement-EULA.pdf</licenseUrl>
+    <docsUrl>http://avigilon.com/support-and-downloads/for-software/acc/documentation/</docsUrl>
+    <tags>avigilon cctv control center cctv client acc</tags>
+    <summary>Avigilon Control Center Client 6</summary>
+    <description>Avigilon Control Center (ACC) video management software gives you control over your workstation with a simplified screen layout, intuitive controls, and customizable features that improve multi-person interactions.</description>
+    <releaseNotes>http://avigilon.com/support-and-downloads/for-software/acc/downloads/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

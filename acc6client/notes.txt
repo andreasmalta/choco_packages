@@ -1,0 +1,11 @@
+cd c:\temp
+choco new acc6client packageversion="6.14.4.6" maintainername="aa.malta" installertype="'exe'" file="'ftp://ftp.avigilon.com/ACC/ACC_6.14.4.6/AvigilonControlCenterClient-6.14.4.6.exe'" silentargs="'/s'"
+
+checksum -t sha256 -f c:\temp\AvigilonControlCenterClient-6.14.4.6.exe
+
+cd acc6client
+choco pack
+choco install acc6client -s .
+choco uninstall acc6client
+
+choco push acc6client.6.14.4.6.nupkg -s https://push.chocolatey.org/
