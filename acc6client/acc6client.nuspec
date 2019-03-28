@@ -6,7 +6,7 @@
     <version>6.14.4.6</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/acc6client</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>acc6client (Install)</title>
+    <title>Avigilon Control Center Client 6</title>
     <authors>Avigilon</authors>
     <projectUrl>http://avigilon.com/support-and-downloads/for-software/acc/downloads/</projectUrl>
     <iconUrl>https://github.com/andreasmalta/choco_packages/raw/master/acc6client/acc.jpg</iconUrl>
