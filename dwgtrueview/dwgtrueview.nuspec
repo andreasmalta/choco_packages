@@ -6,15 +6,16 @@
     <version>2019.03.27</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>dwgtrueview (Install)</title>
+    <title>Autodesk DWG TrueView 2019</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/dwg</projectUrl>
     <iconUrl>https://github.com/andreasmalta/choco_packages/blob/master/dwgtrueview/dwgtrueview.png</iconUrl>
-    <licenseUrl>http://download.autodesk.com/us/FY19/Suites/LSA/en-US/lsa.html</licenseUrl>
+    <licenseUrl>https://download.autodesk.com/us/FY19/Suites/LSA/en-US/lsa.html</licenseUrl>
     <docsUrl>https://knowledge.autodesk.com/support/dwg-trueview</docsUrl>
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
-    <summary>DWG TrueView 2019</summary>
+    <summary>Autodesk DWG TrueView 2019</summary>
     <description>View DWG files or convert them to work with older versions of AutoCAD software.</description>
+    <releaseNotes>https://knowledge.autodesk.com/support/dwg-trueview</releaseNotes>
     <dependencies>
       <dependency id="dwgtrueview.install" version="2019.03.27" />
     </dependencies>
