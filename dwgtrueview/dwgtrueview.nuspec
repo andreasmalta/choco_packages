@@ -10,7 +10,7 @@
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/dwg</projectUrl>
     <iconUrl>https://github.com/andreasmalta/choco_packages/blob/master/dwgtrueview/dwgtrueview.png</iconUrl>
-    <licenseUrl>https://download.autodesk.com/us/FY19/Suites/LSA/en-US/lsa.html</licenseUrl>
+    <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
     <docsUrl>https://knowledge.autodesk.com/support/dwg-trueview</docsUrl>
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
     <summary>Autodesk DWG TrueView 2019</summary>
