@@ -16,9 +16,6 @@
     <summary>Autodesk DWG TrueView 2019</summary>
     <description>View DWG files or convert them to work with older versions of AutoCAD software.</description>
     <releaseNotes>https://knowledge.autodesk.com/support/dwg-trueview</releaseNotes>
-    <dependencies>
-      <dependency id="dwgtrueview.install" version="2019.03.27" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
