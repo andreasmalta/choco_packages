@@ -1,12 +1,15 @@
 cd c:\temp
 choco new dwgtrueview2 packageversion="2019.03.27" maintainername="aa.malta" installertype="'exe'" file="'C:\ProgramData\chocolatey\lib\dwgtrueview.install\tools\DWGTrueView_2019_Enu_64bit\Setup.exe'" silentargs="'/q'"
 
-checksum -t sha256 -f c:\temp\DWGTrueView_2019_Enu_32bit.sfx.exe
-checksum -t sha256 -f c:\temp\DWGTrueView_2019_Enu_64bit.sfx.exe
+checksum -t sha256 -f C:\temp\dwgtrueview\tools\DWGTrueView_2020_Enu_64bit_dlm.sfx.exe
+B8576EB643C879CB078F6779D45131625285664D9621B00C0B02B00073383FAD
+
+checksum -t sha256 -f C:\temp\dwgtrueview\tools\DWGTrueView_2020_Enu_64bit_dlm\Setup.exe
+A42B7914F3834871C84404961432BADF11A8E839BB19BA2014EF8F91202DA5B0
 
 cd dwgtrueview
 choco pack
 choco install dwgtrueview -s .
 choco uninstall dwgtrueview
 
-choco push dwgtrueview.2019.03.27.nupkg -s https://push.chocolatey.org/
+choco push dwgtrueview.2020.01.nupkg -s https://push.chocolatey.org/

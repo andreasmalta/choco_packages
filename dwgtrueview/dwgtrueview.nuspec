@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dwgtrueview</id>
-    <version>2019.03.27</version>
+    <version>2020.01</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>Autodesk DWG TrueView 2019</title>
+    <title>Autodesk DWG TrueView (64-bit only)</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/dwg</projectUrl>
     <iconUrl>https://github.com/andreasmalta/choco_packages/blob/master/dwgtrueview/dwgtrueview.png</iconUrl>
-    <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/dwgtrueview/tools/license.txt</licenseUrl>
     <docsUrl>https://knowledge.autodesk.com/support/dwg-trueview</docsUrl>
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
-    <summary>Autodesk DWG TrueView 2019</summary>
+    <summary>Autodesk DWG TrueView (64-bit only)</summary>
     <description>View DWG files or convert them to work with older versions of AutoCAD software.</description>
-    <releaseNotes>https://knowledge.autodesk.com/support/dwg-trueview</releaseNotes>
+    <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/dwgtrueview/tools/releasenotes.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
