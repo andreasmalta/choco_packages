@@ -12,4 +12,4 @@ choco pack
 choco install dwgtrueview -s .
 choco uninstall dwgtrueview
 
-choco push dwgtrueview.2020.01.nupkg -s https://push.chocolatey.org/
+choco push dwgtrueview.2019.03.27.nupkg -s https://push.chocolatey.org/
