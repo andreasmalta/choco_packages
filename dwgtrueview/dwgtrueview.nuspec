@@ -15,6 +15,10 @@
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
     <summary>Autodesk DWG TrueView (64-bit only)</summary>
     <description>View DWG files or convert them to work with older versions of AutoCAD software.</description>
+    <dependencies>
+      <dependency id="vcredist2012" />
+      <dependency id="vcredist140" />
+    </dependencies>
     <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/dwgtrueview/tools/releasenotes.txt</releaseNotes>
   </metadata>
   <files>
