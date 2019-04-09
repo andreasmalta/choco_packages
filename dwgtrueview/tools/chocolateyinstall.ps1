@@ -13,6 +13,7 @@ $packageArgs1 = @{
   checksum64    = $checksum_url
   checksumType64= 'sha256'
   silentArgs    = "-suppresslaunch -d $toolsDir"
+  validExitCodes= @(0, 3010, 1641)
 }
 
 $packageArgs2 = @{
@@ -23,6 +24,7 @@ $packageArgs2 = @{
   checksum64    = $checksum_file
   checksumType64= 'sha256'
   silentArgs    = "/S /Q /W"
+  validExitCodes= @(0, 3010, 1641)
 }
 
 Install-ChocolateyPackage @packageArgs1
