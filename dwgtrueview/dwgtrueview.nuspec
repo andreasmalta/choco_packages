@@ -18,6 +18,7 @@
     <dependencies>
       <dependency id="vcredist2012" />
       <dependency id="vcredist140" />
+      <dependency id="dotnet4.7" />
     </dependencies>
     <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/dwgtrueview/tools/releasenotes.txt</releaseNotes>
   </metadata>
