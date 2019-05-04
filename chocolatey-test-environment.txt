@@ -2,3 +2,4 @@ vagrant up
 vagrant sandbox on
 vagrant provision
 vagrant sandbox rollback
+vagrant suspend
