@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>designreview</id>
+    <version>2017.05.24</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/designreview</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Autodesk Design Review</title>
+    <authors>Autodesk</authors>
+    <projectUrl>https://www.autodesk.com/products/design-review</projectUrl>
+    <iconUrl>designreview.png</iconUrl>
+    <licenseUrl>license.txt</licenseUrl>
+    <docsUrl>https://knowledge.autodesk.com/support/design-review</docsUrl>
+    <tags>design review autodesk autocad dwg dwf dxf</tags>
+    <summary>Autodesk Design Review 2018</summary>
+    <description>View, mark up, and print 2D and 3D files. Design Review CAD viewer software lets you view, mark up, print, and track changes to 2D and 3D files for free — without the original design software. Work with a variety of file formats, including: DWF, DWFx, DWG, and DXF (requires installation of free DWG TrueView software); Adobe PDF; as well as image file types such as.bmp, .jpg, .gif, .pcx, .pct, .png, .rlc, .tga, .tif, .mil, .cal, and more.</description>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.6.0.0" />
+      <dependency id="vcredist2010" version="10.0.40219.2" />
+      <dependency id="vcredist2012" version="11.0.61031" />
+	</dependencies>
+    <releaseNotes>https://download.autodesk.com/esd/designreview/2018/ADR/adr_readme.htm</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
