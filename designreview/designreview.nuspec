@@ -9,8 +9,8 @@
     <title>Autodesk Design Review</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/design-review</projectUrl>
-    <iconUrl>designreview.png</iconUrl>
-    <licenseUrl>license.txt</licenseUrl>
+    <iconUrl>https://github.com/andreasmalta/choco_packages/raw/master/designreview/designreview.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/designreview/license.txt</licenseUrl>
     <docsUrl>https://knowledge.autodesk.com/support/design-review</docsUrl>
     <tags>design review autodesk autocad dwg dwf dxf</tags>
     <summary>Autodesk Design Review 2018</summary>
