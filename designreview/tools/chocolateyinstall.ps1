@@ -1,36 +1,28 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url      = 'https://trial2.autodesk.com/NetSWDLD/2020/ACD/79D9B4F2-2A92-453A-A1A4-CF3F3A09B77D/SFX/DWGTrueView_2020_Enu_64bit_dlm.sfx.exe'
-$checksum_url    = 'B8576EB643C879CB078F6779D45131625285664D9621B00C0B02B00073383FAD'
-$file = Join-Path $toolsDir 'DWGTrueView_2020_Enu_64bit_dlm\Setup.exe'
-$checksum_file    = 'A42B7914F3834871C84404961432BADF11A8E839BB19BA2014EF8F91202DA5B0'
-$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
+$url      = 'https://download.autodesk.com/us/support/files/designreview/2018/EXE/enu/SetupDesignReview.exe'
+$checksum_url    = '5258D6F5C26FE59A245A2540ADD6E49CC80025EEA48289F3ED30424EB83F3325'
+$extract = Join-Path $toolsDir 'setup'
+$file = Join-Path $toolsDir 'setup\x86\ADR\SetupDesignReview.msi'
+$checksum_file    = 'A54C237AAAC1570965AC61FAB480658A413955CD2151EAE02759D1F35A1CDAE1'
 
 $packageArgs1 = @{
   packageName   = $env:ChocolateyPackageName
-  fileType      = 'exe'
-  url64bit      = $url
-  softwareName  = 'dwgtrueview*'
-  checksum64    = $checksum_url
-  checksumType64= 'sha256'
-  silentArgs    = "-suppresslaunch -d $toolsDir"
-  validExitCodes= @(0, 3010, 1641)
+  url           = $url
+  checksum      = $checksum_url
+  checksumType  = 'sha256'
+  unziplocation = $extract
 }
+Install-ChocolateyZipPackage @packageArgs1
 
 $packageArgs2 = @{
   packageName   = $env:ChocolateyPackageName
-  fileType      = 'exe'
-  file64        = $file
-  softwareName  = 'dwgtrueview*'
-  checksum64    = $checksum_file
-  checksumType64= 'sha256'
-  silentArgs    = "/q /w"
+  fileType      = 'msi'
+  file          = $file
+  softwareName  = 'designreview*'
+  checksum      = $checksum_file
+  checksumType  = 'sha256'
+  silentArgs    = "/q"
   validExitCodes= @(0, 3010, 1641)
 }
-
-if (Test-path $RegRebootRequired)
-{
-    Remove-Item -Path $RegRebootRequired
-}
-Install-ChocolateyPackage @packageArgs1
 Install-ChocolateyInstallPackage @packageArgs2

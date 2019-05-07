@@ -4,6 +4,9 @@ choco new designreview packageversion="2017.05.24" maintainername="aa.malta" ins
 checksum -t sha256 -f C:\Users\andreas.andersson\GitHub\chocolatey-test-environment\packages\SetupDesignReview.exe
 5258D6F5C26FE59A245A2540ADD6E49CC80025EEA48289F3ED30424EB83F3325
 
+checksum -t sha256 -f C:\ProgramData\chocolatey\lib\designreview\tools\setup\x86\ADR\SetupDesignReview.msi
+A54C237AAAC1570965AC61FAB480658A413955CD2151EAE02759D1F35A1CDAE1
+
 cd designreview
 choco pack
 choco install designreview -s .
