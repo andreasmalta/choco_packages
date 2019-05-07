@@ -7,9 +7,14 @@ checksum -t sha256 -f C:\Users\andreas.andersson\GitHub\chocolatey-test-environm
 checksum -t sha256 -f C:\ProgramData\chocolatey\lib\designreview\tools\setup\x86\ADR\SetupDesignReview.msi
 A54C237AAAC1570965AC61FAB480658A413955CD2151EAE02759D1F35A1CDAE1
 
-cd C:\temp\designreview
+cd designreview
 choco pack
 choco install designreview -s .
 choco uninstall designreview
 
 choco push designreview.2017.05.24.nupkg -s https://push.chocolatey.org/
+
+https://knowledge.autodesk.com/sites/default/files/file_downloads/ADR-2018-Hotfix-1.msp
+msiexec /p ADR-2018-Hotfix-1.msp /qn
+
+Autodesk Design Review 14.0.0.177
