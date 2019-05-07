@@ -1,4 +1,4 @@
-cd C:\Users\andreas.andersson\GitHub\chocolatey-test-environment\packages
+cd C:\temp
 choco new designreview packageversion="2017.05.24" maintainername="aa.malta" installertype="'exe'" file="'http://download.autodesk.com/us/support/files/designreview/2018/EXE/enu/SetupDesignReview.exe'"
 
 checksum -t sha256 -f C:\Users\andreas.andersson\GitHub\chocolatey-test-environment\packages\SetupDesignReview.exe
@@ -7,7 +7,7 @@ checksum -t sha256 -f C:\Users\andreas.andersson\GitHub\chocolatey-test-environm
 checksum -t sha256 -f C:\ProgramData\chocolatey\lib\designreview\tools\setup\x86\ADR\SetupDesignReview.msi
 A54C237AAAC1570965AC61FAB480658A413955CD2151EAE02759D1F35A1CDAE1
 
-cd designreview
+cd C:\temp\designreview
 choco pack
 choco install designreview -s .
 choco uninstall designreview
