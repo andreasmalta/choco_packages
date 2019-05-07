@@ -18,7 +18,7 @@
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
       <dependency id="vcredist2012" version="11.0.61031" />
-      <dependency id="dotnetfx" version="4.6.0.0" />
+      <dependency id="dotnetfx" version="4.5.0.0" />
       <dependency id="directx" version="9.29.1974.20180606" />
 	</dependencies>
     <releaseNotes>https://download.autodesk.com/esd/designreview/2018/ADR/adr_readme.htm</releaseNotes>
