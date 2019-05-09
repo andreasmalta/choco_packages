@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>solarwinds-tftp-server</id>
+    <version>11.0.4.101</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/solarwinds-tftp-server</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>SolarWinds TFTP Server</title>
+    <authors>SolarWinds</authors>
+    <projectUrl>https://www.solarwinds.com/free-tools/free-tftp-server</projectUrl>
+    <iconUrl>TFTPServer-icon.png</iconUrl>
+    <licenseUrl>https://www.solarwinds.com/legal/eula</licenseUrl>
+    <docsUrl>TFTPServer-en.htm</docsUrl>
+    <tags>solarwinds tftp server network file transfers</tags>
+    <summary>SolarWinds TFTP Server</summary>
+    <description>Free TFTP server for reliable and secure network file transfers.</description>
+    <releaseNotes>TFTPServer-en.htm</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
+	<title>SolarWinds TFTP Server</title>
+	<link rel="stylesheet" type="text/css" href="TFTPServer.css">
+	<!-- saved from url=(0014)about:internet -->
+</head>
+
+<body>
+<div id="header">
+  <table border=0 cellspacing=0 cellpadding=0 width=100%>
+    <tr>
+      <td width=200><a href="http://www.solarwinds.com" target="_blank"><img border = 0 src="Images/header.left.x65.y200.png"></a></td>
+      <td class="fill">TFTP Server</td>
+      <td class="end" width=10></td> </td>
+    </tr>
+  </table>
+
+</div>
+
+<a name="introduction" id="introduction"></a><h2>Introduction</h2>
+<p>
+Numerous network devices, including routers, switches, hubs, X-terminals, printers, and terminal server devices, need a TFTP server to load initial configuration, IOS files, and transfer configuration file updates. SolarWinds TFTP Server was written to transmit and receive multiple configuration files at the same time using multiple connections.
+<br><br><strong>Note:</strong> A TFTP Server is not an FTP server. TFTP and FTP are different protocols. You cannot connect to a TFTP server with an FTP client.
+</p>
+<h3>For support, <a href="http://thwack.com/forums/37.aspx" target="_blank">click to visit the SolarWinds Free Tools Forum on thwack.</a></h3>
+
+<h2>Table of Contents</h2>
+<a href="#Requirements">Requirements</a><br>
+<a href="#Installing">Installing and Running SolarWinds TFTP Server</a><br>
+<a href="#Configuring">Configuring Your TFTP Server</a><br>
+
+<a name="Requirements" id="Requirements"></a><h2>Requirements</h2>
+<table>
+	<tr><th>Need</th><th>Item</th></tr>
+	<tr><td>Operating System</td>
+	<td>Install on a 32-bit or 64-bit edition of one of the following operating systems:
+		<ul>
+			<li>Microsoft Windows XP SP2 or later</li>
+			<li>Microsoft Windows Vista Business and Ultimate Editions</li>
+			<li>Microsoft Windows Server 2003 SP1 or later</li>
+			<li>Microsoft Windows 2000 SP4 or later</li>
+			<li>Microsoft Windows Server 2008</li>
+			<li>Microsoft Windows 7</li>
+		</ul>
+	</td>
+	</tr>
+	<tr><td>.NET Framework</td><td>Microsoft .NET Framework 2.0 or later.</td></tr>
+	<tr><td>Hard Drive space</td><td>10MB</td></tr>
+</table>
+
+<a name="Installing" id="Installing"></a><h2>Installing and Running SolarWinds TFTP Server</h2>
+<p>You can modify the installation location and other settings using the SolarWinds TFTP Server setup program.<br><br>
+<strong>Note:</strong> The Windows user account used to install SolarWinds TFTP Server must have administrator rights.</p>
+
+<h4>To install SolarWinds TFTP Server:</h4>
+<ol>
+<li>Run the setup program (<code>SolarWindsTftpServer.exe).</code></li>
+<li>Complete the setup wizard, providing the appropriate information as necessary.</li>
+</ol>
+
+<h4>To run SolarWinds TFTP Server:</h4>
+<p>Start <strong>TFTP Server</strong> in the SolarWinds TFTP Server folder.</p>
+
+<a name="Configuring" id="Configuring"></a><h2>Configuring Your TFTP Server</h2>
+<p>The TFTP server runs as a service, but some basic configuration may be necessary to ensure the TFTP server behaves in a way that works best within your environment. Complete the following procedure to setup your server.</p>
+<h4>To configure your TFTP server:</h4>
+<ol>
+	<li>Click <strong>File > Configure</strong>.</li>
+	<li>Click the General tab, and then specify whether to start the server.</li>
+	<li><strong><em>If you want the TFTP server to appear in the task tray,</em></strong> check <strong>Add TFTP Server to Windows task tray</strong>.</li>
+	<li>Specify a directory to use as the root directory of the TFTP server. Files received by the TFTP server are saved here. Files to be sent by the TFTP server must be first copied to this directory.</li>
+	<li>Click the Security tab, and select what actions you want to allow the TFTP server to do. For example, click <strong>Receive Files</strong> if you want to restrict the server to only receiving files.</li>
+	<li><strong><em>If you want to restrict TFTP server functions to a specific IP address range,</em></strong> click <strong>Add</strong> and then specify the beginning and ending IP addresses of the range. Then, click <strong>OK</strong>.</li>
+	<li>Click <strong>OK</strong>.</li>
+</ol>
+<p><strong>Note:</strong> TFTP protocol has no innate security. There are no passwords or authentication. SolarWinds TFTP Server adds security by allowing you to limit the server's functionality and specify a range of IP addresses from which to accept requests.
+</p>
+
+<h3>Legal</h3>
+
+<p class="legal">
+Copyright 1995-2012 SolarWinds, Inc. All rights reserved worldwide. No part of this document may be reproduced by any means nor modified, decompiled, disassembled, published or distributed, in whole or in part, or translated to any electronic medium or other means without the written consent of SolarWinds. All right, title and interest in and to the software and documentation are and shall remain the exclusive property of SolarWinds and its licensors. SolarWinds Orion™, SolarWinds TFTP Server™, and SolarWinds Toolset™ are trademarks of SolarWinds. SolarWinds® and the SolarWinds logo are registered trademarks of SolarWinds. Microsoft Windows Server, Windows Vista, and Windows XP are registered trademarks or trademarks of Microsoft Corporation in the United States and other countries. All other trademarks contained in this document and in the Software are the property of their respective owners.
+</p>
+
+<p class="legal">
+SOLARWINDS DISCLAIMS ALL WARRANTIES, CONDITIONS OR OTHER TERMS, EXPRESS OR IMPLIED, STATUTORY OR OTHERWISE, ON SOFTWARE AND DOCUMENTATION FURNISHED HEREUNDER INCLUDING WITHOUT LIMITATION THE WARRANTIES OF DESIGN, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL SOLARWINDS, ITS SUPPLIERS OR ITS LICENSORS BE LIABLE FOR ANY DAMAGES, WHETHER ARISING IN TORT, CONTRACT OR ANY OTHER LEGAL THEORY EVEN IF SOLARWINDS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+</p>
+
+
+</body>
+</html>

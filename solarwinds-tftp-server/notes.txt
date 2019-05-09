@@ -1,0 +1,18 @@
+solarwinds-tftp-server
+
+checksum -t sha256 -f C:\temp\SolarWinds-TFTP-Server.zip
+BBDC2D1FDCCEBB445F972480675DF732A674FC86671EBE7107161D8DAA3DFA14
+
+checksum -t sha256 -f C:\temp\TFTP-Server-Installer.exe
+EC61640CA19CD915B264058198237802477D3B44B4D62B35A654087AA31B8C03
+
+cd C:\temp\designreview
+choco pack
+choco install designreview -s .
+choco uninstall designreview
+
+choco push designreview.2017.05.24.nupkg -s https://push.chocolatey.org/
+
+
+https://downloads.solarwinds.com/solarwinds/Release/FreeTool/SolarWinds-TFTP-Server.zip
+TFTP-Server-Installer.exe /S /R
