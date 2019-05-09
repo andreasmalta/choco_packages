@@ -10,7 +10,7 @@ choco pack
 choco install solarwinds-tftp-server -s .
 choco uninstall solarwinds-tftp-server
 
-choco push solarwinds-tftp-server.2017.05.24.nupkg -s https://push.chocolatey.org/
+choco push solarwinds-tftp-server.11.0.4.101.nupkg -s https://push.chocolatey.org/
 
 
 https://downloads.solarwinds.com/solarwinds/Release/FreeTool/SolarWinds-TFTP-Server.zip

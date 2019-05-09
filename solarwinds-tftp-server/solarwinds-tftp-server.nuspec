@@ -15,6 +15,9 @@
     <tags>solarwinds tftp server network file transfers</tags>
     <summary>SolarWinds TFTP Server</summary>
     <description>Free TFTP server for reliable and secure network file transfers.</description>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.6.2.0" />
+	</dependencies>
     <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/solarwinds-tftp-server/docs.txt</releaseNotes>
   </metadata>
   <files>
