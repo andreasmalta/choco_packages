@@ -9,13 +9,12 @@
     <title>SolarWinds TFTP Server</title>
     <authors>SolarWinds</authors>
     <projectUrl>https://www.solarwinds.com/free-tools/free-tftp-server</projectUrl>
-    <iconUrl>https://github.com/andreasmalta/choco_packages/raw/master/solarwinds-tftp-server/icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/solarwinds-tftp-server/icon.png</iconUrl>
     <licenseUrl>https://www.solarwinds.com/legal/eula</licenseUrl>
-    <docsUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/solarwinds-tftp-server/docs.txt</docsUrl>
+    <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/solarwinds-tftp-server/docs.txt</docsUrl>
     <tags>solarwinds tftp server network file transfer</tags>
     <summary>SolarWinds TFTP Server</summary>
     <description>Free TFTP server for reliable and secure network file transfers.</description>
-    <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/solarwinds-tftp-server/docs.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
