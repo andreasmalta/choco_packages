@@ -1,15 +1,13 @@
-cd c:\temp
-choco new acc6client packageversion="6.14.4.6" maintainername="aa.malta" installertype="'exe'" file="'ftp://ftp.avigilon.com/ACC/ACC_6.14.4.6/AvigilonControlCenterClient-6.14.4.6.exe'" silentargs="'/s'"
-
-checksum -t sha256 -f c:\temp\AvigilonControlCenterClient-6.14.4.6.exe
-
-$f='C:\temp\acc6client\tools\chocolateyuninstall.ps1'
-gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
-
+checksum -t sha256 -f c:\temp\AvigilonControlCenterClient-6.14.6.30.exe
+22210EF8BAA6EABCE6F0EA84D296AFA2B2F6E3DAA6525C6FA5059A3A123B2C50
 
 cd acc6client
 choco pack
 choco install acc6client -s .
+choco upgrade acc6client -s .
 choco uninstall acc6client
 
-choco push acc6client.6.14.4.6.nupkg -s https://push.chocolatey.org/
+choco push acc6client.6.14.6.30.nupkg -s https://push.chocolatey.org/
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{7E84C38A-25FF-42C8-AD63-09A9CB3F9D17}]
+"UninstallString"="C:\\ProgramData\\{FAC0E652-8EDB-4C70-8AF9-1F7DD75AAC56}\\AvigilonControlCenterClient.exe"
