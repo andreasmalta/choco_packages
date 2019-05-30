@@ -1,5 +1,6 @@
+cd C:\Users\andreas.andersson\GitHub\chocolatey-test-environment
 vagrant up
 vagrant sandbox on
-vagrant provision
 vagrant sandbox rollback
+vagrant provision
 vagrant halt
