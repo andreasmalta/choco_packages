@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>geit5pcl6</id>
+
+    <version>11.1.2.0</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/geit5pcl6</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Develop PCL6 Printer Driver</title>
+    <authors>Konica Minolta</authors>
+    <projectUrl>https://www.develop.eu/en/support/download-centre.html</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/tools/GEIT5PCL6Winx64_11120EN.TXT</licenseUrl>
+    <docsUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/tools/GEIT5PCL6Winx64_11120EN.TXT</docsUrl>
+    <tags>Konica Minolta Develop printer driver pcl6</tags>
+    <summary>Develop Generic 70C-10/65C-9/36C-9/28C-8/C MF385-2 Series PCL/PS/FAX Printer Driver</summary>
+    <description>This printer driver is a software that controls Generic 70C-10/65C-9/36C-9/28C-8/C MF385-2 Series.
+This is required to print with Generic 70C-10/65C-9/36C-9/28C-8/C MF385-2 Series from your PC.
+
+Supported devices :
+    70C-10Series (70C-10/65C-10)
+    65C-9Series (65C-9/55C-9/45C-9)
+    36C-9Series (36C-9/30C-9/25C-9)
+    28C-8Series (28C-8/22C-8)
+    C MF385-2Series (C MF385-2/C MF385-2FS/C MF335-2)
+	</description>
+    <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/tools/GEIT5PCL6Winx64_11120EN.TXT</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
