@@ -17,8 +17,33 @@ Install-ChocolateyZipPackage @packageArgs
 
 Get-ChildItem $toolsDir -Recurse -Filter "*.inf" | 
 ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
-Add-PrinterDriver -Name "Generic 28C-8SeriesPCL"
-Add-PrinterDriver -Name "Generic 36C-9SeriesPCL"
-Add-PrinterDriver -Name "Generic 65C-9SeriesPCL"
-Add-PrinterDriver -Name "Generic 70C-10SeriesPCL"
-Add-PrinterDriver -Name "Generic C MF385-2SeriesPCL"
+
+$pp = Get-PackageParameters
+if ($pp.28C-8PCL) { 
+    Write-Host "Installing Generic 28C-8SeriesPCL"
+	Add-PrinterDriver -Name "Generic 28C-8SeriesPCL"
+	}
+if ($pp.36C-9PCL) { 
+    Write-Host "Installing Generic 36C-9SeriesPCL"
+	Add-PrinterDriver -Name "Generic 36C-9SeriesPCL"
+	}
+if ($pp.65C-9PCL) { 
+    Write-Host "Installing Generic 65C-9SeriesPCL"
+	Add-PrinterDriver -Name "Generic 65C-9SeriesPCL"
+	}
+if ($pp.70C-10PCL) { 
+    Write-Host "Installing Generic 70C-10SeriesPCL"
+	Add-PrinterDriver -Name "Generic 70C-10SeriesPCL"
+	}
+if ($pp.MF385-2PCL) { 
+    Write-Host "Installing Generic C MF385-2SeriesPCL"
+	Add-PrinterDriver -Name "Generic C MF385-2SeriesPCL"
+	}
+if (!$pp) { 
+    Write-Host "Installing All Drivers in Package"
+	Add-PrinterDriver -Name "Generic 28C-8SeriesPCL"
+	Add-PrinterDriver -Name "Generic 36C-9SeriesPCL"
+	Add-PrinterDriver -Name "Generic 65C-9SeriesPCL"
+	Add-PrinterDriver -Name "Generic 70C-10SeriesPCL"
+	Add-PrinterDriver -Name "Generic C MF385-2SeriesPCL"
+	}
