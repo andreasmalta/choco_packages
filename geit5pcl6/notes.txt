@@ -11,7 +11,7 @@ checksum -t sha256 -f C:\temp\GEIT5PCL6Winx64_11120EN.zip
 
 cd geit5pcl6
 choco pack
-choco install geit5pcl6 -s .
+choco install geit5pcl6 -s . --params="'/36C /28C'"
 choco uninstall geit5pcl6
 
 choco push geit5pcl6.11.1.2.0.nupkg -s https://push.chocolatey.org/
@@ -20,11 +20,12 @@ choco push geit5pcl6.11.1.2.0.nupkg -s https://push.chocolatey.org/
 
 
 
-
-
+$portIP = "192.168.10.26"
 $portName = "IP_192.168.10.26"
+$printerName = "hp3027_Office1_Buh"
+$driverName = "Generic 36C-9SeriesPCL"
 $checkPortExists = Get-Printerport -Name $portname -ErrorAction SilentlyContinue
 if (-not $checkPortExists) {
-Add-PrinterPort -name $portName -PrinterHostAddress "192.168.10.26"
+Add-PrinterPort -name $portName -PrinterHostAddress $portIP
 }
-Add-Printer -Name hp3027_Office1_Buh -DriverName "Generic 36C-9SeriesPCL" -PortName IP_192.168.10.26
+Add-Printer -Name $printerName -DriverName $driverName -PortName $portName

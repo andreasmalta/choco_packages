@@ -20,14 +20,14 @@ This is required to print with Generic 70C-10/65C-9/36C-9/28C-8/C MF385-2 Series
 #### Package Parameters
 The following package parameters can be set:
 
- * `/28C-8PCL:` - Install driver for 28C-8Series (28C-8/22C-8)
- * `/36C-9PCL:` - Install driver for 36C-9Series (36C-9/30C-9/25C-9)
- * `/65C-9PCL` - Install driver for 65C-9Series (65C-9/55C-9/45C-9)
- * `/70C-10PCL` - Install driver for 70C-10Series (70C-10/65C-10)
- * `/MF385-2PCL:` - Install driver for C MF385-2Series (C MF385-2/C MF385-2FS/C MF335-2)
+ * `/28C:` - Install driver for 28C-8Series (28C-8/22C-8)
+ * `/36C:` - Install driver for 36C-9Series (36C-9/30C-9/25C-9)
+ * `/65C` - Install driver for 65C-9Series (65C-9/55C-9/45C-9)
+ * `/70C` - Install driver for 70C-10Series (70C-10/65C-10)
+ * `/MF385:` - Install driver for C MF385-2Series (C MF385-2/C MF385-2FS/C MF335-2)
  * If no parameters is given all above drivers will be installed
 
-To pass parameters, use `--params "''"` (e.g. `choco install geit5pcl6 --params="'/28C-8PCL /36C-9PCL'"`).
+To pass parameters, use `--params "''"` (e.g. `choco install geit5pcl6 --params="'/28C /36C'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 	</description>
     <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/tools/GEIT5PCL6Winx64_11120EN.TXT</releaseNotes>
