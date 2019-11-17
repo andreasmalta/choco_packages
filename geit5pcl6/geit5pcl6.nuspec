@@ -10,8 +10,8 @@
     <title>Develop PCL6 Printer Driver</title>
     <authors>Konica Minolta</authors>
     <projectUrl>https://www.develop.eu/en/support/download-centre.html</projectUrl>
-    <licenseUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/tools/GEIT5PCL6Winx64_11120EN.TXT</licenseUrl>
-    <docsUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/tools/GEIT5PCL6Winx64_11120EN.TXT</docsUrl>
+    <licenseUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</licenseUrl>
+    <docsUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</docsUrl>
     <tags>Konica Minolta Develop printer driver pcl6</tags>
     <summary>Develop Generic 70C-10/65C-9/36C-9/28C-8/C MF385-2 Series PCL/PS/FAX Printer Driver</summary>
     <description>This printer driver is a software that controls Generic 70C-10/65C-9/36C-9/28C-8/C MF385-2 Series.
@@ -25,18 +25,17 @@ The following package parameters can be set:
  * `/65C` - Install driver for 65C-9Series (65C-9/55C-9/45C-9)
  * `/70C` - Install driver for 70C-10Series (70C-10/65C-10)
  * `/MF385:` - Install driver for C MF385-2Series (C MF385-2/C MF385-2FS/C MF335-2)
- * If no parameters is given all above drivers will be installed
+ * If no parameter is given all above drivers will be installed
 
 To pass parameters, use `--params "''"` (e.g. `choco install geit5pcl6 --params="'/28C /36C'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 	</description>
-    <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/tools/GEIT5PCL6Winx64_11120EN.TXT</releaseNotes>
+    <dependencies>
+      <dependency id="powershell" version="4.0.20141001" />
+	</dependencies>
+    <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
-
-
-
-

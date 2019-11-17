@@ -11,7 +11,8 @@ checksum -t sha256 -f C:\temp\GEIT5PCL6Winx64_11120EN.zip
 
 cd geit5pcl6
 choco pack
-choco install geit5pcl6 -s . --params="'/36C /28C'"
+choco install geit5pcl6 -s .
+choco install geit5pcl6 -s . --params="'/70C /28C'"
 choco uninstall geit5pcl6
 
 choco push geit5pcl6.11.1.2.0.nupkg -s https://push.chocolatey.org/

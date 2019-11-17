@@ -20,36 +20,43 @@ ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
 
 $pp = Get-PackageParameters
 
-if ($pp.'28C') { 
-    Write-Host "Installing Generic 28C-8SeriesPCL"
+if ($pp.'28C' -or $pp.'36C' -or $pp.'65C' -or $pp.'70C' -or $pp.'MF385') { 
+
+	if ($pp.'28C') { 
+	Write-Host "Installing Generic 28C-8SeriesPCL"
 	Add-PrinterDriver -Name "Generic 28C-8SeriesPCL"
+	$all = $all + 1
 	}
 
-if ($pp.'36C') { 
-    Write-Host "Installing Generic 36C-9SeriesPCL"
+	if ($pp.'36C') { 
+	Write-Host "Installing Generic 36C-9SeriesPCL"
 	Add-PrinterDriver -Name "Generic 36C-9SeriesPCL"
+	$all = $all + 1
 	}
 
-if ($pp.'65C') { 
-    Write-Host "Installing Generic 65C-9SeriesPCL"
+	if ($pp.'65C') { 
+	Write-Host "Installing Generic 65C-9SeriesPCL"
 	Add-PrinterDriver -Name "Generic 65C-9SeriesPCL"
+	$all = $all + 1
 	}
 
-if ($pp.'70C') { 
-    Write-Host "Installing Generic 70C-10SeriesPCL"
+	if ($pp.'70C') { 
+	Write-Host "Installing Generic 70C-10SeriesPCL"
 	Add-PrinterDriver -Name "Generic 70C-10SeriesPCL"
+	$all = $all + 1
 	}
 
-if ($pp.'MF385') { 
-    Write-Host "Installing Generic C MF385-2SeriesPCL"
+	if ($pp.'MF385') { 
+	Write-Host "Installing Generic C MF385-2SeriesPCL"
 	Add-PrinterDriver -Name "Generic C MF385-2SeriesPCL"
+	$all = $all + 1
 	}
-
-if (!$pp) { 
-    Write-Host "Installing All Drivers in Package"
+	
+} else {
+	Write-Host "Installing all drivers from package"
 	Add-PrinterDriver -Name "Generic 28C-8SeriesPCL"
 	Add-PrinterDriver -Name "Generic 36C-9SeriesPCL"
 	Add-PrinterDriver -Name "Generic 65C-9SeriesPCL"
 	Add-PrinterDriver -Name "Generic 70C-10SeriesPCL"
 	Add-PrinterDriver -Name "Generic C MF385-2SeriesPCL"
-	}
+}
