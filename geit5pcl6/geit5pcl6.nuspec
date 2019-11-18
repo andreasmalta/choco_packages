@@ -10,8 +10,9 @@
     <title>Develop PCL6 Printer Driver</title>
     <authors>Konica Minolta</authors>
     <projectUrl>https://www.develop.eu/en/support/download-centre.html</projectUrl>
-    <licenseUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</licenseUrl>
-    <docsUrl>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</docsUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geit5pcl6/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</licenseUrl>
+    <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</docsUrl>
     <tags>Konica Minolta Develop printer driver pcl6</tags>
     <summary>Develop Generic 70C-10/65C-9/36C-9/28C-8/C MF385-2 Series PCL/PS/FAX Printer Driver</summary>
     <description>This printer driver is a software that controls Generic 70C-10/65C-9/36C-9/28C-8/C MF385-2 Series.
@@ -33,7 +34,7 @@ To have choco remember parameters on upgrade, be sure to set `choco feature enab
     <dependencies>
       <dependency id="powershell" version="4.0.20141001" />
 	</dependencies>
-    <releaseNotes>https://raw.githubusercontent.com/andreasmalta/choco_packages/master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</releaseNotes>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
