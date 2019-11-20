@@ -1,0 +1,30 @@
+choco new bhc554epcl6 packageversion="5.4.0.0" maintainername="aa.malta"
+
+https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=518dd3f48e952f48c9dc19a1ca1aae15&tx_kmanacondaimport_downloadproxy[documentId]=102461&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685
+checksum -t sha256 -f BHC554ePCL6Winx86_5400EN.zip
+757C80DCD13D71F1EC09065BDB8F1E0F6994B773231440C008107DCAF4E3C78E
+
+https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=1c59526e5a05786fa3209e3825f8e1e7&tx_kmanacondaimport_downloadproxy[documentId]=102464&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685
+checksum -t sha256 -f BHC554ePCL6Winx64_5400EN.zip
+211852B7B792A2DD1605BE6F0F49A00247D9C849115020F0DE28A1FFE4D1569D
+
+choco pack
+choco install bhc554epcl6 -s .
+choco install bhc554epcl6 -s . --params="'/70C /28C'"
+choco uninstall bhc554epcl6
+
+choco push bhc554epcl6.5.4.0.0.nupkg -s https://push.chocolatey.org/
+
+
+
+
+
+$portIP = "192.168.10.26"
+$portName = "IP_192.168.10.26"
+$printerName = "hp3027_Office1_Buh"
+$driverName = "Generic 36C-9SeriesPCL"
+$checkPortExists = Get-Printerport -Name $portname -ErrorAction SilentlyContinue
+if (-not $checkPortExists) {
+Add-PrinterPort -name $portName -PrinterHostAddress $portIP
+}
+Add-Printer -Name $printerName -DriverName $driverName -PortName $portName

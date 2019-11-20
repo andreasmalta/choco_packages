@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>geit5pcl6</id>
+    <version>11.1.2.0</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/geit5pcl6</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Konica Minolta DEVELOP GEIT5 PCL6 Driver Package</title>
+    <authors>Konica Minolta</authors>
+    <projectUrl>https://www.develop.eu/en/support/download-centre.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geit5pcl6/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</licenseUrl>
+    <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</docsUrl>
+    <tags>Konica Minolta Develop printer driver pcl6</tags>
+    <summary>Generic 70C-10/65C-9/36C-9/28C-8/C MF385-2 Series PCL/PS/FAX Printer Driver</summary>
+    <description>Supported devices:
+    bizhub C554
+    bizhub C554e
+    bizhub C454
+    bizhub C454e
+    bizhub C364
+    bizhub C364e
+    bizhub C284
+    bizhub C284e
+    bizhub C224
+    bizhub C224e
+
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/28C:` - Install driver for 28C-8Series (28C-8/22C-8)
+ * `/36C:` - Install driver for 36C-9Series (36C-9/30C-9/25C-9)
+ * `/65C` - Install driver for 65C-9Series (65C-9/55C-9/45C-9)
+ * `/70C` - Install driver for 70C-10Series (70C-10/65C-10)
+ * `/MF385:` - Install driver for C MF385-2Series (C MF385-2/C MF385-2FS/C MF335-2)
+ * If no parameter is given all drivers in the package will be installed.
+
+To pass parameters, use `--params "''"` (e.g. `choco install geit5pcl6 --params="'/28C /36C'"`).
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+	</description>
+    <dependencies>
+      <dependency id="powershell" version="4.0.20141001" />
+	</dependencies>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geit5pcl6/GEIT5PCL6Winx64_11120EN.TXT</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
