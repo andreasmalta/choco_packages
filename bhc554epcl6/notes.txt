@@ -10,7 +10,7 @@ checksum -t sha256 -f BHC554ePCL6Winx64_5400EN.zip
 
 choco pack
 choco install bhc554epcl6 -s .
-choco install bhc554epcl6 -s . --params="'/70C /28C'"
+choco install bhc554epcl6 -s . --params="'/C364 /C554'"
 choco uninstall bhc554epcl6
 
 choco push bhc554epcl6.5.4.0.0.nupkg -s https://push.chocolatey.org/

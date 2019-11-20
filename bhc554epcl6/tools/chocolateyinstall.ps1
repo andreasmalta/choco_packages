@@ -2,6 +2,7 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=518dd3f48e952f48c9dc19a1ca1aae15&tx_kmanacondaimport_downloadproxy[documentId]=102461&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
 $url64      = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=1c59526e5a05786fa3209e3825f8e1e7&tx_kmanacondaimport_downloadproxy[documentId]=102464&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$drivercert = Join-Path $toolsDir 'konicadriver.cer'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -13,6 +14,7 @@ $packageArgs = @{
   checksum64    = '211852B7B792A2DD1605BE6F0F49A00247D9C849115020F0DE28A1FFE4D1569D'
   checksumType64= 'sha256'
 }
+certutil -addstore "TrustedPublisher" $drivercert
 Install-ChocolateyZipPackage @packageArgs
 
 Get-ChildItem $toolsDir -Recurse -Filter "*.inf" | 
