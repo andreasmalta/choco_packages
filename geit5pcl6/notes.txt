@@ -16,17 +16,3 @@ choco install geit5pcl6 -s . --params="'/70C /28C'"
 choco uninstall geit5pcl6
 
 choco push geit5pcl6.11.1.2.0.nupkg -s https://push.chocolatey.org/
-
-
-
-
-
-$portIP = "192.168.10.26"
-$portName = "IP_192.168.10.26"
-$printerName = "hp3027_Office1_Buh"
-$driverName = "Generic 36C-9SeriesPCL"
-$checkPortExists = Get-Printerport -Name $portname -ErrorAction SilentlyContinue
-if (-not $checkPortExists) {
-Add-PrinterPort -name $portName -PrinterHostAddress $portIP
-}
-Add-Printer -Name $printerName -DriverName $driverName -PortName $portName
