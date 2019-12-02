@@ -2,9 +2,6 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=518dd3f48e952f48c9dc19a1ca1aae15&tx_kmanacondaimport_downloadproxy[documentId]=102461&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
 $url64      = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=1c59526e5a05786fa3209e3825f8e1e7&tx_kmanacondaimport_downloadproxy[documentId]=102464&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$driverFile = Get-ChildItem $toolsDir -Recurse -Filter "koaytj__.cat"
-$exportType = [System.Security.Cryptography.X509Certificates.X509ContentType]::Cert
-$drivercert = Join-Path $toolsDir 'koaytj__.cer'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -17,11 +14,14 @@ $packageArgs = @{
   checksumType64= 'sha256'
 }
 
-$cert = (Get-AuthenticodeSignature $driverFile).SignerCertificate;
-[System.IO.File]::WriteAllBytes($drivercert, $cert.Export($exportType));
-certutil -addstore "TrustedPublisher" $drivercert
-
 Install-ChocolateyZipPackage @packageArgs
+
+$driverFile = Get-ChildItem $toolsDir -Recurse -Filter 'koaytj__.cat'
+$drivercert = Join-Path $toolsDir 'koaytj__.cer'
+$exportType = [System.Security.Cryptography.X509Certificates.X509ContentType]::Cert
+$cert = (Get-AuthenticodeSignature $driverFile.FullName).SignerCertificate
+[System.IO.File]::WriteAllBytes($drivercert, $cert.Export($exportType))
+certutil -addstore "TrustedPublisher" $drivercert
 
 Get-ChildItem $toolsDir -Recurse -Filter "*.inf" | 
 ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
