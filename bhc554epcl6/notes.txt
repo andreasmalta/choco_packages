@@ -14,17 +14,3 @@ choco install bhc554epcl6 -s . --params="'/C364 /C554'"
 choco uninstall bhc554epcl6
 
 choco push bhc554epcl6.5.4.0.0.nupkg -s https://push.chocolatey.org/
-
-
-
-
-
-$portIP = "192.168.10.26"
-$portName = "IP_192.168.10.26"
-$printerName = "hp3027_Office1_Buh"
-$driverName = "Generic 36C-9SeriesPCL"
-$checkPortExists = Get-Printerport -Name $portname -ErrorAction SilentlyContinue
-if (-not $checkPortExists) {
-Add-PrinterPort -name $portName -PrinterHostAddress $portIP
-}
-Add-Printer -Name $printerName -DriverName $driverName -PortName $portName
