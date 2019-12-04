@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=fda2b9f7de235182ba423627216161f0&tx_kmanacondaimport_downloadproxy[documentId]=1483&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$url64      = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=31153230a299b1c3939e5518e04e20a9&tx_kmanacondaimport_downloadproxy[documentId]=1482&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$url        = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=f2a8c5c610bf613c8e918fb541cf294a&tx_kmanacondaimport_downloadproxy[documentId]=6502&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$url64      = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=87eb1789be0bcb9095fc722992bc46b6&tx_kmanacondaimport_downloadproxy[documentId]=6503&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   url           = $url
   url64bit      = $url64
-  checksum      = 'C95A5AE3A115346BEE4944E8DA1CBBF7449BF8DE32AA6A95E9803012BEFBDC64'
+  checksum      = '29375A736DB46FC3764021B50924DBB3A89B6E7B02C431CD2EE43AFD704C5FF5'
   checksumType  = 'sha256'
-  checksum64    = '739C32D531F02DAE8FCE641903610B14221DFD72C59CD2F813B0BC37BB85D16F'
+  checksum64    = '07FD1B0D0B73EAC864320367E45CFB0D20984BED7671A93F0ABE1463739E0E51'
   checksumType64= 'sha256'
 }
 Install-ChocolateyZipPackage @packageArgs
