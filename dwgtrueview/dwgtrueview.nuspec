@@ -10,7 +10,7 @@
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/dwg</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/icon.png</iconUrl>
-    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/EULA.rtf</licenseUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/license.txt</licenseUrl>
     <docsUrl>https://knowledge.autodesk.com/support/dwg-trueview</docsUrl>
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
     <summary>Autodesk DWG TrueView 2021 (64-bit)</summary>
@@ -20,7 +20,7 @@
 #      <dependency id="vcredist2012" version="11.0.0" />
 #      <dependency id="vcredist140" version="14.16.0.0" />
 	</dependencies>
-    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/releasenotes.html</releaseNotes>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/releasenotes.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
