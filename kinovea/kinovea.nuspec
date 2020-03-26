@@ -3,16 +3,24 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kinovea</id>
-    <version>0.8.27</version>
+    <version>0.9.1</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kinovea</packageSourceUrl>
 	<owners>aa.malta</owners>
-    <title>kinovea (Install)</title>
-    <authors>kinovea.org</authors>
+    <title>Kinovea (x64 experimental)</title>
+    <authors>Joan Charmant</authors>
     <projectUrl>http://www.kinovea.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kinovea/icon.png</iconUrl>
     <licenseUrl>https://www.kinovea.org/help/en/003.html</licenseUrl>
-    <projectSourceUrl>https://bitbucket.org/kinovea/kinovea</projectSourceUrl>
+    <docsUrl>https://www.kinovea.org/help/en/index.htm</docsUrl>
     <tags>kinovea video player sport analysis</tags>
-    <summary>Kinovea Video Player - Experimental Version</summary>
-    <description>Kinovea is a video player for all sport enthusiasts. Slow down, study and comment the technique of your athletes or of yourself. It is 100% free and open source.</description>
+    <projectSourceUrl>https://github.com/Kinovea/Kinovea</projectSourceUrl>
+    <summary>Kinovea Sport Analysis Video Player - 64-bit Experimental Version</summary>
+    <description>Kinovea is a video player for sport analysis.
+It provides a set of tools to capture, slow down, study, compare, annotate and measure technical performances. (Learn more).
+Kinovea is completely free and open source.</description>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.8.0.0" />
+	</dependencies>
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
