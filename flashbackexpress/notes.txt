@@ -1,0 +1,11 @@
+choco new flashbackexpress
+
+checksum -t sha256 -f C:\temp\bbfbex5.exe
+2C84232513C55DBB31F8D0DE94F673793F815CD9EFBAB183926AD30657FE031B
+
+cd flashbackexpress
+choco pack
+choco install flashbackexpress -s .
+choco uninstall flashbackexpress
+
+choco push flashbackexpress.5.41.0.4544.nupkg -s https://push.chocolatey.org/
