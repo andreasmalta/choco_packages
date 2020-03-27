@@ -16,9 +16,9 @@
     <summary>Autodesk DWG TrueView 2021 (64-bit)</summary>
     <description>View DWG files or convert them to work with older versions of AutoCAD software.</description>
     <dependencies>
-#      <dependency id="dotnetfx" version="4.7.0.0" />
-#      <dependency id="vcredist2012" version="11.0.0" />
-#      <dependency id="vcredist140" version="14.16.0.0" />
+      <dependency id="dotnetfx" version="4.8.0.0" />
+      <dependency id="vcredist2012" version="11.0.0" />
+      <dependency id="vcredist140" version="14.16.0.0" />
 	</dependencies>
     <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/releasenotes.txt</releaseNotes>
   </metadata>

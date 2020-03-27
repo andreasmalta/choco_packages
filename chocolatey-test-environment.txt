@@ -1,4 +1,5 @@
-cd C:\Users\andreas.andersson\GitHub\chocolatey-test-environment
+cd chocolatey-test-environment
+vagrant plugin update
 vagrant up
 vagrant sandbox on
 vagrant sandbox rollback
