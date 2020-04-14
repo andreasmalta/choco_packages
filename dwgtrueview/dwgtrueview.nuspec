@@ -6,7 +6,7 @@
     <version>2020.01.22</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>Autodesk DWG TrueView 2021 (64-bit)</title>
+    <title>Autodesk DWG TrueView (64-bit)</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/dwg</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/icon.png</iconUrl>
