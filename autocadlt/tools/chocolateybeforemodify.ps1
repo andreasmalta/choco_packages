@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileLocation = Join-Path $toolsDir 'DWGTrueView*'
+$fileLocation = Join-Path $toolsDir 'AutoCAD_LT_*'
 
 $AutoCADLT2021English = @{
   packageName   = $env:ChocolateyPackageName
