@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://efulfillment.autodesk.com/NetSWDLD/2021/ACDLT/B1A1D73D-D894-441D-803D-BFFCF11A1340/SFX/AutoCAD_LT_2021_SWL_English_Win_64bit_dlm.sfx.exe'
+$url            = 'https://trial2.autodesk.com/NetSWDLD/2021/ACDLT/B1A1D73D-D894-441D-803D-BFFCF11A1340/SFX/AutoCAD_LT_2021_SWL_English_Win_64bit_dlm.sfx.exe'
 $file           = Join-Path $toolsDir 'AutoCAD_LT_2021_SWL_English_Win_64bit_dlm\Setup.exe'
 $RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
 
