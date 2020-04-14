@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>autocadlt</id>
+    <version>2020.01.24</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/autocadlt</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Autocad LT (64-bit)</title>
+    <authors>Autodesk</authors>
+    <projectUrl>https://www.autodesk.com/products/autocad-lt/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/autocadlt/icon.png</iconUrl>
+    <licenseUrl>http://download.autodesk.com/us/FY19/Suites/LSA/en-US/lsa.html</licenseUrl>
+    <docsUrl>http://help.autodesk.com/view/ACDLT/2021/ENU/</docsUrl>
+    <tags>autodesk autocad dwg cad 2D drawing</tags>
+    <summary>Autocad LT 2021 (64-bit)</summary>
+    <description>Create precise 2D drawings with powerful drafting tools. AutoCAD LT is computer-aided design (CAD) software that architects, engineers, construction professionals, and designers rely on to produce 2D drawings and documentation.</description>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.8.0.0" />
+      <dependency id="vcredist2012" version="11.0.0" />
+      <dependency id="vcredist140" version="14.20.0.0" />
+	</dependencies>
+    <releaseNotes>http://help.autodesk.com/view/ACDLT/2021/ENU/?guid=AutoCAD_LT_ReleaseNotes_autocadlt_2021_release_notes_html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
