@@ -1,0 +1,17 @@
+choco new autocad
+#check version, date of msi file in x64\acadlt
+
+checksum -t sha256 -f AutoCAD_2021_English_Win_64bit_dlm.sfx.exe
+
+checksum -t sha256 -f Setup.exe
+
+choco pack
+choco install autocad -s .
+
+#Test uninstall, powershell:
+Get-WMIObject -class win32_product
+Start-Process -FilePath "msiexec.exe" -ArgumentList "/x {xxxxxx} /qn /norestart" -Wait
+
+choco uninstall autocad
+
+choco push autocad.2020.01.24.nupkg -s https://push.chocolatey.org/
