@@ -2,15 +2,14 @@ choco new autocadlt
 #check version, date of msi file in x64\acadlt
 
 checksum -t sha256 -f AutoCAD_LT_2021_SWL_English_Win_64bit_dlm.sfx.exe
-B7B6551918F352D7D8010DE77F3DD869A2B5E774F7D628066BB446634DF9E5E3
-
 checksum -t sha256 -f Setup.exe
-32AA0B3585DCA9FD5ED45CA527B16EDB358393406E1AD9D48CC766BD18EED44A
 
 choco pack
 choco install autocadlt -s .
 
-Get-WMIObject -class win32_product -filter "Name Like '%Autodesk%'"
+#Test uninstall, powershell:
+Get-WMIObject -class win32_product
+Start-Process -FilePath "msiexec.exe" -ArgumentList "/x {xxxxxx} /qn /norestart" -Wait
 
 choco uninstall autocadlt
 

@@ -8,16 +8,16 @@ $AutoCADLT2021English = @{
   silentArgs    = "{28B89EEF-4109-0409-2102-CF3F3A09B77D} /qn /norestart"
 }
 
-$AutodeskSingleSignOnComponent = @{
+$AutoCADLT2021 = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'msi'
-  silentArgs    = "{951BB060-1350-4C93-BD83-D966C51D4005} /qn /norestart"
+  silentArgs    = "{28B89EEF-4109-0000-0102-CF3F3A09B77D} /qn /norestart"
 }
 
-$AutodeskSavetoWebandMobile = @{
+$AutoCADLT2021LanguagePackEnglish = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'msi'
-  silentArgs    = "{A9005AC0-4AD8-4E84-B1F7-EE38BB6BCC2D} /qn /norestart"
+  silentArgs    = "{28B89EEF-4109-0409-1102-CF3F3A09B77D} /qn /norestart"
 }
 
 $AutodeskMaterialLibrary2021 = @{
@@ -32,13 +32,9 @@ $AutodeskMaterialLibraryBaseResolutionImageLibrary2021 = @{
   silentArgs    = "{6EFAD582-86C1-4AB2-97C5-2070D0B90E08} /qn /norestart"
 }
 
-Stop-Process -Name "Autodesk*" -Force
-Stop-Service -Name "AdAppMgrSvc"
 Uninstall-ChocolateyPackage @AutoCADLT2021English
-Uninstall-ChocolateyPackage @AutodeskSingleSignOnComponent
-Uninstall-ChocolateyPackage @AutodeskSavetoWebandMobile
+Uninstall-ChocolateyPackage @AutoCADLT2021
+Uninstall-ChocolateyPackage @AutoCADLT2021LanguagePackEnglish
 Uninstall-ChocolateyPackage @AutodeskMaterialLibrary2021
 Uninstall-ChocolateyPackage @AutodeskMaterialLibraryBaseResolutionImageLibrary2021
-Remove-Item –path C:\ProgramData\Autodesk\SDS –recurse
-& "C:\Program Files (x86)\Autodesk\Autodesk Desktop App\removeAdAppMgr.exe" --mode unattended
 Remove-Item $fileLocation -Recurse -Force -ErrorAction Ignore
