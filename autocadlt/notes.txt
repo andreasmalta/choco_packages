@@ -13,4 +13,4 @@ Start-Process -FilePath "msiexec.exe" -ArgumentList "/x {xxxxxx} /qn /norestart"
 
 choco uninstall autocadlt
 
-choco push autocadlt.2020.01.24.nupkg -s https://push.chocolatey.org/
+choco push autocadlt.2020.01.24.nupkg --source https://push.chocolatey.org/

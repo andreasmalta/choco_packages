@@ -26,9 +26,13 @@ $packageArgsSetup = @{
   validExitCodes= @(0, 3010, 1641)
 }
 
-if (Test-path $RegRebootRequired)
-{
+if (Test-path $RegRebootRequired) {
     Remove-Item -Path $RegRebootRequired
+    Install-ChocolateyPackage @packageArgsExtract
+    Install-ChocolateyInstallPackage @packageArgsSetup
+    New-Item -Path $RegRebootRequired
 }
-Install-ChocolateyPackage @packageArgsExtract
-Install-ChocolateyInstallPackage @packageArgsSetup
+else {
+    Install-ChocolateyPackage @packageArgsExtract
+    Install-ChocolateyInstallPackage @packageArgsSetup
+}
