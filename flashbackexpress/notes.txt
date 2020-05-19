@@ -1,7 +1,7 @@
 choco new flashbackexpress
 
 checksum -t sha256 -f bbfbex5.exe
-2C84232513C55DBB31F8D0DE94F673793F815CD9EFBAB183926AD30657FE031B
+C2930CFFFBCC72F377E3EBD22C8B7B8A6E21152451125F364E72FF7BF00D6782
 
 $f='chocolateyinstall.ps1'
 gc $f | ? {$_ -notmatch "^\s*#"} | % {$_ -replace '(^.*?)\s*?[^``]#.*','$1'} | Out-File $f+".~" -en utf8; mv -fo $f+".~" $f
@@ -11,4 +11,4 @@ choco pack
 choco install flashbackexpress -s .
 choco uninstall flashbackexpress
 
-choco push flashbackexpress.5.41.0.4544.nupkg -s https://push.chocolatey.org/
+choco push flashbackexpress.5.44.0.4579.nupkg -s https://push.chocolatey.org/
