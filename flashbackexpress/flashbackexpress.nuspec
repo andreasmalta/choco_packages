@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
    <id>flashbackexpress</id>
-    <version>5.44.0.4579</version>
+    <version>5.45.0.4591</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/flashbackexpress</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>FlashBack Express</title>
@@ -16,7 +16,7 @@
     <summary>FlashBack Express 5</summary>
     <description>FlashBack Express - the best free screen recorder, captures your PC screen, webcam and sounds. Upload to Youtube or save as a video file.
 
-	NOTE: TRY AGAIN IF IT GIVES ERROR ON FIRST OPEN
+	NOTE: TRY TO OPEN AGAIN IF IT GIVES ERROR ON FIRST OPEN
 	</description>
     <releaseNotes>https://www.flashbackrecorder.com/change-history/</releaseNotes>
   </metadata>
