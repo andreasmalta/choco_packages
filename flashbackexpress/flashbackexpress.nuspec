@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
    <id>flashbackexpress</id>
-    <version>5.45.0.4591</version>
+    <version>5.47.0.4619</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/flashbackexpress</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>FlashBack Express</title>
