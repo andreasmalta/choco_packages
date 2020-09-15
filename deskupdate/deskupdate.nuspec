@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+   <id>deskupdate</id>
+    <version>5.01.0064</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/deskupdate</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Fujitsu DeskUpdate (Setup)</title>
+    <authors>Fujitsu</authors>
+    <projectUrl>https://support.ts.fujitsu.com/Deskupdate/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/deskupdate/icon.png</iconUrl>
+    <licenseUrl>https://support.ts.fujitsu.com/content/tou.asp</licenseUrl>
+    <docsUrl>https://support.ts.fujitsu.com/Deskupdate/index.asp</docsUrl>
+    <tags>fujitsu driver desk update</tags>
+    <summary>Fujitsu DeskUpdate (Setup)</summary>
+    <description>DeskUpdate searches the Fujitsu database for new drivers, BIOS updates and system-specific software packages for your system. You can decide which of the identified packages should be locally installed or updated.</description>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/deskupdate/FTS_DeskUpdate5010064ReleaseNotes_5010064_1238860.TXT</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
