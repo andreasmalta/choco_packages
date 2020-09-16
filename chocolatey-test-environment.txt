@@ -1,3 +1,6 @@
+choco install vagrant -y
+choco install virtualbox -y
+vagrant plugin install sahara
 cd chocolatey-test-environment
 vagrant plugin update
 vagrant up

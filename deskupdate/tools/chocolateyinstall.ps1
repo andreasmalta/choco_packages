@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://webdownloads2.ts.fujitsu.com/download/FileDownload/fileDownload.aspx?SoftwareGUID=E47C0F3D-69DA-4EA8-86A7-DAD3861AE17E&FileFolder=Downloadfiles&FileTypeExtension=EXE&FileNameClient=FTS_DeskUpdateSetup_5010064_1238862.EXE&Token=NTkxPTE2NDY0MTY0MTY3HyA='
+$url        = 'https://webdownloads2.ts.fujitsu.com/download/FileDownload/fileDownload.aspx?SoftwareGUID=E47C0F3D-69DA-4EA8-86A7-DAD3861AE17E&FileFolder=Downloadfiles&FileTypeExtension=EXE&FileNameClient=FTS_DeskUpdateSetup_5010064_1238862.EXE'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
