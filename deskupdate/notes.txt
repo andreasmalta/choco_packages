@@ -1,7 +1,7 @@
-checksum -t sha256 -f FTS_DeskUpdateSetup_5010064_1238862.EXE
+checksum -t sha256 -f FTS_DeskUpdateSetup_5020026_1244560.EXE
 
 choco pack
 choco install deskupdate -s .
 choco uninstall deskupdate
 
-choco push deskupdate.5.01.0064.nupkg -s https://push.chocolatey.org/
+choco push deskupdate.5.02.0026.nupkg -s https://push.chocolatey.org/

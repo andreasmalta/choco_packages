@@ -1,4 +1,4 @@
-DeskUpdate 5.01.0064 Release Notes
+DeskUpdate 5.02.0026 Release Notes
 ==================================
 
 Introduction
@@ -13,6 +13,12 @@ installable DeskUpdate you will be notified about updates.
 
 Changes
 -------
+
+CHANGES FOR 5.02.0026
+
+* NEW:   Support download mirrors
+* NEW:   Display severity info & security advisory number
+
 
 CHANGES FOR 5.01.0064
 

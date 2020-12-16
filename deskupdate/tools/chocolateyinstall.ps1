@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://webdownloads2.ts.fujitsu.com/download/FileDownload/fileDownload.aspx?SoftwareGUID=E47C0F3D-69DA-4EA8-86A7-DAD3861AE17E&FileFolder=Downloadfiles&FileTypeExtension=EXE&FileNameClient=FTS_DeskUpdateSetup_5010064_1238862.EXE'
+$url        = 'https://webdownloads3.ts.fujitsu.com/download/FileDownload/fileDownload.aspx?SoftwareGUID=ADB78416-CEC6-4914-83AB-81244A2A2939&FileFolder=Downloadfiles&FileTypeExtension=EXE&FileNameClient=FTS_DeskUpdateSetup_5020026_1244560.EXE'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -8,7 +8,7 @@ $packageArgs = @{
   fileType      = 'exe'
   url           = $url
   softwareName  = 'deskupdate*'
-  checksum      = 'C8B60B88B27364D5AAC11689C4FE597B90E171ED6FFFBC85AC6E84DA91673388'
+  checksum      = 'F9E97B9B289E56F5E54B44D934A59E0D5BA78A4618BD91149C231C5CF1483ABE'
   checksumType  = 'sha256'
   silentArgs    = "/VERYSILENT"
   validExitCodes= @(0, 3010, 1641)

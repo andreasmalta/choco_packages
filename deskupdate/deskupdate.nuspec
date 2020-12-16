@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
    <id>deskupdate</id>
-    <version>5.01.0064</version>
+    <version>5.02.0026</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/deskupdate</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Fujitsu DeskUpdate (Setup)</title>
@@ -15,7 +15,7 @@
     <tags>fujitsu driver desk update</tags>
     <summary>Fujitsu DeskUpdate (Setup)</summary>
     <description>DeskUpdate searches the Fujitsu database for new drivers, BIOS updates and system-specific software packages for your system. You can decide which of the identified packages should be locally installed or updated.</description>
-    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/deskupdate/FTS_DeskUpdate5010064ReleaseNotes_5010064_1238860.TXT</releaseNotes>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/deskupdate/FTS_DeskUpdate5020026ReleaseNotes_5020026_1244549.TXT</releaseNotes>
     <dependencies>
       <dependency id="dotnetfx" version="4.5.2.0" />
     </dependencies>
