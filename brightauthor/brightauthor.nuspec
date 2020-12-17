@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>brightauthor</id>
+    <version>4.7.2.18</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/brightauthor</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>BrightAuthor</title>
+    <authors>BrightSign</authors>
+    <projectUrl>https://www.brightsign.biz/digital-signage-products/software/brightauthor</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/brightauthor/icon.png</iconUrl>
+    <licenseUrl>https://www.brightsign.biz/legal/acceptable-use-policy</licenseUrl>
+    <docsUrl>https://docs.brightsign.biz/display/DOC/BrightAuthor+User+Guide</docsUrl>
+    <tags>brightsign brightauthor brightwall signage</tags>
+    <summary>BrightAuthor</summary>
+    <description>BrightAuthor is a PC software application for BrightSign that makes creating, publishing and managing BrightSign presentations simple and dependable. It is the central application for all your BrightSign needs, from building and distributing your presentations to managing your entire network of remote signs via the BrightSign Network. Not only does BrightAuthor offer an intuitive user interface and a wealth of digital signage features, it is also free of charge to all BrightSign customers. BrightAuthor is continually updated to keep up with market demands and future-proof your digital signage.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

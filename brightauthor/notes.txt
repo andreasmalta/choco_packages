@@ -1,0 +1,7 @@
+checksum -t sha256 -f setup_BrightAuthor_4.7.2.18.zip
+checksum -t sha256 -f setup.4.7.2.18.exe
+
+choco pack
+choco install brightauthor -s .
+choco uninstall brightauthor
+choco push brightauthor.4.7.2.18.nupkg -s https://push.chocolatey.org/
