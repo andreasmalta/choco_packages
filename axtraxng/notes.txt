@@ -9,5 +9,6 @@ checksum -t sha256 -f 'setup.exe'
 
 choco pack
 choco install axtraxng -s .
+choco install axtraxng --params="'/server'" -s .
 choco uninstall axtraxng
 choco push axtraxng.27.7.1.9.nupkg -s https://push.chocolatey.org/

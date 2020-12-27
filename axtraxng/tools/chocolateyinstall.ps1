@@ -95,10 +95,10 @@ Install-ChocolateyInstallPackage @packageArgsPreReq
 
 $pp = Get-PackageParameters
 if ($pp.'server') { 
-	Write-Host "Installing server"
+	Write-Host "INSTALLING SERVER"
 	Install-ChocolateyInstallPackage @packageArgsServer
 	Install-ChocolateyInstallPackage @packageArgsMonitor
 }
-Write-Host "Installing client"
+Write-Host "INSTALLING CLIENT"
 Install-ChocolateyInstallPackage @packageArgsClient
 Install-ChocolateyInstallPackage @packageArgsConfigTool

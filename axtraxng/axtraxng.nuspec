@@ -20,8 +20,9 @@
 The following package parameters can be set:
 
  * `/server:` - Install server together with client
+ * (SQL server needs to be installed separately)
  * If no parameter is given only the client is installed.
- * (Let me know if you need parameters for ViTrax or AxTime.)
+ * (Let me know if you need parameters for ViTrax or AxTime)
 
 To pass parameters, use `--params "''"` (e.g. `choco install axtraxng --params="'/server'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
