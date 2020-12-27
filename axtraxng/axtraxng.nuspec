@@ -27,7 +27,7 @@ The following package parameters can be set:
 To pass parameters, use `--params "''"` (e.g. `choco install axtraxng --params="'/server'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 	</description>
-    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/axtraxng/ReleaseNotes190120.pdf</releaseNotes>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/axtraxng/Rosslare%20AxTraxNG%2027.7.1.9%20Release%20Notes%20190120.pdf</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
