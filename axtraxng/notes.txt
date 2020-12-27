@@ -1,0 +1,14 @@
+checksum -t sha256 -f axtraxng_27_7_1_9.zip
+checksum -t sha256 -f AxTraxNGSetup_V.27.7.1.9_01_01_2020.exe
+checksum -t sha256 -f 'AxTime\setup.exe'
+checksum -t sha256 -f 'AxTraxConfigTool\setup.exe'
+checksum -t sha256 -f 'Client\setup.exe'
+checksum -t sha256 -f 'Pre_Requisite\setup.exe'
+checksum -t sha256 -f 'Server\setup.exe'
+cd Server Monitor
+checksum -t sha256 -f 'setup.exe'
+
+choco pack
+choco install axtraxng -s .
+choco uninstall axtraxng
+choco push axtraxng.27.7.1.9.nupkg -s https://push.chocolatey.org/
