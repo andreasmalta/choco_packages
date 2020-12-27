@@ -1,8 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-#$url = 'http://axtraxng.com/support/axtraxng/axtraxng_27_7_1_9.zip'
-$url = 'C:\temp\axtraxng_27_7_1_9.zip'
+$url = 'http://axtraxng.com/support/axtraxng/axtraxng_27_7_1_9.zip'
 $checksum_url = '63D1D6954C50F76C81A0C90291AE123CBB47836D17801007A6CDA7A22E20843F'
 $extract_url = Join-Path $toolsDir 'zip'
 $packageArgsURL = @{
