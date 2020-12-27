@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>brightauthorconnected</id>
+    <version>1.6.6</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/brightauthorconnected</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>BrightAuthor:connected</title>
+    <authors>BrightSign</authors>
+    <projectUrl>https://www.brightsign.biz/digital-signage-products/software/brightauthorconnected</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/brightauthorconnected/icon.png</iconUrl>
+    <licenseUrl>https://www.brightsign.biz/legal/acceptable-use-policy</licenseUrl>
+    <docsUrl>https://docs.brightsign.biz/display/DOC/BrightAuthor%3Aconnected</docsUrl>
+    <tags>brightsign brightauthor connected brightwall signage</tags>
+    <summary>BrightAuthor:connected</summary>
+    <description>BrightSign’s free authoring software allows you to easily create, publish and manage digital signage presentations that run flawlessly on BrightSign players. It offers an enhanced and unified BrightSign experience with a common user interface, workflow and feature set available for PC, Mac and a Chrome web browser.
+Securely connect to BSN.cloud enabled players to take advantage of new real time player controls as well as robust network and content management tools. With BrightAuthor:connected you can experience a fully connected interface to BSN.cloud and BrightSign players at all levels.</description>
+    <releaseNotes>https://www.brightsignnetwork.com/download/Marketing/Software-ReleaseNotes/BCN1_6_6.pdf</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

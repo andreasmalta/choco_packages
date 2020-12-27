@@ -1,0 +1,6 @@
+checksum -t sha256 -f BAconnected-Setup-1.6.6.exe
+
+choco pack
+choco install brightauthorconnected -s .
+choco uninstall brightauthorconnected
+choco push brightauthorconnected.1.6.6.nupkg -s https://push.chocolatey.org/
