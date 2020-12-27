@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>axtraxng</id>
+    <version>27.7.1.9</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/axtraxng</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>AxTraxNG</title>
+    <authors>Rosslare</authors>
+    <projectUrl>https://rosslaresecurity.com/products/axtraxng-platform/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/axtraxng/icon.png</iconUrl>
+    <licenseUrl>http://axtraxng.com/free/AxTraxNG_Server_Licensing_Update_260716.pdf</licenseUrl>
+    <docsUrl>http://axtraxng.com/training.html</docsUrl>
+    <tags>rosslare axtrax access control panels</tags>
+    <summary>AxTraxNG</summary>
+    <description>AxTraxNG is a complete server-client software management platform that enables setting physical access control policy across organizations that is available in multiple languages and date formats. The server manages thousands of networked access control panels and system users. The user-friendly interface is intuitive, reliable and rich in functionality. With Rosslare’s SDK tool AxTraxNG also leverages easy integration and deployment of various applications in security, safety, time and attendance and more. AxTraxNG allows the control and monitoring of every aspect of site access.
+
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/server:` - Install server together with client
+ * If no parameter is given only the client is installed.
+ * (Let me know if you need parameters for ViTrax or AxTime.)
+
+To pass parameters, use `--params "''"` (e.g. `choco install axtraxng --params="'/server'"`).
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+	</description>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/axtraxng/ReleaseNotes190120.pdf</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
