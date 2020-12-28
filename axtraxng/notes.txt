@@ -1,5 +1,4 @@
-checksum -t sha256 -f axtraxng*.zip
-checksum -t sha256 -f AxTraxNGSetup*.exe
+checksum -t sha256 -f axtraxng-master.zip
 checksum -t sha256 -f 'AxTraxConfigTool\setup.exe'
 checksum -t sha256 -f 'Client\setup.exe'
 checksum -t sha256 -f 'Pre_Requisite\setup.exe'

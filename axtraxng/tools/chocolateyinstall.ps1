@@ -2,7 +2,7 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $url = 'https://github.com/andreasmalta/axtraxng/archive/master.zip'
-$checksum_url = '63D1D6954C50F76C81A0C90291AE123CBB47836D17801007A6CDA7A22E20843F'
+$checksum_url = '704D634C008EA295A5F30C2D6B2A4ABA2FC8C2E741F053E4CCE822DFF5F37C64'
 $extract_url = Join-Path $toolsDir 'exe'
 $packageArgsURL = @{
   packageName   = $env:ChocolateyPackageName
