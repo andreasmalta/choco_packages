@@ -1,10 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$extract_url = Join-Path $toolsDir 'zip'
-$extract_exe = Join-Path $toolsDir 'exe'
-
+$extract_url = Join-Path $toolsDir 'exe'
 Remove-Item $extract_url -Recurse -Force -ErrorAction Ignore
-Remove-Item $extract_exe -Recurse -Force -ErrorAction Ignore
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName "AxTraxNG Configuration Tool"
 $key.UninstallString

@@ -1,26 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url = 'http://axtraxng.com/support/axtraxng/axtraxng_27_7_1_9.zip'
+$url = 'https://github.com/andreasmalta/axtraxng/archive/master.zip'
 $checksum_url = '63D1D6954C50F76C81A0C90291AE123CBB47836D17801007A6CDA7A22E20843F'
-$extract_url = Join-Path $toolsDir 'zip'
+$extract_url = Join-Path $toolsDir 'exe'
 $packageArgsURL = @{
   packageName   = $env:ChocolateyPackageName
   url           = $url
   checksum      = $checksum_url
   checksumType  = 'sha256'
   unziplocation = $extract_url
-}
-
-$file_exe = Join-Path $toolsDir 'zip\AxTraxNGSetup_V.27.7.1.9_01_01_2020.exe'
-$checksum_exe = 'C8A3A8D5177128D9D0B1AB16198C5C90AAC86209BFD3699B157EF488AB2F58D4'
-$extract_exe = Join-Path $toolsDir 'exe'
-$packageArgsEXE = @{
-  packageName   = $env:ChocolateyPackageName
-  file          = $file_exe
-  checksum      = $checksum_exe
-  checksumType  = 'sha256'
-  unziplocation = $extract_exe
 }
 
 $file_Client = Join-Path $toolsDir 'exe\Client\setup.exe'
@@ -89,7 +78,6 @@ $packageArgsServer = @{
 }
 
 Install-ChocolateyZipPackage @packageArgsURL
-Install-ChocolateyZipPackage @packageArgsEXE
 Install-ChocolateyInstallPackage @packageArgsPreReq
 
 $pp = Get-PackageParameters
