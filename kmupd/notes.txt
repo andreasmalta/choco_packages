@@ -9,5 +9,5 @@ checksum -t sha256 -f Universal_PS_x86_driver.msi
 choco pack
 choco install kmupd -s .
 choco install kmupd -s . --params="'/PCL /PCL5 /PS'"
-choco uninstall kmupd 
+choco uninstall kmupd
 choco push kmupd.3.7.0.0.nupkg -s https://push.chocolatey.org/
