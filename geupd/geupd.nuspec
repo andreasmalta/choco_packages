@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>geupd</id>
+    <version>3.8.0.0</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/geupd</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>DEVELOP/GENERIC Universal Print Driver PCL/PS/PCL5</title>
+    <authors>Konica Minolta</authors>
+    <projectUrl>https://www.konicaminolta.eu/eu-en/software/connectivity/universal-print-driver</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd/Readme_en.txt</licenseUrl>
+    <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd/Readme_en.txt</docsUrl>
+    <tags>konica minolta develop generic universal print printer driver pcl6 pcl5 ps</tags>
+    <summary>DEVELOP/GENERIC Universal Print Driver PCL/PS/PCL5</summary>
+    <description>This printer driver is a software that controls KONICA MINOLTA Multi Function Printer.
+This is required to print with KONICA MINOLTA Multi Function Printer from your PC.
+
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/PCL:` - Install PLC6 drivers
+ * `/PCL5:` - Install PLC5 drivers
+ * `/PS:` - Install PS drivers
+ * If no parameter is given all above drivers in the package will be installed.
+
+To pass parameters, use `--params "''"` (e.g. `choco install geupd --params="'/PCL /PCL5 /PS'"`).
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+	</description>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd/Readme_en.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,9 @@
+checksum -t sha256 -f GEUPDPCL6Win_3800MU.zip
+checksum -t sha256 -f GEUPDPCL5Win_3800MU.zip
+checksum -t sha256 -f GEUPDPSWin_3800MU.zip
+
+choco pack
+choco install geupd -s .
+choco install geupd -s . --params="'/PCL /PCL5 /PS'"
+choco uninstall geupd
+choco push geupd.3.8.0.0.nupkg -s https://push.chocolatey.org/
