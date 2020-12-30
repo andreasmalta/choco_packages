@@ -1,0 +1,9 @@
+checksum -t sha256 -f ENGLISH.txt
+checksum -t sha256 -f FRENCH.txt
+checksum -t sha256 -f JAPANESE.txt
+
+choco pack
+choco install test -s .
+choco install test -s . --params="'/FRENCH'"
+choco install test -s . --params="'/JAPANESE'"
+choco uninstall test
