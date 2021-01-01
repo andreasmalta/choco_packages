@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>navfree</id>
+    <version>2020.03.12</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/navfree</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Navisworks Freedom 2021 (64-bit)</title>
+    <authors>Autodesk</authors>
+    <projectUrl>https://www.autodesk.com/products/navisworks/3d-viewers</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/navfree/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/navfree/All%20other%20countries.rtf</licenseUrl>
+    <docsUrl>http://help.autodesk.com/view/NAVFREE/2021/ENU/</docsUrl>
+    <tags>autodesk nwd design viewer autocad revit</tags>
+    <summary>Navisworks Freedom 2021 (64-bit)</summary>
+    <description>Get the whole-project view using Navisworks solutions. Combine design data created in AutoCAD and Revit software-based products and other applications with models created by other design tools. Then, view these files with Navisworks® Freedom viewer software. NWD files viewed with Navisworks Freedom give stakeholders equal access to explore and experience whole projects.
+The Navisworks Freedom free download creates compressed, more secure, NWD format files. A practical solution to streaming large CAD models, NWD files require no model preparation, third-party server hosting, setup time, or ongoing costs.</description>
+    <releaseNotes>https://www.autodesk.com/products/navisworks/features</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist140" version="14.20.0.0" />
+	</dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
