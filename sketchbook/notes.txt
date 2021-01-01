@@ -1,0 +1,9 @@
+checksum -t sha256 -f sketchbook_8.7.1.0_win64.exe
+checksum -t sha256 -f SketchBook8.0.0.msi
+checksum -t sha256 -f isscript.msi
+
+choco pack
+choco install sketchbook -s .
+choco uninstall sketchbook
+
+choco push sketchbook.8.7.1.0.nupkg -s https://push.chocolatey.org/
