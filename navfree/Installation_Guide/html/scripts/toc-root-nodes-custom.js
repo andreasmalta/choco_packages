@@ -1,1 +1,0 @@
-$(document).trigger("register-toc-root-node-data", ["", []]);
