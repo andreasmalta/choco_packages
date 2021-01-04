@@ -1,15 +1,10 @@
-REDISTRIBUTION APPROVAL:
-
-Date: Mon, 28 Dec 2020 07:08:23 -0800
+﻿Date: Mon, 28 Dec 2020 07:08:23 -0800
 From: Mickey Markovits <support.eu@rosslaresecurity.com>
 To: Andreas Andersson <aa.malta@gmail.com>
 Subject: Re:[## 6499 ##] axtraxng redistribution
 
-
 Hi Andreas, 
-
 Please note that you can place the installation file on any storage you like. 
-
 
 ---- On  Mon, 28 Dec 2020 16:33:02 +0200 "Andreas Andersson"<aa.malta@gmail.com>  wrote ---- 
  > Hi Mickey,

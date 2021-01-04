@@ -10,7 +10,7 @@
     <authors>Rosslare</authors>
     <projectUrl>https://rosslaresecurity.com/products/axtraxng-platform/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/axtraxng/icon.png</iconUrl>
-    <licenseUrl>http://axtraxng.com/free/AxTraxNG_Server_Licensing_Update_260716.pdf</licenseUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/axtraxng/tools/LICENSE.txt</licenseUrl>
     <docsUrl>http://axtraxng.com/training.html</docsUrl>
     <tags>rosslare axtrax access control panels</tags>
     <summary>AxTraxNG</summary>
