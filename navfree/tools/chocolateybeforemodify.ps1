@@ -1,10 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileLocation = Join-Path $toolsDir 'extract'
-Remove-Item $fileLocation -Recurse -Force -ErrorAction Ignore
 
-$navfree = Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -like "Autodesk Navisworks Freedom*" }
-$navfree.Uninstall()
+#Uninstall old version - Main software & English Language Pack 2021
+Uninstall-ChocolateyPackage -PackageName "Autodesk Navisworks Freedom 2021" -FileType "msi" -SilentArgs "{DECB3F5F-A3E8-0000-8836-4CDD683D49DB} /qn /norestart"
+Uninstall-ChocolateyPackage -PackageName "Autodesk Navisworks Freedom 2021 - English Language Pack" -FileType "msi" -SilentArgs "{DECB3F5F-A3E8-0409-8836-4CDD683D49DB} /qn /norestart"
 
-$matlib = Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -like "Autodesk Material Library*" }
-$matlib.Uninstall()
+#Uninstall old version - Material Library
+$packageName = 'Autodesk Material Library*'
+$validExitCodes = @(0, 3010, 1605, 1614, 1641)
+Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
+                 -ErrorAction:SilentlyContinue `
+| Where-Object   {$_.DisplayName -like $packageName} `
+| ForEach-Object {
+	$silentArgs = '/qn /norestart'
+	$file = "$($_.UninstallString)"
+	$silentArgs = "$($_.PSChildName) $silentArgs"
+	$file = ''
+	Uninstall-ChocolateyPackage -PackageName "$packageName" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $validExitCodes
+	}
