@@ -9,8 +9,8 @@
     <title>Moldflow Communicator 2021 (64-bit)</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/moldflow/communicator-viewer</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/communicator-viewer/icon.png</iconUrl>
-    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/communicator-viewer/English.rtf</licenseUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/moldflowcommunicator/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/moldflowcommunicator/English.rtf</licenseUrl>
     <docsUrl>https://help.autodesk.com/view/MFC/2021/ENU/</docsUrl>
     <tags>autodesk mfr design viewer</tags>
     <summary>Moldflow Communicator 2021 (64-bit)</summary>
