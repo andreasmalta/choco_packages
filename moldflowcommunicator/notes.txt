@@ -1,0 +1,7 @@
+checksum -t sha256 -f MFC_2021_FCS_Multilingual_Win_64bit_dlm.sfx.exe
+checksum -t sha256 -f setup.exe
+
+choco pack
+choco install moldflowcommunicator -s .
+choco uninstall moldflowcommunicator
+choco push moldflowcommunicator.2020.09.29.nupkg -s https://push.chocolatey.org/
