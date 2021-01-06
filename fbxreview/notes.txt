@@ -1,0 +1,7 @@
+checksum -t sha256 -f Autodesk_FBX_Review_Win_64bit.exe
+checksum -t sha256 -f fbxreview.msi
+
+choco pack
+choco install fbxreview -s .
+choco uninstall fbxreview
+choco push fbxreview.1.4.1.nupkg -s https://push.chocolatey.org/

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>fbxreview</id>
+    <version>1.4.1</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/fbxreview</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>FBX Review (64-bit)</title>
+    <authors>Autodesk</authors>
+    <projectUrl>https://www.autodesk.com/products/fbx/fbx-review</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/fbxreview/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/fbxreview/All%20Other%20Countries.txt</licenseUrl>
+    <docsUrl>https://help.autodesk.com/view/FBX/2019/ENU/</docsUrl>
+    <tags>autodesk 3D models viewport wireframe shading texture lighting animation scrub abc fbx 3ds obj dxf dae bvh htr trc asf amc c3d aoa mcd</tags>
+    <summary>FBX Review (64-bit)</summary>
+    <description>FBX Review software is a stand-alone tool that lets users view 3D models and animations across many platforms without using a 3D authoring tool.</description>
+    <releaseNotes>https://help.autodesk.com/view/FBX/2019/ENU/?guid=FBX_Developer_Help_welcome_to_the_fbx_sdk_what_new_html</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2012" version="11.0.61030" />
+	</dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
