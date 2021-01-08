@@ -2,15 +2,15 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>moldflowcommunicator</id>
+    <id>moldflowc</id>
     <version>2020.09.29</version>
-    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/moldflowcommunicator</packageSourceUrl>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/moldflowc</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Moldflow Communicator 2021 (64-bit)</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/moldflow/communicator-viewer</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/moldflowcommunicator/icon.png</iconUrl>
-    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/moldflowcommunicator/English.rtf</licenseUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/moldflowc/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/moldflowc/English.rtf</licenseUrl>
     <docsUrl>https://help.autodesk.com/view/MFC/2021/ENU/</docsUrl>
     <tags>autodesk mfr design viewer</tags>
     <summary>Moldflow Communicator 2021 (64-bit)</summary>
