@@ -5,4 +5,4 @@ choco pack
 choco install flashbackexpress -s .
 choco uninstall flashbackexpress
 
-choco push flashbackexpress.5.48.0.4626.nupkg -s https://push.chocolatey.org/
+choco push flashbackexpress.5.49.nupkg -s https://push.chocolatey.org/
