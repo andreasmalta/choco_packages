@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kmupd</id>
-    <version>3.7.0.0</version>
+    <version>3.8.0.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kmupd</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>KONICA MINOLTA Universal Print Driver PCL/PS/PCL5</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://www.konicaminolta.eu/eu-en/software/connectivity/universal-print-driver</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/icon.png</iconUrl>
     <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/Readme_en.txt</licenseUrl>
-    <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/manual_en.pdf</docsUrl>
+    <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/Readme_en.txt</docsUrl>
     <tags>konica minolta universal print printer driver pcl6 pcl5 ps</tags>
     <summary>KONICA MINOLTA Universal Print Driver PCL/PS/PCL5</summary>
     <description>This printer driver is a software that controls KONICA MINOLTA Multi Function Printer.

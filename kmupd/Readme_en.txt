@@ -1,15 +1,15 @@
 ==========================================================================================
 KONICA MINOLTA Universal Printer Driver PCL/PS/PCL5
 Printer Software Document
-02/20/2020
+08/08/2020
 
-PCL  Version 3.7.0.0
-PS   Version 3.7.0.0
-PCL5 Version 3.7.0.0
-Printer Installer Version 3.2.6.0
-PCL  Setup Package Version 3.7.0.0
-PS   Setup Package Version 3.7.0.0
-PCL5 Setup Package Version 3.7.0.0
+PCL  Version 3.8.0.0
+PS   Version 3.8.0.0
+PCL5 Version 3.8.0.0
+Installer Version 3.2.12.0
+PCL  Setup Package Version 3.8.0.0
+PS   Setup Package Version 3.8.0.0
+PCL5 Setup Package Version 3.8.0.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -271,59 +271,19 @@ Supported OS :
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/PCL5 Version 3.7.0.0
+  PCL/PS/PCL5 Version 3.8.0.0
 
 ==========================================================================================
-4-1. Support the following models.
+4-1. The following issue is solved in this driver.
 ==========================================================================================
-  KONICA MINOLTA 650i
-  KONICA MINOLTA 550i
-  KONICA MINOLTA 450i
-  KONICA MINOLTA 360i
-  KONICA MINOLTA 300i
-  KONICA MINOLTA C750i
-  KONICA MINOLTA 750i
-  KONICA MINOLTA 4750i
-  KONICA MINOLTA 4050i
-  KONICA MINOLTA 4700i
-  KONICA MINOLTA C287i
-  KONICA MINOLTA C257i
-  KONICA MINOLTA C227i
-  KONICA MINOLTA C286i
-  KONICA MINOLTA C266i
-  KONICA MINOLTA C226i
+ 1 .SNMP settings not display on some models.
+    (PCL/PS/PCL5)
 
-==========================================================================================
-4-2. Update the following models.
-==========================================================================================
-  KONICA MINOLTA C360i
-  KONICA MINOLTA C300i
-  KONICA MINOLTA C250i
-  KONICA MINOLTA C4050i
-  KONICA MINOLTA C3350i
-  KONICA MINOLTA C3320i
-  KONICA MINOLTA C4000i
-  KONICA MINOLTA C3300i
-  KONICA MINOLTA 306i
-  KONICA MINOLTA 266i
-  KONICA MINOLTA 246i
-  KONICA MINOLTA 226i
-  KONICA MINOLTA C650i
-  KONICA MINOLTA C550i
-  KONICA MINOLTA C450i
+ 2 .Printout result is Exponentiation on some models.
+    (PCL)
 
-==========================================================================================
-4-3. The following issue is solved in this driver.
-==========================================================================================
- 1 .When printing in grayscale,
-    printing speed is slower than color.
-    (PCLXL)
-
- 2 .Event 1000 error occurs in Citrix environment.
-    (PCL5)
-
- 3. Suppress automatic generation of "snmpapp.conf".
-　　(PCLXL/PS/PCL5)
+ 3. Print color of Excel is different in UPD PCL.
+　　(PCL)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -547,7 +507,7 @@ This completes the uninstallation procedure.
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[UPDSetup_Own_PCL_3.7.0.0]Folder
+[UPDSetup_Own_PCL_3.8.0.0]Folder
  |- [Drivers]
   |- [Win_x64]
   |- [Win_x86]
@@ -555,7 +515,7 @@ This completes the uninstallation procedure.
   |- [Lang]                      MulitLangageFile
  |- [UPDSetup64.exe]             Installer(64-bit)
  |- [UPDSetup.exe]               Installer(32-bit)
-[UPDSetup_Own_PS_3.7.0.0]Folder
+[UPDSetup_Own_PS_3.8.0.0]Folder
  |- [Drivers]
   |- [Win_x64]
   |- [Win_x86]
@@ -563,7 +523,7 @@ This completes the uninstallation procedure.
   |- [Lang]                      MulitLangageFile
  |- [UPDSetup64.exe]             Installer(64-bit)
  |- [UPDSetup.exe]               Installer(32-bit)
-[UPDSetup_Own_PCL5_3.7.0.0]Folder
+[UPDSetup_Own_PCL5_3.8.0.0]Folder
  |- [Drivers]
   |- [Win_x64]
   |- [Win_x86]
@@ -648,6 +608,16 @@ In such a case, please be careful of the setting method etc.
         2 .[General]Tab -> [Preferrence]
         3 .[Favorite Setting] -> [Edit...]
         4 .[Edit Favorite Setting]Dialog -> [OK]
+
+ 9 .About Installer
+    When "Obtain Device Information" acquire from "Configure" Tab after 
+    installing the USB connection from "Network search" by installer, 
+    The "Apply" button is not grayed out.
+
+ 10 .About Paper Tray Information
+    Hint box is not displayed in printer property/Configure/Paper Tray Information.
+
+    Workaround: Open print settings, close OK, and reopen printer properties.
 
 ==========================================================================================
 8-2. Attentions and Restrictions when using a PCL5 driver

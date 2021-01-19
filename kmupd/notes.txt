@@ -1,13 +1,9 @@
-checksum -t sha256 -f UPDMSIWin_3700MU.zip
-checksum -t sha256 -f Universal_PCL5_x64_driver.msi
-checksum -t sha256 -f Universal_PCL5_x86_driver.msi
-checksum -t sha256 -f Universal_PCL6_x64_driver.msi
-checksum -t sha256 -f Universal_PCL6_x86_driver.msi
-checksum -t sha256 -f Universal_PS_x64_driver.msi
-checksum -t sha256 -f Universal_PS_x86_driver.msi
+checksum -t sha256 -f UPDPCL6Win_3800MU.zip
+checksum -t sha256 -f UPDPCL5Win_3800MU.zip
+checksum -t sha256 -f UPDPSWin_3800MU.zip
 
 choco pack
 choco install kmupd -s .
 choco install kmupd -s . --params="'/PCL /PCL5 /PS'"
 choco uninstall kmupd
-choco push kmupd.3.7.0.0.nupkg -s https://push.chocolatey.org/
+choco push kmupd.3.8.0.0.nupkg -s https://push.chocolatey.org/
