@@ -5,3 +5,6 @@ choco pack
 choco install moldflowc -s .
 choco uninstall moldflowc
 choco push moldflowc.2020.09.29.nupkg -s https://push.chocolatey.org/
+
+#Uninstall old version - Autodesk Moldflow Communicator 2021
+Uninstall-ChocolateyPackage -PackageName "Autodesk Moldflow Communicator 2021" -FileType "msi" -SilentArgs "{753C779D-0564-4042-8000-8FF1C120CB5E} /qn /norestart"
