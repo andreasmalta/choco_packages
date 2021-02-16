@@ -1,0 +1,7 @@
+checksum -t sha256 -f inventor_view_2021_english_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f setup.exe
+
+choco pack
+choco install inventorview -s .
+choco uninstall inventorview
+choco push inventorview.2020.09.29.nupkg -s https://push.chocolatey.org/

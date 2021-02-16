@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>inventorview</id>
+    <version>2020.09.29</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/inventorview</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Inventor View 2021 (64-bit)</title>
+    <authors>Autodesk</authors>
+    <projectUrl>https://knowledge.autodesk.com/support/inventor/downloads/caas/downloads/content/inventor-apprentice-server-2021.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/inventorview/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/inventorview/English.rtf</licenseUrl>
+    <docsUrl>https://help.autodesk.com/view/INVNTOR/2021/ENU/?guid=GUID-751C5950-5955-414D-B594-7272E532948A</docsUrl>
+    <tags>autodesk inventor viewer</tags>
+    <summary>Inventor View 2021 (64-bit)</summary>
+    <description>Share native Autodesk Inventor software data with non-Autodesk Inventor users with this freely distributable viewer that delivers high-fidelity viewing and printing of parts, assemblies and drawings.</description>
+    <releaseNotes>https://download.autodesk.com/us/support/autodesk_inventor_view_2021/autodesk_inventor_view_2021_enu.htm</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
