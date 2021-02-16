@@ -1,10 +1,11 @@
 checksum -t sha256 -f inventor_view_2021_english_win_64bit_dlm.sfx.exe
 checksum -t sha256 -f setup.exe
-date from C:\Autodesk\Inventor_View_2021_English_Win_64bit_DLM\x64\en-US\IVV\inventorViewLP.msi
-copy English.rtf from C:\Autodesk\Inventor_View_2021_English_Win_64bit_DLM\EULA
-copy inventorview.ico from C:\Autodesk\Inventor_View_2021_English_Win_64bit_DLM\SetupRes
+#date/version from C:\Autodesk\Inventor_View_2021_English_Win_64bit_DLM\x64\en-US\IVV\inventorViewLP.msi
+#copy English.rtf from C:\Autodesk\Inventor_View_2021_English_Win_64bit_DLM\EULA
+#copy inventorview.ico from C:\Autodesk\Inventor_View_2021_English_Win_64bit_DLM\SetupRes
 
 choco pack
+choco install dotnetfx vcredist2012 vcredist140 -y
 choco install inventorview -s .
 choco uninstall inventorview
 choco push inventorview.2020.02.21.nupkg -s https://push.chocolatey.org/
