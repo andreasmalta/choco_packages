@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>inventorview</id>
-    <version>2020.09.29</version>
+    <version>2020.02.21</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/inventorview</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Inventor View 2021 (64-bit)</title>
@@ -16,6 +16,11 @@
     <summary>Inventor View 2021 (64-bit)</summary>
     <description>Share native Autodesk Inventor software data with non-Autodesk Inventor users with this freely distributable viewer that delivers high-fidelity viewing and printing of parts, assemblies and drawings.</description>
     <releaseNotes>https://download.autodesk.com/us/support/autodesk_inventor_view_2021/autodesk_inventor_view_2021_enu.htm</releaseNotes>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.8.0.0" />
+      <dependency id="vcredist2012" version="11.0.0" />
+      <dependency id="vcredist140" version="14.20.0.0" />
+	</dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $url            = 'https://download.autodesk.com/us/support/autodesk_inventor_view_2021/inventor_view_2021_english_win_64bit_dlm.sfx.exe'
-$checksum_url   = '3339302E1925EDCED8965879BB7236C3E7635A4899E8E8345336F68DEBDA468F'
-$file           = Join-Path $env:TEMP 'inventor_view_2021_english_win_64bit_dlm\setup.exe'
+$checksum_url   = '93F08609AC2E3CAC05E5D836BF2C6FFDD7256572351C39C9ACB4686B2581B7AE'
+$file           = Join-Path $env:TEMP 'Inventor_View_2021_English_Win_64bit_DLM\setup.exe'
 $checksum_file  = '32AA0B3585DCA9FD5ED45CA527B16EDB358393406E1AD9D48CC766BD18EED44A'
 
 $packageArgsURL = @{
