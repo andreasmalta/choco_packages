@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hpsupportassistant</id>
+    <version>9.6.870.0</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/hpsupportassistant</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>HP Support Assistant</title>
+    <authors>HP</authors>
+    <projectUrl>https://www8.hp.com/us/en/campaigns/hpsupportassistant/hpsupport.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpsupportassistant/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpsupportassistant/license.txt</licenseUrl>
+    <docsUrl>http://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</docsUrl>
+    <tags>hp device driver update</tags>
+    <summary>HP Support Assistant</summary>
+    <description>Built-in support for your PCs and printers. Maintain your HP devices with automated support, updates, and fixes.</description>
+    <releaseNotes>http://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
