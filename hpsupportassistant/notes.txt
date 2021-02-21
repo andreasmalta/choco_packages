@@ -1,12 +1,7 @@
 checksum -t sha256 -f sp111562.exe
-checksum -t sha256 -f Setup.exe
 #copy text during gui installation to license.txt
 
 choco pack
 choco install hpsupportassistant -s .
 choco uninstall hpsupportassistant
 choco push hpsupportassistant.9.6.870.0.nupkg -s https://push.chocolatey.org/
-
-#uninstall
-"C:\Program Files (x86)\InstallShield Installation Information\{54ECA61C-83AE-4EE3-A9F7-848155A33386}\setup.exe" -runfromtemp -l0x0409  -removeonly
-MsiExec.exe /X{D0873D1A-C420-483C-A2B7-08AACD6CAC00}
