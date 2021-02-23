@@ -1,10 +1,7 @@
-choco new dwgtrueview
-
 checksum -t sha256 -f DWGTrueView_2021_English_64bit_dlm.sfx.exe
-47DBDE0EA38F195433902836D3944906519B34384D058452CC7F8A893A793480
-
 checksum -t sha256 -f Setup.exe
-32AA0B3585DCA9FD5ED45CA527B16EDB358393406E1AD9D48CC766BD18EED44A
+
+NEXT VERSION: 2022.20210122
 
 choco pack
 choco install dwgtrueview -s .
