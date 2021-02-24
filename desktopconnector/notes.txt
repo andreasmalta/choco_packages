@@ -2,9 +2,7 @@ checksum -t sha256 -f DesktopConnector-x64.exe
 
 #license - copy from setup gui
 
-choco install vcredist140 -y
-
 choco pack
 choco install desktopconnector -y -dv -s .
-choco uninstall desktopconnector /y
+choco uninstall desktopconnector -y
 choco push desktopconnector.14.6.0.1242.nupkg -s https://push.chocolatey.org/
