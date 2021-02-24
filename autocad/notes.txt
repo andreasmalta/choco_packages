@@ -1,16 +1,21 @@
-choco new autocad
-#check version, date of msi file in x64\acadlt
-
+#version, (official version).(date of msi file in x64\acadlt)
 checksum -t sha256 -f AutoCAD_2021_English_Win_64bit_dlm.sfx.exe
-checksum -t sha256 -f Setup.exe
 
 choco pack
 choco install autocad -s .
-
-#Test uninstall, powershell:
-Get-WMIObject -class win32_product
-Start-Process -FilePath "msiexec.exe" -ArgumentList "/x {xxxxxx} /qn /norestart" -Wait
-
 choco uninstall autocad
-
 choco push autocad.2020.01.24.nupkg -s https://push.chocolatey.org/
+
+
+#autocad.nuspec
+    <version>2021.20200124</version>
+    <title>Autocad 2021 (64-bit)</title>
+    <licenseUrl>https://download.autodesk.com/us/FY19/Suites/LSA/en-US/lsa.html</licenseUrl>
+    <docsUrl>https://help.autodesk.com/view/ACD/2021/ENU/</docsUrl>
+    <summary>Autocad 2021 (64-bit)</summary>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.8.0.0" />
+      <dependency id="vcredist2012" version="11.0.0" />
+      <dependency id="vcredist140" version="14.20.0.0" />
+	</dependencies>
+    <releaseNotes>https://help.autodesk.com/view/ACD/2021/ENU/?guid=AutoCAD_ReleaseNotes_autocad_2021_release_notes_html</releaseNotes>
