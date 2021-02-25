@@ -9,7 +9,8 @@ $packageArgsURL = @{
   softwareName  = 'autodesk desktop connector*'
   checksum      = $checksum_url
   checksumType  = 'sha256'
-  silentArgs    = "-s"
+  silentArgs    = "/quiet /norestart"
   validExitCodes= @(0, 3010, 1641)
 }
 Install-ChocolateyPackage @packageArgsURL
+Stop-Process -Name "DesktopConnector*" -Force
