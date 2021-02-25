@@ -1,0 +1,6 @@
+checksum -t sha256 -f R3306194_20_ApplicationSw.zip
+
+choco pack
+choco install clickshare-desktop -y -dv -s .
+choco uninstall clickshare-desktop -y
+choco push clickshare-desktop.4.12.1.10.nupkg -s https://push.chocolatey.org/
