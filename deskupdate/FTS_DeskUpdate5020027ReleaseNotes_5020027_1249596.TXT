@@ -1,0 +1,75 @@
+DeskUpdate 5.02.0027 Release Notes
+==================================
+
+Introduction
+------------
+
+DeskUpdate searches the Fujitsu database for new drivers, BIOS updates and system-specific software
+packages for your system. You can decide which of the identified packages should be locally installed
+or updated.
+
+The application is available as non-installable (instant) and as installable version. When using the
+installable DeskUpdate you will be notified about updates.
+
+Changes
+-------
+
+
+CHANGES FOR 5.02.0027
+
+* NEW:   New signature with a later expiration date
+
+
+CHANGES FOR 5.02.0026
+
+* NEW:   Support download mirrors
+* NEW:   Display severity info & security advisory number
+
+
+CHANGES FOR 5.01.0064
+
+* NEW:   Support drivers that require a specific half-year release of Windows 10
+* NEW:   Easier troubleshooting by improved error handling and logging
+* NEW:   In addition to host verification and package integrity checking,
+         DeskUpdate now uses a secure connection for downloads
+* NEW:   Switch to the modern .NET core framework
+
+
+CHANGES FOR 5.00.0050
+
+* NEW:   Display the detected device with a hyperlink to the related support site (opens a web browser)
+* FIXED: Using command line auto update could fail [ducmd]
+* FIXED: Internationalization fixes for non EU Countries [ducmd]
+* FIXED: Improved self update
+* FIXED: Re-enable the switch "/au" [ducmd]
+* FIXED: The switch "/install" is now the default if no other command switch is specified [ducmd]
+* FIXED: The switches "/app" and "/drv" work again [ducmd]
+* FIXED: Re-enable the switch "/arb" [ducmd]
+* FIXED: Disable auto update if “/web” is not specified (ignore config in this case) [ducmd]
+* FIXED: Improved compatibility with some proxy servers
+
+
+CHANGES FOR 5.00.0045
+
+* NEW:   Setup for DeskUpdate
+* NEW:   Notifier for available updates
+* FIXED: DeskUpdate does not work correctly if started from a (non-mapped) UNC Path 
+* FIXED: DeskUpdate does not work if Windows runs the turkish language 
+* FIXED: Intel Drivers with a release date of 1968 do not work 
+* FIXED: If the marketing name contains a slash, DeskUpdate fails
+* FIXED: Downloading or preparing of packages failed. ErrorCode: 661
+
+Known issues
+
+* DUCMD has compatibility issues with the switch "/drv" on some systems.
+  If using the combination "/drv /app" then please remove both switches.
+* Sometimes a driver will be offered more than once even if already installed. 
+* In rare circumstances an available driver will not be offered.
+* In rare circumstances a bios update may fail with error code 659.
+* For very old bios versions which require shutdown instead of a reboot a bios update may fail.
+* Updating from the command line when the GUI is installed does not work.
+
+
+CHANGES FOR 5.00.0008
+
+* NEW:   Support for generation 8 systems
