@@ -1,0 +1,6 @@
+checksum -t sha256 -f CiscoJabberSetup.msi
+
+choco pack
+choco install jabber -y -dv -s .
+choco uninstall jabber -y
+choco push jabber.12.9.4.nupkg -s https://push.chocolatey.org/
