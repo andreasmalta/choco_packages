@@ -1,10 +1,11 @@
 #go to https://support.ts.fujitsu.com/Deskupdate/ (Windows 10 x64)
+#select a new product / deskupdate
 #download latest version of DeskUpdate (Setup), copy link without &Token...
-#download latest releaseNotes document, copy to package folder
+#download latest releaseNotes document, copy to package folder, rename to "ReleaseNotes.TXT"
 checksum -t sha256 -f FTS_DeskUpdateSetup_5020027_1249345.EXE
 
 #update chocolateyinstall (url, checksum_url)
-#update nuspec (version, releaseNotes)
+#update nuspec (version)
 
 choco pack
 choco install dotnetfx -y
