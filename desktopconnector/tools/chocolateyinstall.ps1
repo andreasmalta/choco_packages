@@ -12,5 +12,8 @@ $packageArgsURL = @{
   silentArgs    = "/quiet /norestart"
   validExitCodes= @(0, 3010, 1641)
 }
+
 Install-ChocolateyPackage @packageArgsURL
+
+#Close software running in elevated mode
 Stop-Process -Name "DesktopConnector*" -Force
