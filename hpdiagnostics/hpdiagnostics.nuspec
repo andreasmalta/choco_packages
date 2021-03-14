@@ -8,15 +8,15 @@
     <owners>aa.malta</owners>
     <title>HP PC Hardware Diagnostics</title>
     <authors>HP</authors>
-    <projectUrl>https://www8.hp.com/us/en/campaigns/hpsupportassistant/hpsupport.html</projectUrl>
+    <projectUrl>https://www8.hp.com/us/en/campaigns/hpsupportassistant/pc-diags.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/icon.png</iconUrl>
     <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/license.txt</licenseUrl>
-    <docsUrl>http://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</docsUrl>
-    <tags>hp device driver update</tags>
+    <docsUrl>https://h20195.www2.hp.com/v2/getpdf.aspx/4AA5-3192ENW.pdf</docsUrl>
+    <tags>hp device tests</tags>
     <summary>HP PC Hardware Diagnostics</summary>
     <description>HP PC Hardware Diagnostics Windows is a Windows-based utility that allows you to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
 For Windows 7, 8.1, and older versions of Win10 (this version is for older operating systems and must be updated manually to maintain the latest diagnostics, i.e. NOT the version updated with the Microsoft Store Application)</description>
-    <releaseNotes>http://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</releaseNotes>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/releasenotes.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
