@@ -5,7 +5,6 @@ $checksum_url   = 'D1B27A0E31C6C7053A9070D48D6B3494C00AB51EA9C3D45DE243DD986C2AE
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
   fileType      = 'msi'
   url           = $url
   checksum      = $checksum_url
