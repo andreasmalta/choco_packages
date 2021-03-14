@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>fbxreview</id>
-    <version>1.4.1</version>
+    <version>1.5.0.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/fbxreview</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>FBX Review (64-bit)</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/fbx/fbx-review</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/fbxreview/icon.png</iconUrl>
-    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/fbxreview/All%20Other%20Countries.txt</licenseUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/fbxreview/license.txt</licenseUrl>
     <docsUrl>https://help.autodesk.com/view/FBX/2019/ENU/</docsUrl>
     <tags>autodesk 3D models viewport wireframe shading texture lighting animation scrub abc fbx 3ds obj dxf dae bvh htr trc asf amc c3d aoa mcd</tags>
     <summary>FBX Review (64-bit)</summary>

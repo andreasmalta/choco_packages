@@ -1,7 +1,8 @@
-checksum -t sha256 -f Autodesk_FBX_Review_Win_64bit.exe
-checksum -t sha256 -f fbxreview.msi
+#compare checksum with original file at https://apps.autodesk.com/MAYA/en/Detail/Index?id=6979630331069053932&appLang=en&os=Win64
+checksum -t sha256 -f fbx-review-installer.exe
+#copy text during gui installation to license.txt
 
 choco pack
 choco install fbxreview -s .
 choco uninstall fbxreview
-choco push fbxreview.1.4.1.nupkg -s https://push.chocolatey.org/
+choco push fbxreview.1.5.0.0.nupkg -s https://push.chocolatey.org/
