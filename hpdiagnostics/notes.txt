@@ -1,0 +1,7 @@
+checksum -t sha256 -f sp112517.exe
+#copy text during gui installation to license.txt
+
+choco pack
+choco install hpdiagnostics -dv -s .
+choco uninstall hpdiagnostics
+choco push hpdiagnostics.1.6.8.0.nupkg -s https://push.chocolatey.org/

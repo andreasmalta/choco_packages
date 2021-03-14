@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hpdiagnostics</id>
+    <version>1.6.8.0</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/hpdiagnostics</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>HP PC Hardware Diagnostics</title>
+    <authors>HP</authors>
+    <projectUrl>https://www8.hp.com/us/en/campaigns/hpsupportassistant/hpsupport.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/license.txt</licenseUrl>
+    <docsUrl>http://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</docsUrl>
+    <tags>hp device driver update</tags>
+    <summary>HP PC Hardware Diagnostics</summary>
+    <description>HP PC Hardware Diagnostics Windows is a Windows-based utility that allows you to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
+For Windows 7, 8.1, and older versions of Win10 (this version is for older operating systems and must be updated manually to maintain the latest diagnostics, i.e. NOT the version updated with the Microsoft Store Application)</description>
+    <releaseNotes>http://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
