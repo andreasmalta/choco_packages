@@ -15,9 +15,10 @@
     <tags>hp device tests</tags>
     <summary>HP PC Hardware Diagnostics</summary>
     <description>HP PC Hardware Diagnostics Windows is a Windows-based utility that allows you to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
-For Windows 7, 8.1, and older versions of Win10 (this version is for older operating systems and must be updated manually to maintain the latest diagnostics, i.e. NOT the version updated with the Microsoft Store Application)</description>
+For Windows 7, 8.1, and older versions of Win10 (this version is for older operating systems and must be updated manually to maintain the latest diagnostics, i.e. NOT the version updated with the Microsoft Store Application)
+(before installation, make sure at least dotnetfx 4.5.2 is installed first)</description>
     <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/releasenotes.txt</releaseNotes>
-  </metadata>
+	</metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
