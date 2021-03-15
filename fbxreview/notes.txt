@@ -3,6 +3,13 @@ checksum -t sha256 -f fbx-review-installer.exe
 #copy text during gui installation to license.txt
 
 choco pack
-choco install fbxreview -s .
+
+#INSTALL
+choco install vcredist140 -y
+choco install fbxreview -y -dv -s .
+
+#UPGRADE
+choco install fbxreview -y
+choco upgrade fbxreview -y -dv -s .
 choco uninstall fbxreview
 choco push fbxreview.1.5.0.0.nupkg -s https://push.chocolatey.org/
