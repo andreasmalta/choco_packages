@@ -14,12 +14,14 @@ Install-ChocolateyZipPackage @packageArgsURL
 
 $setup1         = Join-Path $extract 'setup.exe'
 $installdir     = Join-Path -Path $env:LocalAppData -ChildPath "Temp\1\chocolatey" | Join-Path -ChildPath $env:ChocolateyPackageName | Join-Path -ChildPath $env:ChocolateyPackageVersion
+$altinstalldir  = Join-Path -Path $env:LocalAppData -ChildPath "Temp\chocolatey" | Join-Path -ChildPath $env:ChocolateyPackageName | Join-Path -ChildPath $env:ChocolateyPackageVersion
 $packageArgsExtract = @{
   packageName   = $env:ChocolateyPackageName
   file          = $setup1
   unziplocation = $installdir
 }
 Install-ChocolateyZipPackage @packageArgsExtract
+Get-ChildItem $installdir | Copy-Item -Destination $altinstalldir -Recurse -Force
 
 $setup2         = Join-Path $installdir 'setup.exe'
 $packageArgsInstall = @{
