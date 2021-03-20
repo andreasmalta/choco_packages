@@ -5,11 +5,13 @@ checksum -t sha256 -f fbx-review-installer.exe
 choco pack
 
 #INSTALL
-choco install vcredist140 -y
+choco install vcredist140 autohotkey.portable -y
 choco install fbxreview -y -dv -s .
 
 #UPGRADE
 choco install fbxreview -y
 choco upgrade fbxreview -y -dv -s .
-choco uninstall fbxreview
+
+#UNINSTALL
+choco uninstall fbxreview -y
 choco push fbxreview.1.5.0.0.nupkg -s https://push.chocolatey.org/
