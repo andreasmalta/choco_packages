@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url            = 'https://dl2.filehorse.com/win/imaging-and-digital-photo/autodesk-fbx-review/Autodesk-FBX-Review-1.5.0.0.exe?st=ORxIVm6xf5yYd3oNg07kBQ&e=1616219897&fn=fbx-review-installer.exe'
+$url            = 'https://softpedia-secure-download.com/dl/cc350a59e413b41f3944f2a0114a6c8d/60573631/100246329/software/multimedia/graphic/Autodesk_FBX_Review_Win_64bit.exe'
 $checksum_url   = 'C87887125A61FF3BCA636BBEC495E3BAE64AFAE27E4492E4DC2907ECB9F7BD14'
 
 #remove version 1.4.1 before upgrading
