@@ -1,10 +1,13 @@
 checksum -t sha256 -f DWGTrueView_2021_English_64bit_dlm.sfx.exe
-checksum -t sha256 -f Setup.exe
 
-NEXT VERSION: 2022.20210122
-
+#INSTALL
 choco pack
-choco install dwgtrueview -s .
-choco uninstall dwgtrueview
+choco install dwgtrueview -y -dv -s .
 
-choco push dwgtrueview.2020.01.22.nupkg -s https://push.chocolatey.org/
+#UPGRADE
+choco install dwgtrueview -y
+choco upgrade dwgtrueview -y -dv -s .
+
+#UNINSTALL
+choco uninstall dwgtrueview -y
+choco push dwgtrueview.2022.20210122.nupkg -s https://push.chocolatey.org/
