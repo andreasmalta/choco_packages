@@ -2,9 +2,8 @@
 checksum -t sha256 -f fbx-review-installer.exe
 #copy text during gui installation to license.txt
 
-choco pack
-
 #INSTALL
+choco pack
 choco install vcredist140 autohotkey.portable -y
 choco install fbxreview -y -dv -s .
 
