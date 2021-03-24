@@ -2,10 +2,12 @@ checksum -t sha256 -f DWGTrueView_2022_English_64bit_dlm.sfx.exe
 checksum -t sha256 -f DWGTrueView_2022_French_64bit_dlm.sfx.exe
 checksum -t sha256 -f DWGTrueView_2022_Japanese_64bit_dlm.sfx.exe
 
-#copy readme from installed "Help" folder
+#copy version (buildnumber) from extract folder "setup.xml"
+#copy readme text from installed "Help" folder to releasenotes.txt
 
 #INSTALL
 choco pack
+choco install dotnetfx directx vcredist2012 vcredist140 -y
 choco install dwgtrueview -y -dv -s .
 
 #UPGRADE
@@ -14,6 +16,13 @@ choco upgrade dwgtrueview -y -dv -s .
 
 #UNINSTALL
 choco uninstall dwgtrueview -y
-choco push dwgtrueview.2022.20210122.nupkg -s https://push.chocolatey.org/
+choco push dwgtrueview.2022.24.1.51.nupkg -s https://push.chocolatey.org/
 
-setup.exe /q /w
+
+Z:\dwgtrueview\DWGTrueView_2022_English_64bit_dlm.sfx.exe -suppresslaunch -d C:\Autodesk
+
+C:\Autodesk\DWGTrueView_2022_English_64bit_dlm\x64\dwgviewr\dwgviewr.msi /q ADSK_SETUP_EXE=1
+
+MsiExec.exe /X{28B89EEF-5128-0409-0100-CF3F3A09B77D}
+close ADPClientService
+close explorer

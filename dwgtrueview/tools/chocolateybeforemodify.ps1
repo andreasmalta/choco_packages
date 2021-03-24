@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 #old versions are not removed automatically
-$packageName = 'Autodesk DWG TrueView*'
+$packageName = '*DWG TrueView*'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
 Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
                          'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
@@ -13,4 +13,5 @@ Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVe
 	$silentArgs = "$($_.PSChildName) $silentArgs"
 	$file = ''
 	Uninstall-ChocolateyPackage -PackageName "$packageName" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $validExitCodes
+	Remove-Item
 	}

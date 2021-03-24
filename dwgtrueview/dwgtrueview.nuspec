@@ -3,20 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dwgtrueview</id>
-    <version>2020.01.22</version>
+    <version>2022.24.1.51</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>Autodesk DWG TrueView (64-bit)</title>
+    <title>DWG TrueView 2022 (64-bit)</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/dwg</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
     <docsUrl>https://knowledge.autodesk.com/support/dwg-trueview</docsUrl>
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
-    <summary>Autodesk DWG TrueView 2021 (64-bit)</summary>
+    <summary>DWG TrueView 2022 (64-bit)</summary>
     <description>View DWG files or convert them to work with older versions of AutoCAD software.</description>
     <dependencies>
       <dependency id="dotnetfx" version="4.8.0.0" />
+      <dependency id="directx" version="9.29.1974.0" />
       <dependency id="vcredist2012" version="11.0.61030" />
       <dependency id="vcredist140" version="14.27.29112" />
 	</dependencies>
