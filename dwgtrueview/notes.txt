@@ -1,4 +1,6 @@
 checksum -t sha256 -f DWGTrueView_2021_English_64bit_dlm.sfx.exe
+#copy text during gui installation to license.txt
+#copy text during gui installation to releasenotes.txt
 
 #INSTALL
 choco pack
