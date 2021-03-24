@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 #old versions are not removed automatically
-$packageName = 'DWGTrueView*'
+$packageName = 'Autodesk DWG TrueView*'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
 Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
                          'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `

@@ -1,6 +1,8 @@
-checksum -t sha256 -f DWGTrueView_2021_English_64bit_dlm.sfx.exe
-#copy text during gui installation to license.txt
-#copy text during gui installation to releasenotes.txt
+checksum -t sha256 -f DWGTrueView_2022_English_64bit_dlm.sfx.exe
+checksum -t sha256 -f DWGTrueView_2022_French_64bit_dlm.sfx.exe
+checksum -t sha256 -f DWGTrueView_2022_Japanese_64bit_dlm.sfx.exe
+
+#copy readme from installed "Help" folder
 
 #INSTALL
 choco pack
@@ -13,3 +15,5 @@ choco upgrade dwgtrueview -y -dv -s .
 #UNINSTALL
 choco uninstall dwgtrueview -y
 choco push dwgtrueview.2022.20210122.nupkg -s https://push.chocolatey.org/
+
+setup.exe /q /w
