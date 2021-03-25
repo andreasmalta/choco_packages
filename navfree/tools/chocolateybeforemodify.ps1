@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-#Uninstall old version - Main software & English Language Pack 2021
-Uninstall-ChocolateyPackage -PackageName "Autodesk Navisworks Freedom 2021" -FileType "msi" -SilentArgs "{DECB3F5F-A3E8-0000-8836-4CDD683D49DB} /qn /norestart"
-Uninstall-ChocolateyPackage -PackageName "Autodesk Navisworks Freedom 2021 - English Language Pack" -FileType "msi" -SilentArgs "{DECB3F5F-A3E8-0409-8836-4CDD683D49DB} /qn /norestart"
+#Uninstall old version - Main software & English Language Pack 2022
+Uninstall-ChocolateyPackage -PackageName "Autodesk Navisworks Freedom 2022" -FileType "msi" -SilentArgs "{DECB3F5F-A3E8-0000-8836-4CDD683D49DB} /qn /norestart"
+Uninstall-ChocolateyPackage -PackageName "Autodesk Navisworks Freedom 2022 - English Language Pack" -FileType "msi" -SilentArgs "{DECB3F5F-A3E8-0409-8836-4CDD683D49DB} /qn /norestart"
 
 #Uninstall old version - Material Library
 $packageName = 'Autodesk Material Library*'

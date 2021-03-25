@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>navfree</id>
-    <version>2022</version>
+    <version>2022.190136606</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/navfree</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Navisworks Freedom 2022 (64-bit)</title>
