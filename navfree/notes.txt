@@ -1,9 +1,9 @@
-checksum -t sha256 -f Autodesk_Navisworks_Freedom_2021_Multilingual_Win_64bit_dlm.sfx.exe
-#copy text during gui installation to license.txt
-#copy text during gui installation to releasenotes.txt
+checksum -t sha256 -f Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm.sfx.exe
+#copy readme text from installed "Help" folder to releasenotes.txt
 
 #INSTALL
 choco pack
+choco install vcredist140 -y
 choco install navfree -y -dv -s .
 
 #UPGRADE
