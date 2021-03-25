@@ -1,8 +1,15 @@
 checksum -t sha256 -f Autodesk_Navisworks_Freedom_2021_Multilingual_Win_64bit_dlm.sfx.exe
-checksum -t sha256 -f setup.exe
+#copy text during gui installation to license.txt
+#copy text during gui installation to releasenotes.txt
 
+#INSTALL
 choco pack
-choco install navfree -s .
-choco uninstall navfree
+choco install navfree -y -dv -s .
 
-choco push navfree.2020.03.12.nupkg -s https://push.chocolatey.org/
+#UPGRADE
+choco install navfree -y
+choco upgrade navfree -y -dv -s .
+
+#UNINSTALL
+choco uninstall navfree -y
+choco push navfree.2022.20210122.nupkg -s https://push.chocolatey.org/
