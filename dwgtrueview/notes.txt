@@ -7,6 +7,7 @@ checksum -t sha256 -f DWGTrueView_2022_Japanese_64bit_dlm.sfx.exe
 
 #INSTALL
 choco pack
+choco install dependency-windows10 --version=10.0 -y
 choco install dotnetfx directx vcredist2012 vcredist140 -y
 choco install dwgtrueview -y -dv -s .
 choco install dwgtrueview -y -dv -s . --params="'/French'"
