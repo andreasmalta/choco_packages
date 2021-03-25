@@ -1,5 +1,0 @@
-choco pack
-choco install test -s .
-choco install test -s . --params="'/FRENCH'"
-choco install test -s . --params="'/JAPANESE'"
-choco uninstall test
