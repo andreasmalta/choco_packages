@@ -14,7 +14,18 @@
     <docsUrl>https://knowledge.autodesk.com/support/dwg-trueview</docsUrl>
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
     <summary>DWG TrueView 2022 (64-bit)</summary>
-    <description>View DWG files or convert them to work with older versions of AutoCAD software.</description>
+    <description>View DWG files or convert them to work with older versions of AutoCAD software.
+
+#### Package Parameters
+The following package parameters can be set (choose only one!):
+
+ * `/French:` - Install French language version
+ * `/Japanese:` - Install Japanese language version
+ * If no parameter is given the English language version will be installed.
+
+To pass parameters, use `--params "''"` (e.g. `choco install dwgtrueview --params="'/French'"`).
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+</description>
     <dependencies>
       <dependency id="dotnetfx" version="4.8.0.0" />
       <dependency id="directx" version="9.29.1974.0" />
