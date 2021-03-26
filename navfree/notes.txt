@@ -3,7 +3,7 @@ checksum -t sha256 -f Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm.sfx.exe
 
 #INSTALL
 choco pack
-choco install vcredist140 -y
+choco install vcredist2010 vcredist2012 vcredist140 -y
 choco install navfree -y -dv -s .
 
 #UPGRADE
@@ -14,48 +14,35 @@ choco upgrade navfree -y -dv -s .
 choco uninstall navfree -y
 choco push navfree.2022.190136606.nupkg -s https://push.chocolatey.org/
 
+Extract:
+Z:\navfree\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm.sfx.exe -suppresslaunch -d C:\Autodesk\
 
+Autodesk Navisworks Freedom 2022:
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\NAVFREE\freedom.msi" /qn /norestart
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}
+#UninstallString:	MsiExec.exe /I{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}
+#NoRemove:	0
+#SystemComponent:	0
 
+Autodesk Navisworks Freedom 2022 Language Pack:
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\en-US\NAVFREE\NAVFREE_LP.msi" /qn /norestart
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C39E6EC4-985A-0409-92D4-F6DC06B39DD2}
+#SystemComponent:	0
 
-"NAVFREE" external="false" path="x64/NAVFREE/pkg.NAVFREE.xml"
-x64/NAVFREE/freedom.msi
-    <Dependencies>
-        <Package installAs="core" name="MSXML 6.0 Parser" external="true" path="3rdParty/x64/msxml6/pkg.msxml6.xml" upi2="{31E4B8AB-D0BA-453B-B3F3-37AF06860A6D}" upgradeCode="{290D92AD-FA9F-32AC-9641-682CD88FADC7}"/>
-        <Package installAs="core" name="Microsoft Visual C 2010 SP1 Redistributable (x64)" path="3rdParty/x64/VCRedist/2010SP1/pkg.vcredist2010sp1x64.xml" upi2="{DC87AF5D-AB40-32F2-8649-BC3DE14FA559}" upgradeCode="{5CCBAB26-C180-328E-99A6-42CD219B2726}"/>
-        <Package installAs="core" name="VCREDIST2019X86" external="true" path="3rdParty/x86/VCRedist/2019/pkg.vcredist2019x86.xml" upi2="{96F1D0EF-3F86-345D-AFFC-AAE7D27F4CC3}" upgradeCode="{D716A193-0A3F-3BD8-8DB2-1EF2E5ADC7BC}"/>
-        <Package installAs="core" name="VCREDIST2019X64" external="true" path="3rdParty/x64/VCRedist/2019/pkg.vcredist2019x64.xml" upi2="{83A63925-3118-3036-88FD-99376DE050A9}" upgradeCode="{DD181682-A86C-396F-B9A4-06C053C767EB}"/>
-        <Package installAs="core" name="Microsoft DirectX for Windows" path="3rdParty/DirectX/pkg.dxsetup.xml" upi2="{C9D7C6BF-A352-3EE7-AF06-BFE6D5507BED}" upgradeCode="{E4625438-EBA5-36E6-A3EE-AF5DEB6E7AC0}"/>
-        <Package installAs="core" name="DOTNET48" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48.xml" upi2="{8A2C37AC-AD7E-3DF8-A22D-9DC8D45F7942}" upgradeCode="{1EA91221-20E9-370E-8754-EAB3FA108D71}"/>
-        <Package installAs="core" name="DOTNET48_1028" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1028.xml" upi2="{78F01D43-1392-3AD0-87DF-E01E24ADBDA9}" upgradeCode="{B8D71D8C-367D-386D-BCC2-C9F81D497544}"/>
-        <Package installAs="core" name="DOTNET48_1029" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1029.xml" upi2="{33EF1D9A-2A07-38B7-AB34-27CC9A416AA5}" upgradeCode="{0CFB57EF-FBF7-316D-8D14-8F28FD3771E8}"/>
-        <Package installAs="core" name="DOTNET48_1031" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1031.xml" upi2="{AAFFB02C-550D-3103-8594-49AAC92277B4}" upgradeCode="{0EAAA723-7B82-3C01-8BD0-AC71FE078689}"/>
-        <Package installAs="core" name="DOTNET48_1036" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1036.xml" upi2="{1A54D9CD-D4EE-3DE0-B1D1-94B9510E1F39}" upgradeCode="{94B2A88D-CE57-3468-88C6-E0F14F98CAF0}"/>
-        <Package installAs="core" name="DOTNET48_1038" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1038.xml" upi2="{2AF18D84-D59C-36A2-8244-726A5CC24CEF}" upgradeCode="{0C39BF01-AA32-34B3-9204-FC7E8FEB9E79}"/>
-        <Package installAs="core" name="DOTNET48_1040" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1040.xml" upi2="{1BC4DE18-5F81-393C-90FE-1E246F146DC0}" upgradeCode="{6C1368F7-AD99-387C-9305-67F12DE47629}"/>
-        <Package installAs="core" name="DOTNET48_1041" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1041.xml" upi2="{0A9572CF-478F-3D73-A0A5-C584EA38D2D8}" upgradeCode="{AACB6C00-0424-3597-AE20-E42001B58173}"/>
-        <Package installAs="core" name="DOTNET48_1042" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1042.xml" upi2="{B5A308E7-15D7-3365-9ACE-E87BD6782DCF}" upgradeCode="{C0D2A361-4D85-34F8-9C01-DF87D64154B4}"/>
-        <Package installAs="core" name="DOTNET48_1045" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1045.xml" upi2="{CFC42912-7329-3F75-9694-055742FAE046}" upgradeCode="{610F1FE4-B1DB-3A29-B432-09BFAE37EDC5}"/>
-        <Package installAs="core" name="DOTNET48_1046" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1046.xml" upi2="{103310B2-5290-386D-89F5-3EC4E4B0E469}" upgradeCode="{D9DA2E54-484F-35B4-9EAA-A64CFC37F6F7}"/>
-        <Package installAs="core" name="DOTNET48_1049" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_1049.xml" upi2="{1DCC7D36-3A20-33AC-B286-BF1CF8973E83}" upgradeCode="{4290863B-B9D7-333C-834B-103D413B398E}"/>
-        <Package installAs="core" name="DOTNET48_2052" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_2052.xml" upi2="{10C31A18-C4BB-3565-BA0F-E727D6D148EB}" upgradeCode="{B88DF24D-B618-3E6C-AA91-5542D0D8E57F}"/>
-        <Package installAs="core" name="DOTNET48_2070" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_2070.xml" upi2="{E58F00A6-2F04-31F9-B89E-8662B5234175}" upgradeCode="{C4519D79-9097-384D-8D20-ADF108DDE3CA}"/>
-        <Package installAs="core" name="DOTNET48_3082" external="true" path="3rdParty/dotNetFramework/48/pkg.dotnet48_3082.xml" upi2="{93971929-4058-35D8-A264-3AFC5627B763}" upgradeCode="{50143213-01D9-31C3-8916-F3CB5A9679BE}"/>
-        <Package installAs="core" name="CM" external="true" path="Content/ADSKMaterials/CM/pkg.MaterialLibrary2022.xml" upi2="{73E2F625-BB5E-42B5-8A27-6407559C5897}" upgradeCode="{908A8540-301E-3CD4-8CC8-AED15D9B47F2}"/>
-        <Package installAs="core" name="CMILB" external="true" path="Content/ADSKMaterials/ILB/pkg.BaseImageLibrary2022.xml" upi2="{80F8F9E5-B879-4CE1-AD5A-756F33DD5273}" upgradeCode="{5BC0AFDA-8A34-32AF-8510-B001AC024877}"/>
-        <Package installAs="core" name="CMPLB" external="true" path="Content/ADSKMaterials/PLB/pkg.PrismBaseImageLibrary2022.xml" upi2="{F2C4A7A4-A233-4F71-AB90-E688901F951B}" upgradeCode="{343E20BC-A84D-30D5-A261-B571FB8B7BC4}"/>
-        <Package installAs="core" name="AdSSO" external="true" path="x64/AdSSO/pkg.adsso.xml" upi2="{8AE68CB2-6668-476B-A3CF-D591129AD697}" upgradeCode="{25A33AEA-0873-3AF8-839D-CAB1697AE15F}"/>
-    </Dependencies>
+Autodesk Material Library 2022
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\CM\MaterialLibrary2022.msi" /qn /norestart
 
+Autodesk Material Library Base Resolution Image Library 2022
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\ILB\BaseImageLibrary2022.msi" /qn /norestart
 
-"NAVFREE en-US LP" external="false" path="x64/en-US/NAVFREE/pkg.NAVFREELP.xml"
-x64/en-US/NAVFREE/NAVFREE_LP.msi
+Autodesk Advanced Material Library Base Resolution Image Library 2022
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\PLB\PrismBaseImageLibrary2022.msi" /qn /norestart
 
-"AGS" external="true" path="x64/AGS/pkg.AGS.xml"
-x64/AGS/Autodesk Genuine Service.msi
+Autodesk Single Sign On Component (OK to upgrade from 11.2.0.1802)
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\AdSSO\AdSSO.msi" /qn /norestart
 
-"Autodesk Desktop App" external="true" path="x86/ADSKAPP/pkg.adskapp.xml"
-x86/ADSKAPP/AdApplicationManager-WebInstaller.exe
+Autodesk Genuine Service (OK to upgrade from 3.2.18)
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\AGS\Autodesk Genuine Service.msi" /qn /norestart
 
-Autodesk Material Library 2020: \Content\ADSKMaterials\2020\CM\MaterialLibrary2020.msi.
-Autodesk Material Library 2020 Base Image Library: \Content\ADSKMaterials\2020\ILB\BaseImageLibrary.msi.
-Autodesk Material Library 2020 Medium Image Library: \Content\ADSKMaterials\2020\ILM\MediumImageLibrary.msi.
+Autodesk Desktop App (OK to upgrade from 8.1.0.68)
+"C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x86\ADSKAPP\AdApplicationManager-installer.exe" --mode unattended
