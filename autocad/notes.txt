@@ -9,7 +9,7 @@ F7C886D879BD311635EBF229B9F5D9B6CE2171C668E905EE83C239FE9BBF2FB9
 z:
 cd Z:\autocad
 choco pack
-choco install dotnetfx vcredist2012 vcredist140 -y
+choco install dotnetfx vcredist2012 vcredist140 dotnetcore-runtime dotnetcore-aspnetruntime -y
 choco install autocad -y -dv -s .
 
 #UPGRADE
@@ -26,33 +26,56 @@ Z:\autocad\AutoCAD_2022_English_Win_64bit_dlm.sfx.exe -suppresslaunch -d C:\Auto
 
 
 
+Microsoft .NET Core Runtime 3.1.10.29419 (x64)
+choco install dotnetcore-runtime --version=3.1.10
 
-Autodesk Navisworks Freedom 2022:
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\NAVFREE\freedom.msi" /qn /norestart
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}
-#UninstallString:	MsiExec.exe /I{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}
+Microsoft ASP.NET Core Runtime 3.1.10.20520 - Shared Framework
+choco install dotnetcore-aspnetruntime --version=3.1.10
+
+
+
+
+<Package name="AutoCAD 2022 - English" upgradeCode="{F6E7356F-C99B-339D-A02C-95151183B389}" upi2="{2F9DA8EC-569C-40DF-B9E6-5CEEDB9AE7F2}" path="x64/en-US/acadps/pkg.acadps.xml" external="false" launchApp="true" installAs="core"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x64\en-US\acadps\acadps.msi"
+msiexec /i "xxx.msi" /qn /norestart
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{xxxx}
+#UninstallString:	MsiExec.exe /I{xxxxx}
 #NoRemove:	0
 #SystemComponent:	0
 
-Autodesk Navisworks Freedom 2022 Language Pack:
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\en-US\NAVFREE\NAVFREE_LP.msi" /qn /norestart
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C39E6EC4-985A-0409-92D4-F6DC06B39DD2}
+<Package name="AutoCAD 2022 Language Pack - English" path="x64/en-US/acadlp/pkg.acadlp.xml" upgradeCode="{FAFFC99C-421C-3084-BA51-037D9E2D6DE4}" upi2="{4FD9EA18-5F0E-428C-8FD0-87FCAAC103EA}" external="false" installAs="core"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x64\en-US\acadlp\acadlp.msi"
+msiexec /i "xxx.msi" /qn /norestart
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{xxxx}
 #SystemComponent:	0
 
-Autodesk Material Library 2022
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\CM\MaterialLibrary2022.msi" /qn /norestart
+<Package name="ACAD Private" path="x64/acadprivate/pkg.acadprivate.xml" upgradeCode="{FFC0C27A-A6C5-367D-86AB-F3344F4D985C}" upi2="{C54CBE6F-7D81-4B6D-8BA1-49580C3B8A4E}" external="false" installAs="core"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x64\acadprivate\acadprivate.msi"
+msiexec /i "xxx.msi" /qn /norestart
 
-Autodesk Material Library Base Resolution Image Library 2022
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\ILB\BaseImageLibrary2022.msi" /qn /norestart
+<Package name="ACA & MEP 2022 Object Enabler" upgradeCode="{0945937E-0DD8-3D11-83C8-5374BD736B40}" upi2="{75A6EBA9-735B-453B-9F45-19B6A61C8BB6}" path="x64/acaoe/pkg.acaoe.xml" external="true" installAs="core"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x64\acaoe\acaoe.msi"
+msiexec /i "xxx.msi" /qn /norestart
 
-Autodesk Advanced Material Library Base Resolution Image Library 2022
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\PLB\PrismBaseImageLibrary2022.msi" /qn /norestart
+<Package name="Autodesk Save to Web and Mobile" upgradeCode="{433896CD-E219-3F22-8FFB-71884A466102}" upi2="{4547EBFD-4728-410C-86D3-0102258EB17B}" path="x64/savetowebandmobile/pkg.autodesksavetowebandmobile.xml" external="true" installAs="core"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x64\savetowebandmobile\autodesksavetowebandmobile.msi"
+msiexec /i "xxx.msi" /qn /norestart
 
-Autodesk Single Sign On Component (OK to upgrade from 11.2.0.1802)
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\AdSSO\AdSSO.msi" /qn /norestart
+<Package name="Autodesk Genuine Service" upgradeCode="{9759EED3-17FB-3F78-9BEF-35EA8A679AC5}" upi2="{A1C7D85E-D78B-478A-86FE-4D1172CD859B}" path="x64/AGS/pkg.AGS.xml" external="true" installAs="essential"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x64\AGS\Autodesk Genuine Service.msi"
+msiexec /i "xxx.msi" /qn /norestart
 
-Autodesk Genuine Service (OK to upgrade from 3.2.18)
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\AGS\Autodesk Genuine Service.msi" /qn /norestart
+<Package name="Autodesk Desktop app" upgradeCode="{6ACE136F-9A34-3A4A-A043-F9B415F80FA2}" upi2="{AC79A0ED-A792-340A-B40F-C9D4C1C52B89}" path="x86/ADSKAPP/pkg.adskapp.xml" external="true" installAs="essential"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x86\ADSKAPP\AdApplicationManager-installer.exe" --mode unattended
 
-Autodesk Desktop App (OK to upgrade from 8.1.0.68)
-"C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x86\ADSKAPP\AdApplicationManager-installer.exe" --mode unattended
+<Package name="Autodesk App Manager" upgradeCode="{1E42956D-5864-3E05-801C-57301BC5FB80}" upi2="{378D2F61-53D6-4B43-A13A-501036FB93D3}" path="x64/appmanager/pkg.autodeskappmanager.xml" external="true" installAs="essential"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x64\appmanager\autodeskappmanager.msi"
+msiexec /i "xxx.msi" /qn /norestart
+
+<Package name="Autodesk Featured Apps" upgradeCode="{F1B55C86-95DD-3A9C-BF3D-C7435BD46E6E}" upi2="{445C5755-E118-49F6-A7B4-1A7A18895DC3}" path="x64/featuredapps/pkg.autodeskfeaturedapps.xml" external="true" installAs="essential"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x64\featuredapps\autodeskfeaturedapps.msi"
+msiexec /i "xxx.msi" /qn /norestart
+
+<Package name="AutoCAD Open in Desktop" upgradeCode="{E7B10029-61BA-3D48-8076-4BF95CC03F4D}" upi2="{709D89FA-0310-4C2E-853B-3EE00B002A9D}" path="x64/webfileopen/pkg.webfileopen.xml" external="true" installAs="essential"/>
+"C:\Autodesk\AutoCAD_2022_English_Win_64bit_dlm\x64\webfileopen\webfileopen.msi"
+msiexec /i "xxx.msi" /qn /norestart
