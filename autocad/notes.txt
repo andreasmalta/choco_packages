@@ -1,21 +1,58 @@
-#version, (official version).(date of msi file in x64\acadlt)
-checksum -t sha256 -f AutoCAD_2021_English_Win_64bit_dlm.sfx.exe
+https://efulfillment.autodesk.com/NetSWDLD/2022/ACD/1E7D4EF7-A28E-3D3E-BA3C-C6FAE4AAB2E0/SFX/AutoCAD_2022_English_Win_64bit_dlm.sfx.exe
+checksum -t sha256 -f AutoCAD_2022_English_Win_64bit_dlm.sfx.exe
+F7C886D879BD311635EBF229B9F5D9B6CE2171C668E905EE83C239FE9BBF2FB9
 
+#copy version from unzip folder setup.xml
+
+
+#INSTALL
+z:
+cd Z:\autocad
 choco pack
-choco install autocad -s .
-choco uninstall autocad
-choco push autocad.2020.01.24.nupkg -s https://push.chocolatey.org/
+choco install dotnetfx vcredist2012 vcredist140 -y
+choco install autocad -y -dv -s .
+
+#UPGRADE
+choco install autocad -y
+choco upgrade autocad -y -dv -s .
+
+#UNINSTALL
+choco uninstall autocad -y
+choco push autocad.2022.241510.nupkg -s https://push.chocolatey.org/
+
+Extract:
+Z:\autocad\AutoCAD_2022_English_Win_64bit_dlm.sfx.exe -suppresslaunch -d C:\Autodesk\
 
 
-#autocad.nuspec
-    <version>2021.20200124</version>
-    <title>Autocad 2021 (64-bit)</title>
-    <licenseUrl>https://download.autodesk.com/us/FY19/Suites/LSA/en-US/lsa.html</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/ACD/2021/ENU/</docsUrl>
-    <summary>Autocad 2021 (64-bit)</summary>
-    <dependencies>
-      <dependency id="dotnetfx" version="4.8.0.0" />
-      <dependency id="vcredist2012" version="11.0.0" />
-      <dependency id="vcredist140" version="14.20.0.0" />
-	</dependencies>
-    <releaseNotes>https://help.autodesk.com/view/ACD/2021/ENU/?guid=AutoCAD_ReleaseNotes_autocad_2021_release_notes_html</releaseNotes>
+
+
+
+Autodesk Navisworks Freedom 2022:
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\NAVFREE\freedom.msi" /qn /norestart
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}
+#UninstallString:	MsiExec.exe /I{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}
+#NoRemove:	0
+#SystemComponent:	0
+
+Autodesk Navisworks Freedom 2022 Language Pack:
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\en-US\NAVFREE\NAVFREE_LP.msi" /qn /norestart
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C39E6EC4-985A-0409-92D4-F6DC06B39DD2}
+#SystemComponent:	0
+
+Autodesk Material Library 2022
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\CM\MaterialLibrary2022.msi" /qn /norestart
+
+Autodesk Material Library Base Resolution Image Library 2022
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\ILB\BaseImageLibrary2022.msi" /qn /norestart
+
+Autodesk Advanced Material Library Base Resolution Image Library 2022
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\PLB\PrismBaseImageLibrary2022.msi" /qn /norestart
+
+Autodesk Single Sign On Component (OK to upgrade from 11.2.0.1802)
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\AdSSO\AdSSO.msi" /qn /norestart
+
+Autodesk Genuine Service (OK to upgrade from 3.2.18)
+msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\AGS\Autodesk Genuine Service.msi" /qn /norestart
+
+Autodesk Desktop App (OK to upgrade from 8.1.0.68)
+"C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x86\ADSKAPP\AdApplicationManager-installer.exe" --mode unattended
