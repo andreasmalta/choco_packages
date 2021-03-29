@@ -6,22 +6,24 @@
     <version>2022.241510</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/autocad</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>AutoCAD 2022</title>
+    <title>AutoCAD</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/autocad/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/autocad/icon.png</iconUrl>
     <licenseUrl>https://download.autodesk.com/global/dlm_eula/English.html</licenseUrl>
     <docsUrl>https://help.autodesk.com/view/ACD/2022/ENU/</docsUrl>
     <tags>autodesk autocad dwg cad drawing</tags>
-    <summary>AutoCAD 2022</summary>
+    <summary>AutoCAD</summary>
     <description>AutoCAD is computer-aided design (CAD) software that architects, engineers, and construction professionals rely on to create precise 2D and 3D drawings.
 	
 #### System requirements for AutoCAD 2022
 Operating System: 64-bit Microsoft® Windows® 10</description>
     <dependencies>
       <dependency id="dotnetfx" version="4.8.0.0" />
-      <dependency id="vcredist2012" version="11.0.0" />
-      <dependency id="vcredist140" version="14.20.0.0" />
+      <dependency id="vcredist2012" version="11.0.61030" />
+      <dependency id="vcredist140" version="14.27.29112" />
+      <dependency id="dotnetcore-runtime" version="3.1.10" />
+      <dependency id="dotnetcore-aspnetruntime" version="3.1.10" />
 	</dependencies>
     <releaseNotes>https://help.autodesk.com/view/ACD/2022/ENU/?guid=AUTOCAD_2022_RELEASE_NOTES</releaseNotes>
   </metadata>
