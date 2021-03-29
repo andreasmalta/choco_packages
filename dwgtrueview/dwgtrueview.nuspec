@@ -6,14 +6,14 @@
     <version>2022.24.1.51</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>DWG TrueView 2022</title>
+    <title>DWG TrueView</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/dwg</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
     <docsUrl>https://knowledge.autodesk.com/support/dwg-trueview</docsUrl>
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
-    <summary>DWG TrueView 2022</summary>
+    <summary>DWG TrueView</summary>
     <description>View DWG files or convert them to work with older versions of AutoCAD software.
 
 #### System requirements for DWG TrueView 2022
