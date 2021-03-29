@@ -12,4 +12,4 @@ choco upgrade desktopconnector -y -dv -s .
 
 #UNINSTALL
 choco uninstall desktopconnector -y
-choco push desktopconnector.14.7.0.1306.nupkg -s https://push.chocolatey.org/
+choco push desktopconnector.14.8.0.1381.nupkg -s https://push.chocolatey.org/
