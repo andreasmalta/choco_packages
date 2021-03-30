@@ -3,25 +3,29 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>autocadlt</id>
-    <version>2020.01.24</version>
+    <version>2022.241510</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/autocadlt</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>Autocad LT (64-bit)</title>
+    <title>AutoCAD LT</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/autocad-lt/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/autocadlt/icon.png</iconUrl>
-    <licenseUrl>http://download.autodesk.com/us/FY19/Suites/LSA/en-US/lsa.html</licenseUrl>
-    <docsUrl>http://help.autodesk.com/view/ACDLT/2021/ENU/</docsUrl>
+    <licenseUrl>https://download.autodesk.com/global/dlm_eula/English.html</licenseUrl>
+    <docsUrl>https://help.autodesk.com/view/ACDLT/2022/ENU/</docsUrl>
     <tags>autodesk autocad dwg cad 2D drawing</tags>
-    <summary>Autocad LT 2021 (64-bit)</summary>
-    <description>Create precise 2D drawings with powerful drafting tools. AutoCAD LT is computer-aided design (CAD) software that architects, engineers, construction professionals, and designers rely on to produce 2D drawings and documentation.
-This package will install the full software with default settings, but needs to be activated on first run. On upgrade, this package will remove the previous version before installing the new version. Hotfixes or service packs are not included in this package as the Desktop App will handle this.</description>
+    <summary>AutoCAD LT</summary>
+    <description>AutoCAD LT® is a powerful 2D computer-aided design (CAD) software that architects, engineers, construction professionals, and designers rely on to: Design, draft, and document with precise 2D geometry, Access a comprehensive set of editing, design, and annotation tools, Work faster in an intuitive and customizable interfaceCreate precise 2D drawings with powerful drafting tools. AutoCAD LT is computer-aided design (CAD) software that architects, engineers, construction professionals, and designers rely on to produce 2D drawings and documentation.
+	
+#### System requirements for AutoCAD 2022
+Operating System: 64-bit Microsoft® Windows® 10</description>
     <dependencies>
       <dependency id="dotnetfx" version="4.8.0.0" />
-      <dependency id="vcredist2012" version="11.0.0" />
-      <dependency id="vcredist140" version="14.20.0.0" />
+      <dependency id="vcredist2012" version="11.0.61030" />
+      <dependency id="vcredist140" version="14.27.29112" />
+      <dependency id="dotnetcore-runtime" version="3.1.10" />
+      <dependency id="dotnetcore-aspnetruntime" version="3.1.10" />
 	</dependencies>
-    <releaseNotes>http://help.autodesk.com/view/ACDLT/2021/ENU/?guid=AutoCAD_LT_ReleaseNotes_autocadlt_2021_release_notes_html</releaseNotes>
+    <releaseNotes>https://help.autodesk.com/view/ACDLT/2022/ENU/?guid=AUTOCADLT_2022_RELEASE_NOTES</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
