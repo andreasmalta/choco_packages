@@ -2,8 +2,6 @@ checksum -t sha256 -f Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm.sfx.exe
 #copy "All other countries.rtf" from unzip folder x64\NAVFREE\Autodesk\EULA
 
 #INSTALL
-z:
-cd Z:\navfree
 choco pack
 choco install dotnetfx vcredist2010 vcredist2012 vcredist140 -y
 choco install navfree -y -dv -s .
