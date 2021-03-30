@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $url            = 'https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64.exe'
-$checksum_url   = '0E0D82FB24F1758C581BB9EA65A7A4364E560638834161E5B312618C32BD0F7B'
+$checksum_url   = '1C0272A2F88D8F1F5AF0C7984ED2A6E071DB44EFD99C548133DE7F70396A91EB'
 $packageArgsURL = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'

@@ -1,16 +1,15 @@
-choco new autocadlt
-#check version, date of msi file in x64\acadlt
+checksum -t sha256 -f AutoCAD_LT_2022_English_Win_64bit_dlm.sfx.exe
+#copy version number from unzip folder setup.xml
 
-checksum -t sha256 -f AutoCAD_LT_2021_SWL_English_Win_64bit_dlm.sfx.exe
-checksum -t sha256 -f Setup.exe
-
+#INSTALL
 choco pack
-choco install autocadlt -s .
+choco install dotnetfx vcredist2012 vcredist140 dotnetcore-runtime dotnetcore-aspnetruntime -y
+choco install autocadlt -y -dv -s .
 
-#Test uninstall, powershell:
-Get-WMIObject -class win32_product
-Start-Process -FilePath "msiexec.exe" -ArgumentList "/x {xxxxxx} /qn /norestart" -Wait
+#UPGRADE
+choco install autocadlt -y
+choco upgrade autocadlt -y -dv -s .
 
-choco uninstall autocadlt
-
-choco push autocadlt.2020.01.24.nupkg --source https://push.chocolatey.org/
+#UNINSTALL
+choco uninstall autocadlt -y
+choco push autocadlt.2022.241510.nupkg -s https://push.chocolatey.org/

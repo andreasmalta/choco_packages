@@ -2,8 +2,6 @@ checksum -t sha256 -f Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm.sfx.exe
 #copy "All other countries.rtf" from unzip folder x64\NAVFREE\Autodesk\EULA
 
 #INSTALL
-z:
-cd Z:\navfree
 choco pack
 choco install dotnetfx vcredist2010 vcredist2012 vcredist140 -y
 choco install navfree -y -dv -s .
@@ -15,36 +13,3 @@ choco upgrade navfree -y -dv -s .
 #UNINSTALL
 choco uninstall navfree -y
 choco push navfree.2022.190136606.nupkg -s https://push.chocolatey.org/
-
-Extract:
-Z:\navfree\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm.sfx.exe -suppresslaunch -d C:\Autodesk\
-
-Autodesk Navisworks Freedom 2022:
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\NAVFREE\freedom.msi" /qn /norestart
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}
-#UninstallString:	MsiExec.exe /I{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}
-#NoRemove:	0
-#SystemComponent:	0
-
-Autodesk Navisworks Freedom 2022 Language Pack:
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\en-US\NAVFREE\NAVFREE_LP.msi" /qn /norestart
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C39E6EC4-985A-0409-92D4-F6DC06B39DD2}
-#SystemComponent:	0
-
-Autodesk Material Library 2022
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\CM\MaterialLibrary2022.msi" /qn /norestart
-
-Autodesk Material Library Base Resolution Image Library 2022
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\ILB\BaseImageLibrary2022.msi" /qn /norestart
-
-Autodesk Advanced Material Library Base Resolution Image Library 2022
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\Content\ADSKMaterials\PLB\PrismBaseImageLibrary2022.msi" /qn /norestart
-
-Autodesk Single Sign On Component (OK to upgrade from 11.2.0.1802)
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\AdSSO\AdSSO.msi" /qn /norestart
-
-Autodesk Genuine Service (OK to upgrade from 3.2.18)
-msiexec /i "C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x64\AGS\Autodesk Genuine Service.msi" /qn /norestart
-
-Autodesk Desktop App (OK to upgrade from 8.1.0.68)
-"C:\Autodesk\Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm\x86\ADSKAPP\AdApplicationManager-installer.exe" --mode unattended
