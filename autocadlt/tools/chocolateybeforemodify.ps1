@@ -1,6 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-
-#we are removing all packages named with a yearly release to prepare for an upgrade to next years version
+#we are removing all packages named with a yearly release to prepare for the upgrade to next years version
 
 $packageArgsPS  = @{
   packageName    = 'AutoCAD LT 2022 - English Product Specific Pack'

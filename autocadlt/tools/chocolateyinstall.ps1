@@ -1,7 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-#$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2022/ACDLT/3E4FF57B-0533-3C99-A29F-C9E2838E11E5/SFX/AutoCAD_LT_2022_English_Win_64bit_dlm.sfx.exe'
-$url             = 'Z:\autocadlt\AutoCAD_LT_2022_English_Win_64bit_dlm.sfx.exe'
+$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2022/ACDLT/3E4FF57B-0533-3C99-A29F-C9E2838E11E5/SFX/AutoCAD_LT_2022_English_Win_64bit_dlm.sfx.exe'
 $checksum        = '34D6D25E0A981BDABCC6B1C1725610DFC0419E82A1FAD62F983FE9A9DE702972'
 
 $unzip           = Join-Path $env:TEMP 'AutoCAD_LT_2022_English_Win_64bit_dlm'
@@ -25,6 +24,7 @@ if (Test-path $RegRebootRequired)
 }
 
 #setup.exe is apparently not silent so we have to install all parts individually below
+
 $adsso           = Join-Path $unzip 'x64\AdSSO\AdSSO.msi'
 $packageArgsAdSSO  = @{
   packageName    = 'Autodesk Single Sign On Component'
