@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>yammer</id>
+    <version>3.4.8</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/yammer</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Yammer Desktop</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://support.microsoft.com/en-us/office/yammer-for-windows-and-mac-50920c05-cbfc-4f11-8503-e20fb2e623a5</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/yammer/icon.png</iconUrl>
+    <licenseUrl>https://legal.office.com/en-US/docid13</licenseUrl>
+    <docsUrl>https://support.microsoft.com/en-us/yammer</docsUrl>
+    <tags>community enterprise social network knowledge discuss collaborate work</tags>
+    <summary>Yammer Desktop</summary>
+    <description>Open and dynamic communication across your organization.
+Improve engagement and enhance communication in your organization. Build communities of interest, gather ideas and feedback, and keep everyone informed, aligned, and moving forward with help from Yammer.
+The desktop app is a native client for Mac and Windows with the full functionality of Yammer. Along with streamlined log in and SSO support, the app integrates with native operating system capabilities such as notifications, shortcuts, and launch on startup.
+When you run the MSI installer, the Yammer Machine-Wide Installer is installed on the client machine, and it installs the Yammer Desktop app for users the next time they log in to their machine.</description>
+    <releaseNotes>https://support.microsoft.com/en-ie/office/what-s-new-in-yammer-12116b2c-a9f4-40a5-bf6f-5e2d82f16d58</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
