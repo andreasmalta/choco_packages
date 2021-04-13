@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url            = 'https://barcoprdwebsitefs.azureedge.net/barcoprdfs/Data/secure/downloads/tde/Active/SoftwareFiles/ApplicationSoftware/R3306183_27_ApplicationSw.zip?zBAiid5DQXjIm0jC_qm6h2uPlTRnJT9d2TloOezN2swxiMSlerltfvPxfANUfxhrvv_ubYJaX-UiWqmAiZxncqbqZ3TG'
-$checksum_url   = '10B5AA58875D4984878FF95077BA800BE19FDEDAE007AE2C50B4C9C902C62763'
-$file           = Join-Path $env:TEMP 'ClickShare_Setup.exe'
+$url            = "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306194&TdeType=3&MajorVersion=04&MinorVersion=13&PatchVersion=00&BuildVersion=012&ShowDownloadPage=False"
+$checksum_url   = '0AB0FE34F97139D68F18341A893AAB53CDD89FB914129776E04F1088BC4B098E'
+$file           = Join-Path $env:TEMP 'ClickShare_Installer.msi'
 
 $packageArgsURL = @{
   packageName   = $env:ChocolateyPackageName
@@ -15,10 +15,10 @@ Install-ChocolateyZipPackage @packageArgsURL
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  fileType      = 'exe'
+  fileType      = 'msi'
   file          = $file
   softwareName  = 'clickshare*'
-  silentArgs    = "/S"
+  silentArgs    = "/qn ACCEPT_EULA=YES /norestart"
   validExitCodes= @(0, 3010, 1641)
 }
 Install-ChocolateyPackage @packageArgs

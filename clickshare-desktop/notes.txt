@@ -1,4 +1,4 @@
-checksum -t sha256 -f R3306183_27_ApplicationSw.zip
+checksum -t sha256 -f R3306194_21_ApplicationSw.zip
 
 #INSTALL
 choco pack
