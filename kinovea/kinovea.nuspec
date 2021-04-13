@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kinovea</id>
-    <version>0.9.3</version>
+    <version>0.9.4</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kinovea</packageSourceUrl>
 	<owners>aa.malta</owners>
-    <title>Kinovea (x64 experimental)</title>
+    <title>Kinovea (x64 beta)</title>
     <authors>Joan Charmant</authors>
     <projectUrl>http://www.kinovea.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kinovea/icon.png</iconUrl>
@@ -14,15 +14,13 @@
     <docsUrl>https://www.kinovea.org/help/en/index.htm</docsUrl>
     <tags>kinovea video player sport analysis</tags>
     <projectSourceUrl>https://github.com/Kinovea/Kinovea</projectSourceUrl>
-    <summary>Kinovea Sport Analysis Video Player - 64-bit Experimental Version</summary>
+    <summary>Kinovea Sport Analysis Video Player - 64-bit Beta Version</summary>
     <description>Kinovea is a video player for sport analysis.
-It provides a set of tools to capture, slow down, study, compare, annotate and measure technical performances. (Learn more).
+It provides a set of tools to capture, slow down, study, compare, annotate and measure technical performances.
 Kinovea is completely free and open source.</description>
-    <releaseNotes>https://www.kinovea.org/setup/kinovea.0.9.3/Changelog.0.9.3.txt</releaseNotes>
+    <releaseNotes>https://www.kinovea.org/setup/kinovea.0.9.4/Changelog.0.9.4.txt</releaseNotes>
   </metadata>
   <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>

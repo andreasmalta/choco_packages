@@ -1,21 +1,15 @@
-﻿
-$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url      = 'https://www.kinovea.org/setup/kinovea.0.9.3/Kinovea-0.9.3-x64.exe'
+﻿$ErrorActionPreference = 'Stop';
+$url            = 'https://www.kinovea.org/setup/kinovea.0.9.4/Kinovea-0.9.4-x64.exe'
+$checksum       = '02A38BC3E0C72542647AAE783460F5C2183E06BED7570650DE240FF72E11B5F4'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
+  softwareName  = 'kinovea*'
   fileType      = 'exe'
   url           = $url
-
-  softwareName  = 'kinovea*'
-
-  checksum      = '917B4D391E58F2A08469A4ED4A6E454CA59D809F38F401FAA5711812A3E30942'
+  checksum      = $checksum
   checksumType  = 'sha256'
-
   silentArgs    = "/S"
   validExitCodes= @(0, 3010, 1641)
 }
-
 Install-ChocolateyPackage @packageArgs
