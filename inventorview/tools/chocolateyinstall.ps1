@@ -4,7 +4,6 @@ $url             = 'https://download.autodesk.com/us/support/files/autodesk_inve
 $checksum        = '94C4E11509DEA6F7857B936920E627D27160EE2EA148B72CFCF1B48477B6C94B'
 $unzip           = Join-Path $env:TEMP 'Inventor_View_2022_English_Win_64bit_DLM'
 
-$regkey2021lp    = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7F4DD591-2564-0004-1033-7107D70F3DB4}'
 $regkey2022      = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7F4DD591-2664-0004-0000-7107D70F3DB4}'
 $regkey2022lp    = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7F4DD591-2664-0004-1033-7107D70F3DB4}'
 
@@ -15,7 +14,7 @@ $regkey          = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$p
 if (Test-path $regkey) { Uninstall-ChocolateyPackage -PackageName "$packagename" -FileType "msi" -SilentArgs "$productcode /qn /norestart" }
 
 $packagename     = 'Language Pack 2021'
-$productcode     = '{7F4DD591-2564-0004-0000-7107D70F3DB4}'
+$productcode     = '{7F4DD591-2564-0004-1033-7107D70F3DB4}'
 $regkey          = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$productcode"
 if (Test-path $regkey) { Uninstall-ChocolateyPackage -PackageName "$packagename" -FileType "msi" -SilentArgs "$productcode /qn /norestart" }
 
