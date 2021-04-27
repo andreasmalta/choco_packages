@@ -1,8 +1,13 @@
-checksum -t sha256 -f bbfbex5.exe
+checksum -t sha256 -f bbflbk5.exe
 
-cd flashbackexpress
+#INSTALL
 choco pack
-choco install flashbackexpress -s .
-choco uninstall flashbackexpress
+choco install flashbackexpress -y -dv -s .
 
-choco push flashbackexpress.5.49.nupkg -s https://push.chocolatey.org/
+#UPGRADE
+choco install flashbackexpress -y
+choco upgrade flashbackexpress -y -dv -s .
+
+#UNINSTALL
+choco uninstall flashbackexpress -y
+choco push flashbackexpress.5.50.nupkg -s https://push.chocolatey.org/
