@@ -1,11 +1,11 @@
-checksum -t sha256 -f bbflbk5.exe
+checksum -t sha256 -f bbfbex5.exe
 
 #INSTALL
 choco pack
 choco install flashbackexpress -y -dv -s .
 
 #UPGRADE
-choco install flashbackexpress -y
+choco install flashbackexpress --ignore-checksums -y
 choco upgrade flashbackexpress -y -dv -s .
 
 #UNINSTALL
