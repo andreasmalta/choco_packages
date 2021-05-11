@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>thinupdate</id>
+    <version>2.06.22</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/thinupdate</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>HP Recovery Image and Software Download Tool (ThinUpdate)</title>
+    <authors>HP</authors>
+    <projectUrl>https://support.hp.com/us-en/document/c05480006</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/thinupdate/icon.png</iconUrl>
+    <licenseUrl>https://www.hpe.com/us/en/software/licensing.html</licenseUrl>
+    <docsUrl>http://h10032.www1.hp.com/ctg/Manual/c05211374</docsUrl>
+    <tags>hp thin client images usb update</tags>
+    <summary>HP Recovery Image and Software Download Tool (ThinUpdate)</summary>
+    <description>The HP ThinUpdate app allows you to download system images and software add-ons from HP, capture HP thin client images, create ISO files, and create bootable USB drives for image deployment.</description>
+    <releaseNotes>https://ftp.hp.com/pub/tcimages/EasyUpdate/AddOns/Win64/HPThinUpdate-02.06.22-Win64.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

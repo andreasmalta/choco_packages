@@ -1,0 +1,15 @@
+checksum -t sha256 -f HPThinUpdate-02.06.22-Win32.msi
+checksum -t sha256 -f HPThinUpdate-02.06.22-Win64.msi
+
+#INSTALL
+choco pack
+choco install thinupdate -y -dv -s .
+
+#UPGRADE
+choco pack
+choco install thinupdate -y
+choco upgrade thinupdate -y -dv -s .
+
+#UNINSTALL
+choco uninstall thinupdate -y
+choco push thinupdate.2.06.22.nupkg -s https://push.chocolatey.org/
