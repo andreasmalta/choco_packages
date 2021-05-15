@@ -5,4 +5,4 @@ in verifying that this package's contents are trustworthy.
 1. The original software is available on the following page (with very limited download speed): http://axtraxng.com/
 2. Download and unzip the AxTraxNG zip package, you will find a setup file AxTraxNGSetup*.exe
 3. Unzip the setup file with 7zip or similar to get access to the installation folders for the different components.
-4. You will find that the checksums of all the individual files will match the files that I have included in this chocolatey package.
+4. You will find that the checksums of all the individual files will match the files included in this chocolatey package.

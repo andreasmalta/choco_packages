@@ -1,13 +1,21 @@
-checksum -t sha256 -f setup-27.7.1.9.7z
-checksum -t sha256 -f 'AxTraxConfigTool\setup.exe'
-checksum -t sha256 -f 'Client\setup.exe'
-checksum -t sha256 -f 'Pre_Requisite\setup.exe'
-checksum -t sha256 -f 'Server\setup.exe'
-cd Server Monitor
-checksum -t sha256 -f 'setup.exe'
+#extract zip
+#copy release notes to github
+#extract exe
+#delete exe, ini, dll from root folder
+#delete "Add on" folder
+#delete "AxTime" folder
+#add remaining files to 7z archive (ultra compression level)
+#move 7z archive to package tools folder
 
+#INSTALL
 choco pack
-choco install axtraxng -s .
+choco install axtraxng -y -dv -s .
 choco install axtraxng --params="'/server'" -s .
-choco uninstall axtraxng
-choco push axtraxng.27.7.1.9.nupkg -s https://push.chocolatey.org/
+
+#UPGRADE
+choco install axtraxng -y
+choco upgrade axtraxng -y -dv -s .
+
+#UNINSTALL
+choco uninstall axtraxng -y
+choco push axtraxng.27.7.1.18.nupkg -s https://push.chocolatey.org/
