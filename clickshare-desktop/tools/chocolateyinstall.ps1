@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url            = "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306194&TdeType=3&MajorVersion=04&MinorVersion=13&PatchVersion=00&BuildVersion=012&ShowDownloadPage=False"
-$checksum_url   = '0AB0FE34F97139D68F18341A893AAB53CDD89FB914129776E04F1088BC4B098E'
+$url            = "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306194&TdeType=3&MajorVersion=04&MinorVersion=14&PatchVersion=00&BuildVersion=10&ShowDownloadPage=False"
+$checksum_url   = '0978D7EB5E73249E5DFBA8D1F09B1EA4A25BEB454349094A3286C80BCF234005'
 $file           = Join-Path $env:TEMP 'ClickShare_Installer.msi'
 
 $packageArgsURL = @{
