@@ -10,4 +10,4 @@ choco upgrade flashbackexpress -y -dv -s .
 
 #UNINSTALL
 choco uninstall flashbackexpress -y
-choco push flashbackexpress.5.50.nupkg -s https://push.chocolatey.org/
+choco push flashbackexpress.5.51.nupkg -s https://push.chocolatey.org/
