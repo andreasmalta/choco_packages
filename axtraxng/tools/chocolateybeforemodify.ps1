@@ -1,18 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName = $env:ChocolateyPackageName
-$softwareName = 'AxTraxNG Configuration Tool'
-$installerType = 'msi'
-$silentArgs = '/qn /norestart'
+#Uninstall AxTraxNG Configuration Tool before upgrade
+$packageName = 'AxTraxNG Configuration Tool'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
-[array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
-$file = "$($key.UninstallString)"
-$silentArgs = "$($key.PSChildName) $silentArgs"
-$file = ''
-
-Uninstall-ChocolateyPackage `
-	-PackageName $packageName `
-	-FileType $installerType `
-	-SilentArgs "$silentArgs" `
-	-ValidExitCodes $validExitCodes `
-	-File "$file"
+Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
+                 -ErrorAction:SilentlyContinue `
+| Where-Object   {$_.DisplayName -like $packageName} `
+| ForEach-Object {
+	$silentArgs = '/qn /norestart'
+	$file = "$($_.UninstallString)"
+	$silentArgs = "$($_.PSChildName) $silentArgs"
+	$file = ''
+	Uninstall-ChocolateyPackage -PackageName "$packageName" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $validExitCodes
+	}

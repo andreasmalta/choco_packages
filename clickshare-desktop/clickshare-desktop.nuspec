@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>clickshare-desktop</id>
-    <version>4.13.0.12</version>
+    <version>4.14.0.10</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/clickshare-desktop</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>ClickShare Desktop App</title>
@@ -15,7 +15,7 @@
     <tags>barco clickshare desktop app</tags>
     <summary>ClickShare Desktop App</summary>
     <description>App to wirelessly connect, conference and share content</description>
-    <releaseNotes>https://www.barco.com/en/clickshare/support/software/R3306183</releaseNotes>
+    <releaseNotes>https://www.barco.com/en/clickshare/support/software/R3306194</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
