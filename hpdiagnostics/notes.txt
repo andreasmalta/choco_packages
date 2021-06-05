@@ -1,4 +1,4 @@
-checksum -t sha256 -f sp112517.exe
+checksum -t sha256 -f sp114031.exe
 #copy text during gui installation to releasenotes.txt
 #copy text during gui installation to license.txt
 
@@ -14,4 +14,4 @@ choco upgrade hpdiagnostics -y -dv -s .
 
 #UNINSTALL
 choco uninstall hpdiagnostics -y
-choco push hpdiagnostics.1.6.8.0.nupkg -s https://push.chocolatey.org/
+choco push hpdiagnostics.1.6.9.0.nupkg -s https://push.chocolatey.org/

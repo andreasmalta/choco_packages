@@ -1,33 +1,38 @@
 TITLE:  HP PC Hardware Diagnostics Windows For FTP only (Win7/8/8.1/10 32/64-bit)
-VERSION: 1.6.8.0
+VERSION: 1.6.9.0
 DESCRIPTION: 
-This package provides the HP PC Hardware Diagnostics Windows 1.6.8.0 in supported models that are running a supported operating systems.
+This package provides the HP PC Hardware Diagnostics Windows 1.6.9.0 in supported models that are running a supported operating systems.
 
 PURPOSE: Routine
-SoftPaq NUMBER: sp112517
-EFFECTIVE DATE:  01/29/2021
+SoftPaq NUMBER: sp114031
+EFFECTIVE DATE:  05/21/2021
 CATEGORY:  Diagnostic
 SSM SUPPORTED:  No
 DEVICES SUPPORTED: N/A
-PREREQUISITES: - You must be logged on as an administrator to install this update.
+PREREQUISITES: None
 LANGUAGE(S): 
 English (US)
  
 
 ENHANCEMENTS:
-- BIOS Revision Check          
-- Battery Discharge Function 
-- Wireless Stress Test
-- Check for Battery Safety Mode
-- Improvements to Battery Health Management Detection 
-- Improvements to Always On (run as a service for battery and storage)
+- Web Cam Test Added
+- Audio Microphone Test Added
+- Fan and Thermal Test Added via UEFI
+- Ability to check /update drivers on select components:
+          - Audio
+          - Multimedia
+          - Video
+          - Wired Network
+          - Wireless Network
+- Improvements to BIOS Flash 
+- Improvements to Media Stress Test
 - Various Bug Fixes
 HOW TO USE:
 NOTE: To install the software in this package, you must be logged in with Administrator privileges.
 
 1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
 
-2. Double-click the downloaded file and follow the on-screen instructions to unpack the files to C:\SWSETUP\SP112517 or another directory of your choice.
+2. Double-click the downloaded file and follow the on-screen instructions to unpack the files to C:\SWSETUP\SP114031 or another directory of your choice.
 
 3. Run the setup program from the directory that contains the unpacked softpaq files. Use the -? to list the command line options for the setup program.
 

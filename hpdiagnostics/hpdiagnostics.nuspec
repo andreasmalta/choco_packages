@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hpdiagnostics</id>
-    <version>1.6.8.0</version>
+    <version>1.6.9.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/hpdiagnostics</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>HP PC Hardware Diagnostics</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://www8.hp.com/us/en/campaigns/hpsupportassistant/pc-diags.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/icon.png</iconUrl>
     <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/license.txt</licenseUrl>
-    <docsUrl>https://h20195.www2.hp.com/v2/getpdf.aspx/4AA5-3192ENW.pdf</docsUrl>
+    <docsUrl>https://www.hp.com/us-en/campaigns/hpsupportassistant/WhyDiags.html?jumpid=in_r12064_us/en/psg/hw_diags/secondary-banner/why-use-diagnostics</docsUrl>
     <tags>hp device tests</tags>
     <summary>HP PC Hardware Diagnostics</summary>
     <description>HP PC Hardware Diagnostics Windows is a Windows-based utility that allows you to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
