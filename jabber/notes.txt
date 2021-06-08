@@ -1,3 +1,4 @@
+#ladda hem msi från https://www.webex.com/downloads/jabber.html
 checksum -t sha256 -f CiscoJabberSetup.msi
 
 #INSTALL
