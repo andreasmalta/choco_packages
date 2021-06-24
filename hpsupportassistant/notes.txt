@@ -1,4 +1,4 @@
-checksum -t sha256 -f sp112635.exe
+checksum -t sha256 -f sp113820.exe
 #copy text during gui installation to license.txt
 
 #INSTALL
@@ -12,4 +12,4 @@ choco upgrade hpsupportassistant -y -dv -s .
 
 #UNINSTALL
 choco uninstall hpsupportassistant -y
-choco push hpsupportassistant.9.7.238.0.nupkg -s https://push.chocolatey.org/
+choco push hpsupportassistant.9.7.433.0.nupkg -s https://push.chocolatey.org/

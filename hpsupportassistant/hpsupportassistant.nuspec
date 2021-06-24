@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hpsupportassistant</id>
-    <version>9.7.238.0</version>
+    <version>9.7.433.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/hpsupportassistant</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>HP Support Assistant</title>
     <authors>HP</authors>
     <projectUrl>https://www8.hp.com/us/en/campaigns/hpsupportassistant/hpsupport.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpsupportassistant/icon.png</iconUrl>
-    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpsupportassistant/license.txt</licenseUrl>
+    <licenseUrl>https://support.hp.com/us-en/document/c00581401</licenseUrl>
     <docsUrl>http://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</docsUrl>
     <tags>hp device driver update</tags>
     <summary>HP Support Assistant</summary>

@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url            = 'https://ftp.hp.com/pub/softpaq/sp112501-113000/sp112635.exe'
-$checksum_url   = '29E44D338737817ACDEEE730F4716C76978F811A98C794BE46F5B8F488D0C66F'
+$url            = 'https://ftp.ext.hp.com/pub/softpaq/sp113501-114000/sp113820.exe'
+$checksum_url   = 'CF6744D0F547C4BE65ECE3FAFF6E5E7F2E890F9A67E3CBE906F01AC83E34C5E3'
 
 $packageArgsURL = @{
   packageName   = $env:ChocolateyPackageName
