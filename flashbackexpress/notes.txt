@@ -5,9 +5,8 @@ choco pack
 choco install flashbackexpress -y -dv -s .
 
 #UPGRADE
-choco install flashbackexpress --ignore-checksums -y
-choco upgrade flashbackexpress -y -dv -s .
+(cannot test, old version not available for download)
 
 #UNINSTALL
 choco uninstall flashbackexpress -y
-choco push flashbackexpress.5.51.nupkg -s https://push.chocolatey.org/
+choco push flashbackexpress.5.52.nupkg -s https://push.chocolatey.org/
