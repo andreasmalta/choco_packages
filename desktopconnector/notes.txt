@@ -1,5 +1,5 @@
 checksum -t sha256 -f DesktopConnector-x64.exe
-#license - copy from setup gui
+#unzip - copy foldername from autodesk installation folder
 
 #INSTALL
 choco pack
@@ -12,4 +12,4 @@ choco upgrade desktopconnector -y -dv -s .
 
 #UNINSTALL
 choco uninstall desktopconnector -y
-choco push desktopconnector.14.10.0.1456.nupkg -s https://push.chocolatey.org/
+choco push desktopconnector.14.11.0.1476.nupkg -s https://push.chocolatey.org/
