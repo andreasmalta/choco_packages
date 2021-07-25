@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>desktopconnector</id>
-    <version>14.10.0.1456</version>
+    <version>14.11.0.1476</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/desktopconnector</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Desktop Connector (64-bit)</title>
     <authors>Autodesk</authors>
     <projectUrl>https://help.autodesk.com/view/CONNECT/ENU/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/desktopconnector/icon.png</iconUrl>
-    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/desktopconnector/license.txt</licenseUrl>
+    <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
     <docsUrl>https://help.autodesk.com/view/CONNECT/ENU/?guid=CONNECT_User_s_Guide_for_Desktop_html</docsUrl>
     <tags>autodesk drive desktop connector</tags>
     <summary>Desktop Connector (64-bit)</summary>
