@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $url            = 'https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64.exe'
-$checksum       = '75559DB99902C31342109DADA7629F1A7F0C4C2894FD03729B02152A0FDA50FD'
-$unzip           = Join-Path $env:TEMP 'Autodesk_Desktop_Connector_14_11_0_1476_Win_64bit'
+$checksum       = 'A054039FAFCD88683342D616EB61B2CB5CB6B80EAEA65CA4E8BDB6F7335384E4'
+$unzip           = Join-Path $env:TEMP 'Autodesk_Desktop_Connector_14_12_0_1491_Win_64bit'
 
 $packageArgsUnzip = @{
   packageName    = 'Unzip'
