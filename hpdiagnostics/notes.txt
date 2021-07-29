@@ -1,6 +1,5 @@
-checksum -t sha256 -f sp114031.exe
+checksum -t sha256 -f sp118349.exe
 #copy text during gui installation to releasenotes.txt
-#copy text during gui installation to license.txt
 
 #INSTALL
 choco pack
