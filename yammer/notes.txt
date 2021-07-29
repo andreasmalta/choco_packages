@@ -1,10 +1,9 @@
-checksum -t sha256 -f Yammer-ia32-3.4.8.msi
-checksum -t sha256 -f Yammer-x64-3.4.8.msi
+checksum -t sha256 -f Yammer-ia32-3.4.9.msi
+checksum -t sha256 -f Yammer-x64-3.4.9.msi
 
 #INSTALL
 choco pack
 choco install yammer -y -dv -s .
-choco uninstall yammer -y
 
 #UPGRADE
 choco install yammer -y
@@ -12,4 +11,4 @@ choco upgrade yammer -y -dv -s .
 
 #UNINSTALL
 choco uninstall yammer -y
-choco push yammer.3.4.8.nupkg -s https://push.chocolatey.org/
+choco push yammer.3.4.9.nupkg -s https://push.chocolatey.org/

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yammer</id>
-    <version>3.4.8</version>
+    <version>3.4.9</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/yammer</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Yammer Desktop</title>
@@ -14,7 +14,9 @@
     <docsUrl>https://support.microsoft.com/en-us/yammer</docsUrl>
     <tags>community enterprise social network knowledge discuss collaborate work</tags>
     <summary>Yammer Desktop</summary>
-    <description>Open and dynamic communication across your organization.
+    <description>Important: The Yammer for Windows and Mac experience will end on July 31, 2021, and it's replaced by a new web version of Yammer Desktop which will not be covered by this chocolatey installation package.
+	
+	Open and dynamic communication across your organization.
 Improve engagement and enhance communication in your organization. Build communities of interest, gather ideas and feedback, and keep everyone informed, aligned, and moving forward with help from Yammer.
 The desktop app is a native client for Mac and Windows with the full functionality of Yammer. Along with streamlined log in and SSO support, the app integrates with native operating system capabilities such as notifications, shortcuts, and launch on startup.
 When you run the MSI installer, the Yammer Machine-Wide Installer is installed on the client machine, and it installs the Yammer Desktop app for users the next time they log in to their machine.</description>
