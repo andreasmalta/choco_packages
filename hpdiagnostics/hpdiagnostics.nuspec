@@ -14,8 +14,7 @@
     <docsUrl>https://www.hp.com/us-en/campaigns/hpsupportassistant/WhyDiags.html?jumpid=in_r12064_us/en/psg/hw_diags/secondary-banner/why-use-diagnostics</docsUrl>
     <tags>hp device tests</tags>
     <summary>HP PC Hardware Diagnostics</summary>
-    <description>HP PC Hardware Diagnostics Windows is a Windows-based utility that allows you to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
-(before installation, make sure at least dotnetfx 4.5.2 is installed first)</description>
+    <description>HP PC Hardware Diagnostics Windows is a Windows-based utility that allows you to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.</description>
     <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/releasenotes.txt</releaseNotes>
 	</metadata>
   <files>
