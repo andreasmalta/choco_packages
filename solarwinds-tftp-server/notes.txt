@@ -1,12 +1,10 @@
+#copy TFTPServer-en.htm from "C:\Program Files (x86)\SolarWinds\TFTP Server\Help"
+checksum -t sha256 -f SolarWinds-TFTP-Server.zip
 
-checksum -t sha256 -f C:\temp\SolarWinds-TFTP-Server.zip
-BBDC2D1FDCCEBB445F972480675DF732A674FC86671EBE7107161D8DAA3DFA14
-
-checksum -t sha256 -f C:\temp\TFTP-Server-Installer.exe
-EC61640CA19CD915B264058198237802477D3B44B4D62B35A654087AA31B8C03
-
-cd C:\temp\solarwinds-tftp-server
+#INSTALL
 choco pack
-choco install solarwinds-tftp-server -s .
-choco uninstall solarwinds-tftp-server
-choco push solarwinds-tftp-server.11.0.4.101.nupkg -s https://push.chocolatey.org/
+choco install solarwinds-tftp-server -y -dv -s .
+
+#UNINSTALL
+choco uninstall solarwinds-tftp-server -y
+choco push solarwinds-tftp-server.11.2.0.211.nupkg -s https://push.chocolatey.org/

@@ -1,28 +1,32 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url      = 'https://downloads.solarwinds.com/solarwinds/Release/FreeTool/SolarWinds-TFTP-Server.zip'
-$checksum_url    = 'BBDC2D1FDCCEBB445F972480675DF732A674FC86671EBE7107161D8DAA3DFA14'
-$extract = Join-Path $toolsDir 'setup'
-$file = Join-Path $toolsDir 'setup\TFTP-Server-Installer.exe'
-$checksum_file    = 'EC61640CA19CD915B264058198237802477D3B44B4D62B35A654087AA31B8C03'
 
-$packageArgs1 = @{
-  packageName   = $env:ChocolateyPackageName
-  url           = $url
-  checksum      = $checksum_url
-  checksumType  = 'sha256'
-  unziplocation = $extract
-}
-Install-ChocolateyZipPackage @packageArgs1
+$url             = 'https://downloads.solarwinds.com/solarwinds/Release/FreeTool/SolarWinds-TFTP-Server.zip'
+$checksum        = '2D5CB035F23CD25BE5F0DAA391E6A21FB04A52E968991F363E755B92F2ACC2D6'
 
-$packageArgs2 = @{
-  packageName   = $env:ChocolateyPackageName
-  fileType      = 'exe'
-  file          = $file
-  softwareName  = 'SolarWinds TFTP Server*'
-  checksum      = $checksum_file
-  checksumType  = 'sha256'
-  silentArgs    = "/S /R"
-  validExitCodes= @(0, 3010, 1641)
+$packageArgsURL = @{
+  packageName    = $env:ChocolateyPackageName
+  url            = $url
+  checksum       = $checksum
+  checksumType   = 'sha256'
+  unziplocation  = $env:TEMP
 }
-Install-ChocolateyInstallPackage @packageArgs2
+Install-ChocolateyZipPackage @packageArgsURL
+
+$extract = Join-Path $env:TEMP 'TFTP-Server-Installer.exe'
+$packageArgsExtract = @{
+  packageName    = $env:ChocolateyPackageName
+  url            = $extract
+  unziplocation  = $env:TEMP
+}
+Install-ChocolateyZipPackage @packageArgsExtract
+
+$setup = Join-Path $env:TEMP '$_2_\SubInstallers\TFTPInstaller.msi'
+$packageArgs = @{
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'msi'
+  file           = $setup
+  softwareName   = 'SolarWinds TFTP Server*'
+  silentArgs     = "/qn /norestart"
+  validExitCodes = @(0, 3010, 1641)
+}
+Install-ChocolateyPackage @packageArgs
