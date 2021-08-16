@@ -1,4 +1,4 @@
-DeskUpdate 5.02.0027 Release Notes
+DeskUpdate 5.02.0030 Release Notes
 ==================================
 
 Introduction
@@ -14,6 +14,11 @@ installable DeskUpdate you will be notified about updates.
 Changes
 -------
 
+CHANGES FOR 5.02.0030
+
+* NEW:  ducmd.exe can download and install BIOS updates
+* NEW:  Added /NOBIOS switch to suppress BIOS updates
+* NEW:  Updated help text of ducmd.exe /? 
 
 CHANGES FOR 5.02.0027
 

@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url             = 'https://webdownloads2.ts.fujitsu.com/download/FileDownload/fileDownload.aspx?SoftwareGUID=5345FCD8-3F02-4199-90AD-22269D958EF8&FileFolder=Downloadfiles&FileTypeExtension=EXE&FileNameClient=FTS_DeskUpdateSetup_5020027_1249345.EXE'
-$checksum_url    = '285641F909F12552068BDEBF3BF8F78F9916331356101B23A563DD9B16C577BC'
+$url             = 'https://webdownloads3.ts.fujitsu.com/download/FileDownload/fileDownload.aspx?SoftwareGUID=2A321609-0FBB-480D-B331-0968AA886CC1&FileFolder=Downloadfiles&FileTypeExtension=EXE&FileNameClient=FTS_DeskUpdateSetup_5020030_1257366.EXE'
+$checksum_url    = '260DA0BD1F9C1E6959256CC438D13E03C487479BAC05B4D0967EDCD16488FE3A'
 
 $packageArgs     = @{
   packageName    = $env:ChocolateyPackageName
