@@ -1,4 +1,4 @@
-checksum -t sha256 -f "BA connected Setup 1.6.40.exe"
+checksum -t sha256 -f "BA connected Setup 1.6.44.exe"
 
 #INSTALL
 choco pack
@@ -10,4 +10,4 @@ choco upgrade brightauthorconnected -y -dv -s .
 
 #UNINSTALL
 choco uninstall brightauthorconnected -y
-choco push brightauthorconnected.1.6.40.nupkg -s https://push.chocolatey.org/
+choco push brightauthorconnected.1.6.44.nupkg -s https://push.chocolatey.org/
