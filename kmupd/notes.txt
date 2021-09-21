@@ -1,10 +1,11 @@
 checksum -t sha256 -f UPDPSWin_3900MU.zip
 checksum -t sha256 -f UPDPCL6Win_3900MU.zip
+checksum -t sha256 -f UPDPCFAXWin_3900MU.zip
 
 #INSTALL
 choco pack
 choco install kmupd -y -dv -s .
-choco install kmupd -y -dv -s . --params="'/PCL /PS'"
+choco install kmupd -y -dv -s . --params="'/FAX /PCL /PS'"
 
 #UPGRADE
 choco install kmupd -y

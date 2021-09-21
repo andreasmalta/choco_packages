@@ -8,11 +8,11 @@
     <owners>aa.malta</owners>
     <title>KONICA MINOLTA Universal Print Driver PCL/PS</title>
     <authors>Konica Minolta</authors>
-    <projectUrl>https://www.konicaminolta.eu/eu-en/software/connectivity/universal-print-driver</projectUrl>
+    <projectUrl>https://www.konicaminolta.eu/eu-en/software/connectivity/universal-print-driver-connectivity</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/icon.png</iconUrl>
     <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/Readme_en.txt</licenseUrl>
     <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/Readme_en.txt</docsUrl>
-    <tags>konica minolta universal print printer driver pcl pcl6 ps</tags>
+    <tags>konica minolta universal print printer driver fax pcl pcl6 ps</tags>
     <summary>KONICA MINOLTA Universal Print Driver PCL/PS</summary>
     <description>This printer driver is a software that controls KONICA MINOLTA Multi Function Printer.
 This is required to print with KONICA MINOLTA Multi Function Printer from your PC.
@@ -20,11 +20,12 @@ This is required to print with KONICA MINOLTA Multi Function Printer from your P
 #### Package Parameters
 The following package parameters can be set:
 
+ * `/FAX:` - Install FAX x86/x64 driver
  * `/PCL:` - Install PLC6 x86/x64 driver
  * `/PS:` - Install PS x86/x64 driver
  * If no parameter is given all drivers in the package will be installed.
 
-To pass parameters, use `--params "''"` (e.g. `choco install kmupd --params="'/PCL /PS'"`).
+To pass parameters, use `--params "''"` (e.g. `choco install kmupd --params="'/FAX /PCL /PS'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 	</description>
     <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/Readme_en.txt</releaseNotes>
