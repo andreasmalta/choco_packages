@@ -1,28 +1,23 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$PCL            = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=fc81b71d454cfae7b9104e06bc05211b&tx_kmanacondaimport_downloadproxy[documentId]=126942&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum   = '847731F2FD7C8E6DE98618E3C51F9D0E5E47CBC990B713BA1FB620AC1E09D3C3'
-$PCL5           = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=d51187f49809251bc17f5a9565ee22d1&tx_kmanacondaimport_downloadproxy[documentId]=126943&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PCL5_checksum  = 'FDB643E46768DBA53A065056AE56B03B87218328764E8443EC34AED811F5B25F'
-$PS             = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=a146b3a16d8f9f5c390f03aec512ddeb&tx_kmanacondaimport_downloadproxy[documentId]=126944&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PS_checksum    = 'AA8509845983BF63CA9568977700DEBAFF55D7084867DAE416CEA9D375E78223'
+$PCL            = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=db69e8d121fea061d1d8558184cc2bc2&tx_kmanacondaimport_downloadproxy[documentId]=128825&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PCL_checksum   = '85C5476F7671CC65D3864CB3C6829B0B497D216F2F9AC00B21E18879F2E8B9A9'
+$PS             = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=5ebe0f108582723d2feba8950d2b5fcc&tx_kmanacondaimport_downloadproxy[documentId]=128826&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PS_checksum    = 'C453748DCC581EC85005E7E19163F424BBC358C02C718DF62A6C87260D6918A4'
 
 $PCL_extract    = Join-Path $env:TEMP 'extractPCL'
-$PCL5_extract   = Join-Path $env:TEMP 'extractPCL5'
 $PS_extract     = Join-Path $env:TEMP 'extractPS'
+
+$validExitCodes = @(0, 3010, 1605, 1614, 1641)
+Uninstall-ChocolateyPackage -PackageName "Universal PCL6 x64 Multi-Lingual driver" -FileType "msi" -SilentArgs "{710D3701-E7E6-4958-A75B-60663234694D} /qn /norestart" -ValidExitCodes $validExitCodes
+Uninstall-ChocolateyPackage -PackageName "Universal PS x64 Multi-Lingual driver" -FileType "msi" -SilentArgs "{8F32D344-DE7B-4D48-ADD0-1811AE858FFE} /qn /norestart" -ValidExitCodes $validExitCodes
+Uninstall-ChocolateyPackage -PackageName "Universal PCL5 x64 Multi-Lingual driver" -FileType "msi" -SilentArgs "{A8C9B8BA-88CA-4322-B686-9AD7330BCF06} /qn /norestart" -ValidExitCodes $validExitCodes
 
 $packageArgsPCL = @{
 	packageName   = $env:ChocolateyPackageName
 	unzipLocation = $PCL_extract
 	url           = $PCL
 	checksum      = $PCL_checksum
-	checksumType  = 'sha256'
-}
-$packageArgsPCL5 = @{
-	packageName   = $env:ChocolateyPackageName
-	unzipLocation = $PCL5_extract
-	url           = $PCL5
-	checksum      = $PCL5_checksum
 	checksumType  = 'sha256'
 }
 $packageArgsPS = @{
@@ -34,7 +29,7 @@ $packageArgsPS = @{
 }
 
 $pp = Get-PackageParameters
-if ($pp.'PCL' -or $pp.'PCL5' -or $pp.'PS') { 
+if ($pp.'PCL' -or $pp.'PS') { 
 
 	if ($pp.'PCL') { 
 	Write-Host "INSTALLING PCL DRIVER"
@@ -42,14 +37,6 @@ if ($pp.'PCL' -or $pp.'PCL5' -or $pp.'PS') {
 	Get-ChildItem $PCL_extract -Recurse -Filter "*.inf" | 
 	ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
 	Add-PrinterDriver -Name "KONICA MINOLTA Universal PCL"
-	}
-
-	if ($pp.'PCL5') { 
-	Write-Host "INSTALLING PCL5 DRIVER"
-	Install-ChocolateyZipPackage @packageArgsPCL5
-	Get-ChildItem $PCL5_extract -Recurse -Filter "*.inf" | 
-	ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
-	Add-PrinterDriver -Name "KONICA MINOLTA Universal PCL5"
 	}
 
 	if ($pp.'PS') { 
@@ -61,16 +48,11 @@ if ($pp.'PCL' -or $pp.'PCL5' -or $pp.'PS') {
 	}
 
 } else {
-	Write-Host "INSTALLING PCL/PCL5/PS DRIVERS"
+	Write-Host "INSTALLING PCL/PS DRIVERS"
 	Install-ChocolateyZipPackage @packageArgsPCL
 	Get-ChildItem $PCL_extract -Recurse -Filter "*.inf" | 
 	ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
 	Add-PrinterDriver -Name "KONICA MINOLTA Universal PCL"
-
-	Install-ChocolateyZipPackage @packageArgsPCL5
-	Get-ChildItem $PCL5_extract -Recurse -Filter "*.inf" | 
-	ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
-	Add-PrinterDriver -Name "KONICA MINOLTA Universal PCL5"
 
 	Install-ChocolateyZipPackage @packageArgsPS
 	Get-ChildItem $PS_extract -Recurse -Filter "*.inf" | 

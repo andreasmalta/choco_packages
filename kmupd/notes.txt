@@ -1,9 +1,15 @@
-checksum -t sha256 -f UPDPCL6Win_3800MU.zip
-checksum -t sha256 -f UPDPCL5Win_3800MU.zip
-checksum -t sha256 -f UPDPSWin_3800MU.zip
+checksum -t sha256 -f UPDPSWin_3900MU.zip
+checksum -t sha256 -f UPDPCL6Win_3900MU.zip
 
+#INSTALL
 choco pack
-choco install kmupd -s .
-choco install kmupd -s . --params="'/PCL /PCL5 /PS'"
-choco uninstall kmupd
-choco push kmupd.3.8.0.0.nupkg -s https://push.chocolatey.org/
+choco install kmupd -y -dv -s .
+choco install kmupd -y -dv -s . --params="'/PCL /PS'"
+
+#UPGRADE
+choco install kmupd -y
+choco upgrade kmupd -y -dv -s .
+
+#UNINSTALL
+choco uninstall kmupd -y
+choco push kmupd.3.9.0.0.nupkg -s https://push.chocolatey.org/

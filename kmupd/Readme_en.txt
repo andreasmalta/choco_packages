@@ -1,15 +1,15 @@
 ==========================================================================================
-KONICA MINOLTA Universal Printer Driver PCL/PS/PCL5
+KONICA MINOLTA Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-08/08/2020
+03/19/2021
 
-PCL  Version 3.8.0.0
-PS   Version 3.8.0.0
-PCL5 Version 3.8.0.0
+PCL  Version 3.9.0.0
+PS   Version 3.9.0.0
+FAX  Version 3.9.0.0
 Installer Version 3.2.12.0
-PCL  Setup Package Version 3.8.0.0
-PS   Setup Package Version 3.8.0.0
-PCL5 Setup Package Version 3.8.0.0
+PCL  Setup Package Version 3.9.0.0
+PS   Setup Package Version 3.9.0.0
+FAX  Setup Package Version 3.9.0.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -271,19 +271,26 @@ Supported OS :
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/PCL5 Version 3.8.0.0
+  PCL/PS/FAX Version 3.9.0.0
 
 ==========================================================================================
 4-1. The following issue is solved in this driver.
 ==========================================================================================
- 1 .SNMP settings not display on some models.
-    (PCL/PS/PCL5)
+ 1 .Support FAX driver.
 
- 2 .Printout result is Exponentiation on some models.
+ 2 .Not Support PCL5 driver.
+
+==========================================================================================
+4-2. The following issue is solved in this driver.
+==========================================================================================
+ 1. Print color of Excel is different in UPD PCL.
+　　(PCL)
+
+ 2 .When using a specific model, "Cover Mode" tab is hidden.
     (PCL)
 
- 3. Print color of Excel is different in UPD PCL.
-　　(PCL)
+ 3. When using Excel, Authentication information saved file.
+　　(PCL/PS/FAX)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -507,7 +514,7 @@ This completes the uninstallation procedure.
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[UPDSetup_Own_PCL_3.8.0.0]Folder
+[UPDSetup_Own_PCL_3.9.0.0]Folder
  |- [Drivers]
   |- [Win_x64]
   |- [Win_x86]
@@ -515,7 +522,7 @@ This completes the uninstallation procedure.
   |- [Lang]                      MulitLangageFile
  |- [UPDSetup64.exe]             Installer(64-bit)
  |- [UPDSetup.exe]               Installer(32-bit)
-[UPDSetup_Own_PS_3.8.0.0]Folder
+[UPDSetup_Own_PS_3.9.0.0]Folder
  |- [Drivers]
   |- [Win_x64]
   |- [Win_x86]
@@ -523,7 +530,7 @@ This completes the uninstallation procedure.
   |- [Lang]                      MulitLangageFile
  |- [UPDSetup64.exe]             Installer(64-bit)
  |- [UPDSetup.exe]               Installer(32-bit)
-[UPDSetup_Own_PCL5_3.8.0.0]Folder
+[UPDSetup_Own_FAX_3.9.0.0]Folder
  |- [Drivers]
   |- [Win_x64]
   |- [Win_x86]
@@ -538,7 +545,7 @@ This completes the uninstallation procedure.
 The version information appears by selecting the following from the print settings of 
 the driver in the printer folder after installing the printer driver.
 
-  - PCL/PS/PCL5
+  - PCL/PS/FAX
     [Other]Tab -> [About...]
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -578,7 +585,7 @@ In such a case, please be careful of the setting method etc.
  5 .In case of printing on specific model
     When printing the document that has objects drawn on the edge of paper, 
     The following models has a defect of about 2 mm in some case. 
-    (PS/PCL5 driver)
+    (PS driver)
       - KONICA MINOLTA bizhub 4700P/4000P/3300P/3301P/4020/3320/
                               4702P/4402P/3602P/4422/3622/
                               5020i/5000i/4020i/4000i
@@ -620,30 +627,15 @@ In such a case, please be careful of the setting method etc.
     Workaround: Open print settings, close OK, and reopen printer properties.
 
 ==========================================================================================
-8-2. Attentions and Restrictions when using a PCL5 driver
+8-2. Attentions and Restrictions when using a FAX driver
 ==========================================================================================
 
- 1. If "Enable advanced printing features" is enabled, 
-    Poster setting is not reflected on the printed result because Poster function is 
-    disabled internally.
+ 1. When select different language to OS,garbled characters occur in the following dialog.
+         - "Add from Address Book"
+         - "Add Recipient from Phone Book"
+         - "Phone Book Entry"
+     Workaround: Match the language settings of the OS and driver.
 
- 2. If Overlay is used in Point and Print environment, 
-    the following functions are not able to be used at the same time. 
-      (The following functions become disabled.)
-      N-up, Poster Printing, Booklet, Zoom, Binding Margin Shift, Image Shift, Watermark
-
- 3. If N-up and Booklet are configured at the same time, 
-    a part of the printed image is cut (the image is printed on a slant).
-
- 4. If poster print and following functions is set same time, print result is not correct. 
-      - front cover / back cover, watermark, overlay, long paper
-
- 5. In point and print environment, following function is not printed correctly. 
-         - per page setting, user authentication, security print
-     Workaround: Disable the group policy of "Always render print jobs on the server".
-
- 6. If print on long paper with long side exceeding 1155.9 mm, 
-    a part of the printed image is cut.
 
 //////////////////////////////////////////////////////////////////////////////////////////
 9. Apache License
