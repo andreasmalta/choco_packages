@@ -1,52 +1,55 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$urlPCL     = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=f40f29e43ba544465b56d12920da38bc&tx_kmanacondaimport_downloadproxy[documentId]=126447&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$urlPCL_checksum = '8EF211F0D3BEE96721E1FF771E80DC0A3C46350EB75DBC2C65926D5405D83ADC'
-$urlPCL5    = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=77768063984cedf3232e475bfc1ae603&tx_kmanacondaimport_downloadproxy[documentId]=126446&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$urlPCL5_checksum = 'BAE939A504DE2A4D58C942092216F26DD3D8F419E28DF60974F89A5ED964D3CB'
-$urlPS      = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=dcbe8b3270c2a8bf0871e4688eea6b52&tx_kmanacondaimport_downloadproxy[documentId]=126448&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$urlPS_checksum = 'FCC38DD6FA6CF338A85E2879B797230AFBBD61C53FCBFA7843C44318CCFEC09D'
+$urlPCL     = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=3781038422c14d7b0b65bb678a983de8&tx_kmanacondaimport_downloadproxy[documentId]=129423&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$urlPCL_checksum = '4330DB1F2BF3313E8DD88729EB0D0E49AAEAB80B598A0C53015F89B5BD56016E'
+$urlFAX    = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=c0365c7739dd5be9d95af1b233a09293&tx_kmanacondaimport_downloadproxy[documentId]=129422&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$urlFAX_checksum = '2F028CDC756E9F98892CB9CE78118496563257D27053303830F04B0050B1C7C1'
+$urlPS      = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=4af03c9451268c8908628972511516f8&tx_kmanacondaimport_downloadproxy[documentId]=129424&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$urlPS_checksum = 'E1B86648C27909D773B136450A5B535BA86A834AA2954D8B2161AFBB9491AC58'
+
+$FAX_extract    = Join-Path $env:TEMP 'extractFAX'
+$PCL_extract    = Join-Path $env:TEMP 'extractPCL'
+$PS_extract     = Join-Path $env:TEMP 'extractPS'
 
 $packageArgsPCL = @{
   packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
+  unzipLocation = $PCL_extract
   url           = $urlPCL
   checksum      = $urlPCL_checksum
   checksumType  = 'sha256'
 }
-$packageArgsPCL5 = @{
+$packageArgsFAX = @{
   packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
-  url           = $urlPCL5
-  checksum      = $urlPCL5_checksum
+  unzipLocation = $FAX_extract
+  url           = $urlFAX
+  checksum      = $urlFAX_checksum
   checksumType  = 'sha256'
 }
 $packageArgsPS = @{
   packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
+  unzipLocation = $PS_extract
   url           = $urlPS
   checksum      = $urlPS_checksum
   checksumType  = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgsPCL
-Install-ChocolateyZipPackage @packageArgsPCL5
+Install-ChocolateyZipPackage @packageArgsFAX
 Install-ChocolateyZipPackage @packageArgsPS
 
 Get-ChildItem $toolsDir -Recurse -Filter "*.inf" | 
 ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
 
 $pp = Get-PackageParameters
-if ($pp.'PCL' -or $pp.'PCL5' -or $pp.'PS') { 
+if ($pp.'PCL' -or $pp.'FAX' -or $pp.'PS') { 
 
 	if ($pp.'PCL') { 
 	Write-Host "INSTALLING PCL DRIVER"
 	Add-PrinterDriver -Name "Generic Universal PCL"
 	}
 
-	if ($pp.'PCL5') { 
-	Write-Host "INSTALLING PCL5 DRIVER"
-	Add-PrinterDriver -Name "Generic Universal PCL5"
+	if ($pp.'FAX') { 
+	Write-Host "INSTALLING FAX DRIVER"
+	Add-PrinterDriver -Name "Generic Universal FAX"
 	}
 
 	if ($pp.'PS') { 
@@ -55,8 +58,8 @@ if ($pp.'PCL' -or $pp.'PCL5' -or $pp.'PS') {
 	}
 
 } else {
-	Write-Host "INSTALLING PCL/PCL5/PS DRIVERS"
+	Write-Host "INSTALLING PCL/FAX/PS DRIVERS"
 	Add-PrinterDriver -Name "Generic Universal PCL"
-	Add-PrinterDriver -Name "Generic Universal PCL5"
+	Add-PrinterDriver -Name "Generic Universal FAX"
 	Add-PrinterDriver -Name "Generic Universal PS"
 }

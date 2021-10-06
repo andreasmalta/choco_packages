@@ -3,29 +3,29 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>geupd</id>
-    <version>3.8.0.0</version>
+    <version>3.9.0.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/geupd</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>DEVELOP/GENERIC Universal Print Driver PCL/PS/PCL5</title>
+    <title>DEVELOP/GENERIC Universal Print Driver PCL/PS/FAX</title>
     <authors>Konica Minolta</authors>
-    <projectUrl>https://www.konicaminolta.eu/eu-en/software/connectivity/universal-print-driver</projectUrl>
+    <projectUrl>https://www.konicaminolta.eu/eu-en/software/connectivity/universal-print-driver-connectivity</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd/icon.png</iconUrl>
     <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd/Readme_en.txt</licenseUrl>
     <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd/Readme_en.txt</docsUrl>
-    <tags>konica minolta develop generic universal print printer driver pcl6 pcl5 ps</tags>
-    <summary>DEVELOP/GENERIC Universal Print Driver PCL/PS/PCL5</summary>
+    <tags>konica minolta develop generic universal print printer driver pcl6 pcl ps fax</tags>
+    <summary>DEVELOP/GENERIC Universal Print Driver PCL/PS/FAX</summary>
     <description>This printer driver is a software that controls KONICA MINOLTA Multi Function Printer.
 This is required to print with KONICA MINOLTA Multi Function Printer from your PC.
 
 #### Package Parameters
 The following package parameters can be set:
 
- * `/PCL:` - Install PLC6 drivers
- * `/PCL5:` - Install PLC5 drivers
- * `/PS:` - Install PS drivers
+ * `/FAX:` - Install FAX x86/x64 driver
+ * `/PCL:` - Install PLC6 x86/x64 driver
+ * `/PS:` - Install PS x86/x64 driver
  * If no parameter is given all above drivers in the package will be installed.
 
-To pass parameters, use `--params "''"` (e.g. `choco install geupd --params="'/PCL /PCL5 /PS'"`).
+To pass parameters, use `--params "''"` (e.g. `choco install geupd --params="'/PCL /PS /FAX'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 	</description>
     <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd/Readme_en.txt</releaseNotes>
