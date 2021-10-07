@@ -6,10 +6,6 @@ choco pack
 choco install vcredist140 dotnetfx -y
 choco install desktopconnector -y -dv -s .
 
-#UPGRADE
-choco install desktopconnector -y --ignore-checksums
-choco upgrade desktopconnector -y -dv -s .
-
 #UNINSTALL
 choco uninstall desktopconnector -y
 choco push desktopconnector.15.0.0.1540.nupkg -s https://push.chocolatey.org/
