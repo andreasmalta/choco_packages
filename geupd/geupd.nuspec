@@ -29,9 +29,6 @@ To pass parameters, use `--params "''"` (e.g. `choco install geupd --params="'/P
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 	</description>
     <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd/Readme_en.txt</releaseNotes>
-    <dependencies>
-      <dependency id="powershell" version="4.0.20141001" />
-	</dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
