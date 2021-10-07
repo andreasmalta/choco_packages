@@ -4,6 +4,7 @@ checksum -t sha256 -f GEUPDPSWin_3900MU.zip
 
 #INSTALL
 choco pack
+choco install powershell -y
 choco install geupd -y -dv -s .
 choco install geupd -y -dv -s . --params="'/FAX /PCL /PS'"
 
