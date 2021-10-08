@@ -18,4 +18,4 @@ choco upgrade deskupdate -y -dv -s .
 
 #UNINSTALL
 choco uninstall deskupdate -y
-choco push deskupdate.5.02.0030.nupkg -s https://push.chocolatey.org/
+choco push deskupdate.5.02.0030.1.nupkg -s https://push.chocolatey.org/

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
    <id>deskupdate</id>
-    <version>5.02.0030</version>
+    <version>5.02.0030.1</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/deskupdate</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Fujitsu DeskUpdate (Setup)</title>
