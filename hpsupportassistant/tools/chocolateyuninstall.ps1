@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-#support solutions framework is not removed automatically
+#old support solutions framework is not removed automatically
 $packageName = 'HP Support Solutions Framework*'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
 Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
