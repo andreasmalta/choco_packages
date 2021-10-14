@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kinovea</id>
-    <version>0.9.4</version>
+    <version>0.9.5</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kinovea</packageSourceUrl>
 	<owners>aa.malta</owners>
     <title>Kinovea (x64 beta)</title>
@@ -18,7 +18,7 @@
     <description>Kinovea is a video player for sport analysis.
 It provides a set of tools to capture, slow down, study, compare, annotate and measure technical performances.
 Kinovea is completely free and open source.</description>
-    <releaseNotes>https://www.kinovea.org/setup/kinovea.0.9.4/Changelog.0.9.4.txt</releaseNotes>
+    <releaseNotes>https://www.kinovea.org/setup/kinovea.0.9.5/Changelog.0.9.5.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

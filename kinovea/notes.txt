@@ -1,4 +1,4 @@
-checksum -t sha256 -f Kinovea-0.9.4-x64.exe
+checksum -t sha256 -f Kinovea-0.9.5-x64.exe
 
 #INSTALL
 choco pack
@@ -10,4 +10,4 @@ choco upgrade kinovea -y -dv -s .
 
 #UNINSTALL
 choco uninstall kinovea -y
-choco push kinovea.0.9.4.nupkg -s https://push.chocolatey.org/
+choco push kinovea.0.9.5.nupkg -s https://push.chocolatey.org/
