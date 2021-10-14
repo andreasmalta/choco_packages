@@ -5,7 +5,7 @@ choco pack
 choco install kinovea -y -dv -s .
 
 #UPGRADE
-choco install kinovea -y
+choco install kinovea -y --ignore-checksums
 choco upgrade kinovea -y -dv -s .
 
 #UNINSTALL
