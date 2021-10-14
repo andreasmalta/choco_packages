@@ -6,17 +6,17 @@
     <version>0.9.5</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kinovea</packageSourceUrl>
 	<owners>aa.malta</owners>
-    <title>Kinovea (x64 beta)</title>
+    <title>Kinovea (x64)</title>
     <authors>Joan Charmant</authors>
     <projectUrl>http://www.kinovea.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kinovea/icon.png</iconUrl>
-    <licenseUrl>https://www.kinovea.org/help/en/003.html</licenseUrl>
-    <docsUrl>https://www.kinovea.org/help/en/index.htm</docsUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/Kinovea/Kinovea@master/license.md</licenseUrl>
+    <docsUrl>https://www.kinovea.org/help/en/index.html</docsUrl>
     <tags>kinovea video player sport analysis</tags>
     <projectSourceUrl>https://github.com/Kinovea/Kinovea</projectSourceUrl>
-    <summary>Kinovea Sport Analysis Video Player - 64-bit Beta Version</summary>
-    <description>Kinovea is a video player for sport analysis.
-It provides a set of tools to capture, slow down, study, compare, annotate and measure technical performances.
+    <summary>Kinovea (x64)</summary>
+    <description>Kinovea is a video annotation tool designed for sport analysis.
+It features utilities to capture, slow down, compare, annotate and measure motion in videos.
 Kinovea is completely free and open source.</description>
     <releaseNotes>https://www.kinovea.org/setup/kinovea.0.9.5/Changelog.0.9.5.txt</releaseNotes>
   </metadata>
