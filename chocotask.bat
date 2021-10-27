@@ -1,0 +1,2 @@
+powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://gist.githubusercontent.com/andreasmalta/3a43df87f53deab3e7e352cb59c8e88b/raw/c93dc344dc492bc2d1d8d62f2cd49be2b62fc6a7/Schedule-ChocoUpgradeAll.ps1'))"
