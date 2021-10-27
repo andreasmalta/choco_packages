@@ -1,41 +1,35 @@
-TITLE:  HP PC Hardware Diagnostics Windows For FTP only (Win7/8/8.1/10 32/64-bit)
-VERSION: 1.6.9.0
+TITLE:  HP PC Hardware Diagnostics Windows
+VERSION: 1.8.0.0
 DESCRIPTION: 
-This package provides the HP PC Hardware Diagnostics Windows 1.6.9.0 in supported models that are running a supported operating systems.
+This package provides HP PC Hardware Diagnostics for supported computer models that are running a supported operating system. HP PC Hardware Diagnostics Windows allows HP customers to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
 
-PURPOSE: Routine
-SoftPaq NUMBER: sp114031
-EFFECTIVE DATE:  05/21/2021
+PURPOSE: Recommended
+SoftPaq NUMBER: SP135762
+EFFECTIVE DATE:  10/15/2021
 CATEGORY:  Diagnostic
-SSM SUPPORTED:  No
+SSM SUPPORTED:  Yes
 DEVICES SUPPORTED: N/A
-PREREQUISITES: None
+PREREQUISITES: - You must be logged on as an administrator to install this update.
+- You must have a Microsoft Windows operating system.
 LANGUAGE(S): 
-English (US)
- 
+Global 
 
 ENHANCEMENTS:
-- Web Cam Test Added
-- Audio Microphone Test Added
-- Fan and Thermal Test Added via UEFI
-- Ability to check /update drivers on select components:
-          - Audio
-          - Multimedia
-          - Video
-          - Wired Network
-          - Wireless Network
-- Improvements to BIOS Flash 
-- Improvements to Media Stress Test
+ - Ability to launch into UEFI Diagnostics main menu.
+- DMI capture and restore data for DMIFIT auto population of MUD data. 
+- Provide Pass ID and FID barcodes for repair centers. 
+- Enable wheel on mouse + add scroll test.
+- Added Mouse / Touchpad pointer test.
+- Added support for DDR5 memory DIMM
+- Added additional support on Battery test. 
+- UI Improvements.
 - Various Bug Fixes
+
+FIXES: 
+ 
 HOW TO USE:
-NOTE: To install the software in this package, you must be logged in with Administrator privileges.
+ 1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
 
-1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
-
-2. Double-click the downloaded file and follow the on-screen instructions to unpack the files to C:\SWSETUP\SP114031 or another directory of your choice.
-
-3. Run the setup program from the directory that contains the unpacked softpaq files. Use the -? to list the command line options for the setup program.
-
-NOTE: After double-clicking the downloaded file, select This program installed correctly on the Program Compatibility Assistant screen. This message is displayed by the protection mechanism of Microsoft Windows.
+2. Double-click the downloaded file and follow the on-screen instructions.
 
 Copyright (c) 2021 HP Development Company, L.P.

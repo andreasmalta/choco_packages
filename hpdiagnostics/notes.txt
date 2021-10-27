@@ -1,9 +1,8 @@
-checksum -t sha256 -f sp118349.exe
+checksum -t sha256 -f sp135762.exe
 #copy text during gui installation to releasenotes.txt
 
 #INSTALL
 choco pack
-choco install dotnetfx -y
 choco install hpdiagnostics -y -dv -s .
 
 #UPGRADE
@@ -13,4 +12,4 @@ choco upgrade hpdiagnostics -y -dv -s .
 
 #UNINSTALL
 choco uninstall hpdiagnostics -y
-choco push hpdiagnostics.1.6.9.0.nupkg -s https://push.chocolatey.org/
+choco push hpdiagnostics.1.8.0.0.nupkg -s https://push.chocolatey.org/
