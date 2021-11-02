@@ -1,4 +1,4 @@
-DeskUpdate 5.02.0030 Release Notes
+DeskUpdate 5.02.0037 Release Notes
 ==================================
 
 Introduction
@@ -16,9 +16,15 @@ Changes
 
 CHANGES FOR 5.02.0030
 
+* NEW:  Support for Windows 11
+
+
+CHANGES FOR 5.02.0030
+
 * NEW:  ducmd.exe can download and install BIOS updates
 * NEW:  Added /NOBIOS switch to suppress BIOS updates
 * NEW:  Updated help text of ducmd.exe /? 
+
 
 CHANGES FOR 5.02.0027
 
