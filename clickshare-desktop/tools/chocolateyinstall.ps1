@@ -15,8 +15,8 @@ Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVe
 	Uninstall-ChocolateyPackage -PackageName "$DisplayName" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $ExitCodes
 	}
 
-$url            = "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306194&TdeType=3&MajorVersion=04&MinorVersion=17&PatchVersion=00&BuildVersion=009&ShowDownloadPage=False"
-$checksum_url   = 'B6BD235B78F6F83F8BBA09C3E7557B219959EB0F85F3020DBE405E04D479FAA2'
+$url            = "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306194&TdeType=3&MajorVersion=04&MinorVersion=18&PatchVersion=00&BuildVersion=008&ShowDownloadPage=False"
+$checksum_url   = '20FD1F372000B07F1167DED6EB8443D83D8DDCB16A22066155CB0BFF77675320'
 $file           = Join-Path $env:TEMP 'ClickShare_Installer.msi'
 
 $packageArgsURL = @{
