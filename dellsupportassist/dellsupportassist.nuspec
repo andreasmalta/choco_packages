@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dellsupportassist</id>
+    <version>3.10.3</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dellsupportassist</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>SupportAssist for Home PCs</title>
+    <authors>Dell</authors>
+    <projectUrl>https://www.dell.com/support/contents/en-us/article/product-support/self-support-knowledgebase/software-and-downloads/supportassist</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dellsupportassist/icon.png</iconUrl>
+    <licenseUrl>https://www.dell.com/learn/us/en/uscorp1/terms-conditions/art-software-license-agreements</licenseUrl>
+    <docsUrl>https://www.dell.com/support/home/en-us/product-support/product/dell-supportassist-pcs-tablets/docs</docsUrl>
+    <tags>dell device driver update</tags>
+    <summary>SupportAssist for Home PCs</summary>
+    <description>Automated, proactive, and predictive support.
+SupportAssist is the smart technology, available on your PC that will keep it running like new by removing viruses, detecting issues, optimizing settings and telling you when you need to make updates. Premium Support Plus customers enjoy the full set of SupportAssist features including predictive issue detection and proactive resolution.</description>
+    <releaseNotes>https://www.dell.com/support/home/en-us/product-support/product/dell-supportassist-pcs-tablets/docs</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

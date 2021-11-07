@@ -1,0 +1,13 @@
+checksum -t sha256 -f SupportAssistInstaller.exe
+
+#INSTALL
+choco pack
+choco install dellsupportassist -y -dv -s .
+
+#UPGRADE
+choco install dellsupportassist -y
+choco upgrade dellsupportassist -y -dv -s .
+
+#UNINSTALL
+choco uninstall dellsupportassist -y
+choco push dellsupportassist.3.10.3.nupkg -s https://push.chocolatey.org/
