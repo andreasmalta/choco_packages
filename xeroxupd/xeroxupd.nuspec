@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>xeroxupd</id>
+    <version>5.810.8.0</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/xeroxupd</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Xerox Global Print Driver PCL/PS V3</title>
+    <authors>Xerox</authors>
+    <projectUrl>https://www.office.xerox.com/en-us/software-solutions/global-printer-driver</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/xeroxupd/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/xeroxupd/eula.txt</licenseUrl>
+    <docsUrl>https://www.office.xerox.com/latest/SFTBR-15U.pdf</docsUrl>
+    <tags>xerox universal print printer driver pcl pcl6 ps</tags>
+    <summary>Xerox Global Print Driver PCL/PS V3</summary>
+    <description>Adding the Xerox® Global Print Driver® to your workplace means less IT involvement and less hassle for end users.
+There’s no need to download individual printer drivers for every device in your office.
+The Global Print Driver is a truly universal printer driver that lets you print to virtually any printer or multifunction printer — even to those made by other manufacturers.</description>
+    <releaseNotes>https://www.support.xerox.com/en-us/product/global-printer-driver/content/150345</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
