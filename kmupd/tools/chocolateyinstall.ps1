@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$FAX            = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=5d941dae7cb9d54a474cc91c8c4395a2&tx_kmanacondaimport_downloadproxy[documentId]=128824&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$FAX_checksum   = 'DB75C4511DD2641381D5CCA286CA2B4C7942AEE734B29E36CD7E11907061F71A'
-$PCL            = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=db69e8d121fea061d1d8558184cc2bc2&tx_kmanacondaimport_downloadproxy[documentId]=128825&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum   = '85C5476F7671CC65D3864CB3C6829B0B497D216F2F9AC00B21E18879F2E8B9A9'
-$PS             = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=5ebe0f108582723d2feba8950d2b5fcc&tx_kmanacondaimport_downloadproxy[documentId]=128826&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PS_checksum    = 'C453748DCC581EC85005E7E19163F424BBC358C02C718DF62A6C87260D6918A4'
+$FAX            = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=72e3d35146daf16029a74882ce64d981&tx_kmanacondaimport_downloadproxy[documentId]=129834&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$FAX_checksum   = '45D92412E920F898D7F77F45A33DF2E6C957E45689EEAEA012EFA53C553EBECF'
+$PCL            = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=6445b83e71773b350e6e8f5af0b97bd1&tx_kmanacondaimport_downloadproxy[documentId]=129832&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PCL_checksum   = 'C5BF9D1A9AD90CFDBE774D109C076A59E2895041613D360CDEB5796516121582'
+$PS             = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=60e52c5052b4f023a051e49606abce7c&tx_kmanacondaimport_downloadproxy[documentId]=129833&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PS_checksum    = '9286C3CA2B42620544B15A1E2EBE634988C747C90DE6D81DC17A5BEE0792A818'
 
 $FAX_extract    = Join-Path $env:TEMP 'extractFAX'
 $PCL_extract    = Join-Path $env:TEMP 'extractPCL'

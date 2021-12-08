@@ -1,15 +1,15 @@
 ==========================================================================================
 KONICA MINOLTA Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-03/19/2021
+09/10/2021
 
-PCL  Version 3.9.0.0
-PS   Version 3.9.0.0
-FAX  Version 3.9.0.0
-Installer Version 3.2.12.0
-PCL  Setup Package Version 3.9.0.0
-PS   Setup Package Version 3.9.0.0
-FAX  Setup Package Version 3.9.0.0
+PCL  Version 3.9.117.0
+PS   Version 3.9.117.0
+FAX  Version 3.9.117.0
+Installer Version 3.2.16.0
+PCL  Setup Package Version 3.9.117.0
+PS   Setup Package Version 3.9.117.0
+FAX  Setup Package Version 3.9.117.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -254,7 +254,7 @@ Supported OS :
     Windows Server 2012 R2 Standard
     Windows Server 2012 R2 Datacenter
     Windows Server 2012 R2 Essentials
-    Windows 10 *
+    Windows 10 Home*
     Windows 10 Pro *
     Windows 10 Enterprise *
     Windows 10 Education *
@@ -267,30 +267,31 @@ Supported OS :
 
     * 32-bit (x86) and 64-bit (x64) editions of Windows are supported.
 
+Other :
+1. The following versions of  Microsoft .NET Framework must be installed in order 
+to use the LDAP server in the Fax driver.
+    Microsoft .NET Framework
+     - Microsoft(R) .NET Framework 2.0 (SP1 or later)
+     - Microsoft(R) .NET Framework 3.0 (SP1 or later)
+     - Microsoft(R) .NET Framework 3.5
+In Windows 7, Windows Server 2008 R2 necessary .NET Framework is installed.
+
 //////////////////////////////////////////////////////////////////////////////////////////
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/FAX Version 3.9.0.0
+  PCL/PS/FAX Version 3.9.117.0
 
 ==========================================================================================
-4-1. The following issue is solved in this driver.
+4-1. The following functions are add in this driver.
 ==========================================================================================
- 1 .Support FAX driver.
-
- 2 .Not Support PCL5 driver.
+ 1 .Support IdP Authentication.
 
 ==========================================================================================
-4-2. The following issue is solved in this driver.
+4-2. The following issues are solved in this driver.
 ==========================================================================================
- 1. Print color of Excel is different in UPD PCL.
-　　(PCL)
-
- 2 .When using a specific model, "Cover Mode" tab is hidden.
-    (PCL)
-
- 3. When using Excel, Authentication information saved file.
-　　(PCL/PS/FAX)
+ 1. OpenSSL vulnerability.
+    Upate from 1.1.1i to 1.1.1k
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -345,10 +346,15 @@ Please read the following notes before use.
 5-2. Automatic installation using an installer
 ==========================================================================================
 
- 1. If your PC is 32-bit environment, please use "UPDSetup.exe". If your PC is 64-bit environment, 
-    please use "UPDSetup64.exe". And follow the onscreen wizard to do installation.
+ 1. Turn on your computer and start Windows.
 
- 2. Read the contents of the displayed [Installer license agreement] screen.
+ 2. Insert the Printer Driver DVD in the DVD drive of your computer.
+
+ 3. Click [Printer Install].
+
+ 4. Select the printer driver that you want to install and click.
+
+ 5. Read the contents of the displayed [Installer license agreement] screen.
     Click [AGREE] button, and then follow the instructions that appear on the 
     screen to complete the installation. 
     If you click [DISAGREE], the screen returns to the main menu screen and the 
@@ -358,75 +364,81 @@ Please read the following notes before use.
 5-3. Manual installation using Add Printer
 ==========================================================================================
 
-Try the following manual installation steps if you cannot install from install program.
+Try the following manual installation steps if you cannot install from DVD install program.
 
- 1. Open Devices and Printers by clicking the [Start] button , and then, 
+ 1. Insert the Printer Driver DVD in the DVD drive of your computer.
+
+ 2. Exit the installer.
+
+ 3. Open Devices and Printers by clicking the [Start] button , and then, 
     on the Start menu, clicking Devices and Printers.
 
- 2. Click [Add a printer].
+ 4. Click [Add a printer].
 
- 3. Set the printer port based on printer connections.
+ 5. Set the printer port based on printer connections.
 
-   3-1. When you create a port on a network connection (LPR/Port9100)
-    3-1-1. Click [Add a local printer]
-    3-1-2. Select [Create a new port] and choose [Standard TCP/IP Port] for 
+   5-1. When you create a port on a network connection (LPR/Port9100)
+    5-1-1. Click [Add a local printer]
+    5-1-2. Select [Create a new port] and choose [Standard TCP/IP Port] for 
            the [Type of port]. Click [Next].
-    3-1-3. Change [Device type] to [TCP/IP Device] and type the IP address 
+    5-1-3. Change [Device type] to [TCP/IP Device] and type the IP address 
            of the printer into the [Hostname or IPaddress] field.Click [Next].
-    3-1-4. Select [Custom] from [Device type] and click [Settings].
-    3-1-5. Change settings to suit the port and click [OK].
+    5-1-4. Select [Custom] from [Device type] and click [Settings].
+    5-1-5. Change settings to suit the port and click [OK].
            For LPR connection, click [LPR], and then enter [lp] in the [Queue Name] box.
            For Port9100, click [RAW], and then enter the RAW port number (the default 
            setting is "9100") in the [Port Number] box.
-    3-1-6. Click [Next].
+    5-1-6. Click [Next].
 
-   Skip to step 4.
+   Skip to step 6.
 
-   3-2. When you search for printers on network connection (LPR/Port9100)
-    3-2-1. Turn on the power of the machine while it is connected to the network.
-    3-2-2. Click [Add a network, wireless or Bluetooth printer].
+   5-2. When you search for printers on network connection (LPR/Port9100)
+    5-2-1. Turn on the power of the machine while it is connected to the network.
+    5-2-2. Click [Add a network, wireless or Bluetooth printer].
            Connected printers are detected. It may take a long time to find all printers.
-    3-2-3. In the list of available printers, select the one you want to use, 
+    5-2-3. In the list of available printers, select the one you want to use, 
            and then click [Next].
            If more than one printer is detected, select the printer with IP address of 
            this machine.
-    3-2-4. Select [Custom] from [Device type] and click [Settings].
-    3-2-5. Change settings to suit the port and click [OK].
+    5-2-4. Select [Custom] from [Device type] and click [Settings].
+    5-2-5. Change settings to suit the port and click [OK].
            For LPR connection, click [LPR], and then enter [lp] in the [Queue Name] box.
            For Port9100, click "RAW", and then enter the RAW port number (the default 
            setting is "9100") in the [Port Number] box.
-    3-2-6. Click [Next].
+    5-2-6. Click [Next].
 
-   Skip to step 4.
+   Skip to step 6.
 
-   3-3. When you search for printers on network connection (IPP)
-    3-3-1. Turn on the power of the machine while it is connected to the network.
-    3-3-2. Click [Add a network, wireless or Bluetooth printer].
-    3-3-3. In the dialog box, click [The printer that I want isn't listed].
-    3-3-4. In the URL field in the next dialog box enter the printer's 
+   5-3. When you search for printers on network connection (IPP)
+    5-3-1. Turn on the power of the machine while it is connected to the network.
+    5-3-2. Click [Add a network, wireless or Bluetooth printer].
+    5-3-3. In the dialog box, click [The printer that I want isn't listed].
+    5-3-4. In the URL field in the next dialog box enter the printer's 
            network pathname in one of the following formats and then choose [Next]:
            http://<IP_address_for_this_machine>/ipp
 
- 4. Click [Have Disk].
+ 6. Click [Have Disk].
 
- 5. Click [Browse].
+ 7. Click [Browse].
 
- 6. Locate the directory where the printer driver files are located 
+ 8. Locate the directory on the DVD where the printer driver files are located 
     and then click "Open". Select the directory depending on using printer driver, 
     OS, and language.
 
- 7. Click [OK].
+ 9. Click [OK].
 
- 8. Click [OK] or [Next].
+ 10. Click [OK] or [Next].
 
- 9. Follow the on-screen instructions.
+ 11. Follow the on-screen instructions.
 
- 10. Click [Finish].
+ 12. Click [Finish].
 
 This completes the printer driver installation.
 
- 11. When installation is complete, make sure that the icon of the installed printer 
+ 13. When installation is complete, make sure that the icon of the installed printer 
      appears in the [Printers] window.
+
+ 14. Remove the DVD from the DVD drive.
 
 ==========================================================================================
 5-4. How to automatically uninstall the print driver from the [Start] menu
@@ -458,18 +470,27 @@ You can delete the printer driver using the installer if you installed the drive
 using the installer.
 - You must have administrative rights on the computer to uninstall the printer driver.
 
- 1. If your PC is 32-bit environment, please use "UPDSetup.exe". If your PC is 64-bit environment, 
-    please use "UPDSetup64.exe". And follow the onscreen wizard to do installation.
+ 1. Turn on your computer and start Windows.
 
- 2. The [Installer license agreement] screen will apperar.  Click the [Agree] button 
+ 2. Insert the Printer Driver DVD in the DVD drive of your computer.
+    The install program will start automatically and the main menu will be displayed. 
+
+ 3. Click [Printer Install] in the main menu screen.
+
+ 4. Select the printer driver that you want to delete and click.
+
+ 5. The [Installer license agreement] screen will apperar.  Click the [Agree] button 
     to proceed.
 
- 3. Select [Delete] and click next.
+ 6. Select [Delete] and click next.
 
- 4. Select the printer driver to be deleted from [Uninstall Printer Driver], and then 
+ 7. Select the printer driver to be deleted from [Uninstall Printer Driver], and then 
     click [Uninstall].
     To complete the uninstall printer driver procedure, follow the directions provided 
     by the Wizard.
+
+ 8. When you are prompted to confirm the computer restart process, click [OK] and then 
+    restart the computer.
 
 This completes the uninstallation procedure.
 
@@ -514,30 +535,37 @@ This completes the uninstallation procedure.
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[UPDSetup_Own_PCL_3.9.0.0]Folder
- |- [Drivers]
-  |- [Win_x64]
-  |- [Win_x86]
- |- [Sub]                        MulitLangageFile/HelpFile
-  |- [Lang]                      MulitLangageFile
- |- [UPDSetup64.exe]             Installer(64-bit)
- |- [UPDSetup.exe]               Installer(32-bit)
-[UPDSetup_Own_PS_3.9.0.0]Folder
- |- [Drivers]
-  |- [Win_x64]
-  |- [Win_x86]
- |- [Sub]                        MulitLangageFile/HelpFile
-  |- [Lang]                      MulitLangageFile
- |- [UPDSetup64.exe]             Installer(64-bit)
- |- [UPDSetup.exe]               Installer(32-bit)
-[UPDSetup_Own_FAX_3.9.0.0]Folder
- |- [Drivers]
-  |- [Win_x64]
-  |- [Win_x86]
- |- [Sub]                        MulitLangageFile/HelpFile
-  |- [Lang]                      MulitLangageFile
- |- [UPDSetup64.exe]             Installer(64-bit)
- |- [UPDSetup.exe]               Installer(32-bit)
+ [Windows]Folder
+  |- [Driver]
+      |- [PCL]
+          |- [Driver]
+              |- [Win_x64]
+              |- [Win_x86]
+          |- [Sub]                MultiLanguageFile
+              |- [Lang]           MultiLanguageFile
+          |- [UPDSetup64.exe]     Installer(64-bit)
+          |- [UPDSetup.exe]       Installer(32-bit)
+      |- [PS]
+          |- [Drivers]
+              |- [Win_x64]
+              |- [Win_x86]
+          |- [Sub]                MultiLanguageFile
+              |- [Lang]           MultiLanguageFile
+          |- [UPDSetup64.exe]     Installer(64-bit)
+          |- [UPDSetup.exe]       Installer(32-bit)
+      |- [FAX]
+          |- [Drivers]
+              |- [Win_x64]
+              |- [Win_x86]
+          |- [Sub]                MultiLanguageFile
+              |- [Lang]           MultiLanguageFile
+          |- [UPDSetup64.exe]     Installer(64-bit)
+          |- [UPDSetup.exe]       Installer(32-bit)
+      |- [Readme]フォルダー
+          |- [EN]
+              |- [Readme.txt]     Readme file for English (This file)
+          |- [JA]
+              |- [Readme.txt]     Readme file for Japanese
 
 //////////////////////////////////////////////////////////////////////////////////////////
 7. How to check the version in a printer driver
@@ -560,29 +588,283 @@ In such a case, please be careful of the setting method etc.
 8-1. Attentions and Restrictions of each functions
 ==========================================================================================
 
- 1. When you perform printing using the application, 
+ 1. About Printer Font
+  1-1. About Japanese Printer Driver
+       When printing an original containing a Japanese font on a device 
+       sold outside Japan with a Japanese printer driver, 
+       set the download font format of the printer driver to 
+       [Outline] or [Bitmap] and then print.
+
+ 2. Paper Size Setting  
+  2-1. When not printing as paper size setting
+       - Paper size can be set by the printer property, but it may become invalid 
+         the paper size that is specified on the printer property according to 
+         the application to use.
+         ==>Please set the paper size on the Print menu of the application.
+
+  2-2. Wide Paper
+       When you use a Wide paper, load the paper in the tray and set the paper size 
+       in the printer before the printing operation.  
+       ==>For the setting procedure, please refer to the User's Guide for the printer.
+
+  2-3. Registration of Custom Size
+       Please perform registration of Custom Size by administrator.  
+
+ 3. Paper Tray Setting
+  3-1. Cannot set Paper Tray.
+       - To set an optional tray for the Paper Tray, the optional Paper Source unit
+         is necessary.  Also, you need to select the Paper Source unit in 
+         the [Device Option] setting of the printer driver.
+         ==>Please check the existence of Paper Source unit and the [Device Option]
+            setting.
+       - Paper Tray may have restriction depending on the specified paper size.
+
+  3-2. When Paper Tray setting doesn't work as specified.
+       - Paper Tray can be set by the printer property, but it may become invalid 
+         the Paper Tray that is specified on the printer property according to 
+         the application to use.
+         ==>Please set the Paper Tray on the Print menu of the application.
+       - Paper may be fed from the tray other than the specified one depending on 
+         the paper size set up on the printer.
+
+ 4. Original Orientation Setting
+  4-1. Original Orientation setting doesn't work as specified.
+       Original Orientation can be set by the printer property, but it may become 
+       invalid the Original Orientation that is specified on the printer property 
+       depending on the application to use.
+       ==>Please set Original Orientation in the application.
+
+ 5. Collate Functions
+  5-1. Collate doesn't work as specified.
+       Collate is able to be set by the printer property, but the following 
+       situation may occur depending on the application to use if you specify 
+       Collate on the Print menu.
+       - If [Combination] is specified, the last page of No. n copies and 
+         the first page of No. n+1 copies are printed on the same paper.
+       - If [2-Sided] is specified, the first page of No. n+1 copies is printed on
+         2nd side of the last page of No. n copies.
+       - If [Booklet] is specified, all prints are collected into one book and printed.
+       - If [Staple] is specified, all prints are collected into one set and stapled.
+       - If [Distribution Control Number] is specified, all prints are printed with 
+         the same number. 
+       - If [Secure Print] is specified, the waiting documents for print for specified
+         number of copies are stored in the printer.
+       - If [Watermark] is specified only on the first page of multiple copies of 
+         printing, it will be stamped only on the first page of the first copy.
+       - Even if [Offset] is specified, it will be output without offset.
+         ==>Please set No Collate on the Print menu and specify Collate on 
+            the printer property.
+
+ 6. Copies Setting
+  6-1. Copies Setting doesn't work as specified.
+       Copies can be set by the printer property and the Print menu of most of 
+       applications, but the priority of setting between the printer property and
+       the Print menu is different depending on the application to use.
+       ==>First, please set 1 for the copies on the Print menu and specify the 
+          required copies by the printer property.
+          If only 1 copy is printed with this setting, please specify the required
+          copies on the Print menu.
+
+  6-2. [Proof Print] and Copies
+       In Microsoft Excel, even though [Proof Print] function is selected and multiple 
+       copies are set for print, all copies of document will be printed without storing.
+       ==>[Proof Print] function can not be specified with 1 copy.  Also, even if the 
+          multiple copies are set in Excel, Proof Print function is cancelled because 
+          all data are printed only 1 copy with number of set.
+          This can be solved by un-checking [Print on copy unit].
+
+ 7. [Front Cover] / [Back Cover]
+  7-1. Paper for [Front Cover] / [Back Cover]
+       When you use Front and/or Back Cover function, it is necessary to set the correct 
+       paper beforehand in the Paper Tray for Front and/or Back Cover that is specified 
+       by the printer driver.
+
+ 8. [User Authentication] / [Account Track]
+  8-1. [User Authentication] / [Account Track] for use
+       When you use the printer that requires [User Authentication] / [Account Track] 
+       before printing, print is not accepted without entering the correct [User Name], 
+       [Department Name] and [Password].
+
+  8-2. When the Limitation for printing  is exceeded at the [Account Track]
+       When the Account Track mode and Limitation for printing are enabled in the printer, 
+       if there is a job that stops in the middle of printing as the limit is reached, 
+       any following jobs are not printed unless the stopping job is canceled.    
+       Please ask your administrator to cancel the limitation to output the stopping 
+       job or someone must delete the job after confirmation.  
+
+  8-3. [Device Option] in [Account Track]
+       The [Account Track] displayed on the [Device Option] displays the status of the 
+       "[Account Track] of main body device". Account Track status cannot be displayed 
+       on the Printer driver when using the Enhanced Server Authentication since 
+       the status of the "[Account Track] of  Enhanced Server Authentication" could not 
+       be acquired.
+
+  8-4. When verifying the registered user or account information, the verification will 
+       fail when [Enable Single Sign-On functionality for printing functions] is enabled.
+       ==>Please do not enable [Enable Single Sign-On functionality for printing 
+          functions] on [User Authentication/Account Track] dialog in the [Basic]tab of 
+          the Properties, when [Settings]tab - [Verify Authentication settings before 
+          printing] is enabled.
+          If [Enable Single Sign-On functionality for printing functions] is enabled 
+          and then printing is executed, the document cannot be printed.
+
+ 9. [Booklet] and [Center Staple and Fold]
+  9-1. Blank of Paper Center Part
+       When [Booklet] and [Center Staple and Fold] are specified, blank space with 
+       a width of about 10mm will occur in the center of paper.
+       ==>Please make more than 5mm blank space of the original, then print it.
+
+ 10. Two-way Communication
+  10-1. Acquire Device Information
+       When you installed the printer driver to a client computer by Point and Print,
+       you can not use [Configure]-[Acquire Device Information] in the printer property.
+       ==>Please set the composition of Device Options manually or acquire the option
+          information on the server.
+
+  10-2. About Two-way communication of Printer Driver and MFP
+       This printer driver is able to acquire MFP's information via the network 
+       communication.
+       Please update more than Internet Explorer 6.0 (Service pack 1) to take full
+       advantage of this printer driver.
+       ==>MFP's information may not be acquired depending on the Internet Explorer version.
+
+ 11. Custom Size
+  11-1. Paper Width
+        If you specify  a paper wider greater than 12.248 inches  (311.1mm) when 
+        you set the custom size, the printing results are not guaranteed.
+
+ 12. OS Restrictions
+  12-1. Wartermark in PCL driver for x64 Edition
+        When printing the document with odd number of pages with specifying [Duplex] and
+        [Watermark], a blank page would be added after the last page and the watermark 
+        would be printed on the blank page.
+
+  12-2. File name of Phone Book
+        Fax driver could not read the Phone Book file with long file or folder name 
+        because of the OS's restriction.
+
+  12-3. PS Driver for Windows 7
+        There will be a blank space in the window since the window size of 
+        the Print Setting is bigger that the other drivers. This will have no effect
+        on the print operation.
+
+  12-4. Using a WSD Port Connection in Windows 7 and Windows Server 2008 R2
+        The Printer Driver must be installed in order to connect to the device using 
+        the WSD port in Windows 7 and Windows Server 2008 R2.
+
+  12-5. About Watermark printing in Windows 8.1 
+        In some instances, the Watermark is not printed when the print is executed
+        from Microsoft Word 2010 or Microsoft Excel 2010.
+        - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
+        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+
+  12-6. About Text on Tab printing in Windows 8.1
+        In some instances, Text on Tab is not printed when the print is executed 
+        from Microsoft Word 2010 or Microsoft Excel 2010.
+        - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
+        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+
+  12-7. About [Copy Security] printing in Windows 8.1
+        In some instances, [Copy Security] is not printed when the print is executed 
+        from Microsoft Word 2010 or Microsoft Excel 2010.
+        - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
+        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+
+  12-8. About [Excel Job Control] printing in Windows 8.1
+        In some instances, [Excel Job Control] is not printed when the print is executed 
+        from Microsoft Word 2010 or Microsoft Excel 2010.
+        - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
+        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+
+  12-9. About [Remove White Background] printing in Windows 8.1
+        In some instances, [Remove White Background] is not printed when the print is executed 
+        from Microsoft Word 2010 or Microsoft Excel 2010.
+        - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
+        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+
+  12-10. About [Per Page Setting] printing in Windows 8.1
+         In some instances, [Per Page Setting] is not printed when the print is executed 
+         from Microsoft Word 2010 or Microsoft Excel 2010.
+         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
+         - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+
+  12-11. About [Create Host Image] or [Create Shared Folder Image] printing in Windows 8.1
+         In some instances, [Create Host Image] or [Create Shared Folder Image] is not printed 
+         when the print is executed from Microsoft Word 2010 or Microsoft Excel 2010.
+         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
+         - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+
+  12-12. About [Print Host Image] or [Print Device Image] printing in Windows 8.1
+         In some instances, [Print Host Image] or [Print Device Image] is not printed when the print is executed 
+         from Microsoft Word 2010 or Microsoft Excel 2010.
+         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
+         - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+
+  12-13. Restriction of Cover Sheet in Windows 8.1 x86
+         In some instances, the Cover Sheet is not printed when the print is
+         executed from Microsoft Word 2010 or Microsoft Excel 2010.
+
+ 13. Others
+  13-1. Screen Font
+        When printing with using screen fonts installed in your computer, some of 
+        fonts or characters may not be printed correctly.
+
+  13-2. When sending plural printing jobs to Network Port
+        If multiple copies of document is sent to each port such as IPP, SMB, RAW and LPR 
+        at the same time. The print out of one set of document may be separated 
+        by another print job. 
+        ==>In this case, select Uncollated.
+
+  13-3. Copies Setting in Application
+        Some applications may allow you to set copies more than the device's limitation,
+        but the printer can not print as specified in the applications.
+
+  13-4. Blank Page
+        According to the application to use, when the data has odd number pages, 
+        it may be added the blank paper if [2-Sided] function is available.
+        In that case, the following phenomenon will occur.
+        - The Watermark will be printed on the last blank page.
+          (in case of specifying The [Watermark] function)
+        - The Overlay will be printed on the last blank page.
+          (in case of specifying The [Overlay] function).
+
+  13-5. Document Name displayed on the panel
+        Based on the application that indicates the printing operation of a document, 
+        the document name may not be displayed correctly on the panel by the application
+        problem.In this case, there is no influence in the printing result.
+
+  13-6. Orientation and FAX Cover Sheet
+        When [Orientation] in the FAX driver is not same as the one set in the application, 
+        FAX Cover Sheet might not printed as the preview in the driver showed.
+
+  13-7. Restrictions on using with Citrix XenApp and Citrix XenDesktop
+        When print settings is changed to multiple on the Client Printer driver created with the 
+        "Auto Created Client Printer" of Citirx XenApp and Citrix XenDesktop, Printer settings 
+        are changed to default value without inheriting the Printer Driver Settings.
+
+ 14. When you perform printing using the application, 
     if you click <Printer Properties> while the print queue status is in the process of connecting, 
     an Error message is displayed.
 
     Workaround: Click the <Printer Properties> after the print queue status is ready.
 
- 2. When you perform printing using the application (MSPaint.exe), 
+ 15. When you perform printing using the application (MSPaint.exe), 
     if you click <Printer Properties> of the print queue whose Device 
     Information has not been acquired, an Error message is displayed.
 
     Workaround: Perform printing using the application after acquiring the Device Information 
     from <Devices and Printers>.
 
- 3. The Universal Print Driver does not work normally if EasyPrint setting in 
+ 16. The Universal Print Driver does not work normally if EasyPrint setting in 
     MS Terminal Services Environment is disabled.
 
     Workaround: Enable EasyPrint setting.
 
- 4 .About display of favorite setting
+ 17. About display of favorite setting
     In case of model does not support watermark function, watermark function is displayed
     in favorite setting.
 
- 5 .In case of printing on specific model
+ 18. In case of printing on specific model
     When printing the document that has objects drawn on the edge of paper, 
     The following models has a defect of about 2 mm in some case. 
     (PS driver)
@@ -592,17 +874,17 @@ In such a case, please be careful of the setting method etc.
 
     Workaround: Use PCL6 driver
 
- 6 .About language settings
+ 19. About language settings
     When you change the language setting,
     language setting of another printer created with same driver is changed.
 
- 7 .About Import/Export of favorite setting
+ 20. About Import/Export of favorite setting
     "favorite setting" exported with v3.5.0.0 or earlier drivers cannot imported
     by v3.6.0.0 or later drivers.
 
     Workaround: Export after updating to v3.6.0.0 or later.
 
- 8 .About Favorite settings when updating drivers
+ 21. About Favorite settings when updating drivers
     When model changed after the update from the driver before v3.5.0.0,
     Favorite settings of different models are inherited.
 
@@ -616,18 +898,153 @@ In such a case, please be careful of the setting method etc.
         3 .[Favorite Setting] -> [Edit...]
         4 .[Edit Favorite Setting]Dialog -> [OK]
 
- 9 .About Installer
+ 22. About Installer
     When "Obtain Device Information" acquire from "Configure" Tab after 
     installing the USB connection from "Network search" by installer, 
     The "Apply" button is not grayed out.
 
- 10 .About Paper Tray Information
+ 23. About Paper Tray Information
     Hint box is not displayed in printer property/Configure/Paper Tray Information.
 
     Workaround: Open print settings, close OK, and reopen printer properties.
 
+ 24. About IdP authentication
+  24-1. About browser settings
+        Since IdP authentication uses Internet Explorer, you need to make the following settings:
+         - Add the authentication site to the "Trusted sites" of Internet Explorer
+         - Change "Let Internet Explorer open sites in Microsoft Edge" to "Never" in Microsoft Edge
+         - Open "Compatibility View settings" in the Internet Explorer and disable 
+           "Display internet sites in Compatibility View".
+           ==> For sites that require a compatibility view, enable the setting individually.
+
+        For details, please refer to the support manual.
+
 ==========================================================================================
-8-2. Attentions and Restrictions when using a FAX driver
+8-2. Attentions and Restrictions when using a PCL driver
+==========================================================================================
+
+ 1. Restrictions when using Citrix XenApp
+    If you select 1200dpi to print a document when using the Citrix Universal Printer 
+    Driver, printing will fail.
+    When you select 1200dpi to print a document, please use the Native Driver.
+
+
+==========================================================================================
+8-3. Attentions and Restrictions when using a PS driver
+==========================================================================================
+
+ 1. Quality
+    When you set [Quality]tab -[Quality Adjustment]-[Detail]-[Photo]-[Pure Black] 
+    to Off, the full color counter will be counted up because the device performs 
+    CMYK print, but documents will be printed more beautifully.
+
+ 2. PostScript Pass through
+    Depending on applications to use, some functions of printer drivers might not work
+    correctly.  For example, Watermarks specified by printer drivers would be 
+    printed in unexpectedly large size when printing from Adobe Photoshop.
+    ==>this may be solved by setting [PostScript Pass through] to [Disable] 
+       in printer drivers.
+       * The following cases are the error samples.
+         - Output cannot be performed normally when Adobe Application and Overlay are
+           combined.
+         - Watermark specified by printer driver may be printed larger than the size
+           you specified when printing with Adobe Photoshop.
+         - Error page may be printed when printing with the Adobe application.
+
+ 3. Banner Printing
+    Please set [Length] to a value higher than 457.3mm / 18.002 inches in the 
+    Banner Printing [Custom Size Settings] dialog box on the following models:
+    - C650/C550/C451
+    - C353/C353P/C253/C203
+    - C652(DS)/C552(DS)/C452
+    - C360/C280/C220
+    - 652/602/552/502
+    - C754(e)/C654(e)
+    - 754(e)/654(e)
+    - C554(e)/C454(e)/C364(e)/C284(e)/C224(e)
+    - 554e/454e/364e/284e/224e
+    - 658e/558e/458e/368e/308e
+    - C759/C659
+    - 558/458
+    - 368/308
+    - C658/C558/C458
+    - C368/C308/C258
+    - 958/808/758
+    - C750i
+    - C650i/C550i/C450i
+    - C360i/C300i/C250i
+    - 750i
+    - 650i/550i/450i/360i/300i
+    Please set [Length] to a value higher than 431.9mm / 17.002 inches in the 
+    Banner Printing [Custom Size Settings] dialog box on the following models:
+    - WPH
+    - C266/C226
+    - C287/C227
+    - C287i/C257i/C227i
+    - C286i/C266i/C226i
+    You cannot execute Banner printing on the following models.
+    - 350/250/200
+    - 423/363/283/223
+    - 362/282/222
+    - 501/421/361
+    - 751/601
+    - 751/601(Sol-ROM)
+    - C281/C221/C221s
+    - C3851/C3351/C3851FS
+    - 4752/4052
+    - 367/287/227
+    - C4050i/C3350i
+    - C4000i/C3300i
+    - C3320i
+    - 306i/266i/246i/226i
+    - 4750i/4050i
+    - 4700i
+    - C3850/C3350/C3850FS
+    - 4750/4050
+    - C3100P
+    - C3110
+    - 4702P/4402P/3602P
+    - 4422/3622
+    - 4700P/4000P/3300P/3301P
+    - 4020/3320
+    - C35/C25/C35P/mc4750
+    - 42/36(EU/JP)
+    - 42/36
+    - 20
+    - 20P
+    - 195/215/235
+    - 25e
+
+ 4. Printing Custom Size Documents
+  4-1. When printing the document which length and width is the same (i.e. "square"
+       shape document) in some application, the device may print the document with
+       rotating its direction.
+       This means for example that staple or punch may be made in the different 
+       position of the document from the expected one.
+
+  4-2. When [Paper Size] is set to [Custom Size] and a print job is sent, the [Paper Size]
+       set on the MFP may be different than the what is set in the Printer Driver,
+       but the printed output will be normal.
+
+ 5. Overlay Function
+  5-1. About Combination with [Binding Margin]
+       When [Overlay], [Booklet], and [Binding Margin] we set simultaneously, the leading 
+       edge of the Overlay will exceed the [Binding Margin] at the time of printing.
+       - If the [Binding Margin] is set to 10mm, the leading edge of Overlay will be mobed 
+         to 15mm.
+
+ 6. Printing in the [Auto Color] Setting
+    When Black and White document is printed in the [Auto Color] Setting, 
+    it may be counted as color document.
+    To avoid this situation, change your driver/printer setting and print again.
+    (Precondition: [Simulation Profile] is enabled in the printer.)
+    Setting changes:
+    Printer driver setting: Select [Quality]->[Select Color]->[Gray Scale].
+    Printer setting: Select [Utility]->[Printer Settings]->[PS Settings]
+    ->[ICC Profile Settings]->[Simulation Profile]-[None].
+
+==========================================================================================
+8-4. Attentions and Restrictions when using a FAX driver
 ==========================================================================================
 
  1. When select different language to OS,garbled characters occur in the following dialog.
@@ -636,6 +1053,122 @@ In such a case, please be careful of the setting method etc.
          - "Phone Book Entry"
      Workaround: Match the language settings of the OS and driver.
 
+==========================================================================================
+8-5. Cautions and restrictions with specific applications
+==========================================================================================
+
+ 1. Microsoft Office
+  1-1. AutoShapes Graphics Print in Office [* PS Driver only]
+       If the [Transparency] check box of [Fill] column in [Format AutoShape...]-
+       [Colors and Lines]tab is ON, the paint-out part of graphics may not be
+       printed correctly at the time of reduction and enlargement print.
+
+  1-2. Entire workbook Print in Microsoft Excel
+       When you print the Microsoft Excel document that has different binding direction 
+       in each sheets with the [Entire workbook] checkbox ON, it may not be printed 
+       as you specified.
+
+  1-3. Duplex Print in Microsoft Word 2007 or Microsoft Word 2010
+       When a document with odd number sheet is printed in duplex mode from
+       Microsoft Word 2007 or Microsoft Word 2010, white paper which is not included 
+       in original may be printed and counted.
+
+  1-4. Custom Size printing in Microsoft Word
+       When paper size is specified as "Custom Size", it may be printed in invert.
+       In this case, it can be printed normally when paper size is specified as
+       "Same as Original Size".
+
+  1-5. Edit Phone Book file at Microsoft Excel
+       Please open the Phone Book file with changing the file extension from "csv" 
+       to "txt" and specify "character" for each field in order to edit the Phone 
+       Book exported from the FAX driver at Microsoft Excel.
+       Also please save the Phone Book file edited at Microsoft Excel with selecting 
+       "csv" for file type.
+
+ 2. Adobe Acrobat
+  2-1. When a printing is performed from Acrobat Reader or Acrobat, Printing may not 
+       be performed normally. 
+       ==>Please check the [Print as image] on the Print setting of the application.
+
+  2-2. Depending on the PDF file, the background may be painted with white out.
+       When the topside of this image is printed during overlay print, the downside 
+       of the image (Original or Overlay) cannot be printed.
+
+  2-3. When printing the PDF file with turning off the "Choose Paper Source by PDF page 
+       size" checkbox in the "Print" dialog, the page with different direction from 
+       the 1st page and following pages might not be printed with correct direction 
+       since Acrobat Reader will not correctly notify the page direction of pages 
+       after the 1st page to the printer driver.
+
+  2-4. When printing landscape original using Acrobat Reader 9, the page will be rotated 
+       first then printed.[*PCL only]
+       This means for example that staple or punch may be made in the different 
+       position of the document from the expected one.
+       ==>In this case, it can be printed normally when [Auto-Rotate and Center] is 
+          specified to OFF in the [Print Setting] of application.
+
+  2-5. Please note that entering multiple copies in the Print Dialog menu will not 
+       yield the expected results when using Adobe Reader X or Adobe Acrobat X. 
+       ==>When printing a multiple number of copies using Adobe Reader X or
+          Adobe Acrobat X, you need to configure the [Page Setup] setting first and 
+          then configure the Printer Driver Properties menu.  
+
+  2-6. When [Select paper by corresponding to PDF's page size] setting available
+       in the Acrobat`s print dialog box is enabled, 
+       ==>Please disable the [Select paper by corresponding to PDF's page size]
+          setting and execute the print.
+
+ 3. Adobe PageMaker, Illustrator
+  3-1. Depending on applications, such as Adobe PageMaker, Illustrator and etc, 
+       if it recognizes that it is a PostScript printer driver, the application itself 
+       may output PostScript commands. In this case, it may not be printed correctly.
+       [* PS Driver only]
+
+  3-2. When printing a PageMaker file containing Japanese characters, 
+       the text may be garbled sometimes. [* PS driver only]
+       ==> In such cases, set the download font format of the printer driver to 
+           [Outline] or [Bitmap] to print normally.
+
+  3-3. When the Illustrator file with paper size A0/A1/B1 is printed with Illustrator CS, 
+       a part of the image is lost.
+       With Illustrator CS2 or more, this problem doesn't occur.
+
+ 4. About Just Systems Ichitaro [*PS Driver only]
+  4-1. If printing is not performed correctly, click the [Details] tab 
+       in the print dialog box and set the [PostScript code] field to 
+       [Output as PostScript code]. 
+
+ 5. Internet Explorer, Note Pad
+  5-1. Check the selected printer when printing continuously by the Internet Explorer
+       or Note Pad.
+       Selected printer might differ from the previous selection if several same
+       printer drivers have been installed, depending on the application limitation.
+       ==>In this case, change the printer driver name with 
+          which selection will be changed, to less than 29 characters.
+
+ 6. Excel
+  6-1. Check the print settings before printing when you print from Excel after 
+       switching the printer driver.
+       Depending on the limitation of application, current printer driver setting might 
+       apply to the printer driver after switching.
+       ==>In that case, change the name of a printer driver used to within 29 characters. 
+
+  6-2. When you want to print multiple Excel sheets simultaneously, printing may not be 
+       successfully executed.
+       This is a result of different printer driver settings for each sheet.
+       ==>In this case, please enter the same print driver settings for all sheets 
+          within the Excel workbook.
+
+ 7. PowerPoint
+  7-1. Please do not enable the following setting when you print from PowerPoint.
+       It might cause to hang PowerPoint.
+       - [Settings]tab - [Popup Authentication Dialog when printing]
+
+  7-2. The background of PowerPoint data is painted with the specified color.
+       Because of this, when the topside of this image is printed during the overlay
+       print with white background,the bottom of the image (Original or Overlay) cannot
+       be printed by combination of the following driver.
+       - PowerPoint2007 later  ->  PS/PCL driver
 
 //////////////////////////////////////////////////////////////////////////////////////////
 9. Apache License

@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$FAX            = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=c0365c7739dd5be9d95af1b233a09293&tx_kmanacondaimport_downloadproxy[documentId]=129422&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$FAX_checksum   = '2F028CDC756E9F98892CB9CE78118496563257D27053303830F04B0050B1C7C1'
-$PCL            = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=3781038422c14d7b0b65bb678a983de8&tx_kmanacondaimport_downloadproxy[documentId]=129423&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum   = '4330DB1F2BF3313E8DD88729EB0D0E49AAEAB80B598A0C53015F89B5BD56016E'
-$PS             = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=4af03c9451268c8908628972511516f8&tx_kmanacondaimport_downloadproxy[documentId]=129424&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PS_checksum    = 'E1B86648C27909D773B136450A5B535BA86A834AA2954D8B2161AFBB9491AC58'
+$FAX            = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=abc51e992bbfd66b01501a3a5650be84&tx_kmanacondaimport_downloadproxy[documentId]=130166&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$FAX_checksum   = '717ACF72D7E78C08692DFF358AB26B8FF619C724CE5ECBB302EBB7DC0E13A0C6'
+$PCL            = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=5ffdde5837d47f0f3609ba164ef67109&tx_kmanacondaimport_downloadproxy[documentId]=130164&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PCL_checksum   = 'B534450729BA5412D0461B359B86BF7958F88519FD5A6F35874BC7D330A0265D'
+$PS             = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=300d00e9bdcf9abc93ee106688cf60d7&tx_kmanacondaimport_downloadproxy[documentId]=130165&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PS_checksum    = '05DD9770970F30ED96C79F8FC26E2D95D017263E2FABE7EF6078003B25BAC449'
 
 $FAX_extract    = Join-Path $env:TEMP 'extractFAX'
 $PCL_extract    = Join-Path $env:TEMP 'extractPCL'
