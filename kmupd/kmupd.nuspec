@@ -6,14 +6,14 @@
     <version>3.9.117.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kmupd</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>KONICA MINOLTA Universal Print Driver PCL/PS</title>
+    <title>KONICA MINOLTA Universal Print Driver PCL/PS/FAX</title>
     <authors>Konica Minolta</authors>
     <projectUrl>https://www.konicaminolta.eu/eu-en/software/connectivity/universal-print-driver-connectivity</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/icon.png</iconUrl>
     <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/Readme_en.txt</licenseUrl>
     <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd/Readme_en.txt</docsUrl>
     <tags>konica minolta universal print printer driver fax pcl pcl6 ps</tags>
-    <summary>KONICA MINOLTA Universal Print Driver PCL/PS</summary>
+    <summary>KONICA MINOLTA Universal Print Driver PCL/PS/FAX</summary>
     <description>This printer driver is a software that controls KONICA MINOLTA Multi Function Printer.
 This is required to print with KONICA MINOLTA Multi Function Printer from your PC.
 
