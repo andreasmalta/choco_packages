@@ -1,0 +1,14 @@
+checksum -t sha256 -f UPD4PCL6Win81P_2003MU.zip
+
+#INSTALL
+choco pack
+choco install kmupd4 -y -dv -s .
+
+#UPGRADE
+choco install kmupd4 -y
+choco upgrade kmupd4 -y -dv -s .
+
+#UNINSTALL
+choco uninstall kmupd4 -y
+choco push kmupd4.2.0.0.3.nupkg -s https://push.chocolatey.org/
+

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kmupd4</id>
+    <version>2.0.0.3</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kmupd4</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>KONICA MINOLTA Universal V4 PCL</title>
+    <authors>Konica Minolta</authors>
+    <projectUrl>https://www.btapac.konicaminolta.com/solutions/v4_universal_print_driver/index.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd4/icon.png</iconUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd4/Readme_en.txt</licenseUrl>
+    <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd4/Readme_en.txt</docsUrl>
+    <tags>konica minolta universal print printer driver v4 pcl pcl6</tags>
+    <summary>KONICA MINOLTA Universal V4 PCL</summary>
+    <description>The latest Universal Printer Driver compatible with the newly introduced printer driver architecture V4. 
+It provides flexible printing driver capabilities for operating systems including Windows 8.1/Windows 10 and Support printing out from various devices.</description>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kmupd4/Readme_en.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,1 @@
+﻿Remove-PrinterDriver -Name "KONICA MINOLTA Universal V4 PCL" -RemoveFromDriverStore
