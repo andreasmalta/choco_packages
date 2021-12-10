@@ -3,18 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>moldflowc</id>
-    <version>2020.09.29</version>
+    <version>2021.2</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/moldflowc</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>Moldflow Communicator 2021 (64-bit)</title>
+    <title>Moldflow Communicator</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/moldflow/communicator-viewer</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/moldflowc/icon.png</iconUrl>
-    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/moldflowc/English.rtf</licenseUrl>
+    <licenseUrl>https://download.autodesk.com/global/dlm_eula/English.html</licenseUrl>
     <docsUrl>https://help.autodesk.com/view/MFC/2021/ENU/</docsUrl>
     <tags>autodesk mfr design viewer</tags>
-    <summary>Moldflow Communicator 2021 (64-bit)</summary>
-    <description>Moldflow Communicator software helps improve collaboration with manufacturing personnel, procurement engineers, suppliers, and external customers. The viewer works directly with Moldflow result files so stakeholders can more easily visualize, quantify, and compare simulation results. Whether you design injection molds, manufacture plastic parts, or participate in any other step of the plastic injection molding process, Moldflow Communicator software enables you to share simulation knowledge with your extended design team and helps to reduce costly design changes and manufacturing defects.</description>
+    <summary>Moldflow Communicator</summary>
+    <description>Moldflow Communicator software helps improve collaboration with manufacturing personnel, procurement engineers, suppliers, and external customers. The viewer works directly with Moldflow result files so stakeholders can more easily visualize, quantify, and compare simulation results. Whether you design injection molds, manufacture plastic parts, or participate in any other step of the plastic injection molding process, Moldflow Communicator software enables you to share simulation knowledge with your extended design team and helps to reduce costly design changes and manufacturing defects.
+
+#### System requirements for Moldflow Communicator
+Operating System: 64-bit Microsoft® Windows® 10</description>
     <releaseNotes>https://www.autodesk.com/products/moldflow/features</releaseNotes>
     <dependencies>
       <dependency id="vcredist140" version="14.20.0.0" />
