@@ -1,0 +1,13 @@
+checksum -t sha256 -f GEUPD4PCL6Win81P_2003MU.zip
+
+#INSTALL
+choco pack
+choco install geupd4 -y -dv -s .
+
+#UPGRADE
+choco install geupd4 -y
+choco upgrade geupd4 -y -dv -s .
+
+#UNINSTALL
+choco uninstall geupd4 -y
+choco push geupd4.2.0.0.3.nupkg -s https://push.chocolatey.org/
