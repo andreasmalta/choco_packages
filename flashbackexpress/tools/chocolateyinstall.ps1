@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $url            = 'https://files.bbsoftware.co.uk/bbfbex5.exe'
-$checksum       = '6BA171208B66E5D1D3D27121478465E0B63EAE6ACCC573F44D970E27DF75A485'
+$checksum       = '4A6176466D9D1CC3427CE8BE6DBD654B615F70309D5BBB119C989B9C338AABF2'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
