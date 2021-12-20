@@ -1,7 +1,7 @@
-checksum -t sha256 -f UNIV_5.810.8.0_PS_x64.zip
-checksum -t sha256 -f UNIV_5.810.8.0_PS_x86.zip
-checksum -t sha256 -f UNIV_5.810.8.0_PCL6_x64.zip
-checksum -t sha256 -f UNIV_5.810.8.0_PCL6_x86.zip
+checksum -t sha256 -f UNIV_5.860.1.0_PCL6_x64.zip
+checksum -t sha256 -f UNIV_5.860.1.0_PCL6_x86.zip
+checksum -t sha256 -f UNIV_5.860.1.0_PS_x64.zip
+checksum -t sha256 -f UNIV_5.860.1.0_PS_x86.zip
 
 #INSTALL
 choco pack
@@ -13,4 +13,4 @@ choco upgrade xeroxupd -y -dv -s .
 
 #UNINSTALL
 choco uninstall xeroxupd -y
-choco push xeroxupd.5.810.8.0.nupkg -s https://push.chocolatey.org/
+choco push xeroxupd.5.860.1.0.nupkg -s https://push.chocolatey.org/
