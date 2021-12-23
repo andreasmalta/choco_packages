@@ -1,5 +1,5 @@
 #Kopiera download länk "ClickShare Desktop App Windows MSI installer"
-checksum -t sha256 -f R3306194_26_ApplicationSw.zip
+checksum -t sha256 -f R3306194_27_ApplicationSw.zip
 
 #INSTALL
 choco pack
@@ -11,4 +11,4 @@ choco upgrade clickshare-desktop -y -dv -s .
 
 #UNINSTALL
 choco uninstall clickshare-desktop -y
-choco push clickshare-desktop.4.18.0.8.nupkg -s https://push.chocolatey.org/
+choco push clickshare-desktop.4.19.0.16.nupkg -s https://push.chocolatey.org/
