@@ -11,4 +11,4 @@ choco upgrade jabber -y -dv -s .
 
 #UNINSTALL
 choco uninstall jabber -y
-choco push jabber.14.0.2.nupkg -s https://push.chocolatey.org/
+choco push jabber.14.0.4.nupkg -s https://push.chocolatey.org/
