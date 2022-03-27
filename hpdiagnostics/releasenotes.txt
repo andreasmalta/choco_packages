@@ -1,11 +1,11 @@
 TITLE:  HP PC Hardware Diagnostics Windows
-VERSION: 1.8.0.0
+VERSION: 1.8.1.0
 DESCRIPTION: 
 This package provides HP PC Hardware Diagnostics for supported computer models that are running a supported operating system. HP PC Hardware Diagnostics Windows allows HP customers to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
 
 PURPOSE: Recommended
-SoftPaq NUMBER: SP135762
-EFFECTIVE DATE:  10/15/2021
+SoftPaq NUMBER: SP138803
+EFFECTIVE DATE:  03/10/2022
 CATEGORY:  Diagnostic
 SSM SUPPORTED:  Yes
 DEVICES SUPPORTED: N/A
@@ -15,21 +15,18 @@ LANGUAGE(S):
 Global 
 
 ENHANCEMENTS:
- - Ability to launch into UEFI Diagnostics main menu.
-- DMI capture and restore data for DMIFIT auto population of MUD data. 
-- Provide Pass ID and FID barcodes for repair centers. 
-- Enable wheel on mouse + add scroll test.
-- Added Mouse / Touchpad pointer test.
-- Added support for DDR5 memory DIMM
-- Added additional support on Battery test. 
+- Thermal Diagnostic Check.
+- Thermal Tab added to System Info. 
+- HP SMART Support promotion. 
+- Enable Bios Update for consumer systems.
+- Improve EAS flow on Omen and Envy family of products.
+- NET6 Migration. 
+- Improvement to webcam test. 
 - UI Improvements.
-- Various Bug Fixes
-
-FIXES: 
- 
+- Various Bug Fixes.
 HOW TO USE:
- 1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
+1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
 
 2. Double-click the downloaded file and follow the on-screen instructions.
 
-Copyright (c) 2021 HP Development Company, L.P.
+Copyright (c) 2022 HP Development Company, L.P.

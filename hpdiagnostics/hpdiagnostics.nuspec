@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hpdiagnostics</id>
-    <version>1.8.0.0</version>
+    <version>1.8.1.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/hpdiagnostics</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>HP PC Hardware Diagnostics</title>
