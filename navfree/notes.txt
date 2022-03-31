@@ -1,5 +1,4 @@
-checksum -t sha256 -f Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm.sfx.exe
-#copy "All other countries.rtf" from unzip folder x64\NAVFREE\Autodesk\EULA
+checksum -t sha256 -f Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm.sfx.exe
 
 #INSTALL
 choco pack
@@ -12,4 +11,4 @@ choco upgrade navfree -y -dv -s .
 
 #UNINSTALL
 choco uninstall navfree -y
-choco push navfree.2022.190136606.nupkg -s https://push.chocolatey.org/
+choco push navfree.2023.200138263.nupkg -s https://push.chocolatey.org/

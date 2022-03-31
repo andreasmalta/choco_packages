@@ -1,20 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2022/NAVFREE/087B95DF-F444-3F18-B633-4A7A0A0488A4/SFX/Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm.sfx.exe'
-$checksum        = 'F490744780CD2F986AED31643F85818736E3680F71D47681E563C13C5894103A'
+#$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/NAVFREE/404ED079-9FE3-3739-BA09-0069D1EDDFB6/SFX/Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm.sfx.exe'
+$url = 'Z:\navfree\Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm.sfx.exe'
+$checksum = '0E90A246692A8D6B71D395E831BFFA856831B5CC2857ABE8B0B972D477010D20'
 
-$unzip           = Join-Path $env:TEMP 'Autodesk_Navisworks_Freedom_2022_Win_64bit_dlm'
-$matlib          = Join-Path $unzip 'Content\ADSKMaterials\CM\MaterialLibrary2022.msi'
-$matlibbase      = Join-Path $unzip 'Content\ADSKMaterials\ILB\BaseImageLibrary2022.msi'
-$matlibadv       = Join-Path $unzip 'Content\ADSKMaterials\PLB\PrismBaseImageLibrary2022.msi'
-$adsso           = Join-Path $unzip 'x64\AdSSO\AdSSO.msi'
-$navfree         = Join-Path $unzip 'x64\NAVFREE\freedom.msi'
-$navfreelp       = Join-Path $unzip 'x64\en-US\NAVFREE\NAVFREE_LP.msi'
-$ags             = Join-Path $unzip 'x64\AGS\Autodesk Genuine Service.msi'
-$adapp           = Join-Path $unzip 'x86\ADSKAPP\AdApplicationManager-installer.exe'
+#remove any reboot requests that may block the installation
+$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
+if (Test-path $RegRebootRequired)
+{
+    Remove-Item -Path $RegRebootRequired
+}
 
-$navfreekey      = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}'
-$uninstallstring = 'MsiExec.exe /I{C39E6EC4-985A-0000-92D4-F6DC06B39DD2}'
-
+$unzip           = Join-Path $env:TEMP 'Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm'
 $packageArgsUnzip = @{
   packageName    = 'NAVFREE Unzip'
   fileType       = 'exe'
@@ -25,6 +21,9 @@ $packageArgsUnzip = @{
   silentArgs     = "-suppresslaunch -d $env:TEMP"
   validExitCodes = @(0, 3010, 1641)
 }
+Install-ChocolateyPackage @packageArgsUnzip
+
+$matlib          = Join-Path $unzip 'Content\ADSKMaterials\CM\MaterialLibrary2023.msi'
 $packageArgsMatLib  = @{
   packageName    = 'Autodesk Material Library'
   fileType       = 'msi'
@@ -33,6 +32,9 @@ $packageArgsMatLib  = @{
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
 }
+Install-ChocolateyInstallPackage @packageArgsMatLib
+
+$matlibbase      = Join-Path $unzip 'Content\ADSKMaterials\ILB\BaseImageLibrary2023.msi'
 $packageArgsMatLibBase  = @{
   packageName    = 'Autodesk Material Library Base Resolution Image Library'
   fileType       = 'msi'
@@ -41,6 +43,9 @@ $packageArgsMatLibBase  = @{
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
 }
+Install-ChocolateyInstallPackage @packageArgsMatLibBase
+
+$matlibadv       = Join-Path $unzip 'Content\ADSKMaterials\PLB\PrismBaseImageLibrary2023.msi'
 $packageArgsMatLibAdv  = @{
   packageName    = 'Autodesk Advanced Material Library Base Resolution Image Library'
   fileType       = 'msi'
@@ -49,6 +54,9 @@ $packageArgsMatLibAdv  = @{
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
 }
+Install-ChocolateyInstallPackage @packageArgsMatLibAdv
+
+$adsso           = Join-Path $unzip 'x64\AdSSO\AdSSO.msi'
 $packageArgsAdSSO  = @{
   packageName    = 'Autodesk Single Sign On Component'
   fileType       = 'msi'
@@ -57,6 +65,9 @@ $packageArgsAdSSO  = @{
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
 }
+Install-ChocolateyInstallPackage @packageArgsAdSSO
+
+$navfree         = Join-Path $unzip 'x64\NAVFREE\freedom.msi'
 $packageArgsNavFree  = @{
   packageName    = 'Autodesk Navisworks Freedom'
   fileType       = 'msi'
@@ -65,6 +76,20 @@ $packageArgsNavFree  = @{
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
 }
+Install-ChocolateyInstallPackage @packageArgsNavFree
+
+$pp = Get-PackageParameters
+if ($pp.'BR') { $navfreelp = Join-Path $unzip 'x64\pt-BR\NAVFREE\NAVFREE_LP.msi' }
+elseif ($pp.'CN') { $navfreelp = Join-Path $unzip 'x64\zh-CN\NAVFREE\NAVFREE_LP.msi' }
+elseif ($pp.'DE') { $navfreelp = Join-Path $unzip 'x64\de-DE\NAVFREE\NAVFREE_LP.msi' }
+elseif ($pp.'ES') { $navfreelp = Join-Path $unzip 'x64\es-ES\NAVFREE\NAVFREE_LP.msi' }
+elseif ($pp.'FR') { $navfreelp = Join-Path $unzip 'x64\fr-FR\NAVFREE\NAVFREE_LP.msi' }
+elseif ($pp.'IT') { $navfreelp = Join-Path $unzip 'x64\it-IT\NAVFREE\NAVFREE_LP.msi' }
+elseif ($pp.'JP') { $navfreelp = Join-Path $unzip 'x64\ja-JP\NAVFREE\NAVFREE_LP.msi' }
+elseif ($pp.'KR') { $navfreelp = Join-Path $unzip 'x64\ko-KR\NAVFREE\NAVFREE_LP.msi' }
+elseif ($pp.'RU') { $navfreelp = Join-Path $unzip 'x64\ru-RU\NAVFREE\NAVFREE_LP.msi' }
+elseif ($pp.'TW') { $navfreelp = Join-Path $unzip 'x64\zh-TW\NAVFREE\NAVFREE_LP.msi' }
+else { $navfreelp = Join-Path $unzip 'x64\en-US\NAVFREE\NAVFREE_LP.msi' }
 $packageArgsNavFreeLP  = @{
   packageName    = 'Autodesk Navisworks Freedom Language Pack'
   fileType       = 'msi'
@@ -73,6 +98,9 @@ $packageArgsNavFreeLP  = @{
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
 }
+Install-ChocolateyInstallPackage @packageArgsNavFreeLP
+
+$ags             = Join-Path $unzip 'x64\AGS\Autodesk Genuine Service.msi'
 $packageArgsAGS  = @{
   packageName    = 'Autodesk Genuine Service'
   fileType       = 'msi'
@@ -81,6 +109,9 @@ $packageArgsAGS  = @{
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
 }
+Install-ChocolateyInstallPackage @packageArgsAGS
+
+$adapp           = Join-Path $unzip 'x86\ADSKAPP\AdApplicationManager-installer.exe'
 $packageArgsAdApp = @{
   packageName    = 'Autodesk Desktop App'
   fileType       = 'exe'
@@ -89,28 +120,12 @@ $packageArgsAdApp = @{
   silentArgs     = "--mode unattended"
   validExitCodes = @(0, 3010, 1641)
 }
-
-#remove any reboot requests that may block the installation
-$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
-if (Test-path $RegRebootRequired)
-{
-    Remove-Item -Path $RegRebootRequired
-}
-
-#unzip and install (using msi since setup.exe not silent)
-Install-ChocolateyPackage @packageArgsUnzip
-Install-ChocolateyInstallPackage @packageArgsMatLib
-Install-ChocolateyInstallPackage @packageArgsMatLibBase
-Install-ChocolateyInstallPackage @packageArgsMatLibAdv
-Install-ChocolateyInstallPackage @packageArgsAdSSO
-Install-ChocolateyInstallPackage @packageArgsNavFree
-Install-ChocolateyInstallPackage @packageArgsNavFreeLP
-Install-ChocolateyInstallPackage @packageArgsAGS
 Install-ChocolateyInstallPackage @packageArgsAdApp
 
 #msi installers are missing uninstall entry, creating it manually
-if (Test-path $navfreekey)
-{
+$navfreekey = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{2B7952CB-B38D-0000-B451-89598C224C21}'
+$uninstallstring = 'MsiExec.exe /I{2B7952CB-B38D-0000-B451-89598C224C21}'
+if (Test-path $navfreekey) {
 Set-Itemproperty -path $navfreekey -Name 'NoRemove' -value '0' -Type dword
 Set-Itemproperty -path $navfreekey -Name 'SystemComponent' -value '0' -Type dword
 Set-ItemProperty -path $navfreekey -name 'UninstallString' -value $uninstallstring -Type ExpandString

@@ -3,28 +3,47 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>navfree</id>
-    <version>2022.190136606</version>
+    <version>2023.200138263</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/navfree</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Navisworks Freedom</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/navisworks/3d-viewers</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/navfree/icon.png</iconUrl>
-    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/navfree/All%20other%20countries.rtf</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/NAVFREE/2022/ENU/</docsUrl>
-    <tags>autodesk nwd design viewer autocad revit</tags>
+    <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
+    <docsUrl>https://help.autodesk.com/view/NAVFREE/2023/ENU/</docsUrl>
+    <tags>autodesk nwd 3d dwf design viewer autocad revit</tags>
     <summary>Navisworks Freedom</summary>
     <description>Get the whole-project view using Navisworks solutions. Combine design data created in AutoCAD and Revit software-based products and other applications with models created by other design tools. Then, view these files with Navisworks® Freedom viewer software. NWD files viewed with Navisworks Freedom give stakeholders equal access to explore and experience whole projects.
 The Navisworks Freedom free download creates compressed, more secure, NWD format files. A practical solution to streaming large CAD models, NWD files require no model preparation, third-party server hosting, setup time, or ongoing costs.
 
-#### System requirements for Autodesk Navisworks Freedom 2022
-Operating System: 64-bit Microsoft® Windows® 10</description>
+#### System requirements for Autodesk Navisworks Freedom 2023
+Operating System: 64-bit Microsoft® Windows® 11 and Windows 10
+
+#### Package Parameters
+The following package parameters can be set (choose only one!):
+
+ * `/BR:` - Install pt-BR language pack
+ * `/CN:` - Install zh-CN language pack
+ * `/DE:` - Install de-DE language pack
+ * `/ES:` - Install es-ES language pack
+ * `/FR:` - Install fr-FR language pack
+ * `/IT:` - Install it-IT language pack
+ * `/JP:` - Install ja-JP language pack
+ * `/KR:` - Install ko-KR language pack
+ * `/RU:` - Install ru-RU language pack
+ * `/TW:` - Install zh-TW language pack
+ * If no parameter is given the en-US language pack will be installed.
+
+To pass parameters, use `--params "''"` (e.g. `choco install navfree --params="'/BR'"`).
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+</description>
     <releaseNotes>https://www.autodesk.com/products/navisworks/features</releaseNotes>
     <dependencies>
       <dependency id="dotnetfx" version="4.8.0.0" />
       <dependency id="vcredist2010" version="10.0.40219.1" />
       <dependency id="vcredist2012" version="11.0.61030" />
-      <dependency id="vcredist140" version="14.27.29112" />
+      <dependency id="vcredist140" version="14.29.30133" />
 	</dependencies>
   </metadata>
   <files>
