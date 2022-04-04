@@ -1,21 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop';
-#$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/NAVFREE/404ED079-9FE3-3739-BA09-0069D1EDDFB6/SFX/Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm.sfx.exe'
-$url = 'Z:\navfree\Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm.sfx.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/NAVFREE/404ED079-9FE3-3739-BA09-0069D1EDDFB6/SFX/Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm.sfx.exe'
 $checksum = '0E90A246692A8D6B71D395E831BFFA856831B5CC2857ABE8B0B972D477010D20'
 
-#remove any reboot requests that may block the installation
-$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
-if (Test-path $RegRebootRequired)
-{
-    Remove-Item -Path $RegRebootRequired
-}
+#UNINSTALL OLD VERSIONS
+$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+. "$toolsDir\cleanup.ps1"
 
+#EXTRACT AND INSTALL
 $unzip           = Join-Path $env:TEMP 'Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm'
 $packageArgsUnzip = @{
-  packageName    = 'NAVFREE Unzip'
+  packageName    = 'NAVFREE Installation Files'
   fileType       = 'exe'
   url            = $url
-  softwareName   = 'NAVFREE Unzip*'
+  softwareName   = 'NAVFREE Installation Files*'
   checksum       = $checksum
   checksumType   = 'sha256'
   silentArgs     = "-suppresslaunch -d $env:TEMP"
@@ -100,7 +97,7 @@ $packageArgsNavFreeLP  = @{
 }
 Install-ChocolateyInstallPackage @packageArgsNavFreeLP
 
-$ags             = Join-Path $unzip 'x64\AGS\Autodesk Genuine Service.msi'
+$ags = Join-Path $unzip 'x64\AGS\Autodesk Genuine Service.msi'
 $packageArgsAGS  = @{
   packageName    = 'Autodesk Genuine Service'
   fileType       = 'msi'
@@ -109,7 +106,13 @@ $packageArgsAGS  = @{
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
 }
+$agsinstalled = (Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') -ErrorAction:SilentlyContinue | Where-Object {$_.DisplayName -like 'Autodesk Genuine Service'})
+if ($agsinstalled.displayName -match 'Autodesk Genuine Service') {
+Write-Host 'Autodesk Genuine Service already installed, skipping installation.'
+}else {
 Install-ChocolateyInstallPackage @packageArgsAGS
+}
 
 $adapp           = Join-Path $unzip 'x86\ADSKAPP\AdApplicationManager-installer.exe'
 $packageArgsAdApp = @{
@@ -122,7 +125,8 @@ $packageArgsAdApp = @{
 }
 Install-ChocolateyInstallPackage @packageArgsAdApp
 
-#msi installers are missing uninstall entry, creating it manually
+
+#CREATING MISSING UNINSTALL ENTRIES
 $navfreekey = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{2B7952CB-B38D-0000-B451-89598C224C21}'
 $uninstallstring = 'MsiExec.exe /I{2B7952CB-B38D-0000-B451-89598C224C21}'
 if (Test-path $navfreekey) {
