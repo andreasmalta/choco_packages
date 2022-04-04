@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dwgtrueview</id>
-    <version>2022.24.1.51</version>
+    <version>2023.24.2.53</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>DWG TrueView</title>
@@ -17,7 +17,7 @@
     <description>View DWG files or convert them to work with older versions of AutoCAD software.
 
 #### System requirements for DWG TrueView 2022
-Operating System: 64-bit Microsoft® Windows® 10
+Operating System: 64-bit Microsoft® Windows® 11 and Windows 10 version 1809 or above.
 
 #### Package Parameters
 The following package parameters can be set (choose only one!):
@@ -31,6 +31,8 @@ To have choco remember parameters on upgrade, be sure to set `choco feature enab
 </description>
     <dependencies>
       <dependency id="dotnetfx" version="4.8.0.0" />
+      <dependency id="dotnetcore-aspnetruntime" version="3.1.10" />
+      <dependency id="dotnetcore-runtime" version="3.1.10" />
       <dependency id="vcredist2012" version="11.0.61030" />
       <dependency id="vcredist140" version="14.27.29112" />
 	</dependencies>

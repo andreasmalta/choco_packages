@@ -3,30 +3,30 @@ $toolsDir        = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $pp              = Get-PackageParameters
 
 if ($pp.'French') {
-Write-Host "INSTALLING DWG TRUEVIEW 2022 - FRENCH"
-$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2022/ACD/14440FCD-9E86-3EBF-855F-4478C8A683D6/SFX/DWGTrueView_2022_French_64bit_dlm.sfx.exe'
-$checksum        = '7DA5DA429FDB9619B8EDC83373F3C82C7DFD54258925E642A246B39FB3F3DC2B'
-$unzip           = Join-Path $env:TEMP 'DWGTrueView_2022_French_64bit_dlm\x64\dwgviewr\dwgviewr.msi'
+Write-Host "INSTALLING DWG TRUEVIEW 2023 - FRENCH"
+$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/D40E729B-6243-3050-A267-3F664296250F/SFX/DWGTrueView_2023_French_64bit_dlm.sfx.exe'
+$checksum        = 'EC47185FC42C5D8C86E607D0111977CC9EA8752DFB0EE1A462FDE6530FF4C05C'
+$unzip           = Join-Path $env:TEMP 'DWGTrueView_2023_French_64bit_dlm\x64\dwgviewr\dwgviewr.msi'
 $regkey          = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{28B89EEF-5128-040C-0100-CF3F3A09B77D}'
 $uninstall       = 'MsiExec.exe /X{28B89EEF-5128-040C-0100-CF3F3A09B77D}'
 }
 
 elseif ($pp.'Japanese') {
-Write-Host "INSTALLING DWG TRUEVIEW 2022 - JAPANESE"
-$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2022/ACD/51735649-303B-3616-ABBC-448420E5C835/SFX/DWGTrueView_2022_Japanese_64bit_dlm.sfx.exe'
-$checksum        = 'CAA0D4F25981C68C6FB9F40CA4F3B478D57F1289B6052F8656520324D71DD08B'
-$unzip           = Join-Path $env:TEMP 'DWGTrueView_2022_Japanese_64bit_dlm\x64\dwgviewr\dwgviewr.msi'
+Write-Host "INSTALLING DWG TRUEVIEW 2023 - JAPANESE"
+$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/B2459683-0F7B-36BD-84CB-3D821476766E/SFX/DWGTrueView_2023_Japanese_64bit_dlm.sfx.exe'
+$checksum        = '83A3E7F7B36741756A8DEB29924A5DA900133BB440177F3F6046C9D4A5DB95D8'
+$unzip           = Join-Path $env:TEMP 'DWGTrueView_2023_Japanese_64bit_dlm\x64\dwgviewr\dwgviewr.msi'
 $regkey          = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{28B89EEF-5128-0411-0100-CF3F3A09B77D}'
 $uninstall       = 'MsiExec.exe /X{28B89EEF-5128-0411-0100-CF3F3A09B77D}'
 }
 
 else {
-Write-Host "INSTALLING DWG TRUEVIEW 2022 - ENGLISH"
-$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2022/ACD/D7A6621A-1A6A-3DAC-BBD2-9EB566035195/SFX/DWGTrueView_2022_English_64bit_dlm.sfx.exe'
-$checksum        = 'B154E86B005C51232755BA99B89DE0D402D21FD1B42F32021290EDCD2BDC4193'
-$unzip           = Join-Path $env:TEMP 'DWGTrueView_2022_English_64bit_dlm\x64\dwgviewr\dwgviewr.msi'
-$regkey          = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{28B89EEF-5128-0409-0100-CF3F3A09B77D}'
-$uninstall       = 'MsiExec.exe /X{28B89EEF-5128-0409-0100-CF3F3A09B77D}'
+Write-Host "INSTALLING DWG TRUEVIEW 2023 - ENGLISH"
+$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/5E30049E-BFCC-3E1D-B280-6216BD413995/SFX/DWGTrueView_2023_English_64bit_dlm.sfx.exe'
+$checksum        = '03AD6A7B69E97BEF719239658EDFB03A996919DF2763592FA35FFBF495BFF946'
+$unzip           = Join-Path $env:TEMP 'DWGTrueView_2023_English_64bit_dlm\x64\dwgviewr\dwgviewr.msi'
+$regkey          = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{59D6ED58-7BB2-4F80-9632-D1DEA3E8E2BC}'
+$uninstall       = 'MsiExec.exe /X{59D6ED58-7BB2-4F80-9632-D1DEA3E8E2BC}'
 }
 
 $packageArgsUnzip = @{

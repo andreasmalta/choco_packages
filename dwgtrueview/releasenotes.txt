@@ -1,13 +1,13 @@
-Autodesk® DWG TrueView 2022 Release Notes
+Autodesk® DWG TrueView 2023 Release Notes
 
-This document contains the latest information for Autodesk® DWG TrueView 2022. For reference, save or print this document.
+This document contains the latest information for Autodesk® DWG TrueView 2023. For reference, save or print this document.
 
 It is strongly recommended that you read this entire document before you install this product.
 
 Install
 
 Recommended: Install all Windows Updates before installing this product.
-Installing Autodesk® DWG TrueView 2022 on a Windows 32-bit platform is not supported.
+Installing Autodesk® DWG TrueView 2023 on a Windows 32-bit platform is not supported.
 Product Help
 
 The product Help, the Driver and Peripheral Guide, and the Release Notes are available in the Install directory Help folder after the installation. You can launch the Installation Help, System Requirements, or the Release Notes during installation or after the product is installed.
@@ -29,4 +29,4 @@ In the Modify Conversion Setup dialog box, set the Conversion packaged type to F
 Note: Do not select in-place (overwrite files), as this may cause conversion errors.
 In the Action area, select Check and fix errors, and click OK.
 
-Copyright ©2021 Autodesk, Inc.
+Copyright ©2022 Autodesk, Inc.
