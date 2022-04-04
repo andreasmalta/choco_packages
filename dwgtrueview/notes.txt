@@ -1,13 +1,13 @@
-checksum -t sha256 -f DWGTrueView_2022_English_64bit_dlm.sfx.exe
-checksum -t sha256 -f DWGTrueView_2022_French_64bit_dlm.sfx.exe
-checksum -t sha256 -f DWGTrueView_2022_Japanese_64bit_dlm.sfx.exe
+checksum -t sha256 -f DWGTrueView_2023_English_64bit_dlm.sfx.exe
+checksum -t sha256 -f DWGTrueView_2023_French_64bit_dlm.sfx.exe
+checksum -t sha256 -f DWGTrueView_2023_Japanese_64bit_dlm.sfx.exe
 
 #copy version (buildnumber) from extract folder "setup.xml"
 #copy readme text from installed "Help" folder to releasenotes.txt
 
 #INSTALL
 choco pack
-choco install dotnetfx vcredist2012 vcredist140 -y
+choco install dotnetfx dotnetcore-aspnetruntime dotnetcore-runtime vcredist2012 vcredist140 -y
 choco install dwgtrueview -y -dv -s .
 choco install dwgtrueview -y -dv -s . --params="'/French'"
 choco install dwgtrueview -y -dv -s . --params="'/Japanese'"
@@ -18,4 +18,4 @@ choco upgrade dwgtrueview -y -dv -s .
 
 #UNINSTALL
 choco uninstall dwgtrueview -y
-choco push dwgtrueview.2022.24.1.51.nupkg -s https://push.chocolatey.org/
+choco push dwgtrueview.2023.24.2.53.nupkg -s https://push.chocolatey.org/
