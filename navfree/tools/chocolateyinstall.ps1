@@ -1,12 +1,28 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/NAVFREE/404ED079-9FE3-3739-BA09-0069D1EDDFB6/SFX/Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm.sfx.exe'
-$checksum = '0E90A246692A8D6B71D395E831BFFA856831B5CC2857ABE8B0B972D477010D20'
 
 #UNINSTALL OLD VERSIONS
-$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
-. "$toolsDir\cleanup.ps1"
+$packageName1 = '*Navisworks Freedom*'
+$packageName2 = '*Material Library*'
+$folderRoot = 'C:\Program Files\Autodesk'
+$validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
+Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
+                 -ErrorAction:SilentlyContinue `
+| Where-Object   {$_.DisplayName -like $packageName1 -or $_.DisplayName -like $packageName2} `
+| ForEach-Object {
+	$silentArgs = "$($_.PSChildName) /qn /norestart"
+	Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes
+	Remove-Item $_.PsPath -Recurse -ErrorAction Ignore
+	}
+if (Test-Path $folderRoot) { Get-ChildItem $folderRoot -Recurse -Force -Directory -Include $packageName1 | Remove-Item -Recurse -Confirm:$false -Force }
+
+#REMOVE REBOOT REQUESTS
+$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
+if (Test-path $RegRebootRequired) { Remove-Item -Path $RegRebootRequired }
 
 #EXTRACT AND INSTALL
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/NAVFREE/404ED079-9FE3-3739-BA09-0069D1EDDFB6/SFX/Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm.sfx.exe'
+$checksum = '0E90A246692A8D6B71D395E831BFFA856831B5CC2857ABE8B0B972D477010D20'
 $unzip           = Join-Path $env:TEMP 'Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm'
 $packageArgsUnzip = @{
   packageName    = 'NAVFREE Installation Files'
@@ -125,12 +141,14 @@ $packageArgsAdApp = @{
 }
 Install-ChocolateyInstallPackage @packageArgsAdApp
 
-
-#CREATING MISSING UNINSTALL ENTRIES
-$navfreekey = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{2B7952CB-B38D-0000-B451-89598C224C21}'
-$uninstallstring = 'MsiExec.exe /I{2B7952CB-B38D-0000-B451-89598C224C21}'
-if (Test-path $navfreekey) {
-Set-Itemproperty -path $navfreekey -Name 'NoRemove' -value '0' -Type dword
-Set-Itemproperty -path $navfreekey -Name 'SystemComponent' -value '0' -Type dword
-Set-ItemProperty -path $navfreekey -name 'UninstallString' -value $uninstallstring -Type ExpandString
-}
+#CREATING MSI UNINSTALLER
+$packageName = 'Autodesk Navisworks Freedom 2023'
+Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
+                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
+                 -ErrorAction:SilentlyContinue `
+| Where-Object   {$_.DisplayName -like $packageName} `
+| ForEach-Object {
+    Set-Itemproperty -path $_.PsPath -Name 'NoRemove' -value '0' -Type dword
+	Set-Itemproperty -path $_.PsPath -Name 'SystemComponent' -value '0' -Type dword
+	Set-ItemProperty -path $_.PsPath -name 'UninstallString' -value "MsiExec.exe /I$($_.PSChildName)" -Type ExpandString
+	}
