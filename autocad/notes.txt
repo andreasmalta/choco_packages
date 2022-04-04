@@ -1,6 +1,8 @@
 https://trial2.autodesk.com/NetSWDLD/2023/ACD/73A78CE1-E03A-3415-826E-91A699E39B17/SFX/AutoCAD_2023_English_Win_64bit_dlm_001_002.sfx.exe
+07B80B205D5E9ED3CB4A8908D20292485AEE3F4E29884FE3C1B42C97CD1B7751
 
-checksum -t sha256 -f AutoCAD_2022_English_Win_64bit_dlm.sfx.exe
+
+checksum -t sha256 -f AutoCAD_2023_English_Win_64bit_dlm_001_002.sfx.exe
 #copy version number from unzip folder setup.xml
 
 #INSTALL

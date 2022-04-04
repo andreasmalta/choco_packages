@@ -1,8 +1,4 @@
-https://trial2.autodesk.com/NetSWDLD/2023/ACDLT/C8DC0A93-1BFB-3C0D-B3B6-1BD06D06CCC2/SFX/AutoCAD_LT_2023_English_Win_64bit_dlm.sfx.exe
-
-
-
-checksum -t sha256 -f AutoCAD_LT_2022_English_Win_64bit_dlm.sfx.exe
+checksum -t sha256 -f AutoCAD_LT_2023_English_Win_64bit_dlm.sfx.exe
 #copy version number from unzip folder setup.xml
 
 #INSTALL
@@ -16,4 +12,4 @@ choco upgrade autocadlt -y -dv -s .
 
 #UNINSTALL
 choco uninstall autocadlt -y
-choco push autocadlt.2022.241510.nupkg -s https://push.chocolatey.org/
+choco push autocadlt.2023.242530.nupkg -s https://push.chocolatey.org/

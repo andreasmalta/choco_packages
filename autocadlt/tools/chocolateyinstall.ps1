@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url             = 'https://efulfillment.autodesk.com/NetSWDLD/2022/ACDLT/3E4FF57B-0533-3C99-A29F-C9E2838E11E5/SFX/AutoCAD_LT_2022_English_Win_64bit_dlm.sfx.exe'
-$checksum        = '34D6D25E0A981BDABCC6B1C1725610DFC0419E82A1FAD62F983FE9A9DE702972'
+$url             = 'https://trial2.autodesk.com/NetSWDLD/2023/ACDLT/C8DC0A93-1BFB-3C0D-B3B6-1BD06D06CCC2/SFX/AutoCAD_LT_2023_English_Win_64bit_dlm.sfx.exe'
+$checksum        = 'BA24E7616A814938E27995B1CB67ACCF83455603CCE407BACAF88ABC97FDECB5'
 
-$unzip           = Join-Path $env:TEMP 'AutoCAD_LT_2022_English_Win_64bit_dlm'
+$unzip           = Join-Path $env:TEMP 'AutoCAD_LT_2023_English_Win_64bit_dlm'
 $packageArgsURL  = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'

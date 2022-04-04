@@ -3,21 +3,22 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>autocadlt</id>
-    <version>2022.241510</version>
+    <version>2023.242530</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/autocadlt</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>AutoCAD LT</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/autocad-lt/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/autocadlt/icon.png</iconUrl>
-    <licenseUrl>https://download.autodesk.com/global/dlm_eula/English.html</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/ACDLT/2022/ENU/</docsUrl>
+    <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
+    <docsUrl>https://help.autodesk.com/view/ACDLT/2023/ENU/</docsUrl>
     <tags>autodesk autocad dwg cad 2D drawing</tags>
     <summary>AutoCAD LT</summary>
-    <description>AutoCAD LT® is a powerful 2D computer-aided design (CAD) software that architects, engineers, construction professionals, and designers rely on to: Design, draft, and document with precise 2D geometry, Access a comprehensive set of editing, design, and annotation tools, Work faster in an intuitive and customizable interfaceCreate precise 2D drawings with powerful drafting tools. AutoCAD LT is computer-aided design (CAD) software that architects, engineers, construction professionals, and designers rely on to produce 2D drawings and documentation.
-	
-#### System requirements for AutoCAD 2022
-Operating System: 64-bit Microsoft® Windows® 10</description>
+    <description>AutoCAD LT is CAD software that is used for precise 2D drafting, design, and documentation. It includes features to automate tasks and increase productivity such as comparing drawings, counting, adding objects, and creating tables. AutoCAD LT enables users to create, edit, and annotate drawings via desktop, web, and mobile devices.
+
+#### System requirements for AutoCAD LT 2023
+Operating System: Microsoft® Windows® 11 or Windows 10 version 1809 or above.
+</description>
     <dependencies>
       <dependency id="dotnetfx" version="4.8.0.0" />
       <dependency id="vcredist2012" version="11.0.61030" />
@@ -25,7 +26,7 @@ Operating System: 64-bit Microsoft® Windows® 10</description>
       <dependency id="dotnetcore-runtime" version="3.1.10" />
       <dependency id="dotnetcore-aspnetruntime" version="3.1.10" />
 	</dependencies>
-    <releaseNotes>https://help.autodesk.com/view/ACDLT/2022/ENU/?guid=AUTOCADLT_2022_RELEASE_NOTES</releaseNotes>
+    <releaseNotes>https://help.autodesk.com/view/ACDLT/2023/ENU/?guid=AUTOCADLT_2023_RELEASE_NOTES</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
