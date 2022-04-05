@@ -22,9 +22,10 @@ Operating System: Microsoft® Windows® 11 or Windows 10 version 1809 or above.
     <dependencies>
       <dependency id="dotnetfx" version="4.8.0.0" />
       <dependency id="vcredist2012" version="11.0.61030" />
-      <dependency id="vcredist140" version="14.27.29112" />
+      <dependency id="vcredist140" version="14.29.30133" />
       <dependency id="dotnetcore-runtime" version="3.1.10" />
       <dependency id="dotnetcore-aspnetruntime" version="3.1.10" />
+	  <dependency id="webview2-runtime" version="99.0.1150.36" />
 	</dependencies>
     <releaseNotes>https://help.autodesk.com/view/ACDLT/2023/ENU/?guid=AUTOCADLT_2023_RELEASE_NOTES</releaseNotes>
   </metadata>
