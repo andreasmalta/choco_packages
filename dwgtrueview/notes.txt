@@ -6,7 +6,7 @@ checksum -t sha256 -f DWGTrueView_2023_Japanese_64bit_dlm.sfx.exe
 #copy readme text from installed "Help" folder to releasenotes.txt
 
 #INSTALL
-choco install dotnetfx dotnetcore-aspnetruntime dotnetcore-runtime vcredist2012 vcredist140 -y
+choco install dotnetfx dotnetcore-aspnetruntime dotnetcore-runtime vcredist2012 vcredist140 webview2-runtime -y
 choco pack
 choco install dwgtrueview -y -dv -s .
 choco install dwgtrueview -y -dv -s . --params="'/French'"

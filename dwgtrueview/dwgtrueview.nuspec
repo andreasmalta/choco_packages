@@ -35,6 +35,7 @@ To have choco remember parameters on upgrade, be sure to set `choco feature enab
       <dependency id="dotnetcore-runtime" version="3.1.10" />
       <dependency id="vcredist2012" version="11.0.61030" />
       <dependency id="vcredist140" version="14.27.29112" />
+      <dependency id="webview2-runtime" version="99.0.1150.36" />
 	</dependencies>
     <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/releasenotes.txt</releaseNotes>
   </metadata>
