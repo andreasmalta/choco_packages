@@ -11,7 +11,7 @@ Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVe
 | Where-Object   {$_.DisplayName -like $packageName1 -or $_.DisplayName -like $packageName2} `
 | ForEach-Object {
 	$silentArgs = "$($_.PSChildName) /qn /norestart"
-	Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes
+	if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
 	Remove-Item $_.PsPath -Recurse -ErrorAction Ignore
 	}
 if (Test-Path $folderRoot) { Get-ChildItem $folderRoot -Recurse -Force -Directory -Include $packageName1 | Remove-Item -Recurse -Confirm:$false -Force }
