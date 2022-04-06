@@ -18,33 +18,8 @@
 The Navisworks Freedom free download creates compressed, more secure, NWD format files. A practical solution to streaming large CAD models, NWD files require no model preparation, third-party server hosting, setup time, or ongoing costs.
 
 #### System requirements for Autodesk Navisworks Freedom 2023
-Operating System: 64-bit Microsoft® Windows® 11 and Windows 10
-
-#### Package Parameters
-The following package parameters can be set (choose only one!):
-
- * `/BR:` - Install pt-BR language pack
- * `/CN:` - Install zh-CN language pack
- * `/DE:` - Install de-DE language pack
- * `/ES:` - Install es-ES language pack
- * `/FR:` - Install fr-FR language pack
- * `/IT:` - Install it-IT language pack
- * `/JP:` - Install ja-JP language pack
- * `/KR:` - Install ko-KR language pack
- * `/RU:` - Install ru-RU language pack
- * `/TW:` - Install zh-TW language pack
- * If no parameter is given the en-US language pack will be installed.
-
-To pass parameters, use `--params "''"` (e.g. `choco install navfree --params="'/BR'"`).
-To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
-</description>
+Operating System: 64-bit Microsoft® Windows® 11 and Windows 10</description>
     <releaseNotes>https://www.autodesk.com/products/navisworks/features</releaseNotes>
-    <dependencies>
-      <dependency id="dotnetfx" version="4.8.0.0" />
-      <dependency id="vcredist2010" version="10.0.40219.1" />
-      <dependency id="vcredist2012" version="11.0.61030" />
-      <dependency id="vcredist140" version="14.29.30133" />
-	</dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
