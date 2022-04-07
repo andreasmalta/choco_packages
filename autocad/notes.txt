@@ -1,13 +1,8 @@
-https://trial2.autodesk.com/NetSWDLD/2023/ACD/73A78CE1-E03A-3415-826E-91A699E39B17/SFX/AutoCAD_2023_English_Win_64bit_dlm_001_002.sfx.exe
-07B80B205D5E9ED3CB4A8908D20292485AEE3F4E29884FE3C1B42C97CD1B7751
-
-
-checksum -t sha256 -f AutoCAD_2023_English_Win_64bit_dlm_001_002.sfx.exe
+checksum -t sha256 -f AutoCAD_*****_Win_64bit_dlm.sfx.exe
 #copy version number from unzip folder setup.xml
 
 #INSTALL
 choco pack
-choco install dotnetfx vcredist2012 vcredist140 dotnetcore-runtime dotnetcore-aspnetruntime -y
 choco install autocad -y -dv -s .
 
 #UPGRADE
@@ -16,4 +11,4 @@ choco upgrade autocad -y -dv -s .
 
 #UNINSTALL
 choco uninstall autocad -y
-choco push autocad.2022.241510.nupkg -s https://push.chocolatey.org/
+choco push autocad.2023.242530.nupkg -s https://push.chocolatey.org/

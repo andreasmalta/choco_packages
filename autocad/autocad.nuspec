@@ -3,29 +3,22 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>autocad</id>
-    <version>2022.241510</version>
+    <version>2023.242530</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/autocad</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>AutoCAD</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/autocad/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/autocad/icon.png</iconUrl>
-    <licenseUrl>https://download.autodesk.com/global/dlm_eula/English.html</licenseUrl>
+    <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
     <docsUrl>https://help.autodesk.com/view/ACD/2022/ENU/</docsUrl>
     <tags>autodesk autocad dwg cad drawing</tags>
     <summary>AutoCAD</summary>
-    <description>AutoCAD is computer-aided design (CAD) software that architects, engineers, and construction professionals rely on to create precise 2D and 3D drawings.
-	
-#### System requirements for AutoCAD 2022
-Operating System: 64-bit Microsoft® Windows® 10</description>
-    <dependencies>
-      <dependency id="dotnetfx" version="4.8.0.0" />
-      <dependency id="vcredist2012" version="11.0.61030" />
-      <dependency id="vcredist140" version="14.27.29112" />
-      <dependency id="dotnetcore-runtime" version="3.1.10" />
-      <dependency id="dotnetcore-aspnetruntime" version="3.1.10" />
-	</dependencies>
-    <releaseNotes>https://help.autodesk.com/view/ACD/2022/ENU/?guid=AUTOCAD_2022_RELEASE_NOTES</releaseNotes>
+    <description>AutoCAD is computer-aided design (CAD) software that is used for precise 2D and 3D drafting, design, and modeling with solids, surfaces, mesh objects, documentation features, and more. It includes features to automate tasks and increase productivity such as comparing drawings, counting, adding objects, and creating tables. It also comes with seven industry-specific toolsets for electrical design, plant design, architecture layout drawings, mechanical design, 3D mapping, adding scanned images, and converting raster images. AutoCAD enables users to create, edit, and annotate drawings via desktop, web, and mobile devices.
+
+#### System requirements for AutoCAD 2023
+Operating System: 64-bit Microsoft® Windows® 11 and Windows 10 version 1809 or above.</description>
+    <releaseNotes>https://help.autodesk.com/view/ACD/2023/ENU/?guid=AUTOCAD_2023_RELEASE_NOTES</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
