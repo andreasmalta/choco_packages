@@ -1,10 +1,23 @@
-checksum -t sha256 -f AutoCAD_LT_2023_English_Win_64bit_dlm.sfx.exe
+#download from https://ava.autodesk.com/
+checksum -t sha256 -f AutoCAD_LT_*****_Win_64bit_dlm.sfx.exe
 #copy version number from unzip folder setup.xml
 
 #INSTALL
 choco pack
-choco install dotnetfx vcredist2012 vcredist140 dotnetcore-runtime dotnetcore-aspnetruntime -y
 choco install autocadlt -y -dv -s .
+choco install autocadlt -y -dv -s . --params="'/ChineseSimp'"
+choco install autocadlt -y -dv -s . --params="'/ChineseTrad'"
+choco install autocadlt -y -dv -s . --params="'/Czech'"
+choco install autocadlt -y -dv -s . --params="'/French'"
+choco install autocadlt -y -dv -s . --params="'/German'"
+choco install autocadlt -y -dv -s . --params="'/Hungarian'"
+choco install autocadlt -y -dv -s . --params="'/Italian'"
+choco install autocadlt -y -dv -s . --params="'/Japanese'"
+choco install autocadlt -y -dv -s . --params="'/Korean'"
+choco install autocadlt -y -dv -s . --params="'/Polish'"
+choco install autocadlt -y -dv -s . --params="'/Portuguese'"
+choco install autocadlt -y -dv -s . --params="'/Russian'"
+choco install autocadlt -y -dv -s . --params="'/Spanish'"
 
 #UPGRADE
 choco install autocadlt -y
