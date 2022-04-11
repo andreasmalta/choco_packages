@@ -4,6 +4,19 @@ checksum -t sha256 -f AutoCAD_*****_Win_64bit_dlm.sfx.exe
 #INSTALL
 choco pack
 choco install autocad -y -dv -s .
+choco install autocad -y -dv -s . --params="'/ChineseSimp'"
+choco install autocad -y -dv -s . --params="'/ChineseTrad'"
+choco install autocad -y -dv -s . --params="'/Czech'"
+choco install autocad -y -dv -s . --params="'/French'"
+choco install autocad -y -dv -s . --params="'/German'"
+choco install autocad -y -dv -s . --params="'/Hungarian'"
+choco install autocad -y -dv -s . --params="'/Italian'"
+choco install autocad -y -dv -s . --params="'/Japanese'"
+choco install autocad -y -dv -s . --params="'/Korean'"
+choco install autocad -y -dv -s . --params="'/Polish'"
+choco install autocad -y -dv -s . --params="'/Portuguese'"
+choco install autocad -y -dv -s . --params="'/Russian'"
+choco install autocad -y -dv -s . --params="'/Spanish'"
 
 #UPGRADE
 choco install autocad -y
