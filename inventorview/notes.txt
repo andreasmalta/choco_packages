@@ -1,10 +1,63 @@
-checksum -t sha256 -f inventor_view_2022_english_win_64bit_dlm.sfx.exe
+English
+Inventor_View_2023_English_Win_64bit_DLM
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_english_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_english_win_64bit_dlm.sfx.exe
+7212192A99150BB2F1F47839F8499DE289389B25C2D71218642E233162103FE3
+
+Brazilian Portuguese
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_portuguese_brazil_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_portuguese_brazil_win_64bit_dlm.sfx.exe
+
+Czech
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_czech_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_czech_win_64bit_dlm.sfx.exe
+
+French
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_french_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_french_win_64bit_dlm.sfx.exe
+
+German
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_german_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_german_win_64bit_dlm.sfx.exe
+
+Italian
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_italian_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_italian_win_64bit_dlm.sfx.exe
+
+Japanese
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_japanese_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_japanese_win_64bit_dlm.sfx.exe
+
+Korean
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_korean_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_korean_win_64bit_dlm.sfx.exe
+
+Russian
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_russian_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_russian_win_64bit_dlm.sfx.exe
+
+Simplified Chinese
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_simplified_chinese_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_simplified_chinese_win_64bit_dlm.sfx.exe
+
+Polish
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_polish_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_polish_win_64bit_dlm.sfx.exe
+
+Spanish
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_spanish_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_spanish_win_64bit_dlm.sfx.exe
+
+Traditional Chinese
+https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_traditional_chinese_win_64bit_dlm.sfx.exe
+checksum -t sha256 -f inventor_view_2023_traditional_chinese_win_64bit_dlm.sfx.exe
+
+
 #copy version from installation folder setup.xml
 #copy icon from installation folder\SetupRes\icons
 
 #INSTALL
 choco pack
-choco install dotnetfx vcredist2012 vcredist140 insted -y
 choco install inventorview -y -dv -s .
 
 #UPGRADE
@@ -13,4 +66,4 @@ choco upgrade inventorview -y -dv -s .
 
 #UNINSTALL
 choco uninstall inventorview -y
-choco push inventorview.2022.26015300.nupkg -s https://push.chocolatey.org/
+choco push inventorview.2023.270158.nupkg -s https://push.chocolatey.org/
