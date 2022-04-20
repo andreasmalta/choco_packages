@@ -21,34 +21,105 @@ $RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpd
 if (Test-path $RegRebootRequired) { Remove-Item -Path $RegRebootRequired }
 
 
-#EXTRACT AND INSTALL
+#INSTALLATION SETTINGS
 $pp = Get-PackageParameters
 
+if ($pp.'ChineseSimp') {
+$url = 'Z:\inventorview\inventor_view_2023_simplified_chinese_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_simplified_chinese_win_64bit_dlm.sfx.exe'
+$checksum = '523AA1F3B7C41E539DF09E7586BA480EE2BF457A83D304019513E6B7DB15170E'
+$file = Join-Path $env:TEMP 'inventor_view_2023_simplified_chinese_win_64bit_dlm\setup.exe'
+}
 
-$url             = 'https://download.autodesk.com/us/support/files/autodesk_inventor_view_2022/inventor_view_2022_english_win_64bit_dlm.sfx.exe'
-$checksum        = '94C4E11509DEA6F7857B936920E627D27160EE2EA148B72CFCF1B48477B6C94B'
-$unzip           = Join-Path $env:TEMP 'Inventor_View_2022_English_Win_64bit_DLM'
+elseif ($pp.'ChineseTrad') {
+$url = 'Z:\inventorview\inventor_view_2023_traditional_chinese_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_traditional_chinese_win_64bit_dlm.sfx.exe'
+$checksum = 'BDA8CA810DF4874F8E4C0EF4C0D43C1EB3CBE2C759A615F4D9C75F92816C03C4'
+$file = Join-Path $env:TEMP 'inventor_view_2023_traditional_chinese_win_64bit_dlm\setup.exe'
+}
 
-$regkey2022      = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7F4DD591-2664-0004-0000-7107D70F3DB4}'
-$regkey2022lp    = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{7F4DD591-2664-0004-1033-7107D70F3DB4}'
+elseif ($pp.'Czech') {
+$url = 'Z:\inventorview\inventor_view_2023_czech_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_czech_win_64bit_dlm.sfx.exe'
+$checksum = 'B362B8A9A4E48A537701BAFB778FF7E12486581183D63D7AC5280E8D19EA838E'
+$file = Join-Path $env:TEMP 'inventor_view_2023_czech_win_64bit_dlm\setup.exe'
+}
 
-#Uninstall old versions first
-$packagename     = 'Inventor View 2021'
-$productcode     = '{7F4DD591-2564-0004-0000-7107D70F3DB4}'
-$regkey          = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$productcode"
-if (Test-path $regkey) { Uninstall-ChocolateyPackage -PackageName "$packagename" -FileType "msi" -SilentArgs "$productcode /qn /norestart" }
+elseif ($pp.'French') {
+$url = 'Z:\inventorview\inventor_view_2023_french_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_french_win_64bit_dlm.sfx.exe'
+$checksum = 'BDED77DAF9135BAB840E7D9843132326B49E278E8D2BC6FF422F15D089182069'
+$file = Join-Path $env:TEMP 'inventor_view_2023_french_win_64bit_dlm\setup.exe'
+}
 
-$packagename     = 'Language Pack 2021'
-$productcode     = '{7F4DD591-2564-0004-1033-7107D70F3DB4}'
-$regkey          = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$productcode"
-if (Test-path $regkey) { Uninstall-ChocolateyPackage -PackageName "$packagename" -FileType "msi" -SilentArgs "$productcode /qn /norestart" }
+elseif ($pp.'German') {
+$url = 'Z:\inventorview\inventor_view_2023_german_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_german_win_64bit_dlm.sfx.exe'
+$checksum = '1CC3D720F2DA7EC06A7F38F7BD74734BB4266B589EA844A4D512F35FFAF4F03C'
+$file = Join-Path $env:TEMP 'inventor_view_2023_german_win_64bit_dlm\setup.exe'
+}
 
-#Extract first
+elseif ($pp.'Italian') {
+$url = 'Z:\inventorview\inventor_view_2023_italian_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_italian_win_64bit_dlm.sfx.exe'
+$checksum = '83025A75CE6F26D2A96D8902AB75391CA3A7E5A8EBE07F24F958C57131D7A478'
+$file = Join-Path $env:TEMP 'inventor_view_2023_italian_win_64bit_dlm\setup.exe'
+}
+
+elseif ($pp.'Japanese') {
+$url = 'Z:\inventorview\inventor_view_2023_japanese_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_japanese_win_64bit_dlm.sfx.exe'
+$checksum = 'EECFDF72DC95FCAE40589412B377C9BB4F5CF2671AD3085203937385D693CE9E'
+$file = Join-Path $env:TEMP 'inventor_view_2023_japanese_win_64bit_dlm\setup.exe'
+}
+
+elseif ($pp.'Korean') {
+$url = 'Z:\inventorview\inventor_view_2023_korean_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_korean_win_64bit_dlm.sfx.exe'
+$checksum = 'C7FB940A148D32C449D7B9673B63C994A6D77F601BDBB3747E919CDBFF3FA7DA'
+$file = Join-Path $env:TEMP 'inventor_view_2023_korean_win_64bit_dlm\setup.exe'
+}
+
+elseif ($pp.'Polish') {
+$url = 'Z:\inventorview\inventor_view_2023_polish_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_polish_win_64bit_dlm.sfx.exe'
+$checksum = '9503C66BD90A504CBC9DE28919E2C971D0FCAB0BCA67649962A742FB93AA5EA6'
+$file = Join-Path $env:TEMP 'inventor_view_2023_polish_win_64bit_dlm\setup.exe'
+}
+
+elseif ($pp.'Portuguese') {
+$url = 'Z:\inventorview\inventor_view_2023_portuguese_brazil_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_portuguese_brazil_win_64bit_dlm.sfx.exe'
+$checksum = 'ECA4A1B54A5B591B241486E571A68EECB39CA0E19B1888CCCE0D0BC9BEED4863'
+$file = Join-Path $env:TEMP 'inventor_view_2023_portuguese_brazil_win_64bit_dlm\setup.exe'
+}
+
+elseif ($pp.'Russian') {
+$url = 'Z:\inventorview\inventor_view_2023_russian_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_russian_win_64bit_dlm.sfx.exe'
+$checksum = '46797333069683EF55C10BF22436BD6C1B009E52E979B0AAD3FD7A9E9CCD3DA7'
+$file = Join-Path $env:TEMP 'inventor_view_2023_russian_win_64bit_dlm\setup.exe'
+}
+
+elseif ($pp.'Spanish') {
+$url = 'Z:\inventorview\inventor_view_2023_spanish_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_spanish_win_64bit_dlm.sfx.exe'
+$checksum = '86F5EC661619F9067EBDBAC43C08CBFCCDF704EF4313B5DC115A19CD41024A0E'
+$file = Join-Path $env:TEMP 'inventor_view_2023_spanish_win_64bit_dlm\setup.exe'
+}
+
+else {
+$url = 'Z:\inventorview\inventor_view_2023_english_win_64bit_dlm.sfx.exe'
+#$url = 'https://download.autodesk.com/akn/2023/inventor_view/inventor_view_2023_english_win_64bit_dlm.sfx.exe'
+$checksum = '7212192A99150BB2F1F47839F8499DE289389B25C2D71218642E233162103FE3'
+$file = Join-Path $env:TEMP 'inventor_view_2023_english_win_64bit_dlm\Setup.exe'
+}
+
 $packageArgsUnzip = @{
-  packageName    = 'Unzip'
+  packageName    = 'Inventor View Installation Files'
   fileType       = 'exe'
   url            = $url
-  softwareName   = 'Unzip*'
+  softwareName   = 'Inventor View Installation Files*'
   checksum       = $checksum
   checksumType   = 'sha256'
   silentArgs     = "-suppresslaunch -d $env:TEMP"
@@ -56,53 +127,12 @@ $packageArgsUnzip = @{
 }
 Install-ChocolateyPackage @packageArgsUnzip
 
-#Remove any reboot requests that may block the installation
-$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
-if (Test-path $RegRebootRequired) { Remove-Item -Path $RegRebootRequired }
-
-#Setup.exe not silent, installing all modules one by one
-$adsso           = Join-Path $unzip 'x64\AdSSO\AdSSO.msi'
-$packageArgsAdSSO  = @{
-  packageName    = 'Autodesk Single Sign On Component'
-  fileType       = 'msi'
-  file           = $adsso
-  softwareName   = 'Autodesk Single Sign On Component*'
-  silentArgs     = "/qn /norestart"
-  validExitCodes = @(0, 3010, 1641)
-}
-Install-ChocolateyInstallPackage @packageArgsAdSSO
-
-$ivv             = Join-Path $unzip 'x64\IVV\InventorView.msi'
-$packageArgsIVV  = @{
+$packageArgs  = @{
   packageName    = 'Inventor View'
-  fileType       = 'msi'
-  file           = $ivv
-  softwareName   = 'Inventor View*'
-  silentArgs     = 'ADSK_ODIS_SETUP="1" /qn /norestart'
-  validExitCodes = @(0, 3010, 1641)
-}
-Install-ChocolateyInstallPackage @packageArgsIVV
-if (Test-path $regkey2022) { Set-Itemproperty -path $regkey2022 -Name 'SystemComponent' -value '0' -Type dword }
-
-$ivvlp           = Join-Path $unzip 'x64\en-US\IVV\inventorViewLP.msi'
-$packageArgsIVVLP  = @{
-  packageName    = 'Inventor View Language Pack'
-  fileType       = 'msi'
-  file           = $ivvlp
-  softwareName   = 'Inventor View Language Pack*'
-  silentArgs     = 'ADSK_ODIS_SETUP="1" /qn /norestart'
-  validExitCodes = @(0, 3010, 1641)
-}
-Install-ChocolateyInstallPackage @packageArgsIVVLP
-if (Test-path $regkey2022lp) { Set-Itemproperty -path $regkey2022lp -Name 'SystemComponent' -value '0' -Type dword }
-
-$adapp           = Join-Path $unzip 'x86\ADSKAPP\AdApplicationManager-installer.exe'
-$packageArgsAdApp = @{
-  packageName    = 'Autodesk Desktop App'
   fileType       = 'exe'
-  file           = $adapp
-  softwareName   = 'Autodesk Desktop App*'
-  silentArgs     = "--mode unattended"
+  file           = $file
+  softwareName   = 'Inventor View*'
+  silentArgs     = '-q'
   validExitCodes = @(0, 3010, 1641)
 }
-Install-ChocolateyInstallPackage @packageArgsAdApp
+Install-ChocolateyInstallPackage @packageArgs
