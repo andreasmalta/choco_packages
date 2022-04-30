@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url            = 'https://brightsignnetwork.com/download/nsingh/ba-connected/BA%20connected%20Setup%201.7.3.exe'
-$checksum_url   = '95C316958791A65BA7857B7EB9B0C967F5B94B89E10A9AA8A3A9F81E4F57C18B'
+$url            = 'https://brightsignnetwork.com/download/nsingh/ba-connected/BA%20connected%20Setup%201.7.7.exe'
+$checksum_url   = '37CEEFFC968B44CA54CD4CFBFE475100BD6B1219B996D5D3A0AE103122EA2BA5'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
