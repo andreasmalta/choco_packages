@@ -3,8 +3,11 @@ forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
-choco install vcredist140 dotnetfx -y
 choco install desktopconnector -y -dv -s .
+
+#UPGRADE
+choco install desktopconnector -y
+choco upgrade desktopconnector -y -dv -s .
 
 #UNINSTALL
 choco uninstall desktopconnector -y
