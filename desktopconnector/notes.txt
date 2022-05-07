@@ -1,4 +1,4 @@
-checksum -t sha256 -f DesktopConnector-x64.exe
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #unzip - copy foldername from autodesk installation folder
 
 #INSTALL
