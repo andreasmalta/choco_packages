@@ -1,11 +1,14 @@
-checksum -t sha256 -f DesktopConnector-x64.exe
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #unzip - copy foldername from autodesk installation folder
 
 #INSTALL
 choco pack
-choco install vcredist140 dotnetfx -y
 choco install desktopconnector -y -dv -s .
+
+#UPGRADE
+choco install desktopconnector -y
+choco upgrade desktopconnector -y -dv -s .
 
 #UNINSTALL
 choco uninstall desktopconnector -y
-choco push desktopconnector.15.5.0.1684.nupkg -s https://push.chocolatey.org/
+choco push desktopconnector.15.6.0.1752.nupkg -s https://push.chocolatey.org/

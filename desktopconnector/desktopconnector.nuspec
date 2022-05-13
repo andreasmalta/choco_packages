@@ -3,24 +3,22 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>desktopconnector</id>
-    <version>15.5.0.1684</version>
+    <version>15.6.0.1752</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/desktopconnector</packageSourceUrl>
     <owners>aa.malta</owners>
-    <title>Desktop Connector (64-bit)</title>
+    <title>Desktop Connector</title>
     <authors>Autodesk</authors>
     <projectUrl>https://help.autodesk.com/view/CONNECT/ENU/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/desktopconnector/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
     <docsUrl>https://help.autodesk.com/view/CONNECT/ENU/?guid=CONNECT_User_s_Guide_for_Desktop_html</docsUrl>
     <tags>autodesk drive desktop connector</tags>
-    <summary>Desktop Connector (64-bit)</summary>
+    <summary>Desktop Connector</summary>
     <description>Desktop Connector is a desktop service that integrates an Autodesk data management source (or data source) with your desktop folder and file structure for easy file management.
-The files in the data source are replicated in a connected drive. You can manage files in the data source through the connected drive, just as you would any other folder on your machine. Changes made in the connected drive are automatically uploaded to the data source.</description>
+The files in the data source are replicated in a connected drive. You can manage files in the data source through the connected drive, just as you would any other folder on your machine. Changes made in the connected drive are automatically uploaded to the data source.
+
+Operating System Requirements: Microsoft Windows®–8.1, or 10 (v. 1607 Anniversary Update or later).</description>
     <releaseNotes>https://help.autodesk.com/view/DRIVE/ENU/?guid=GUID-03D59AAD-65B0-45E3-84F2-A12AAA5BB267</releaseNotes>
-    <dependencies>
-      <dependency id="dotnetfx" version="4.7.2.20180712" />
-      <dependency id="vcredist140" version="14.23.27820" />
-	</dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
