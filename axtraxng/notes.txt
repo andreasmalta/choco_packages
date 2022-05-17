@@ -1,11 +1,8 @@
 #extract zip
-#copy release notes to github
-#extract exe
-#delete exe, ini, dll from root folder
-#delete "Add on" folder
-#delete "AxTime" folder
+#extract exe, open exe folder
+#delete exe, ini, dll, "Add on" folder, "AxTime" folder
 #add remaining files to 7z archive (ultra compression level)
-#move 7z archive to package tools folder
+#place 7z archive to package tools folder
 
 #INSTALL
 choco pack
@@ -19,4 +16,4 @@ choco upgrade axtraxng -y --params="'/server'" -s .
 
 #UNINSTALL
 choco uninstall axtraxng -y
-choco push axtraxng.27.7.1.18.nupkg -s https://push.chocolatey.org/
+choco push axtraxng.27.7.1.19.nupkg -s https://push.chocolatey.org/

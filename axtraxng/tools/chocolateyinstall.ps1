@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$file_Zip       = Join-Path $toolsDir 'AxTraxNGSetup_V.27.7.1.18_11_04_2021.7z'
+$file_Zip       = Join-Path $toolsDir 'axtraxng_27_7_1_19.7z'
 
 #Unzip installation files in temp folder
 $packageArgsURL = @{
@@ -11,18 +11,15 @@ $packageArgsURL = @{
 Install-ChocolateyZipPackage @packageArgsURL
 
 #Uninstall AxTraxNG Configuration Tool before upgrade
-$packageNameUninstall = 'AxTraxNG Configuration Tool'
-$validExitUninstallCodes = @(0, 3010, 1605, 1614, 1641)
+$packageName = 'AxTraxNG Configuration Tool'
+$validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
 Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
                          'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
                  -ErrorAction:SilentlyContinue `
-| Where-Object   {$_.DisplayName -like $packageNameUninstall} `
+| Where-Object   {$_.DisplayName -like $packageName} `
 | ForEach-Object {
-	$silentArgs = '/qn /norestart'
-	$file = "$($_.UninstallString)"
-	$silentArgs = "$($_.PSChildName) $silentArgs"
-	$file = ''
-	Uninstall-ChocolateyPackage -PackageName "$packageNameUninstall" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $validExitUninstallCodes
+	$silentArgs = "$($_.PSChildName) /qn /norestart"
+	if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
 	}
 
 #Install PreReq
@@ -83,56 +80,47 @@ $packageArgsMonitor = @{
 
 $pp = Get-PackageParameters
 if ($pp.'server') { 
-	Write-Host "INSTALLING SERVER (& REMOVING OLD)"
+	Write-Host "INSTALLING SERVER"
 	
 	#Remove old Server Monitor
 	$packageName = 'AxTraxNG Server Monitor'
-	$validExitCodes = @(0, 3010, 1605, 1614, 1641)
+	$validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
 	Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
-							'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
-					-ErrorAction:SilentlyContinue `
+                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
+                 -ErrorAction:SilentlyContinue `
 	| Where-Object   {$_.DisplayName -like $packageName} `
 	| ForEach-Object {
-		$silentArgs = '/qn /norestart'
-		$file = "$($_.UninstallString)"
-		$silentArgs = "$($_.PSChildName) $silentArgs"
-		$file = ''
-		Uninstall-ChocolateyPackage -PackageName "$packageName" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $validExitCodes
+		$silentArgs = "$($_.PSChildName) /qn /norestart"
+		if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
 	}
-	
+
 	#Remove old Server
 	$packageName = 'AxTraxNG Server'
-	$validExitCodes = @(0, 3010, 1605, 1614, 1641)
+	$validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
 	Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
-							'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
-					-ErrorAction:SilentlyContinue `
+                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
+                 -ErrorAction:SilentlyContinue `
 	| Where-Object   {$_.DisplayName -like $packageName} `
 	| ForEach-Object {
-		$silentArgs = '/qn /norestart'
-		$file = "$($_.UninstallString)"
-		$silentArgs = "$($_.PSChildName) $silentArgs"
-		$file = ''
-		Uninstall-ChocolateyPackage -PackageName "$packageName" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $validExitCodes
+		$silentArgs = "$($_.PSChildName) /qn /norestart"
+		if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
 	}
 	
 	Install-ChocolateyInstallPackage @packageArgsServer
 	Install-ChocolateyInstallPackage @packageArgsMonitor
 }
 
-Write-Host "INSTALLING CLIENT (& REMOVING OLD)"
+Write-Host "INSTALLING CLIENT"
 #Remove old Client
 $packageName = 'AxTraxNG Client'
-$validExitCodes = @(0, 3010, 1605, 1614, 1641)
+$validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
 Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
                          'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
                  -ErrorAction:SilentlyContinue `
 | Where-Object   {$_.DisplayName -like $packageName} `
 | ForEach-Object {
-	$silentArgs = '/qn /norestart'
-	$file = "$($_.UninstallString)"
-	$silentArgs = "$($_.PSChildName) $silentArgs"
-	$file = ''
-	Uninstall-ChocolateyPackage -PackageName "$packageName" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $validExitCodes
+	$silentArgs = "$($_.PSChildName) /qn /norestart"
+	if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
 	}
 
 Install-ChocolateyInstallPackage @packageArgsClient

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>axtraxng</id>
-    <version>27.7.1.18</version>
+    <version>27.7.1.19</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/axtraxng</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>AxTraxNG</title>
@@ -27,7 +27,7 @@ The following package parameters can be set:
 To pass parameters, use `--params "''"` (e.g. `choco install axtraxng --params="'/server'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 	</description>
-    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/axtraxng/Rosslare%20AxTraxNG%2027.7.1.9%20Release%20Notes%20190120.pdf</releaseNotes>
+    <releaseNotes>http://axtraxng.com/support/axtraxng/AxTraxNG%20V27.7.1.19%20Release%20Notes%20V2022_05_16.pdf</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
