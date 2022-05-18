@@ -10,9 +10,8 @@ choco install axtraxng -y -dv -s .
 choco install axtraxng -y --params="'/server'" -s .
 
 #UPGRADE
-choco install axtraxng -y
-choco upgrade axtraxng -y -dv -s .
-choco upgrade axtraxng -y --params="'/server'" -s .
+choco install axtraxng -y --params="'/server'"
+choco upgrade axtraxng -y --params="'/server'" -dv -s .
 
 #UNINSTALL
 choco uninstall axtraxng -y
