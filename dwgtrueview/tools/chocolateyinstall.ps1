@@ -1,20 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-#UNINSTALL OLD VERSIONS
-$packageName = '*DWG TrueView*'
-$folderRoot = 'C:\Program Files\Autodesk'
-$validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
-Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
-                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
-                 -ErrorAction:SilentlyContinue `
-| Where-Object   {$_.DisplayName -like $packageName} `
-| ForEach-Object {
-	$silentArgs = "$($_.PSChildName) /qn /norestart"
-	if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
-	Remove-Item $_.PsPath -Recurse -ErrorAction Ignore
-	}
-if (Test-Path $folderRoot) { Get-ChildItem $folderRoot -Recurse -Force -Directory -Include $packageName | Remove-Item -Recurse -Confirm:$false -Force }
-
+. $toolsDir\helpers.ps1
+Invoke-UninstallOldTrueView
 
 #REMOVE REBOOT REQUESTS
 $RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
@@ -24,20 +12,20 @@ if (Test-path $RegRebootRequired) { Remove-Item -Path $RegRebootRequired }
 #INSTALLATION SETTINGS
 $pp = Get-PackageParameters
 if ($pp.'French') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/D40E729B-6243-3050-A267-3F664296250F/SFX/DWGTrueView_2023_French_64bit_dlm.sfx.exe'
-$checksum = 'EC47185FC42C5D8C86E607D0111977CC9EA8752DFB0EE1A462FDE6530FF4C05C'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/9F180917-4277-3998-AFDB-C9477508D3AE/SFX/DWGTrueView_2023_French_64bit_dlm.sfx.exe'
+$checksum = '1C54998314BD13D75FAF5C352266F1034B6D458162532451BF393B380F3D93A9'
 $file = Join-Path $env:TEMP 'DWGTrueView_2023_French_64bit_dlm\setup.exe'
 }
 
 elseif ($pp.'Japanese') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/B2459683-0F7B-36BD-84CB-3D821476766E/SFX/DWGTrueView_2023_Japanese_64bit_dlm.sfx.exe'
-$checksum = '83A3E7F7B36741756A8DEB29924A5DA900133BB440177F3F6046C9D4A5DB95D8'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/1D3E70AB-9E61-3244-A4CF-EADDFC9B9554/SFX/DWGTrueView_2023_Japanese_64bit_dlm.sfx.exe'
+$checksum = '5E099980D9FAD6C5EEF2CB4E5E96C6191558FF76604C4658E6598D924EFCEA5E'
 $file = Join-Path $env:TEMP 'DWGTrueView_2023_Japanese_64bit_dlm\setup.exe'
 }
 
 else {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/5E30049E-BFCC-3E1D-B280-6216BD413995/SFX/DWGTrueView_2023_English_64bit_dlm.sfx.exe'
-$checksum = '03AD6A7B69E97BEF719239658EDFB03A996919DF2763592FA35FFBF495BFF946'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/EC2FCD9E-AC4D-3E9D-8526-96832A231455/SFX/DWGTrueView_2023_English_64bit_dlm.sfx.exe'
+$checksum = '3D1EB9AD56044D3980F2B14686327E4CB19D0F7378A8EFECBCC6D5BE8B814F43'
 $file = Join-Path $env:TEMP 'DWGTrueView_2023_English_64bit_dlm\Setup.exe'
 }
 

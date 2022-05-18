@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dwgtrueview</id>
-    <version>2023.24.2.53</version>
+    <version>2023.24.2.72</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>DWG TrueView</title>
@@ -15,6 +15,9 @@
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
     <summary>DWG TrueView</summary>
     <description>View DWG files or convert them to work with older versions of AutoCAD software.
+
+#### Re-releasing version 2023 due to bug:
+https://knowledge.autodesk.com/support/dwg-trueview/troubleshooting/caas/sfdcarticles/sfdcarticles/Autodesk-DWG-Trueview-2023-Install-Loading-error.html
 
 #### System requirements for DWG TrueView 2023
 Operating System: 64-bit Microsoft® Windows® 11 and Windows 10 version 1809 or above.
