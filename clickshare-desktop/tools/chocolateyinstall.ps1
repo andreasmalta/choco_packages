@@ -1,22 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop';
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-#Uninstall old version before upgrade
-$DisplayName = 'ClickShare Desktop App Machine-Wide Installer'
-$ExitCodes = @(0, 3010, 1605, 1614, 1641)
-Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
-                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
-                 -ErrorAction:SilentlyContinue `
-| Where-Object   {$_.DisplayName -like $DisplayName} `
-| ForEach-Object {
-	$silentArgs = '/qn /norestart'
-	$file = "$($_.UninstallString)"
-	$silentArgs = "$($_.PSChildName) $silentArgs"
-	$file = ''
-	Uninstall-ChocolateyPackage -PackageName "$DisplayName" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $ExitCodes
-	}
+. $toolsDir\helpers.ps1
+Invoke-UninstallOldClickShare
 
-$url            = "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306194&TdeType=3&MajorVersion=04&MinorVersion=20&PatchVersion=00&BuildVersion=009&ShowDownloadPage=False"
-$checksum_url   = '2DF9C34F7C2459304A7C8084A04ACFC8D66A39BD8F34144BE839436BDD868FB7'
+$url            = "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306183&TdeType=3&MajorVersion=04&MinorVersion=21&PatchVersion=00&BuildVersion=016&ShowDownloadPage=False"
+$checksum_url   = 'E9C44C610A72DF8DFB243FC5A0524B3B8A5CD112B473A7035A4E6FE018144BBB'
 $file           = Join-Path $env:TEMP 'ClickShare_Installer.msi'
 
 $packageArgsURL = @{
