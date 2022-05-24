@@ -1,5 +1,5 @@
 function Invoke-UninstallOldClickShare {
-$packageName = 'ClickShare Desktop App Machine-Wide Installer'
+$packageName = 'ClickShare*'
 $validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
 Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
                          'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
