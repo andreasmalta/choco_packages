@@ -1,9 +1,9 @@
-==========================================================================================
+﻿==========================================================================================
 KONICA MINOLTA Universal V4 PCL
 Printer Software Document
-18/06/2021
+04/02/2022
 
-PCL  Version 2.0.0.3
+PCL  Version 2.0.0.4
 Printer Installer Version 2.0.0.0
 
 Copyright (C) 2016 KONICA MINOLTA, INC.
@@ -205,31 +205,58 @@ Supported OS :
     Windows 10 Pro **
     Windows 10 Enterprise *
     Windows 10 Education *
+    Windows 11 Home ***
+    Windows 11 Pro ***
+    Windows 11 Enterprise
+    Windows 11 Education
     Windows Server 2016 Standard
     Windows Server 2016 Datacenter
     Windows Server 2016 Essentials
     Windows Server 2019 Standard
     Windows Server 2019 Datacenter
     Windows Server 2019 Essentials
+    Windows Server 2022 Standard
+    Windows Server 2022 Datacenter
+    Windows Server 2022 Datacenter:Azure Edition
+    Windows Server 2022 Essentials
 
     * 32-bit (x86) and 64-bit (x64) editions of Windows are supported.
     ** 32-bit (x86), 64-bit (x64) and ARM64-bit editions of Windows are supported.
+    *** 64-bit (x64) and ARM64-bit editions of Windows are supported.
 
 //////////////////////////////////////////////////////////////////////////////////////////
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL Version 2.0.0.3
+  PCL Version 2.0.0.4
 
 ==========================================================================================
-4-1. Supports new architecture.
+4-1. Support OS added.
 ==========================================================================================
-    ARM64 architecture
+  Windows 11 Home
+  Windows 11 Pro
+  Windows 11 Enterprise
+  Windows 11 Education
+  Windows Server 2022 Standard
+  Windows Server 2022 Datacenter
+  Windows Server 2022 Datacenter:Azure Edition
+  Windows Server 2022 Essentials
 
 ==========================================================================================
-4-2. Changed the default value of the favorite "Share" setting.
+4-2. Changed folder and file structure.
 ==========================================================================================
-    Default value: ON �� OFF 
+  [V4UPDSetup_Own_PCL_2.0.0.4]Folder
+  |- [Drivers]
+      |- [x64]
+      |- [x86]
+      |- [ARM64_Win10]　※Changed(Old name：ARM64)
+      |- [ARM64_Win11]　※Added（Windows11）
+  |- [Sub]          MulitLangageFile/HelpFile
+      |- [Lang]     MulitLangageFile
+  |- [Setup64.exe]            Installer(64-bit)
+  |- [Setup.exe]               Installer(32-bit)
+  |- [SetupARM64_Win10.exe]      Installer(ARM64-bit)　※Changed(Old name：SetupARM64.exe)
+  |- [SetupARM64_Win11.exe]      Installer(ARM64-bit)　※Added（Windows11）
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -239,6 +266,7 @@ Supported OS :
 
     a) When using the included Installer
        Run "Setup.exe" and install according to the instructions in the dialog to install.
+　　　※In the case of ARM64 environment, execute "SetupARM64_Win11.exe" for Windows 11 and "SetupARM64_Win10.exe" for Windows 10.
 
     b) When installing manually
        Use Windows Add Printer Wizard to install.
@@ -261,16 +289,18 @@ Supported OS :
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[V4UPDSetup_Own_PCL_2.0.0.3]Folder
+[V4UPDSetup_Own_PCL_2.0.0.4]Folder
  |- [Drivers]
   |- [x64]
   |- [x86]
-  |- [ARM64]
+  |- [ARM64_Win10]
+  |- [ARM64_Win11]
  |- [Sub]                     MulitLangageFile/HelpFile
   |- [Lang]                   MulitLangageFile
  |- [Setup64.exe]            Installer(64-bit)
  |- [Setup.exe]               Installer(32-bit)
- |- [SetupARM64.exe]     Installer(ARM64-bit)
+ |- [SetupARM64_Win10.exe]     Installer(ARM64-bit)
+ |- [SetupARM64_Win11.exe]     Installer(ARM64-bit)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 7. How to check the version in a printer driver
@@ -296,9 +326,9 @@ In such a case, please be careful of the setting method etc.
     Devices: 4700P / 4000P / 3300P / 3301P / 4702P / 4402P / 3602P / 4422 / 3622
     Paper size:
     600dpi print:
-        Envelop #9, Envelop Com10�AEnvelop B5�AEnvelop DL�AEnvelop C5�A8 1/2x13 1/2
+        Envelop #9, Envelop Com10、Envelop B5、Envelop DL、Envelop C5、8 1/2x13 1/2
     1200dpi print:
-        A4�AA5(Landscape)�AB5(Landscape)�AEnvelop #9�AEnvelop Com10�AEnvelop B5�AEnvelop DL�AEnvelop C5�A8 1/2x13 1/2
+        A4、A5(Landscape)、B5(Landscape)、Envelop #9、Envelop Com10、Envelop B5、Envelop DL、Envelop C5、8 1/2x13 1/2
 
  2 .When printing documents with watermark, the texts and images beneath the rectangular area of 
     the watermark text will appear lighter than original/expected.
@@ -317,8 +347,8 @@ In such a case, please be careful of the setting method etc.
          - Print with other application like Adobe Reader.
 
  5 .The following are the differences between the Printer Extension and Windows Store Device App:
-    �EEdit My Tab, Edit favorite, Edit Watermark, changing between Paper View and Text View are only supported on Printer Extension.
-    �EAccessing Device Settings is only possible from the Printer Extension.
+    ・Edit My Tab, Edit favorite, Edit Watermark, changing between Paper View and Text View are only supported on Printer Extension.
+    ・Accessing Device Settings is only possible from the Printer Extension.
 
  6 .About Point & Print installation, in the case of installing a shared printer in the Client PC.
     It is necessary to install Printer driver in the Client PC beforehand.
@@ -336,14 +366,14 @@ In such a case, please be careful of the setting method etc.
          These temporary files is normally deleted automatically in a few minutes after the printing process is completed.
 
     Execute the following on all the PCs on which the above printer driver is installed and delete the temporary files.
-????If the printer driver is installed with Point&Print, the following execution is required on the server PC and each client PC.
+    If the printer driver is installed with Point&Print, the following execution is required on the server PC and each client PC.
 
-?   a) Driver update using Installer attached with v1.2.0.9 or later version.
-?????? Temporary files are automatically deleted when updating the driver.
+    a) Driver update using Installer attached with v1.2.0.9 or later version.
+       Temporary files are automatically deleted when updating the driver.
 
-?   b) Deletion of temporary files manually (Please follow these steps if you do not use Installer)
-?????? Open "C:\Windows\System\Spool\PRINTERS" in Windows Explorer.
-?????? Please select and delete all "PP*.TMP files".
+    b) Deletion of temporary files manually (Please follow these steps if you do not use Installer)
+       Open "C:\Windows\System\Spool\PRINTERS" in Windows Explorer.
+       Please select and delete all "PP*.TMP files".
 
  10. When printing a document that includes specific data on the following devices, printing may be slow.
       An error may be displayed on the spooler, but please wait until printing is completed.
@@ -356,6 +386,16 @@ In such a case, please be careful of the setting method etc.
 
      Workaround: Change the driver paper type to match the paper type required by the printer and try printing again, 
      or insert paper of the paper type required by the printer.
+
+ 12. In the Windows11 ARM64 environment, device information acquisition may fail in the following cases.
+
+      A) If you are using the V4 Universal Printer Driver PCL driver in a Windows 10 (ARM64) environment
+      If you operating system update to Windows 11 (ARM64), the device information acquisition may fail.
+
+      B) If you accidentally install the V4 Universal Printer Driver PCL driver for Windows 10 (ARM64) 
+　　 in the Windows 11 (ARM64) environment It may fail to acquire device information.
+
+      Workaround: Follow the procedure in "5-1) Install" to install or update the V4 Universal Printer Driver PCL driver for Windows 11 (ARM64). 
 
 //////////////////////////////////////////////////////////////////////////////////////////
 9. License

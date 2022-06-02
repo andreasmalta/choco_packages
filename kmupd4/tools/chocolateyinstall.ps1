@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$PCL            = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=4bdfc9dbead1ee58262a0b364faf59a6&tx_kmanacondaimport_downloadproxy[documentId]=129831&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum   = 'CE7758FD48A5812AA334B638E813AF84CB6B32CF7D8F4C677C765064C6DA4D0F'
+$PCL            = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=fafa5a1e8eb7f584fab4d830027232f5&tx_kmanacondaimport_downloadproxy[documentId]=133332&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PCL_checksum   = 'E04400C8F6076D5BE4AE4F0882E088D4148811FD7877B1FD31CEC6B9522D83A5'
 $PCL_extract    = Join-Path $env:TEMP 'extractPCL'
 
 $packageArgsPCL = @{
