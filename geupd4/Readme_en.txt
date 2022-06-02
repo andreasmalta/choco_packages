@@ -1,9 +1,9 @@
 ==========================================================================================
 Generic Universal V4 PCL
 Printer Software Document
-18/06/2021
+04/02/2022
 
-PCL  Version 2.0.0.3
+PCL  Version 2.0.0.4
 Printer Installer Version 2.0.0.0
 
 Copyright (C) 2016 KONICA MINOLTA, INC.
@@ -203,26 +203,58 @@ Supported OS :
     Windows 10 Pro **
     Windows 10 Enterprise *
     Windows 10 Education *
+    Windows 11 Home ***
+    Windows 11 Pro ***
+    Windows 11 Enterprise
+    Windows 11 Education
     Windows Server 2016 Standard
     Windows Server 2016 Datacenter
     Windows Server 2016 Essentials
     Windows Server 2019 Standard
     Windows Server 2019 Datacenter
     Windows Server 2019 Essentials
+    Windows Server 2022 Standard
+    Windows Server 2022 Datacenter
+    Windows Server 2022 Datacenter:Azure Edition
+    Windows Server 2022 Essentials
 
     * 32-bit (x86) and 64-bit (x64) editions of Windows are supported.
     ** 32-bit (x86), 64-bit (x64) and ARM64-bit editions of Windows are supported.
+    *** 64-bit (x64) and ARM64-bit editions of Windows are supported.
 
 //////////////////////////////////////////////////////////////////////////////////////////
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL Version 2.0.0.3
+  PCL Version 2.0.0.4
 
 ==========================================================================================
-4-1. Generic driver
+4-1. Support OS added.
 ==========================================================================================
- New supported.
+  Windows 11 Home
+  Windows 11 Pro
+  Windows 11 Enterprise
+  Windows 11 Education
+  Windows Server 2022 Standard
+  Windows Server 2022 Datacenter
+  Windows Server 2022 Datacenter:Azure Edition
+  Windows Server 2022 Essentials
+
+==========================================================================================
+4-2. Changed folder and file structure.
+==========================================================================================
+  [V4UPDSetup_Generic_PCL_2.0.0.4]Folder
+  |- [Drivers]
+      |- [x64]
+      |- [x86]
+      |- [ARM64_Win10]　※Changed(Old name：ARM64)
+      |- [ARM64_Win11]　※Added（Windows11）
+  |- [Sub]          MulitLangageFile/HelpFile
+      |- [Lang]     MulitLangageFile
+  |- [Setup64.exe]            Installer(64-bit)
+  |- [Setup.exe]               Installer(32-bit)
+  |- [SetupARM64_Win10.exe]      Installer(ARM64-bit)　※Changed(Old name：SetupARM64.exe)
+  |- [SetupARM64_Win11.exe]      Installer(ARM64-bit)　※Added（Windows11）
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -232,6 +264,7 @@ Supported OS :
 
     a) When using the included Installer
        Run "Setup.exe" and install according to the instructions in the dialog to install.
+　　　※In the case of ARM64 environment, execute "SetupARM64_Win11.exe" for Windows 11 and "SetupARM64_Win10.exe" for Windows 10.
 
     b) When installing manually
        Use Windows Add Printer Wizard to install.
@@ -254,16 +287,18 @@ Supported OS :
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[V4UPDSetup_Generic_PCL_2.0.0.3]Folder
+[V4UPDSetup_Generic_PCL_2.0.0.4]Folder
  |- [Drivers]
   |- [x64]
   |- [x86]
-  |- [ARM64]
+  |- [ARM64_Win10]
+  |- [ARM64_Win11]
  |- [Sub]                     MulitLangageFile/HelpFile
   |- [Lang]                   MulitLangageFile
  |- [Setup64.exe]            Installer(64-bit)
  |- [Setup.exe]               Installer(32-bit)
- |- [SetupARM64.exe]     Installer(ARM64-bit)
+ |- [SetupARM64_Win10.exe]     Installer(ARM64-bit)
+ |- [SetupARM64_Win11.exe]     Installer(ARM64-bit)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 7. How to check the version in a printer driver
@@ -322,6 +357,16 @@ In such a case, please be careful of the setting method etc.
 
      Workaround: Change the driver paper type to match the paper type required by the printer and try printing again, 
      or insert paper of the paper type required by the printer.
+
+9. In the Windows11 ARM64 environment, device information acquisition may fail in the following cases.
+
+      A) If you are using the Generic Universal V4 PCL driver in a Windows 10 (ARM64) environment
+      If you operating system update to Windows 11 (ARM64), the device information acquisition may fail.
+
+      B) If you accidentally install the Generic Universal V4 PCL driver for Windows 10 (ARM64) 
+　　 in the Windows 11 (ARM64) environment It may fail to acquire device information.
+
+      Workaround: Follow the procedure in "5-1) Install" to install or update the Generic Universal V4 PCL driver for Windows 11 (ARM64). 
 
 //////////////////////////////////////////////////////////////////////////////////////////
 9. License

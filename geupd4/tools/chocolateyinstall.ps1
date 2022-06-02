@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$PCL            = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=d63da384eb573729d113f3202e93f321&tx_kmanacondaimport_downloadproxy[documentId]=130167&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum   = '3B63B030EFAD04502CF02CD8EBFC033C281C3725451020C63819BF3FDCD0139F'
+$PCL            = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=c5d393830e1ac428eb69bc318fe6912e&tx_kmanacondaimport_downloadproxy[documentId]=133333&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PCL_checksum   = '9110B4FE6721DF9F3C2F2C6E834197336060774F33CC3033F80BD5FA05FA0834'
 $PCL_extract    = Join-Path $env:TEMP 'extractPCL'
 
 $packageArgsPCL = @{

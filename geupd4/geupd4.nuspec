@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>geupd4</id>
-    <version>2.0.0.3</version>
+    <version>2.0.0.4</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/geupd4</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Develop/Generic Universal V4 PCL</title>
@@ -15,7 +15,7 @@
     <tags>konica minolta develop generic universal print printer driver pcl6 pcl v4</tags>
     <summary>Develop/Generic Universal V4 PCL</summary>
     <description>The latest Universal Printer Driver compatible with the newly introduced printer driver architecture V4. 
-It provides flexible printing driver capabilities for operating systems including Windows 8.1/Windows 10 and Support printing out from various devices.</description>
+The UPD is compatible devices that support PCL6 or PostScript, independent of their brand.</description>
     <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/geupd4/Readme_en.txt</releaseNotes>
   </metadata>
   <files>
