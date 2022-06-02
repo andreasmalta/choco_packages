@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url = 'https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-15.6.0.1752.exe'
-$checksum = 'BD36E711A8270EBFAACD85EB5A30D65C5373B0AAA7D768DA1D39F18E63514028'
-$file = Join-Path $env:TEMP 'Autodesk_Desktop_Connector_15_6_0_1752_Win_64bit\Setup.exe'
+$url = 'https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-15.7.0.1767.exe'
+$checksum = 'A5620EAB18E32A2F1E564DA2FC1AC5B836B54FE9DAF6E78C275D4A8CD7E64080'
+$file = Join-Path $env:TEMP 'Autodesk_Desktop_Connector_15_7_0_1767_Win_64bit\Setup.exe'
 
 . $toolsDir\helpers.ps1
 Invoke-UninstallOldAutodesk
