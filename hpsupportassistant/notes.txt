@@ -1,4 +1,4 @@
-checksum -t sha256 -f sp138693.exe
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
@@ -10,4 +10,4 @@ choco upgrade hpsupportassistant -y -dv -s .
 
 #UNINSTALL
 choco uninstall hpsupportassistant -y
-choco push hpsupportassistant.9.14.42.0.nupkg -s https://push.chocolatey.org/
+choco push hpsupportassistant.9.16.80.0.nupkg -s https://push.chocolatey.org/
