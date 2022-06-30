@@ -1,8 +1,9 @@
-#go to https://support.ts.fujitsu.com/, search for "deskupdate setup"
-#find it under applications - tools and utility
-#copy download link (remove text &Token...)
-#download latest releaseNotes document, copy text to "ReleaseNotes.TXT"
-checksum -t sha256 -f FTS_DeskUpdateSetup_5020037_1257531.EXE
+#go to https://support.ts.fujitsu.com/, search for "deskupdate setup", choose deskupdate
+#open applications - tools and utility - DeskUpdate (Setup)
+#press direct download, agree terms and download
+#copy download link & trim "&Token" and everything after...
+#repeat for releasenotes (trim "&Token")
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
@@ -15,4 +16,4 @@ choco upgrade deskupdate -y -dv -s .
 
 #UNINSTALL
 choco uninstall deskupdate -y
-choco push deskupdate.5.02.0037.nupkg -s https://push.chocolatey.org/
+choco push deskupdate.5.02.0040.nupkg -s https://push.chocolatey.org/
