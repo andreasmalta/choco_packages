@@ -1,15 +1,15 @@
 ==========================================================================================
 KONICA MINOLTA Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-09/10/2021
+03/18/2022
 
-PCL  Version 3.9.117.0
-PS   Version 3.9.117.0
-FAX  Version 3.9.117.0
-Installer Version 3.2.16.0
-PCL  Setup Package Version 3.9.117.0
-PS   Setup Package Version 3.9.117.0
-FAX  Setup Package Version 3.9.117.0
+PCL  Version 3.9.212.0
+PS   Version 3.9.212.0
+FAX  Version 3.9.212.0
+Installer Version 3.2.22.0
+PCL  Setup Package Version 3.9.212.0
+PS   Setup Package Version 3.9.212.0
+FAX  Setup Package Version 3.9.212.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -258,12 +258,20 @@ Supported OS :
     Windows 10 Pro *
     Windows 10 Enterprise *
     Windows 10 Education *
+    Windows 11 Home
+    Windows 11 Pro
+    Windows 11 Enterprise
+    Windows 11 Education
     Windows Server 2016 Standard
     Windows Server 2016 Datacenter
     Windows Server 2016 Essentials
     Windows Server 2019 Standard
     Windows Server 2019 Datacenter
     Windows Server 2019 Essentials
+    Windows Server 2022 Standard
+    Windows Server 2022 Datacenter
+    Windows Server 2022 Datacenter:Azure Edition
+    Windows Server 2022 Essentials
 
     * 32-bit (x86) and 64-bit (x64) editions of Windows are supported.
 
@@ -280,18 +288,30 @@ In Windows 7, Windows Server 2008 R2 necessary .NET Framework is installed.
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/FAX Version 3.9.117.0
+  PCL/PS/FAX Version 3.9.212.0
 
 ==========================================================================================
-4-1. The following functions are add in this driver.
+4-1. Support OS added.
 ==========================================================================================
- 1 .Support IdP Authentication.
+  Windows 11 Home
+  Windows 11 Pro
+  Windows 11 Enterprise
+  Windows 11 Education
+  Windows Server 2022 Standard
+  Windows Server 2022 Datacenter
+  Windows Server 2022 Datacenter:Azure Edition
+  Windows Server 2022 Essentials
 
 ==========================================================================================
-4-2. The following issues are solved in this driver.
+4-2. The following functions are add in this driver.
+==========================================================================================
+ 1. Support the WebView2 Runtime of IdP authentication function. 
+
+==========================================================================================
+4-3. The following issues are solved in this driver.
 ==========================================================================================
  1. OpenSSL vulnerability.
-    Upate from 1.1.1i to 1.1.1k
+    Upate from 1.1.1k to 1.1.1l
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -546,7 +566,7 @@ This completes the uninstallation procedure.
           |- [UPDSetup64.exe]     Installer(64-bit)
           |- [UPDSetup.exe]       Installer(32-bit)
       |- [PS]
-          |- [Drivers]
+          |- [Driver]
               |- [Win_x64]
               |- [Win_x86]
           |- [Sub]                MultiLanguageFile
@@ -554,14 +574,14 @@ This completes the uninstallation procedure.
           |- [UPDSetup64.exe]     Installer(64-bit)
           |- [UPDSetup.exe]       Installer(32-bit)
       |- [FAX]
-          |- [Drivers]
+          |- [Driver]
               |- [Win_x64]
               |- [Win_x86]
           |- [Sub]                MultiLanguageFile
               |- [Lang]           MultiLanguageFile
           |- [UPDSetup64.exe]     Installer(64-bit)
           |- [UPDSetup.exe]       Installer(32-bit)
-      |- [Readme]フォルダー
+      |- [Readme]
           |- [EN]
               |- [Readme.txt]     Readme file for English (This file)
           |- [JA]
@@ -909,15 +929,33 @@ In such a case, please be careful of the setting method etc.
     Workaround: Open print settings, close OK, and reopen printer properties.
 
  24. About IdP authentication
-  24-1. About browser settings
-        Since IdP authentication uses Internet Explorer, you need to make the following settings:
+  24-1. About WebView2
+        WebView2 Runtime must be installed for IdP authentication.
+        ==>Depending on the operating system you are using, WebView2 Runtime will be installed as standard.
+        If WebView2 Runtime is not installed, it can be installed using one of the following methods:
+         - Click "WebView2 installation" in the driver installer.
+           (The [Install WebView2] button will become available if WebView2 is not installed.)
+         - Download WebView2 Runtime during IdP authentication.
+           (A message guides to the download page if WebView2 Runtime is not installed.)
+        If you cannot install WebView2 Runtime, contact the system administrator.
+
+  24-2. About browser settings
+        If you do not install WebView2 Runtime, authentication will be executed with Internet Explorer.
+        You then need to make the following settings:
          - Add the authentication site to the "Trusted sites" of Internet Explorer
          - Change "Let Internet Explorer open sites in Microsoft Edge" to "Never" in Microsoft Edge
          - Open "Compatibility View settings" in the Internet Explorer and disable 
            "Display internet sites in Compatibility View".
-           ==> For sites that require a compatibility view, enable the setting individually.
+           ==>For sites that require a compatibility view, enable the setting individually.
 
         For details, please refer to the support manual.
+
+ 24-3. About WebView2 Runtime Cookies
+        WebView2 Runtime cookies cannot be removed from the browser. 
+        To remove the cookies, please delete the following files:
+         C:\Users\<User Name>\AppData\Local\KONICA MINOLTA\IdPAuthenticate\EBWebView\Default
+          Cookies
+          Cookies-journal
 
 ==========================================================================================
 8-2. Attentions and Restrictions when using a PCL driver

@@ -1,6 +1,4 @@
-checksum -t sha256 -f UPDPCFAXWin_391170MU.zip
-checksum -t sha256 -f UPDPCL6Win_391170MU.zip
-checksum -t sha256 -f UPDPSWin_391170MU.zip
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
@@ -13,4 +11,4 @@ choco upgrade kmupd -y -dv -s .
 
 #UNINSTALL
 choco uninstall kmupd -y
-choco push kmupd.3.9.117.0.nupkg -s https://push.chocolatey.org/
+choco push kmupd.3.9.212.0.nupkg -s https://push.chocolatey.org/
