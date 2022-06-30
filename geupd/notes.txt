@@ -1,6 +1,4 @@
-checksum -t sha256 -f GEUPDPCFAXWin_391170MU.zip
-checksum -t sha256 -f GEUPDPCL6Win_391170MU.zip
-checksum -t sha256 -f GEUPDPSWin_391170MU.zip
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
@@ -13,4 +11,4 @@ choco upgrade geupd -y -dv -s .
 
 #UNINSTALL
 choco uninstall geupd -y
-choco push geupd.3.9.117.0.nupkg -s https://push.chocolatey.org/
+choco push geupd.3.9.212.0.nupkg -s https://push.chocolatey.org/
