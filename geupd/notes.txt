@@ -3,11 +3,10 @@ forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #INSTALL
 choco pack
 choco install geupd -y -dv -s .
-choco install geupd -y -dv -s . --params="'/FAX /PCL /PS'"
 
 #UPGRADE
 choco install geupd -y
-choco upgrade geupd -y -dv -s .
+choco upgrade geupd -y -dv -s . --params="'/FAX /PCL /PS'"
 
 #UNINSTALL
 choco uninstall geupd -y
