@@ -3,11 +3,10 @@ forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #INSTALL
 choco pack
 choco install kmupd -y -dv -s .
-choco install kmupd -y -dv -s . --params="'/FAX /PCL /PS'"
 
 #UPGRADE
 choco install kmupd -y
-choco upgrade kmupd -y -dv -s .
+choco upgrade kmupd -y -dv -s . --params="'/FAX /PCL /PS'"
 
 #UNINSTALL
 choco uninstall kmupd -y
