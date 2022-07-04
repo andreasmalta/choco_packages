@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xeroxupd</id>
-    <version>5.860.1.0</version>
+    <version>5.887.3.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/xeroxupd</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Xerox Global Print Driver PCL/PS V3</title>

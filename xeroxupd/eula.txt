@@ -40,10 +40,10 @@ b.	Software may contain, or be modified to contain, computer code capable of aut
 
 15.  DIAGNOSTIC SOFTWARE.   Software used to evaluate or maintain Xerox equipment ("Diagnostic Software") may be embedded in, reside on, or may be loaded onto Xerox equipment. The Diagnostic Software and method of entry or access to it constitute valuable trade secrets of Xerox. Title to Diagnostic Software shall at all times remain solely with Xerox and/or its licensors. You agree that (a) your acquisition of the equipment does not grant you a license or right to use Diagnostic Software in any manner, and (b) that unless separately licensed by Xerox to do so, you will not access, use, reproduce, distribute, or disclose Diagnostic Software for any purpose (or allow third parties to do so). You agree at all times to allow Xerox to access, monitor, and otherwise take steps to prevent unauthorized use or reproduction of Diagnostic Software and to remove or disable Diagnostic Software.  
 
-16.  PRINTER AGREEMENT. The following Equipment models are subject to the Printer Agreement described herein: Xerox B230, Xerox B225, Xerox B235, Xerox B310, Xerox C230, Xerox C235. 
+16.  PRINTER AGREEMENT. The following Equipment models are subject to the Printer Agreement described herein: Xerox B230, Xerox B225, Xerox B235, Xerox B310, Xerox B305, Xerox B315, Xerox C230, Xerox C235, Xerox C310, Xerox C315. 
 Please read before opening: Opening this package, installing the printer device software, or using the products inside confirms your acceptance of these contract terms: This printer is designed to work only with genuine original manufacturer supplies and you agree to only use genuine original manufacturer supplies with this printer. The installed supplies (Toner Cartridge, Imaging Unit) inside the printer are subject to a restriction that they be used only once and returned only to the original manufacturer for remanufacturing or recycling. Supplies without this single-use term are available through the original manufacturer and may be remanufactured by you, or a third-party, as the only supply alternatives to be used with the printer. 
 
-17.  SUPPLIES AGREEMENT.  The following Equipment models are subject to the Supplies Agreement described herein: Xerox B230, Xerox B225, Xerox B235, Xerox B310, Xerox C230, Xerox C235. 
+17.  SUPPLIES AGREEMENT.  The following Equipment models are subject to the Supplies Agreement described herein: Xerox B230, Xerox B225, Xerox B235, Xerox B310, Xerox B305, Xerox B315, Xerox C230, Xerox C235, Xerox C310, Xerox C315. 
 Please read before opening: By opening this package, you accept these contract terms. The supplies inside: (1) are sold at a special price contingent upon your agreement to use the supplies only once and return the supplies only to the original manufacturer for remanufacturing or recycling after using them; and (2) will stop working after reaching end of the rated life established by the original manufacturer (a variable amount of toner may remain when replacement is required); and (3) may automatically update the printer memory to protect the printer from counterfeit and unauthorized products. Supplies without this single-use term are available through the original manufacturer. If you do not accept these terms, return the unopened supplies to the point of purchase. 
 
 18. MICROSOFT CORPORATION NOTICES. Some printer models incorporate technology licensed from Microsoft Corporation.  The following notices are provided for those printer models.
@@ -51,6 +51,20 @@ Please read before opening: By opening this package, you accept these contract t
 a.  This product may incorporate intellectual property owned by Microsoft Corporation.  The terms and conditions upon which Microsoft is licensing such intellectual property may be found at http://go.microsoft.com/fwlink/?LinkId=52369. 
 
 b.  This product is based on Microsoft Print Schema technology.  You may find the terms and conditions upon which Microsoft is licensing such intellectual property at http://go.microsoft.com/fwlink/?LinkId=83288.
+
+19. ADDITIONAL LICENSE TERMS FOR ORACLE AMERICA, INC. SOFTWARE. Xerox C315 contains software licensed form Oracle America, Inc. and is subject to additional terms, as indicated below. 
+
+In addition to the foregoing, with respect to any Oracle America, Inc. ("Oracle") software licensed hereunder, the following terms apply:
+
+a. Java Technology Restrictions.  You are prohibited from creating, modifying, or changing the behavior of classes, interfaces, or subpackages that are in any way identified as "Java", "Javax", "Sun" or similar convention as specified by Oracle in any naming convention designation.
+
+b. Trademarks and Logos. You shall acknowledge that Oracle owns the Java trademark and all Java-related trademarks, logos and icons including the Coffee Cup and Duke ("Java Marks") and agree to: (a) comply with the Java Trademark Guidelines at http://www.oracle.com/us/legal/third-party-trademarks/index.html; (b) not do anything harmful to or inconsistent with Oracle's rights in the Java Marks; and (c) assist Oracle in protecting those rights, including assigning to Oracle any rights acquired by the End User in any Java Mark.
+
+c. Source Code. The Programs may contain source code that, unless expressly licensed for other purposes, is provided solely for reference purposes pursuant to the terms of the End User License Agreement.
+
+d. Third Party Code. Additional copyright notices and license terms applicable to portions of the Programs are set forth in the THIRDPARTYLICENSEREADME.txt file. 
+
+e. Commercial Features.  Use of the Commercial Features for any commercial or production purpose requires a separate license from Oracle.  "Commercial Features" means those features identified in Table 1-1 (Commercial Features In Java SE Product Editions) of the Program Documentation accessible at "http://www.oracle.com/technetwork/java/javase/documentation/index.html."
 
 
 Open Source Software Disclosure
