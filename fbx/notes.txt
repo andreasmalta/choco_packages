@@ -1,0 +1,9 @@
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+
+#INSTALL
+choco pack
+choco install fbx -y -dv -s .
+
+#UNINSTALL
+choco uninstall fbx -y
+choco push fbx.3.18.nupkg -s https://push.chocolatey.org/

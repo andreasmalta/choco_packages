@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+   <id>fbx</id>
+    <version>3.18</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/fbx</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>FBX Game Recorder</title>
+    <authors>Blueberry Software</authors>
+    <projectUrl>https://fbx.gg/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/fbx/icon.png</iconUrl>
+    <licenseUrl>https://fbx.gg/terms/</licenseUrl>
+    <docsUrl>https://fbx.gg/support/</docsUrl>
+    <tags>flashback record live stream game hd recorder</tags>
+    <summary>FBX Game Recorder</summary>
+    <description>FBX is a high performance recorder, capturing lag-free HD gameplay.</description>
+    <releaseNotes>https://fbx.gg/change-history/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
