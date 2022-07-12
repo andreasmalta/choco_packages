@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+   <id>flashbackpro</id>
+    <version>5.56</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/flashbackpro</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>FlashBack Pro</title>
+    <authors>Blueberry Software</authors>
+    <projectUrl>https://www.flashbackrecorder.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/flashbackpro/icon.png</iconUrl>
+    <licenseUrl>https://www.flashbackrecorder.com/eula/</licenseUrl>
+    <docsUrl>https://www.flashbackrecorder.com/files/Flashback_5_User_Guide.pdf</docsUrl>
+    <tags>flashback pro screen recorder player capture video</tags>
+    <summary>FlashBack Pro</summary>
+    <description>The Best Screen Recorder For Remote Work And Learning. Record your screen and share quick clips or make engaging demos and training videos. FlashBack Screen Recorder is the fastest way to capture and edit video.</description>
+    <releaseNotes>https://www.flashbackrecorder.com/change-history/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

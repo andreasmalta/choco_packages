@@ -1,0 +1,9 @@
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+
+#INSTALL
+choco pack
+choco install flashbackpro -y -dv -s .
+
+#UNINSTALL
+choco uninstall flashbackpro -y
+choco push flashbackpro.5.56.nupkg -s https://push.chocolatey.org/
