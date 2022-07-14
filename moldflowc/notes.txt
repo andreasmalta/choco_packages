@@ -1,4 +1,4 @@
-checksum -t sha256 -f MFC_2021_FCS_Multilingual_Win_64bit_dlm.sfx.exe
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
