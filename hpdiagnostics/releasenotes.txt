@@ -1,29 +1,66 @@
 TITLE:  HP PC Hardware Diagnostics Windows
-VERSION: 1.8.1.0
+VERSION: 1.8.2.0
 DESCRIPTION: 
 This package provides HP PC Hardware Diagnostics for supported computer models that are running a supported operating system. HP PC Hardware Diagnostics Windows allows HP customers to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
 
 PURPOSE: Recommended
-SoftPaq NUMBER: SP138803
-EFFECTIVE DATE:  03/10/2022
+SoftPaq NUMBER: sp141746
+EFFECTIVE DATE:  08/06/2022
 CATEGORY:  Diagnostic
 SSM SUPPORTED:  Yes
 DEVICES SUPPORTED: N/A
 PREREQUISITES: - You must be logged on as an administrator to install this update.
 - You must have a Microsoft Windows operating system.
 LANGUAGE(S): 
-Global 
+English (US)
+Arabic
+Brazilian Portuguese
+Bulgarian
+Chinese (Prc. Simplified)
+Croatian
+Czech
+Danish
+Dutch
+Estonian
+Finnish
+French
+German
+Greek
+Hebrew
+Hong Kong
+Hungarian
+Italian
+Japanese
+Korean
+Latvian
+Lithuanian
+Norwegian
+Polish
+Portuguese
+Romanian
+Russian
+Serbian
+Slovenian
+Spanish
+Swedish
+Taiwan Chinese (Traditional)
+Thai
+Turkish
+English (UK)
+ 
 
 ENHANCEMENTS:
-- Thermal Diagnostic Check.
-- Thermal Tab added to System Info. 
-- HP SMART Support promotion. 
-- Enable Bios Update for consumer systems.
-- Improve EAS flow on Omen and Envy family of products.
-- NET6 Migration. 
-- Improvement to webcam test. 
-- UI Improvements.
-- Various Bug Fixes.
+- Enable thermal reading and fan RPM.
+- Enable Nvdia/AMD discrete cards Thermal reading. 
+- Implementing telemetry harvesting for UEFI Diagnostics
+- Invoke UEFI battery calibration using UEFI Calibration. 
+- Enablement of the Video Test for Hybrid mode.
+- Storage Test Improvements 
+- Enable Sensor(s) health.
+- Various Bug Fixes
+
+FIXES: 
+
 HOW TO USE:
 1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
 

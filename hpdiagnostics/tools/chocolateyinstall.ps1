@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url            = 'https://ftp.ext.hp.com/pub/softpaq/sp138501-139000/sp138803.exe'
-$checksum       = '530B922A03A00C8D433C10BDB8AB47CC1F0F6861C1ADBC127E29AE51C7CB9178'
+$url = 'https://ftp.ext.hp.com/pub/softpaq/sp141501-142000/sp141746.exe'
+$checksum = '55EDA4479FEEED98EBCC77700289C7F90AEB2FD8F6BE9C6D8F50A7C05C422C5E'
 
 #Uninstall old version before upgrade
 $DisplayName = 'HP PC Hardware Diagnostics Windows'

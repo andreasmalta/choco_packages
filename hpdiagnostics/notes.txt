@@ -1,4 +1,4 @@
-checksum -t sha256 -f sp138803.exe
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #copy text during gui installation to releasenotes.txt
 
 #INSTALL
@@ -12,4 +12,4 @@ choco upgrade hpdiagnostics -y -dv -s .
 
 #UNINSTALL
 choco uninstall hpdiagnostics -y
-choco push hpdiagnostics.1.8.1.0.nupkg -s https://push.chocolatey.org/
+choco push hpdiagnostics.1.8.2.0.nupkg -s https://push.chocolatey.org/
