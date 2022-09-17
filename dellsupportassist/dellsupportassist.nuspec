@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dellsupportassist</id>
+    <version>3.11.4.29</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dellsupportassist</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Dell SupportAssist for home PCs</title>
+    <authors>Dell</authors>
+    <projectUrl>https://www.dell.com/support/contents/en-us/article/product-support/self-support-knowledgebase/software-and-downloads/SupportAssist</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dellsupportassist/icon.png</iconUrl>
+    <licenseUrl>https://www.dell.com/learn/us/en/uscorp1/terms-conditions/art-software-license-agreements</licenseUrl>
+    <docsUrl>https://www.dell.com/support/home/en-us/product-support/product/dell-supportassist-pcs-tablets/docs</docsUrl>
+    <tags>dell support device driver update</tags>
+    <summary>Dell SupportAssist for home PCs</summary>
+    <description>Automated, proactive, and predictive support - SupportAssist is the smart technology, available on your PC that will keep it running like new by removing viruses, detecting issues, optimizing settings and telling you when you need to make updates.</description>
+    <releaseNotes>https://www.dell.com/support/home/en-us/product-support/product/dell-supportassist-pcs-tablets/docs</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
