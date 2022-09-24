@@ -19,8 +19,3 @@ Install-ChocolateyZipPackage @packageArgsURL
 #apparently needs to open in a new window otherwise it closes down the choco process (start-process -wait)
 #apparently needs to run from the same directory to work ($env:temp)
 cd $env:TEMP; Start-Process -Wait -FilePath ".\Setup.exe" -ArgumentList "-s"
-
-
-
-
-
