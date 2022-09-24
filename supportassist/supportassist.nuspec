@@ -2,14 +2,14 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>dellsupportassist</id>
+    <id>supportassist</id>
     <version>3.11.4.29</version>
-    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dellsupportassist</packageSourceUrl>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/supportassist</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Dell SupportAssist for home PCs</title>
     <authors>Dell</authors>
     <projectUrl>https://www.dell.com/support/contents/en-us/article/product-support/self-support-knowledgebase/software-and-downloads/SupportAssist</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dellsupportassist/icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/supportassist/icon.png</iconUrl>
     <licenseUrl>https://www.dell.com/learn/us/en/uscorp1/terms-conditions/art-software-license-agreements</licenseUrl>
     <docsUrl>https://www.dell.com/support/home/en-us/product-support/product/dell-supportassist-pcs-tablets/docs</docsUrl>
     <tags>dell support device driver update</tags>

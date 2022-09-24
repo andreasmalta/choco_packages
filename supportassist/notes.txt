@@ -1,0 +1,13 @@
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+
+#INSTALL
+choco pack
+choco install supportassist -y -dv -s .
+
+#UPGRADE
+choco install supportassist -y
+choco upgrade supportassist -y -dv -s .
+
+#UNINSTALL
+choco uninstall supportassist -y
+choco push supportassist.3.11.4.29.nupkg -s https://push.chocolatey.org/
