@@ -10,4 +10,4 @@ choco upgrade geupd -y -dv -s . --params="'/FAX /PCL /PS'"
 
 #UNINSTALL
 choco uninstall geupd -y
-choco push geupd.3.9.212.0.nupkg -s https://push.chocolatey.org/
+choco push geupd.3.9.220.0.nupkg -s https://push.chocolatey.org/

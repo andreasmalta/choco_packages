@@ -2,10 +2,10 @@
 
 $FAX = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=094d234fb06d858e5e587e342b3b4ff3&tx_kmanacondaimport_downloadproxy[documentId]=133842&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
 $FAX_checksum = 'A6A519FA4A122E7C81F2F9AF9CF80EBE436125F8F1AA722A28AD672DF50DE110'
-$PCL = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=c4c337b77a455447c6fc58cb9c1abed6&tx_kmanacondaimport_downloadproxy[documentId]=133840&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum = 'B6F7F655F2B68F30A093965E53A0B982E66F088E4105078E8BFF7A4661CABB42'
-$PS = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=9cbb50bff3ce0cf9d0df5d44abd79233&tx_kmanacondaimport_downloadproxy[documentId]=133841&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PS_checksum = 'C04C4B899C07C9F0E6C1781F2FAC5A6AFFBB6046D4E602818F27F603F70CB95D'
+$PCL = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=b9fcb26c8e260da6d411125cd0395801&tx_kmanacondaimport_downloadproxy[documentId]=134903&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PCL_checksum = '5C0A9AC837F01981DFFA252A824D680175D98C6844A028BB018AC2FCBF06B09D'
+$PS = 'https://dl.develop.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=f9ce85daed6007ef82b8175b3d571d31&tx_kmanacondaimport_downloadproxy[documentId]=134904&tx_kmanacondaimport_downloadproxy[system]=Develop&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PS_checksum = '8B091A0EB6C92F4911EE0976F2081E2489FFF07245747B66C72C5A02EA69EC5B'
 
 function Invoke-packageArgsFAX {
 	$FAX_extract = Join-Path $env:TEMP 'extractFAX'
