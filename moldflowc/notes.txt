@@ -2,9 +2,8 @@ forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
-choco install vcredist140 vcredist2012 -y
 choco install moldflowc -y -dv -s .
 
 #UNINSTALL
 choco uninstall moldflowc -y
-choco push moldflowc.2021.2.nupkg -s https://push.chocolatey.org/
+choco push moldflowc.2023.0.nupkg -s https://push.chocolatey.org/
