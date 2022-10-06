@@ -1,14 +1,14 @@
 ==========================================================================================
 KONICA MINOLTA Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-03/18/2022
+09/02/2022
 
-PCL  Version 3.9.212.0
-PS   Version 3.9.212.0
+PCL  Version 3.9.220.0
+PS   Version 3.9.220.0
 FAX  Version 3.9.212.0
 Installer Version 3.2.22.0
-PCL  Setup Package Version 3.9.212.0
-PS   Setup Package Version 3.9.212.0
+PCL  Setup Package Version 3.9.220.0
+PS   Setup Package Version 3.9.220.0
 FAX  Setup Package Version 3.9.212.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.

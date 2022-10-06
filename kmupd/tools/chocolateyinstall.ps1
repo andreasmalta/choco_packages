@@ -2,10 +2,10 @@
 
 $FAX = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=8bdab7aa6c67fc47fa0f003f6138f84a&tx_kmanacondaimport_downloadproxy[documentId]=133839&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
 $FAX_checksum = '0CD7DDED665C4583EA04EE75AA81B781D27621A1FEE3F1FD220FD188232B891B'
-$PCL = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=40d4efc46c2898c10808a222e2472ac1&tx_kmanacondaimport_downloadproxy[documentId]=133837&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum = '810970D80987CB1668D81747D41E2D27C39653710856E82F1C950C3F4AABE3CB'
-$PS = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=cfa7ad9b42789594d214dd5d2661e2d9&tx_kmanacondaimport_downloadproxy[documentId]=133838&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PS_checksum = '344CF3CDAD9C9189285B2C0DEC5B148E3E7534FBF4358F18B1B8D3B8FD35D966'
+$PCL = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=d4bd14a1e3f0617f24287d043c046bf9&tx_kmanacondaimport_downloadproxy[documentId]=134901&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PCL_checksum = '76A07E7E39766C6EB2CBF25FAF96AE73773C5E88E603E48AB4AB64BECE1D5E2A'
+$PS = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=c53e2c60d0e919276d51cd3acdf2c099&tx_kmanacondaimport_downloadproxy[documentId]=134902&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
+$PS_checksum = 'B6F5A47EDAB7F01F1756288BA03EAE8A98C9F0885480AD22DC5136CE6827CFE9'
 
 function Invoke-packageArgsFAX {
 	$FAX_extract = Join-Path $env:TEMP 'extractFAX'
