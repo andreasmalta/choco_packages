@@ -4,8 +4,8 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . $toolsDir\helpers.ps1
 Invoke-UninstallOldClickShare
 
-$url            = "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306194&TdeType=3&MajorVersion=04&MinorVersion=23&PatchVersion=00&BuildVersion=023&ShowDownloadPage=False"
-$checksum_url   = '1582C62F464E41FA8B89768D1D79CC5D466AA60EDFEBA1810FB2211A95C68A2A'
+$url            = "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306194&TdeType=3&MajorVersion=04&MinorVersion=24&PatchVersion=00&BuildVersion=025&ShowDownloadPage=False"
+$checksum_url   = 'CA361471A0EC2A5067308437071EE92BB090CEDFF74B5EFEB1B29F3EE5B1274A'
 $file           = Join-Path $env:TEMP 'ClickShare_Installer.msi'
 
 $packageArgsURL = @{
