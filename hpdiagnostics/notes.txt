@@ -12,4 +12,4 @@ choco upgrade hpdiagnostics -y -dv -s .
 
 #UNINSTALL
 choco uninstall hpdiagnostics -y
-choco push hpdiagnostics.1.8.2.0.nupkg -s https://push.chocolatey.org/
+choco push hpdiagnostics.1.8.3.0.nupkg -s https://push.chocolatey.org/

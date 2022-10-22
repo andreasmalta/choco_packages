@@ -1,11 +1,11 @@
 TITLE:  HP PC Hardware Diagnostics Windows
-VERSION: 1.8.2.0
+VERSION: 1.8.3.0
 DESCRIPTION: 
 This package provides HP PC Hardware Diagnostics for supported computer models that are running a supported operating system. HP PC Hardware Diagnostics Windows allows HP customers to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
 
 PURPOSE: Recommended
-SoftPaq NUMBER: sp141746
-EFFECTIVE DATE:  08/06/2022
+SoftPaq NUMBER: sp142974
+EFFECTIVE DATE:  10/04/2022
 CATEGORY:  Diagnostic
 SSM SUPPORTED:  Yes
 DEVICES SUPPORTED: N/A
@@ -50,17 +50,11 @@ English (UK)
  
 
 ENHANCEMENTS:
-- Enable thermal reading and fan RPM.
-- Enable Nvdia/AMD discrete cards Thermal reading. 
-- Implementing telemetry harvesting for UEFI Diagnostics
-- Invoke UEFI battery calibration using UEFI Calibration. 
-- Enablement of the Video Test for Hybrid mode.
-- Storage Test Improvements 
-- Enable Sensor(s) health.
+- Added HPIA as a launch from Windows Diagnostics. 
+- Added support for Qualcomm WifiCx driver on IRQ Test.
+- Improve User Experience on driver update.  
 - Various Bug Fixes
 
-FIXES: 
-
 HOW TO USE:
 1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
 

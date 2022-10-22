@@ -1,21 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url = 'https://ftp.ext.hp.com/pub/softpaq/sp141501-142000/sp141746.exe'
-$checksum = '55EDA4479FEEED98EBCC77700289C7F90AEB2FD8F6BE9C6D8F50A7C05C422C5E'
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+$url = 'https://ftp.ext.hp.com/pub/softpaq/sp142501-143000/sp142974.exe'
+$checksum = 'FE6F4BE9AF781AED3A9A161FFFCDBC27C6EFC6AE3F0FAADCBCB10493FC0B7F8B'
 
 #Uninstall old version before upgrade
-$DisplayName = 'HP PC Hardware Diagnostics Windows'
-$ExitCodes = @(0, 3010, 1605, 1614, 1641)
-Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
-                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
-                 -ErrorAction:SilentlyContinue `
-| Where-Object   {$_.DisplayName -like $DisplayName} `
-| ForEach-Object {
-	$silentArgs = '/qn /norestart'
-	$file = "$($_.UninstallString)"
-	$silentArgs = "$($_.PSChildName) $silentArgs"
-	$file = ''
-	Uninstall-ChocolateyPackage -PackageName "$DisplayName" -FileType "msi" -SilentArgs "$($silentArgs)" -File "$file" -ValidExitCodes $ExitCodes
-	}
+. $toolsDir\helpers.ps1
+Invoke-Uninstall
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
