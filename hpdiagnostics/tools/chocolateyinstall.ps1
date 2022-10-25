@@ -2,7 +2,7 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $url = 'https://ftp.ext.hp.com/pub/softpaq/sp142501-143000/sp142974.exe'
-$checksum = 'FE6F4BE9AF781AED3A9A161FFFCDBC27C6EFC6AE3F0FAADCBCB10493FC0B7F8B'
+$checksum = 'FFC66FA68A14D1B359C1552956138165B1323D520A8A13EE8B881DE4E5529AF0'
 
 #Uninstall old version before upgrade
 . $toolsDir\helpers.ps1
