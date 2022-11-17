@@ -7,4 +7,4 @@ choco install clickshare-desktop -y -dv -s .
 
 #UNINSTALL
 choco uninstall clickshare-desktop -y
-choco push clickshare-desktop.4.24.0.25.nupkg -s https://push.chocolatey.org/
+choco push clickshare-desktop.4.25.0.15.nupkg -s https://push.chocolatey.org/
