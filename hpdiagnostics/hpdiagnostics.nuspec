@@ -8,10 +8,10 @@
     <owners>aa.malta</owners>
     <title>HP PC Hardware Diagnostics</title>
     <authors>HP</authors>
-    <projectUrl>https://www8.hp.com/us/en/campaigns/hpsupportassistant/pc-diags.html</projectUrl>
+    <projectUrl>https://support.hp.com/us-en/help/hp-pc-hardware-diagnostics</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpdiagnostics/icon.png</iconUrl>
     <licenseUrl>https://support.hp.com/us-en/document/c00581401</licenseUrl>
-    <docsUrl>https://www.hp.com/us-en/campaigns/hpsupportassistant/WhyDiags.html?jumpid=in_r12064_us/en/psg/hw_diags/secondary-banner/why-use-diagnostics</docsUrl>
+    <docsUrl>https://support.hp.com/us-en/document/ish_2854458-2733239-16</docsUrl>
     <tags>hp device tests</tags>
     <summary>HP PC Hardware Diagnostics</summary>
     <description>HP PC Hardware Diagnostics Windows is a Windows-based utility that allows you to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
