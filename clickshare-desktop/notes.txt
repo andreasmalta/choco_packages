@@ -1,4 +1,5 @@
-#Kopiera download länk "ClickShare Desktop App Windows MSI installer"
+https://www.barco.com/en/clickshare/support/clickshare-desktop-app/drivers
+#Copy link address from "ClickShare Desktop App Windows MSI installer"
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
@@ -7,4 +8,4 @@ choco install clickshare-desktop -y -dv -s .
 
 #UNINSTALL
 choco uninstall clickshare-desktop -y
-choco push clickshare-desktop.4.25.0.15.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
