@@ -1,3 +1,4 @@
+https://help.autodesk.com/view/DRIVE/ENU/?guid=GUID-03D59AAD-65B0-45E3-84F2-A12AAA5BB267
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #unzip - copy foldername from autodesk installation folder
 
@@ -11,4 +12,4 @@ choco upgrade desktopconnector -y -dv -s .
 
 #UNINSTALL
 choco uninstall desktopconnector -y
-choco push desktopconnector.15.8.0.1827.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
