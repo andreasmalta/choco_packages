@@ -1,5 +1,6 @@
 function Invoke-UninstallOldAutodesk {
 Stop-Process -Name "DesktopConnector*" -Force
+Stop-Service -Name "FileSystemMonitorService" -Force
 $packageName = 'Autodesk Desktop Connector*'
 $FolderName = 'C:\Program Files\Autodesk\Desktop Connector\'
 $validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
