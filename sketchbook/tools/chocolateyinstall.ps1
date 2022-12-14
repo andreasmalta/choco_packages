@@ -27,7 +27,7 @@ $packageArgsISS = @{
   checksum      = $checksum_isscript
   checksumType  = 'sha256'
 }
-Install-ChocolateyPackage @packageArgsISS
+Install-ChocolateyInstallPackage @packageArgsISS
 
 $packageArgsMSI = @{
   packageName   = $env:ChocolateyPackageName
@@ -39,4 +39,4 @@ $packageArgsMSI = @{
   checksum      = $checksum_msi
   checksumType  = 'sha256'
 }
-Install-ChocolateyPackage @packageArgsMSI
+Install-ChocolateyInstallPackage @packageArgsMSI

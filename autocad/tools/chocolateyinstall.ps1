@@ -151,7 +151,7 @@ $packageArgsUnzip  = @{
   silentArgs     = "-suppresslaunch -d $env:TEMP"
   validExitCodes = @(0, 3010, 1641)
 }
-Install-ChocolateyInstallPackage @packageArgsUnzip
+Install-ChocolateyPackage @packageArgsUnzip
 
 $packageArgs  = @{
   packageName    = 'AutoCAD'

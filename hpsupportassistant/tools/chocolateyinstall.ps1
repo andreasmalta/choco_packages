@@ -14,7 +14,7 @@ $packageArgsURL = @{
   checksumType  = 'sha256'
   unziplocation = $env:TEMP
 }
-Install-ChocolateyZipPackage @packageArgsURL
+Install-ChocolateyPackage @packageArgsURL
 
 #apparently needs to open in a new window otherwise it closes down the choco process (start-process -wait)
 #apparently needs to run from the same directory to work ($env:temp)

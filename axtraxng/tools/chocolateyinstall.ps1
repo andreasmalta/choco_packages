@@ -8,7 +8,7 @@ $packageArgsURL = @{
   file          = $file_Zip
   unziplocation = $env:TEMP
 }
-Install-ChocolateyZipPackage @packageArgsURL
+Get-ChocolateyUnzip @packageArgsURL
 
 #Uninstall AxTraxNG
 . $toolsDir\helpers.ps1

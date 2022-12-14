@@ -18,7 +18,7 @@ $packageArgsExtract = @{
   url            = $extract
   unziplocation  = $env:TEMP
 }
-Install-ChocolateyZipPackage @packageArgsExtract
+Get-ChocolateyUnzip @packageArgsExtract
 
 $setup = Join-Path $env:TEMP '$_2_\SubInstallers\TFTPInstaller.msi'
 $packageArgs = @{
@@ -29,4 +29,4 @@ $packageArgs = @{
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
 }
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs

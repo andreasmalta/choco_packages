@@ -25,4 +25,4 @@ $packageArgs = @{
   silentArgs    = "/qn ACCEPT_EULA=YES /norestart"
   validExitCodes= @(0, 3010, 1641)
 }
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
