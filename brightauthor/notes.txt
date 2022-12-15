@@ -1,7 +1,15 @@
-checksum -t sha256 -f setup_BrightAuthor_4.7.2.18.zip
-checksum -t sha256 -f setup.4.7.2.18.exe
+https://www.brightsign.biz/downloads/xt4-series
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+#Update release notes link
 
+#INSTALL
 choco pack
-choco install brightauthor -s .
-choco uninstall brightauthor
-choco push brightauthor.4.7.2.18.nupkg -s https://push.chocolatey.org/
+choco install brightauthor -y -dv -s .
+
+#UPGRADE
+choco install brightauthor -y
+choco upgrade brightauthor -y -dv -s .
+
+#UNINSTALL
+choco uninstall brightauthor -y
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>brightauthor</id>
-    <version>4.7.2.18</version>
+    <version>5.0.0.3</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/brightauthor</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>BrightAuthor</title>
@@ -15,7 +15,7 @@
     <tags>brightsign brightauthor brightwall signage</tags>
     <summary>BrightAuthor</summary>
     <description>BrightAuthor is a PC software application for BrightSign that makes creating, publishing and managing BrightSign presentations simple and dependable. It is the central application for all your BrightSign needs, from building and distributing your presentations to managing your entire network of remote signs via the BrightSign Network. Not only does BrightAuthor offer an intuitive user interface and a wealth of digital signage features, it is also free of charge to all BrightSign customers. BrightAuthor is continually updated to keep up with market demands and future-proof your digital signage.</description>
-    <releaseNotes>https://brightsignbiz.s3.amazonaws.com/brightauthor/4.7/4.7.2.18/BA%204.7.2.18%20Release%20Notes.pdf</releaseNotes>
+    <releaseNotes>https://www.brightsignnetwork.com/download/Marketing/Software-ReleaseNotes/BA_5_0_0_3_releaseNotes.pdf</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
