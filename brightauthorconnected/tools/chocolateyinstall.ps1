@@ -1,14 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url            = 'https://brightsignnetwork.com/download/nsingh/ba-connected/BA%20connected%20Setup%201.7.10.exe'
-$checksum_url   = 'EBF6FEC870491E4D906B26CD0EE15A305342EA77AA7A71EAA2647B09E52C3E61'
+$url = 'https://www.brightsignnetwork.com/download/ba-connected-builds/ba-connected-prod/BA%20connected%20Setup%201.7.11.exe'
+$checksum = '786CA783D4C3759087BDF21222CD74FD2931BAAD879DEDE99E9A810CE730A828'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  unzipLocation = $env:TEMP
   fileType      = 'exe'
   url           = $url
   softwareName  = 'BAconnected*'
-  checksum      = $checksum_url
+  checksum      = $checksum
   checksumType  = 'sha256'
   silentArgs    = "/S"
   validExitCodes= @(0, 3010, 1641)

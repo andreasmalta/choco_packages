@@ -1,3 +1,4 @@
+https://www.brightsign.biz/downloads/xt4-series
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
@@ -10,4 +11,4 @@ choco upgrade brightauthorconnected -y -dv -s .
 
 #UNINSTALL
 choco uninstall brightauthorconnected -y
-choco push brightauthorconnected.1.7.10.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
