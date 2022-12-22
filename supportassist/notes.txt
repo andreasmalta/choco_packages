@@ -1,3 +1,5 @@
+#Get latest buildnumber from a Dell computer, adjust download link below: 
+#https://downloads.dell.com/serviceability/catalog/SupportAssistx64-3.13.0.236.msi
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
@@ -11,6 +13,3 @@ choco upgrade supportassist -y -dv -s .
 #UNINSTALL
 choco uninstall supportassist -y
 FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
-
-
-https://downloads.dell.com/serviceability/catalog/SupportAssistx64-3.10.4.18.msi
