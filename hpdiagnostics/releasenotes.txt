@@ -1,11 +1,11 @@
 TITLE:  HP PC Hardware Diagnostics Windows
-VERSION: 1.8.3.0
+VERSION: 2.0.0.0
 DESCRIPTION: 
 This package provides HP PC Hardware Diagnostics for supported computer models that are running a supported operating system. HP PC Hardware Diagnostics Windows allows HP customers to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
 
 PURPOSE: Recommended
-SoftPaq NUMBER: sp142974
-EFFECTIVE DATE:  10/04/2022
+SoftPaq NUMBER: sp144027
+EFFECTIVE DATE:  12/16/2022
 CATEGORY:  Diagnostic
 SSM SUPPORTED:  Yes
 DEVICES SUPPORTED: N/A
@@ -50,9 +50,10 @@ English (UK)
  
 
 ENHANCEMENTS:
-- Added HPIA as a launch from Windows Diagnostics. 
-- Added support for Qualcomm WifiCx driver on IRQ Test.
-- Improve User Experience on driver update.  
+- New User Interface which Include a Classic, Modern and Omen UI. 
+- Added new product family code support  
+- Enable telemetry for PCA error codes 
+- Updated HPIA to 5.1.7 
 - Various Bug Fixes
 
 HOW TO USE:
