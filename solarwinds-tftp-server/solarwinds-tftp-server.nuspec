@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>solarwinds-tftp-server</id>
-    <version>11.2.0.211</version>
+    <version>11.2.0.50028</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/solarwinds-tftp-server</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>SolarWinds TFTP Server</title>
     <authors>SolarWinds</authors>
     <projectUrl>https://www.solarwinds.com/free-tools/free-tftp-server</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/solarwinds-tftp-server/icon.png</iconUrl>
-    <licenseUrl>https://www.solarwinds.com/legal/eula</licenseUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/solarwinds-tftp-server/EULA.txt</licenseUrl>
     <docsUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/solarwinds-tftp-server/TFTPServer-en.htm</docsUrl>
     <tags>solarwinds tftp server network file transfer</tags>
     <summary>SolarWinds TFTP Server</summary>

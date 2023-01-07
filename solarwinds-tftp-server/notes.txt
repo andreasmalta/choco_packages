@@ -1,5 +1,5 @@
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #copy TFTPServer-en.htm from "C:\Program Files (x86)\SolarWinds\TFTP Server\Help"
-checksum -t sha256 -f SolarWinds-TFTP-Server.zip
 
 #INSTALL
 choco pack
@@ -7,4 +7,4 @@ choco install solarwinds-tftp-server -y -dv -s .
 
 #UNINSTALL
 choco uninstall solarwinds-tftp-server -y
-choco push solarwinds-tftp-server.11.2.0.211.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
