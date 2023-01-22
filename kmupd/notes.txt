@@ -10,4 +10,4 @@ choco upgrade kmupd -y -dv -s . --params="'/FAX /PCL /PS'"
 
 #UNINSTALL
 choco uninstall kmupd -y
-choco push kmupd.3.9.220.0.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
