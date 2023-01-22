@@ -1,15 +1,15 @@
 ==========================================================================================
 Generic Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-09/02/2022
+10/07/2022
 
-PCL  Version 3.9.220.0
-PS   Version 3.9.220.0
-FAX  Version 3.9.212.0
+PCL  Version 3.9.303.0
+PS   Version 3.9.303.0
+FAX  Version 3.9.303.0
 Installer Version 3.2.22.0
-PCL  Setup Package Version 3.9.220.0
-PS   Setup Package Version 3.9.220.0
-FAX  Setup Package Version 3.9.212.0
+PCL  Setup Package Version 3.9.303.0
+PS   Setup Package Version 3.9.303.0
+FAX  Setup Package Version 3.9.303.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -229,6 +229,8 @@ Supported devices :
     Generic 26C-6i
     Generic 25C-6i
     Generic 22C-6i
+    Generic 95BW-0i
+    Generic 85BW-0i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 3. System requirements
@@ -271,6 +273,29 @@ Supported OS :
 
     * 32-bit (x86) and 64-bit (x64) editions of Windows are supported.
 
+Support the following operation environments :
+  <PCL driver>
+    Windows Server 2008 R2 / 2012 / 2012 R2 Cluster Server Service
+    Citrix Virtual Apps and Desktops 7 2006 / 2003
+    Terminal Services
+    Remote Desktop
+    Terminal Services Easy Print
+    Remote Desktop Easy Print
+
+  <PS driver>
+    Windows Server 2008 R2 / 2012 / 2012 R2 Cluster Server Service
+    Citrix Virtual Apps and Desktops 7 2006 / 2003
+    Terminal Services
+    Remote Desktop
+
+  <FAX driver>
+    Windows Server 2008 R2 / 2012 / 2012 R2 Cluster Server Service
+    Citrix Virtual Apps and Desktops 7 2006 / 2003
+    Terminal Services
+    Remote Desktop
+    Terminal Services Easy Print
+    Remote Desktop Easy Print
+
 Other :
 1. The following versions of  Microsoft .NET Framework must be installed in order 
 to use the LDAP server in the Fax driver.
@@ -284,30 +309,13 @@ In Windows 7, Windows Server 2008 R2 necessary .NET Framework is installed.
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/FAX Version 3.9.212.0
+  PCL/PS/FAX Version 3.9.303.0
 
 ==========================================================================================
-4-1. Support OS added.
+4-1. Support the following models.
 ==========================================================================================
-  Windows 11 Home
-  Windows 11 Pro
-  Windows 11 Enterprise
-  Windows 11 Education
-  Windows Server 2022 Standard
-  Windows Server 2022 Datacenter
-  Windows Server 2022 Datacenter:Azure Edition
-  Windows Server 2022 Essentials
-
-==========================================================================================
-4-2. The following functions are add in this driver.
-==========================================================================================
- 1. Support the WebView2 Runtime of IdP authentication function.
-
-==========================================================================================
-4-3. The following issues are solved in this driver.
-==========================================================================================
- 1. OpenSSL vulnerability.
-    Upate from 1.1.1k to 1.1.1l
+  Generic 95BW-0i
+  Generic 85BW-0i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -315,8 +323,7 @@ In Windows 7, Windows Server 2008 R2 necessary .NET Framework is installed.
 There are two methods for installing this printer driver: automatic installation 
 using an installer or manual installation using Add Printer. These two methods 
 are described in the following sections.
-The following is a description for Windows 7. See Installation guide or Reference 
-guide for details and for other OS.
+The following is a description for Windows 11. See Users guide for details and for other OS.
 
 ==========================================================================================
 5-1. Cautions when installing
@@ -327,12 +334,12 @@ Please read the following notes before use.
     in by the user who has the administrator power to the installing computer.
 
  2. When you selected a printer which belongs to one of computers in "WORKGROUP"
-    of "My Network" and installed the printer driver, you may not open the printer 
+    of "Network" and installed the printer driver, you may not open the printer 
     property of the installed printer.
     ==>In this case, please install the printer driver by its installer.
 
  3. When you installed the network printer by using [Browse for Printer] in 
-    [Printers and Faxes] folder, you may not open the printer property of 
+    [Devices and Printers] folder, you may not open the printer property of 
     the installed printer.
     ==>In this case, please install the printer driver in the way described below.
       3-1. Select [Local printer] and [Create a new port] in [Select a Printer Port] 
@@ -394,48 +401,45 @@ Try the following manual installation steps if you cannot install from DVD insta
  5. Set the printer port based on printer connections.
 
    5-1. When you create a port on a network connection (LPR/Port9100)
-    5-1-1. Click [Add a local printer]
-    5-1-2. Select [Create a new port] and choose [Standard TCP/IP Port] for 
+    5-1-1. Click [The printer that I want isn't listed]
+    5-1-2. Select [Add a local printer or network printer with manual settings].
+           Click [Next].
+    5-1-3. Select [Create a new port] and choose [Standard TCP/IP Port] for 
            the [Type of port]. Click [Next].
-    5-1-3. Change [Device type] to [TCP/IP Device] and type the IP address 
+    5-1-4. Change [Device type] to [TCP/IP Device] and type the IP address 
            of the printer into the [Hostname or IPaddress] field.Click [Next].
-    5-1-4. Select [Custom] from [Device type] and click [Settings].
-    5-1-5. Change settings to suit the port and click [OK].
+    5-1-5. Select [Custom] from [Device type] and click [Settings].
+    5-1-6. Change settings to suit the port and click [OK].
            For LPR connection, click [LPR], and then enter [lp] in the [Queue Name] box.
            For Port9100, click [RAW], and then enter the RAW port number (the default 
            setting is "9100") in the [Port Number] box.
-    5-1-6. Click [Next].
+    5-1-7. Click [Next].
 
    Skip to step 6.
 
    5-2. When you search for printers on network connection (LPR/Port9100)
     5-2-1. Turn on the power of the machine while it is connected to the network.
-    5-2-2. Click [Add a network, wireless or Bluetooth printer].
+    5-2-2. Click [Add a Bluetooth, wireless or network discoverable printer].
            Connected printers are detected. It may take a long time to find all printers.
     5-2-3. In the list of available printers, select the one you want to use, 
            and then click [Next].
            If more than one printer is detected, select the printer with IP address of 
            this machine.
-    5-2-4. Select [Custom] from [Device type] and click [Settings].
-    5-2-5. Change settings to suit the port and click [OK].
-           For LPR connection, click [LPR], and then enter [lp] in the [Queue Name] box.
-           For Port9100, click "RAW", and then enter the RAW port number (the default 
-           setting is "9100") in the [Port Number] box.
-    5-2-6. Click [Next].
+
 
    Skip to step 6.
 
    5-3. When you search for printers on network connection (IPP)
     5-3-1. Turn on the power of the machine while it is connected to the network.
-    5-3-2. Click [Add a network, wireless or Bluetooth printer].
+    5-3-2. Click [Add a Bluetooth, wireless or network discoverable printer].
     5-3-3. In the dialog box, click [The printer that I want isn't listed].
     5-3-4. In the URL field in the next dialog box enter the printer's 
            network pathname in one of the following formats and then choose [Next]:
            http://<IP_address_for_this_machine>/ipp
 
- 6. Click [Have Disk].
+ 6. Click [Browse].
 
- 7. Click [Browse].
+ 7. Click [Have Disk].
 
  8. Locate the directory on the DVD where the printer driver files are located 
     and then click "Open". Select the directory depending on using printer driver, 
@@ -493,10 +497,10 @@ using the installer.
 
  3. Click [Printer Install] in the main menu screen.
 
- 4. Select the printer driver that you want to delete and click.
-
- 5. The [Installer license agreement] screen will apperar.  Click the [Agree] button 
+ 4. The [Installer license agreement] screen will appear.  Click the [Agree] button 
     to proceed.
+
+ 5. Select the printer driver that you want to delete and click.
 
  6. Select [Delete] and click next.
 
@@ -526,7 +530,7 @@ uninstalled manually.
 
  3. On the Deletion Confirmation dialog box, click the [Yes] button.
 
- 4. Click one of the printer icons displayed in [Printers and Faxes], 
+ 4. Click one of the printer icons displayed in [Devices and Printers], 
     and click [Print server property] on the toolbar.
 
  5. Click the [Driver] tab.
@@ -539,9 +543,9 @@ uninstalled manually.
  8. Select [Remove driver and driver package] on [Remove Driver And Package] screen 
     and click [OK].
 
- 9. When you are prompted to confirm the deletion, click [Yes].
+ 9. When you are prompted to confirm the deletion again, click [Delete].
 
- 10. When you are prompted to confirm the deletion again, click [Delete].
+ 10. When you are prompted to confirm the deletion, click [Yes].
 
  11. Close the [Print Server Properties] dialog box, and then restart the computer.
 
@@ -750,7 +754,7 @@ In such a case, please be careful of the setting method etc.
         you set the custom size, the printing results are not guaranteed.
 
  12. OS Restrictions
-  12-1. Wartermark in PCL driver for x64 Edition
+  12-1. Watermark in PCL driver for x64 Edition
         When printing the document with odd number of pages with specifying [Duplex] and
         [Watermark], a blank page would be added after the last page and the watermark 
         would be printed on the blank page.
@@ -772,49 +776,49 @@ In such a case, please be careful of the setting method etc.
         In some instances, the Watermark is not printed when the print is executed
         from Microsoft Word 2010 or Microsoft Excel 2010.
         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+        - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
 
   12-6. About Text on Tab printing in Windows 8.1
         In some instances, Text on Tab is not printed when the print is executed 
         from Microsoft Word 2010 or Microsoft Excel 2010.
         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+        - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
 
   12-7. About [Copy Security] printing in Windows 8.1
         In some instances, [Copy Security] is not printed when the print is executed 
         from Microsoft Word 2010 or Microsoft Excel 2010.
         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+        - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
 
   12-8. About [Excel Job Control] printing in Windows 8.1
         In some instances, [Excel Job Control] is not printed when the print is executed 
         from Microsoft Word 2010 or Microsoft Excel 2010.
         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+        - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
 
   12-9. About [Remove White Background] printing in Windows 8.1
         In some instances, [Remove White Background] is not printed when the print is executed 
         from Microsoft Word 2010 or Microsoft Excel 2010.
         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-        - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+        - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
 
   12-10. About [Per Page Setting] printing in Windows 8.1
          In some instances, [Per Page Setting] is not printed when the print is executed 
          from Microsoft Word 2010 or Microsoft Excel 2010.
          - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-         - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+         - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
 
   12-11. About [Create Host Image] or [Create Shared Folder Image] printing in Windows 8.1
          In some instances, [Create Host Image] or [Create Shared Folder Image] is not printed 
          when the print is executed from Microsoft Word 2010 or Microsoft Excel 2010.
          - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-         - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+         - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
 
   12-12. About [Print Host Image] or [Print Device Image] printing in Windows 8.1
          In some instances, [Print Host Image] or [Print Device Image] is not printed when the print is executed 
          from Microsoft Word 2010 or Microsoft Excel 2010.
          - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-         - Printer Property -> [Advaced]Tab - [Enable advanced printing features] -> ON
+         - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
 
   12-13. Restriction of Cover Sheet in Windows 8.1 x86
          In some instances, the Cover Sheet is not printed when the print is
@@ -910,7 +914,7 @@ In such a case, please be careful of the setting method etc.
 
       - Perform the following procedure.
         1 .Open [printer property]
-        2 .[General]Tab -> [Preferrence]
+        2 .[General]Tab -> [Preference]
         3 .[Favorite Setting] -> [Edit...]
         4 .[Edit Favorite Setting]Dialog -> [OK]
 
@@ -1009,6 +1013,7 @@ In such a case, please be careful of the setting method etc.
     - 36C-0i/30C-0i/25C-0i
     - 75BW-0i
     - 65BW-0i/55BW-0i/45BW-0i/36BW-0i/30BW-0i
+    - 95BW-0i/85BW-0i
     Please set [Length] to a value higher than 431.9mm / 17.002 inches in the 
     Banner Printing [Custom Size Settings] dialog box on the following models:
     - 26C-7/22C-7
