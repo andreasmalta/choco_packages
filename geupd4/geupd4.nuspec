@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>geupd4</id>
-    <version>2.0.0.4</version>
+    <version>2.1.0.1</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/geupd4</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Develop/Generic Universal V4 PCL</title>

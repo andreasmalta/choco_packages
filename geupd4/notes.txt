@@ -1,5 +1,4 @@
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
-#copy Readme_en.txt from zip
 
 #INSTALL
 choco pack
@@ -11,4 +10,4 @@ choco upgrade geupd4 -y -dv -s .
 
 #UNINSTALL
 choco uninstall geupd4 -y
-choco push geupd4.2.0.0.4.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/

@@ -1,9 +1,9 @@
 ==========================================================================================
 Generic Universal V4 PCL
 Printer Software Document
-04/02/2022
+10/08/2022
 
-PCL  Version 2.0.0.4
+PCL  Version 2.1.0.1
 Printer Installer Version 2.0.0.0
 
 Copyright (C) 2016 KONICA MINOLTA, INC.
@@ -184,6 +184,7 @@ Supported devices :
     65BW-0i/55BW-0i/45BW-0i/36BW-0i/30BW-0i
     BW475-0i/BW405-0i
     BW470-0i
+    95BW-0i/85BW-0i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 3. System requirements
@@ -226,35 +227,17 @@ Supported OS :
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL Version 2.0.0.4
+  PCL Version 2.1.0.1
 
 ==========================================================================================
-4-1. Support OS added.
+4-1. Support the following models.
 ==========================================================================================
-  Windows 11 Home
-  Windows 11 Pro
-  Windows 11 Enterprise
-  Windows 11 Education
-  Windows Server 2022 Standard
-  Windows Server 2022 Datacenter
-  Windows Server 2022 Datacenter:Azure Edition
-  Windows Server 2022 Essentials
+    95BW-0i/85BW-0i
 
 ==========================================================================================
-4-2. Changed folder and file structure.
+4-2. The following issue is solved in this driver.
 ==========================================================================================
-  [V4UPDSetup_Generic_PCL_2.0.0.4]Folder
-  |- [Drivers]
-      |- [x64]
-      |- [x86]
-      |- [ARM64_Win10]　※Changed(Old name：ARM64)
-      |- [ARM64_Win11]　※Added（Windows11）
-  |- [Sub]          MulitLangageFile/HelpFile
-      |- [Lang]     MulitLangageFile
-  |- [Setup64.exe]            Installer(64-bit)
-  |- [Setup.exe]               Installer(32-bit)
-  |- [SetupARM64_Win10.exe]      Installer(ARM64-bit)　※Changed(Old name：SetupARM64.exe)
-  |- [SetupARM64_Win11.exe]      Installer(ARM64-bit)　※Added（Windows11）
+ 1. 6in1 printing of image files from Explorer results in small output.(Windows10)
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -287,7 +270,7 @@ Supported OS :
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[V4UPDSetup_Generic_PCL_2.0.0.4]Folder
+[V4UPDSetup_Generic_PCL_2.1.0.1]Folder
  |- [Drivers]
   |- [x64]
   |- [x86]
