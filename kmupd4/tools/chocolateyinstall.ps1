@@ -1,18 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$PCL            = 'https://dl.konicaminolta.eu/en/?tx_kmanacondaimport_downloadproxy[fileId]=fafa5a1e8eb7f584fab4d830027232f5&tx_kmanacondaimport_downloadproxy[documentId]=133332&tx_kmanacondaimport_downloadproxy[system]=KonicaMinolta&tx_kmanacondaimport_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum   = 'E04400C8F6076D5BE4AE4F0882E088D4148811FD7877B1FD31CEC6B9522D83A5'
-$PCL_extract    = Join-Path $env:TEMP 'extractPCL'
+$url = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=7f86746b8a2082a5152d3dd65a48292d&tx_kmdownloadcentersite_downloadproxy[documentId]=135985&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$checksum = 'ED79E30DFB12B4059FDE942C33B299E164D650ACD763D3FD8A4D3563906725AC'
+$extract = Join-Path $env:TEMP 'extractPCL'
 
-$packageArgsPCL = @{
+$packageArgs = @{
 	packageName   = $env:ChocolateyPackageName
-	unzipLocation = $PCL_extract
-	url           = $PCL
-	checksum      = $PCL_checksum
+	unzipLocation = $extract
+	url           = $url
+	checksum      = $checksum
 	checksumType  = 'sha256'
 }
 
-Install-ChocolateyZipPackage @packageArgsPCL
-Get-ChildItem $PCL_extract -Recurse -Filter "*.inf" | 
+Install-ChocolateyZipPackage @packageArgs
+Get-ChildItem $extract -Recurse -Filter "*.inf" | 
 ForEach-Object { PNPUtil.exe /add-driver $_.FullName /install }
 Add-PrinterDriver -Name "KONICA MINOLTA Universal V4 PCL"
