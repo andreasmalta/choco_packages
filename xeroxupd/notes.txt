@@ -10,4 +10,4 @@ choco upgrade xeroxupd -y -dv -s .
 
 #UNINSTALL
 choco uninstall xeroxupd -y
-choco push xeroxupd.5.887.3.0.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
