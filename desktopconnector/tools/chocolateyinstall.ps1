@@ -1,8 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url = "C:\Users\andre\Downloads\DesktopConnector-x64-16.1.0.1935.exe"
-#$url = 'https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-16.1.0.1935.exe'
+$url = 'https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-16.1.0.1935.exe'
 $checksum = '77F76BB61F420437B43C28BB1CE461D3781C0BAB865FBFC0BA0CE7B109F733C4'
 
 . $toolsDir\helpers.ps1
