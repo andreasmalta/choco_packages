@@ -1,6 +1,5 @@
-https://help.autodesk.com/view/DRIVE/ENU/?guid=GUID-03D59AAD-65B0-45E3-84F2-A12AAA5BB267
+#https://help.autodesk.com/view/DRIVE/ENU/?guid=GUID-03D59AAD-65B0-45E3-84F2-A12AAA5BB267
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
-#unzip - copy foldername from autodesk installation folder
 
 #INSTALL
 choco pack
