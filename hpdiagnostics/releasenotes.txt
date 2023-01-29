@@ -1,11 +1,11 @@
 TITLE:  HP PC Hardware Diagnostics Windows
-VERSION: 2.0.0.0
+VERSION: 2.1.0.0
 DESCRIPTION: 
 This package provides HP PC Hardware Diagnostics for supported computer models that are running a supported operating system. HP PC Hardware Diagnostics Windows allows HP customers to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
 
-PURPOSE: Recommended
-SoftPaq NUMBER: sp144027
-EFFECTIVE DATE:  12/16/2022
+PURPOSE: Critical
+SoftPaq NUMBER: sp144583
+EFFECTIVE DATE:  01/13/2023
 CATEGORY:  Diagnostic
 SSM SUPPORTED:  Yes
 DEVICES SUPPORTED: N/A
@@ -49,16 +49,22 @@ Turkish
 English (UK)
  
 
-ENHANCEMENTS:
-- New User Interface which Include a Classic, Modern and Omen UI. 
-- Added new product family code support  
-- Enable telemetry for PCA error codes 
-- Updated HPIA to 5.1.7 
-- Various Bug Fixes
+FIXES: 
+This is a bug fix release due to issues with the New UI on some platforms:
 
+- Various Bug Fixes:
+    1. Keyboard test F5 key not responding
+    2. Passed result after running system test crashes application
+    3. Application does not start:
+      3-1. Event Log service not running
+      3-2. 2.0.0.0 file could not be created
+    4. Localization missing after running device check
+    5. Error in drag and drop link
+    6. Missing text in side drawer foot area
+    7. Battery progress bar on extensive test 
 HOW TO USE:
 1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
 
 2. Double-click the downloaded file and follow the on-screen instructions.
 
-Copyright (c) 2022 HP Development Company, L.P.
+Copyright (c) 2023 HP Development Company, L.P.
