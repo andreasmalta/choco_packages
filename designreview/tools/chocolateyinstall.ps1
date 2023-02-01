@@ -22,7 +22,7 @@ $packageArgs2 = @{
   softwareName  = 'designreview*'
   checksum      = $checksum_file
   checksumType  = 'sha256'
-  silentArgs    = "/q"
+  silentArgs    = "ALLUSERS=1 /q"
   validExitCodes= @(0, 3010, 1641)
 }
 Install-ChocolateyInstallPackage @packageArgs2
