@@ -4,17 +4,17 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . $toolsDir\helpers.ps1
 Invoke-UninstallHPSA
 
-$url = 'https://ftp.ext.hp.com/pub/softpaq/sp142501-143000/sp142943.exe'
-$checksum_url = 'BA0ABFF54A78C38A4A3092766761C160933327BC676AFD013402AD3DC986BF74'
+$url = 'https://ftp.hp.com/pub/softpaq/sp144501-145000/sp144692.exe'
+$checksum = 'E05417FE2655BCE2FC99E413E5897821B4153CB8426644AB463B41DD1C9E7920'
 
-$packageArgsURL = @{
+$packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   file          = $url
-  checksum      = $checksum_url
+  checksum      = $checksum
   checksumType  = 'sha256'
   unziplocation = $env:TEMP
 }
-Install-ChocolateyPackage @packageArgsURL
+Install-ChocolateyZipPackage @packageArgs
 
 #apparently needs to open in a new window otherwise it closes down the choco process (start-process -wait)
 #apparently needs to run from the same directory to work ($env:temp)

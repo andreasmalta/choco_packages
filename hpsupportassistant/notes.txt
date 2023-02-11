@@ -10,4 +10,4 @@ choco upgrade hpsupportassistant -y -dv -s .
 
 #UNINSTALL
 choco uninstall hpsupportassistant -y
-choco push hpsupportassistant.9.20.22.0.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
