@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url             = 'https://webdownloads4.ts.fujitsu.com/download/FileDownload/fileDownload.aspx?SoftwareGUID=9105CDDF-323F-483B-8C80-B9A62182FA3B&FileFolder=Downloadfiles&FileTypeExtension=EXE&FileNameClient=FTS_DeskUpdateSetup_5020040_1268978.EXE'
-$checksum_url    = 'B46CB8E525FC63D777C52C11306640FB20F829D1200424EFD59DDD381F4258C3'
+$url = 'https://webdownloads4.ts.fujitsu.com/download/FileDownload/fileDownload.aspx?SoftwareGUID=FE7260C7-0B8E-46D5-8EEF-613E9DBB09CC&FileFolder=Downloadfiles&FileTypeExtension=EXE&FileNameClient=FTS_DeskUpdateSetup_5020056_1279825.EXE'
+$checksum = 'AD38663E34B616F81EB6A78750C9051C8967DBFD987E717BC76DC821C87A5155'
 
 $packageArgs     = @{
   packageName    = $env:ChocolateyPackageName
@@ -8,7 +8,7 @@ $packageArgs     = @{
   unzipLocation  = $env:TEMP
   fileType       = 'exe'
   url            = $url
-  checksum       = $checksum_url
+  checksum       = $checksum
   checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT"
   validExitCodes = @(0, 3010, 1641)

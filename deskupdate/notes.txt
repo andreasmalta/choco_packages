@@ -2,7 +2,7 @@
 #open applications - tools and utility - DeskUpdate (Setup)
 #press direct download, agree terms and download
 #copy download link & trim "&Token" and everything after...
-#repeat for releasenotes (trim "&Token")
+#download releasenotes and copy to ReleaseNotes.txt
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
@@ -16,4 +16,4 @@ choco upgrade deskupdate -y -dv -s .
 
 #UNINSTALL
 choco uninstall deskupdate -y
-choco push deskupdate.5.02.0040.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/

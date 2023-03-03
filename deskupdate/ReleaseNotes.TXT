@@ -1,4 +1,4 @@
-DeskUpdate 5.02.0040 Release Notes
+DeskUpdate 5.02.0056 Release Notes
 ==================================
 
 Introduction
@@ -14,6 +14,22 @@ updates.
 
 Changes
 -------
+
+CHANGES FOR 5.02.0056
+
+* NEW:  Added support for Windows 10 22H2.
+* NEW:  Switch /SBU for ducmd.exe allows silent BIOS updates without user 
+        interaction. 
+* NEW:	Security: Added support for checking the the file integrity of the 
+        batch files inside of BIOS update packages. 
+
+Known issues
+* The weekly / monthly check for updates does not work when a proxy 
+  server is configured.
+  Workaround: Configure the proxy in the file DU.json with setting [MANUAL].
+• Trying to install the same version of DeskUpdate incorrectly shows a 
+  newer version being already installed.
+
 
 CHANGES FOR 5.02.0040
 
