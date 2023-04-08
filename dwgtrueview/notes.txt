@@ -1,7 +1,8 @@
+#Download "Create_Installer_***.exe, run to extract installation folder:
+#Open setup.xml and copy UPI2, replace in download link:
+#https://efulfillment.autodesk.com/NetSWDLD/{YEAR}/ACD/{UPI2}/SFX/DWGTrueView_{YEAR}_{Language}_64bit_dlm.sfx.exe
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
-
-#open extract folder, copy version (buildnumber) from "setup.xml"
-#open extract folder, copy releasenotes.txt text from x64\dwgviewr\en-us\Aoem\PF\Root\Help\readme.html
+#Copy also version (buildnumber) from above setup.xml
 
 #INSTALL
 choco pack
@@ -15,4 +16,4 @@ choco upgrade dwgtrueview -y -dv -s .
 
 #UNINSTALL
 choco uninstall dwgtrueview -y
-choco push dwgtrueview.2023.24.2.72.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/

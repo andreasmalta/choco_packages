@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dwgtrueview</id>
-    <version>2023.24.2.72</version>
+    <version>2024.24.3.61</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>DWG TrueView</title>
@@ -14,13 +14,10 @@
     <docsUrl>https://knowledge.autodesk.com/support/dwg-trueview</docsUrl>
     <tags>trueview autodesk autocad dwg dwf dxf viewer</tags>
     <summary>DWG TrueView</summary>
-    <description>View DWG files or convert them to work with older versions of AutoCAD software.
+    <description>View and convert 2D and 3D DWG files for free.
 
-#### (2023.24.2.72) Re-releasing 2023 due to bug:
-https://knowledge.autodesk.com/support/dwg-trueview/troubleshooting/caas/sfdcarticles/sfdcarticles/Autodesk-DWG-Trueview-2023-Install-Loading-error.html
-
-#### System requirements for DWG TrueView 2023
-Operating System: 64-bit Microsoft® Windows® 11 and Windows 10 version 1809 or above.
+#### System requirements for DWG TrueView 2024
+Operating System: 64-bit Microsoft® Windows® 11 or Windows 10 version 1809 or above.
 
 #### Package Parameters
 The following package parameters can be set (choose only one!):
@@ -31,7 +28,7 @@ The following package parameters can be set (choose only one!):
 
 To pass parameters, use `--params "''"` (e.g. `choco install dwgtrueview --params="'/French'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.</description>
-    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/releasenotes.txt</releaseNotes>
+    <releaseNotes>https://help.autodesk.com/view/TRUEVIEW/2024/ENU/?guid=DWG_TRUEVIEW_RELEASE_NOTES</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

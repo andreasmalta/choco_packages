@@ -8,25 +8,24 @@ Invoke-UninstallOldTrueView
 $RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
 if (Test-path $RegRebootRequired) { Remove-Item -Path $RegRebootRequired }
 
-
 #INSTALLATION SETTINGS
 $pp = Get-PackageParameters
 if ($pp.'French') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/9F180917-4277-3998-AFDB-C9477508D3AE/SFX/DWGTrueView_2023_French_64bit_dlm.sfx.exe'
-$checksum = '1C54998314BD13D75FAF5C352266F1034B6D458162532451BF393B380F3D93A9'
-$file = Join-Path $env:TEMP 'DWGTrueView_2023_French_64bit_dlm\setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/2D15294B-542A-393B-9197-37F3D33DEFF3/SFX/DWGTrueView_2024_French_64bit_dlm.sfx.exe'
+$checksum = '3E36ACDBD06EA7A348F57005546155B9B49538F6E821333D8157FE9958DE4A49'
+$file = Join-Path $env:TEMP 'DWGTrueView_2024_French_64bit_dlm\setup.exe'
 }
 
 elseif ($pp.'Japanese') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/1D3E70AB-9E61-3244-A4CF-EADDFC9B9554/SFX/DWGTrueView_2023_Japanese_64bit_dlm.sfx.exe'
-$checksum = '5E099980D9FAD6C5EEF2CB4E5E96C6191558FF76604C4658E6598D924EFCEA5E'
-$file = Join-Path $env:TEMP 'DWGTrueView_2023_Japanese_64bit_dlm\setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/9C18555B-A10A-36B3-9F02-4815156C448B/SFX/DWGTrueView_2024_Japanese_64bit_dlm.sfx.exe'
+$checksum = 'C3FA4C1639BD2748B0F16725434A0F0F00DDA62FBDDF54907FA24D85DB722F61'
+$file = Join-Path $env:TEMP 'DWGTrueView_2024_Japanese_64bit_dlm\setup.exe'
 }
 
 else {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/EC2FCD9E-AC4D-3E9D-8526-96832A231455/SFX/DWGTrueView_2023_English_64bit_dlm.sfx.exe'
-$checksum = '3D1EB9AD56044D3980F2B14686327E4CB19D0F7378A8EFECBCC6D5BE8B814F43'
-$file = Join-Path $env:TEMP 'DWGTrueView_2023_English_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/9C02048D-D0DB-3E06-B903-89BD24380AAD/SFX/DWGTrueView_2024_English_64bit_dlm.sfx.exe'
+$checksum = 'F6B52F8E01A2951773433D5B8A1491B21E77F8E157870594DB57FEDDCBA7C5BC'
+$file = Join-Path $env:TEMP 'DWGTrueView_2024_English_64bit_dlm\Setup.exe'
 }
 
 $packageArgsUnzip = @{
