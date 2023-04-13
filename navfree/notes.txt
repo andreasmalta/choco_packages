@@ -1,4 +1,5 @@
-checksum -t sha256 -f Autodesk_Navisworks_Freedom_2023_Win_64bit_dlm.sfx.exe
+#Open setup.xml from the installation folder and copy version (buildnumber)
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
@@ -10,4 +11,4 @@ choco upgrade navfree -y -dv -s .
 
 #UNINSTALL
 choco uninstall navfree -y
-choco push navfree.2023.200138263.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
