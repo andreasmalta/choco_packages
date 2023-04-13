@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url = 'https://brightsignbiz.s3.amazonaws.com/brightauthor/5.0/5.0.0.3/BrightAuthorSetup-5.0.0.3.exe'
-$checksum = '740B047F9AC275D496891951858EC3DA03481876870385F1FAA19E2F9798AD24'
+$url = 'https://brightsignbiz.s3.amazonaws.com/brightauthor/5.0/5.0.1.2/BrightAuthorSetup-5.0.1.2.exe'
+$checksum = 'DD425F33930DF791858A415D70ADD411F7E78421D82F8123261316E413012E39'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName

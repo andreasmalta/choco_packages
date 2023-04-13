@@ -1,4 +1,4 @@
-https://www.brightsign.biz/downloads/xt4-series
+#https://www.brightsign.biz/downloads/xt4-series
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #Update release notes link
 
