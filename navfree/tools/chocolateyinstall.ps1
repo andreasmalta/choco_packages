@@ -6,8 +6,7 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 Invoke-UninstallOld
 
 #EXTRACT AND INSTALL
-$url = 'Z:\Autodesk_Navisworks_Freedom_2024_Win_64bit_dlm.sfx.exe'
-#$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/NAVFREE/00C73B59-6FB8-32FF-B85F-F4CF5EBE4C3F/SFX/Autodesk_Navisworks_Freedom_2024_Win_64bit_dlm.sfx.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/NAVFREE/00C73B59-6FB8-32FF-B85F-F4CF5EBE4C3F/SFX/Autodesk_Navisworks_Freedom_2024_Win_64bit_dlm.sfx.exe'
 $checksum = '38932F5350F849D22C839DE6C00F4A1A975F7BC835A5190014C082162041834F'
 $file = Join-Path $env:TEMP 'Autodesk_Navisworks_Freedom_2024_Win_64bit_dlm\Setup.exe'
 
