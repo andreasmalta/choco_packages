@@ -23,5 +23,5 @@ Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVe
 	Remove-Item $_.PsPath -Recurse -ErrorAction Ignore
 	}
 Get-ChildItem $folderRoot -Recurse -Force -Directory -ErrorAction SilentlyContinue -Include $packageName | Remove-Item -Recurse -Confirm:$false -Force
-Get-ChildItem $startmenu -Recurse -Force -Directory -ErrorAction SilentlyContinue -Include $packageName | Remove-Item -Recurse -Confirm:$false -Force
+Get-ChildItem $startmenu -Recurse -Force -Include $packageName -ErrorAction SilentlyContinue | Remove-Item -Recurse -Confirm:$false -Force
 }
