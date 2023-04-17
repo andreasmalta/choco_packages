@@ -1,4 +1,13 @@
-function Invoke-UninstallOldTrueView {
+function Invoke-UninstallOld {
+	
+#Close software if open
+Get-Process "dwgviewr*" -ErrorAction SilentlyContinue | Stop-Process -Force
+
+#Remove reboot requests that might stop un/installations
+$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
+Remove-Item -Path $RegRebootRequired -ErrorAction SilentlyContinue
+
+#Remove old versions
 $packageName = '*DWG TrueView*'
 $folderRoot = 'C:\Program Files\Autodesk'
 $startmenu = 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs'
@@ -12,6 +21,6 @@ Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVe
 	if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
 	Remove-Item $_.PsPath -Recurse -ErrorAction Ignore
 	}
-if (Test-Path $folderRoot) { Get-ChildItem $folderRoot -Recurse -Force -Directory -Include $packageName | Remove-Item -Recurse -Confirm:$false -Force }
-Get-ChildItem $startmenu -Recurse -Force -Include $packageName | Remove-Item -Recurse -Confirm:$false -Force
+Get-ChildItem $folderRoot -Recurse -Force -Directory -ErrorAction SilentlyContinue -Include $packageName | Remove-Item -Recurse -Confirm:$false -Force
+Get-ChildItem $startmenu -Recurse -Force -Include $packageName -ErrorAction SilentlyContinue | Remove-Item -Recurse -Confirm:$false -Force
 }

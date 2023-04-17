@@ -1,14 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
+#UNINSTALL OLD VERSIONS
 . $toolsDir\helpers.ps1
-Invoke-UninstallOldTrueView
+Invoke-UninstallOld
 
-#REMOVE REBOOT REQUESTS
-$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
-if (Test-path $RegRebootRequired) { Remove-Item -Path $RegRebootRequired }
-
-#INSTALLATION SETTINGS
+#EXTRACT AND INSTALL
 $pp = Get-PackageParameters
 if ($pp.'French') {
 $url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/2D15294B-542A-393B-9197-37F3D33DEFF3/SFX/DWGTrueView_2024_French_64bit_dlm.sfx.exe'
