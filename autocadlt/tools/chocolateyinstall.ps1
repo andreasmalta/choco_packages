@@ -1,111 +1,94 @@
 ﻿$ErrorActionPreference = 'Stop';
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 #UNINSTALL OLD VERSIONS
-$packageName = '*AutoCAD LT*'
-$packageName2 = '*Material Library*'
-$folderRoot = 'C:\Program Files\Autodesk'
-$validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
-Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
-                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
-                 -ErrorAction:SilentlyContinue `
-| Where-Object   {$_.DisplayName -like $packageName -or $_.DisplayName -like $packageName2} `
-| ForEach-Object {
-	$silentArgs = "$($_.PSChildName) /qn /norestart"
-	if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
-	Remove-Item $_.PsPath -Recurse -ErrorAction Ignore
-	}
-if (Test-Path $folderRoot) { Get-ChildItem $folderRoot -Recurse -Force -Directory -Include $packageName | Remove-Item -Recurse -Confirm:$false -Force }
+. $toolsDir\helpers.ps1
+Invoke-UninstallOld
 
-
-#REMOVE REBOOT REQUESTS
-$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
-if (Test-path $RegRebootRequired) { Remove-Item -Path $RegRebootRequired }
-
-
-#EXTRACT AND INSTALL
+#LANGUAGES AND INSTALL
 $pp = Get-PackageParameters
 if ($pp.'ChineseSimp') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/D594DE86-9D39-35EB-A479-2ACB8CC89561/SFX/AutoCAD_LT_2023_Simplified_Chinese_Win_64bit_dlm.sfx.exe'
-$checksum = 'D61911957CDAFBEF116C6EB0FE0BF95C03EFB427AFBD6B531EB48ED871DDBA47'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Simplified_Chinese_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/73E6C25F-EEFD-3C10-8F94-27C090847201/SFX/AutoCAD_LT_2024_Simplified_Chinese_Win_64bit_dlm.sfx.exe'
+$checksum = '7C578660A0420DDA6CF028BAE8A90FBB5CE4C151BB3E1E17D581E82F48A42569'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Simplified_Chinese_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'ChineseTrad') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/50E97E66-960D-32F4-B1A8-58D1103CD7CF/SFX/AutoCAD_LT_2023_Traditional_Chinese_Win_64bit_dlm.sfx.exe'
-$checksum = 'B64157DE88B80F2563006D30F5856AF39518966A4B1D24F0F42069ACC1D990CE'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Traditional_Chinese_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/93270C7F-2C2F-3203-899D-A311B40967EE/SFX/AutoCAD_LT_2024_Traditional_Chinese_Win_64bit_dlm.sfx.exe'
+$checksum = 'EB1A19D2C8A4C90BFE1BC320F4065CE549AB186AB85EFEDD2BD21931DCF161B5'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Traditional_Chinese_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'Czech') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/B21CFE7B-136A-3F05-A5BA-179CB1D50592/SFX/AutoCAD_LT_2023_Czech_Win_64bit_dlm.sfx.exe'
-$checksum = '34939214EA344C5ED85193A7ED600B4DDB8D93C4981776EE34AA52A88497BA22'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Czech_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/BD58AD42-66DF-3ACE-88F4-156FE0693F8F/SFX/AutoCAD_LT_2024_Czech_Win_64bit_dlm.sfx.exe'
+$checksum = '2E9EFC6DD489D533DEE5BA0B3BE0FCF68AD6770E1EC99BFAC4914F9520F1C622'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Czech_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'French') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/10ED6B08-0212-3FA5-9404-C73EFFAF29DD/SFX/AutoCAD_LT_2023_French_Win_64bit_dlm.sfx.exe'
-$checksum = 'F37ED2F3D43A397B3D07F7544AE2614511F93EAA52506B4AD6EEFF2F08948EB1'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_French_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/17D6E577-5802-3C73-9065-FC98E90A1746/SFX/AutoCAD_LT_2024_French_Win_64bit_dlm.sfx.exe'
+$checksum = '0A160FBFB2D34CE69064F83CF085DEBA8695DDC2B6CF15B921B6ED9543FC96EE'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_French_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'German') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/7C263912-D9C6-340A-BED5-A80C5EC8E53E/SFX/AutoCAD_LT_2023_German_Win_64bit_dlm.sfx.exe'
-$checksum = '2EA266312CDFFF72C8B1B04879953DAA86F68074D276C316203536D6704C2F97'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_German_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/38A154B1-6A8F-3923-A2FD-B8621BE6BDB6/SFX/AutoCAD_LT_2024_German_Win_64bit_dlm.sfx.exe'
+$checksum = 'F0D5EAA1718B47CBCC52EEF363624C0680CA719767260C1FD9BD6D2FD96EE020'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_German_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'Hungarian') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/68182B0D-BAC7-36A1-8B76-C26471DD4ECF/SFX/AutoCAD_LT_2023_Hungarian_Win_64bit_dlm.sfx.exe'
-$checksum = '50164808203ED3F0FC58F617921E81275B19E404E502887E2D8D5D4706D7462A'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Hungarian_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/04EFE2E7-D3D3-3F6B-A44E-3EECA4727AA1/SFX/AutoCAD_LT_2024_Hungarian_Win_64bit_dlm.sfx.exe'
+$checksum = 'ECC6E4CABBC3088A1C88E1E998BEB1D718EC857AD13450EA65DFB3675AC369B5'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Hungarian_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'Italian') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/50031BF6-2F16-3050-95AE-698F436C021F/SFX/AutoCAD_LT_2023_Italian_Win_64bit_dlm.sfx.exe'
-$checksum = 'EE886A450881CC4B4CF7DBB6F22ADD4A375BBEE344F30013C1D2C109A72F2DEE'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Italian_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/52DE4325-0A66-3AD7-89B0-23CF5CD38D3F/SFX/AutoCAD_LT_2024_Italian_Win_64bit_dlm.sfx.exe'
+$checksum = 'ABBAAF7379CCB738FC5BE1051DAD6D04B8C838A75971806EB2B8776EF1F7C4E0'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Italian_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'Japanese') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/4321A7C7-5F17-3A3C-9D67-8DB35B6AD99E/SFX/AutoCAD_LT_2023_Japanese_Win_64bit_dlm.sfx.exe'
-$checksum = 'CAA9097E8C1E253B5C31BB05C7AE10CCA5C59FC4F157BF3DE195DCB8DA12F57D'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Japanese_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/13A463DB-D686-3281-8DB9-F3FB8B8C08F2/SFX/AutoCAD_LT_2024_Japanese_Win_64bit_dlm.sfx.exe'
+$checksum = '1E32B3D1CB64775CAFFBC1A07830B75A85357A37F51BE978B311A0B48DDE2FC1'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Japanese_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'Korean') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/A8FF35BA-2574-305D-B55F-5CBB5410DE3E/SFX/AutoCAD_LT_2023_Korean_Win_64bit_dlm.sfx.exe'
-$checksum = '5FADDEB8A20E5D0D6DAD27A7FCF55DD97A73574E223DF6A3092D38745E6FD28D'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Korean_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/D8C5DB52-2418-347E-9490-744ABA6EEE43/SFX/AutoCAD_LT_2024_Korean_Win_64bit_dlm.sfx.exe'
+$checksum = '603DDFAE26F67BFB4DA9579A9ACF2DE0BED5A4DB12B78E56867966D519E69148'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Korean_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'Polish') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/4D242DD9-6067-324B-AA03-DAAA19CD5877/SFX/AutoCAD_LT_2023_Polish_Win_64bit_dlm.sfx.exe'
-$checksum = '603773710871E337ED76C8C7BD4B2D2D72F02A63B33B47ACFBE149ABBD7DCA99'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Polish_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/B7DCBDDB-3C18-33CC-9C8E-DA323FA84666/SFX/AutoCAD_LT_2024_Polish_Win_64bit_dlm.sfx.exe'
+$checksum = '8611FE3CF0C9C28BD0AA565E2AD7BEB94E88E008D2C8EE413F8D9A2F7BF9DAA3'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Polish_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'Portuguese') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/C3F821B8-C774-34E2-9290-FE7AABF8FFAD/SFX/AutoCAD_LT_2023_Brazilian_Portuguese_Win_64bit_dlm.sfx.exe'
-$checksum = '16E23F7AFED2D2722A4B171FFF1D54171CF0DC6506622431DF28770AC81C75DB'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Brazilian_Portuguese_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/C23B2CDF-55CD-32BF-9031-47CA165196BC/SFX/AutoCAD_LT_2024_Brazilian_Portuguese_Win_64bit_dlm.sfx.exe'
+$checksum = 'F936B9A483677F638904CE5881A52C08899D47C9EA112E272CFDC08742110DC6'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Brazilian_Portuguese_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'Russian') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/0C7D5A7A-1911-3480-956F-458B3C605859/SFX/AutoCAD_LT_2023_Russian_Win_64bit_dlm.sfx.exe'
-$checksum = '56E2F32F3ED2E6E1ABA4E6F048AF46B713361933776FDFEDC1EF1A9D0EE0D7B2'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Russian_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/965D6DA7-F826-3617-BED5-1B01BCC2E6A7/SFX/AutoCAD_LT_2024_Russian_Win_64bit_dlm.sfx.exe'
+$checksum = 'BBEA05C36D12EEC210254FE50AD88016EBE081629D59395DEA3572B70083B598'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Russian_Win_64bit_dlm\Setup.exe'
 }
 
 elseif ($pp.'Spanish') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/A95FC3A0-6C69-3433-BE4D-ED07DF85668F/SFX/AutoCAD_LT_2023_Spanish_Win_64bit_dlm.sfx.exe'
-$checksum = '6956282ED0F7E348A0B9C496913EA64DD07724D128824133D1B5884EB4D96FF0'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_Spanish_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/C9419831-0AFE-3E20-A75E-F4AABC25A082/SFX/AutoCAD_LT_2024_Spanish_Win_64bit_dlm.sfx.exe'
+$checksum = '2303A4E62AA86D2EAB52CD68A8D674F89FA40EF6C618C8822069FC3542ABC1A4'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_Spanish_Win_64bit_dlm\Setup.exe'
 }
 
 else {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/C8DC0A93-1BFB-3C0D-B3B6-1BD06D06CCC2/SFX/AutoCAD_LT_2023_English_Win_64bit_dlm.sfx.exe'
-$checksum = 'BA24E7616A814938E27995B1CB67ACCF83455603CCE407BACAF88ABC97FDECB5'
-$file = Join-Path $env:TEMP 'AutoCAD_LT_2023_English_Win_64bit_dlm\Setup.exe'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/4558A64D-DFA2-3773-BF42-92414FF3F3DF/SFX/AutoCAD_LT_2024_English_Win_64bit_dlm.sfx.exe'
+$checksum = '61767B082E20756E35C56B0798BFE5CFDF18AC884DF900A318460AAF99BDAB75'
+$file = Join-Path $env:TEMP 'AutoCAD_LT_2024_English_Win_64bit_dlm\Setup.exe'
 }
 
 $packageArgsUnzip = @{

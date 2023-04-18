@@ -1,5 +1,5 @@
-#download from https://ava.autodesk.com/
-checksum -t sha256 -f AutoCAD_LT_*****_Win_64bit_dlm.sfx.exe
+#download using Autodesk Assistant on https://autodesk.com
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #copy version number from unzip folder setup.xml
 
 #INSTALL
@@ -25,4 +25,4 @@ choco upgrade autocadlt -y -dv -s .
 
 #UNINSTALL
 choco uninstall autocadlt -y
-choco push autocadlt.2023.242530.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
