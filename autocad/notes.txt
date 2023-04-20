@@ -1,4 +1,5 @@
-checksum -t sha256 -f AutoCAD_*****_Win_64bit_dlm.sfx.exe
+#download using Autodesk Assistant on https://autodesk.com
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #copy version number from unzip folder setup.xml
 
 #INSTALL
@@ -24,4 +25,4 @@ choco upgrade autocad -y -dv -s .
 
 #UNINSTALL
 choco uninstall autocad -y
-choco push autocad.2023.242530.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/

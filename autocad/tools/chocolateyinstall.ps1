@@ -1,141 +1,125 @@
 ﻿$ErrorActionPreference = 'Stop';
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 #UNINSTALL OLD VERSIONS
-$packageName = '*AutoCAD*'
-$packageName2 = '*Material Library*'
-$folderRoot = 'C:\Program Files\Autodesk'
-$validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
-Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
-                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
-                 -ErrorAction:SilentlyContinue `
-| Where-Object   {$_.DisplayName -like $packageName -or $_.DisplayName -like $packageName2} `
-| ForEach-Object {
-	$silentArgs = "$($_.PSChildName) /qn /norestart"
-	if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
-	Remove-Item $_.PsPath -Recurse -ErrorAction Ignore
-	}
-if (Test-Path $folderRoot) { Get-ChildItem $folderRoot -Recurse -Force -Directory -Include $packageName | Remove-Item -Recurse -Confirm:$false -Force }
+. $toolsDir\helpers.ps1
+Invoke-UninstallOld
 
-
-#REMOVE REBOOT REQUESTS
-$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
-if (Test-path $RegRebootRequired) { Remove-Item -Path $RegRebootRequired }
-
-
-#EXTRACT AND INSTALL
+#LANGUAGES
 $pp = Get-PackageParameters
 if ($pp.'ChineseSimp') {
-$packageName = 'AutoCAD_2023_Simplified_Chinese_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/8FB3A471-BAFE-379D-AE7F-9ECF1E74401D/SFX/AutoCAD_2023_Simplified_Chinese_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = '479ECC29FD86A43A445B0BE94AB88963AE10C5EE351230184509719FFA87BC2C'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/8FB3A471-BAFE-379D-AE7F-9ECF1E74401D/SFX/AutoCAD_2023_Simplified_Chinese_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = 'B54342945A0FF3DA2579451094A6075DBF8FF630B8F59938402E2CF3B8989541'
+$packageName = 'AutoCAD_2024_Simplified_Chinese_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/C0D3A90A-5925-3283-B826-68A4EAF3698A/SFX/AutoCAD_2024_Simplified_Chinese_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = 'A54387D6E4C64FDC3701B2157ACAFE518E3E95A8751B06D116673340A907CD61'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/C0D3A90A-5925-3283-B826-68A4EAF3698A/SFX/AutoCAD_2024_Simplified_Chinese_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = '5328A6620501FB2430B1276F9911970018BF4C201E5F409AE2F1DC72D0B648E0'
 }
 
 elseif ($pp.'ChineseTrad') {
-$packageName = 'AutoCAD_2023_Traditional_Chinese_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/2A943BBD-E61B-3E2B-AD2B-007D350F2177/SFX/AutoCAD_2023_Traditional_Chinese_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = 'B6019E40BE90261F14C305D44EF1D43C85C0A9A0377A565B91C580E9062C8FCD'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/2A943BBD-E61B-3E2B-AD2B-007D350F2177/SFX/AutoCAD_2023_Traditional_Chinese_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = '35E208D384E7FC939EF52C35F24CC2B618AB87E232C2511243650ABAD7E48CB0'
+$packageName = 'AutoCAD_2024_Traditional_Chinese_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/DDF43270-FC4E-3B3D-8E58-6AA772EFC4DD/SFX/AutoCAD_2024_Traditional_Chinese_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = 'F0108974ADA978D3A1FC7D05FF10D8693757737B9F26C8155F378986030D1A19'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/DDF43270-FC4E-3B3D-8E58-6AA772EFC4DD/SFX/AutoCAD_2024_Traditional_Chinese_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = 'B7485F460C0BC50BE5D5211B298680D8866B6587B36D6225A07D3C2ED0B38553'
 }
 
 elseif ($pp.'Czech') {
-$packageName = 'AutoCAD_2023_Czech_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/9E552C26-38D6-37FA-B05E-B21AD669358E/SFX/AutoCAD_2023_Czech_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = '207E1BD1D9EAC797A5CD95BD4FDF1CC61EDB0AC568739A9E19A017F21106DF32'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/9E552C26-38D6-37FA-B05E-B21AD669358E/SFX/AutoCAD_2023_Czech_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = 'D0BC4C599A5D2303777452D181DB9ADAB4F9D6DA8D0FC68120FD6C01A43DDB2B'
+$packageName = 'AutoCAD_2024_Czech_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/0A931BD6-E930-3242-9C98-038D50791164/SFX/AutoCAD_2024_Czech_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = 'FA5B15655B12FEF1A384D3F6DB88641FDC2FF48A2A24B5BD1AC6830E72263743'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/0A931BD6-E930-3242-9C98-038D50791164/SFX/AutoCAD_2024_Czech_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = '4036C5BE7DBD0FD2AAD7CDE982C6C31E7B80F1D7C66F0ED9E6F0F10B1A96BCA4'
 }
 
 elseif ($pp.'French') {
-$packageName = 'AutoCAD_2023_French_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/423E5E4A-E412-31C8-94B8-7A1171D35541/SFX/AutoCAD_2023_French_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = '0BC7A839D5A8F22B0C4A0F727FB64623A6560D38134BBEFAFA21B3BB73647C21'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/423E5E4A-E412-31C8-94B8-7A1171D35541/SFX/AutoCAD_2023_French_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = '0688AEB922EA1F153604CD8EB546F7D6B36B9A580454BF8A517FAC931DD2FA75'
+$packageName = 'AutoCAD_2024_French_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/3E58E777-D28C-3868-9F91-FEAB7C97C4AC/SFX/AutoCAD_2024_French_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = 'C32F7E2A65F5A78977FE654C9197ABA8F4C6D2B4ABCC503B410D6E28E4A6A7D7'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/3E58E777-D28C-3868-9F91-FEAB7C97C4AC/SFX/AutoCAD_2024_French_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = '224CEB57979E264C876005C86457F6E5FE9415829D1DE36B127477491568D37F'
 }
 
 elseif ($pp.'German') {
-$packageName = 'AutoCAD_2023_German_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/76AB97BD-B32D-3F5A-B05F-3F09F9AFB666/SFX/AutoCAD_2023_German_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = 'DA9B4F6074B687A9F9732AA66F45108F30C911035EC11020E3D83E5265A8774B'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/76AB97BD-B32D-3F5A-B05F-3F09F9AFB666/SFX/AutoCAD_2023_German_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = '63F45D0FDC7D87E880ED0E7C2E802EA9E283284970530100AF1CB0710C844AA9'
+$packageName = 'AutoCAD_2024_German_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/8DED2519-8071-3D9F-8FAD-C434081E8B61/SFX/AutoCAD_2024_German_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = 'ACB4B8D4FBFFA62845E83ED56426F5A5FEAEBCC1C5E429C986DB30C5B4FADA37'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/8DED2519-8071-3D9F-8FAD-C434081E8B61/SFX/AutoCAD_2024_German_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = 'B01A0465F7DDAC41338EAADF50CE74DFDCF017191551E1836E9EFDB076DEF894'
 }
 
 elseif ($pp.'Hungarian') {
-$packageName = 'AutoCAD_2023_Hungarian_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/F4E61065-57C9-3D46-9C2F-F5B5D126F502/SFX/AutoCAD_2023_Hungarian_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = 'EAB3055D827681DC135F02708910B99D35939334D66ED6E859CA6B5653734F14'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/F4E61065-57C9-3D46-9C2F-F5B5D126F502/SFX/AutoCAD_2023_Hungarian_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = '56ABC80A0E6BB0E72BD3297AF2B3068A9F34FABE0150B5E13B76300237555BC5'
+$packageName = 'AutoCAD_2024_Hungarian_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/096E7ADC-6D8E-3159-B087-933C94D3755F/SFX/AutoCAD_2024_Hungarian_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = 'F61B1C95018304CCC98EE3FB55E33273FA2CB62FEF885D3741A3999B22158FD9'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/096E7ADC-6D8E-3159-B087-933C94D3755F/SFX/AutoCAD_2024_Hungarian_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = 'EF2CBBB7AE620A164EB6321A54B4222F53FA9EFD0AAB8BC65ED7BDF1FBB06B02'
 }
 
 elseif ($pp.'Italian') {
-$packageName = 'AutoCAD_2023_Italian_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/287D32F7-4770-3EF5-AD3B-9FB62BAFB06A/SFX/AutoCAD_2023_Italian_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = '23A0B7CC616E71C2DE11E343AB13520AE0A4637AAC893FAD0D4C2CC6A6FC0789'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/287D32F7-4770-3EF5-AD3B-9FB62BAFB06A/SFX/AutoCAD_2023_Italian_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = '9E57A3294EDBF2256C24AC89447A02E0E9A5B9593C0047B9664E6C45613399A1'
+$packageName = 'AutoCAD_2024_Italian_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/D8B80308-A8A1-3E19-AD1D-4AAD8E98277F/SFX/AutoCAD_2024_Italian_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = 'ABEC05E5BD7B32A2CFD9CC57A46E5E5D93EC417BE233C578A0C678CAEFF708CC'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/D8B80308-A8A1-3E19-AD1D-4AAD8E98277F/SFX/AutoCAD_2024_Italian_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = '67BCCFD2FCB72A16C06A7E4F0E1E9A249095904F9DA334268AFA3813A82F84B9'
 }
 
 elseif ($pp.'Japanese') {
-$packageName = 'AutoCAD_2023_Japanese_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/33807360-14CD-3CE0-89D4-EA4021D518CB/SFX/AutoCAD_2023_Japanese_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = '1089361535D9483B3D4516BE0703786B0A29BC550315E77A6425A7A3AF0FC2AB'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/33807360-14CD-3CE0-89D4-EA4021D518CB/SFX/AutoCAD_2023_Japanese_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = 'EDC8EE8070359CFD4020DD9AC88F81A5D2058C65C1F1F7B58156803A5FAAD0B2'
+$packageName = 'AutoCAD_2024_Japanese_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/DD74AC9B-B571-32CE-A667-0A4B6BA8DFB4/SFX/AutoCAD_2024_Japanese_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = '2E2142666D0F44A189A4A8BCDDAE199F54BEED813609E1AB77F1615BE9565174'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/DD74AC9B-B571-32CE-A667-0A4B6BA8DFB4/SFX/AutoCAD_2024_Japanese_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = 'D27CBF021722CC5209B5C32B0C36CB10AAE4A35821F5EF7B4C77628598E0BE0A'
 }
 
 elseif ($pp.'Korean') {
-$packageName = 'AutoCAD_2023_Korean_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/832DD47E-549C-395D-964F-9819BE7F2E79/SFX/AutoCAD_2023_Korean_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = '73C2ED9113171F248507F7501CCB69ED1B5C4BF8C50D1BE93EE2A4A133AB7115'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/832DD47E-549C-395D-964F-9819BE7F2E79/SFX/AutoCAD_2023_Korean_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = 'EE4F681466407CDB7EEC29D671682CB949B080E8C781414082EFB7BE1F4C715C'
+$packageName = 'AutoCAD_2024_Korean_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/2BBD2191-BB12-3557-8D70-4B33544CA3E0/SFX/AutoCAD_2024_Korean_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = '6986EB066019EE17E6626E25E52A15340264BDA7658C1F3474E8B37BEB7160EB'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/2BBD2191-BB12-3557-8D70-4B33544CA3E0/SFX/AutoCAD_2024_Korean_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = '5BAEC6B81D0D73FC8D6DFA04FA0B21064E344CEEC6A1D39F7231258AEF645D81'
 }
 
 elseif ($pp.'Polish') {
-$packageName = 'AutoCAD_2023_Polish_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/D69B2FE9-92E0-3664-A8FD-EAD873C7FE56/SFX/AutoCAD_2023_Polish_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = 'CE579FFFC04EC21473A972C8BF4B696E9DD9CFA1470250C41519074C057AD7BB'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/D69B2FE9-92E0-3664-A8FD-EAD873C7FE56/SFX/AutoCAD_2023_Polish_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = '11EEBC524D4DD729A066CCE6B6AD6E685F051A65065891952965D94EF3FD72A5'
+$packageName = 'AutoCAD_2024_Polish_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/D374645F-0162-318F-A4F2-9BF8240D3D23/SFX/AutoCAD_2024_Polish_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = '28E7AD3D2534B1EEDD9B4395C6ECA389E453F84D3FDFDB67CE2DA054D308721C'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/D374645F-0162-318F-A4F2-9BF8240D3D23/SFX/AutoCAD_2024_Polish_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = '302069A5B918A52DCF31C3DDA2674E8D03C470F9B5A8A6F49725AD28C41FA36D'
 }
 
 elseif ($pp.'Portuguese') {
-$packageName = 'AutoCAD_2023_Brazilian_Portuguese_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/77E4168D-B260-35B3-9FA0-3708351E6B04/SFX/AutoCAD_2023_Brazilian_Portuguese_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = '7ADFA3F100C7F32027ED8E8B2C3DCA722BF907693AA408D2E75071D2D9F0E696'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/77E4168D-B260-35B3-9FA0-3708351E6B04/SFX/AutoCAD_2023_Brazilian_Portuguese_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = 'E85ABA7BEBFBEAF58A607B377B4BFC76C72E5DE5D4C9A1BF51B8CAF47291CD97'
+$packageName = 'AutoCAD_2024_Brazilian_Portuguese_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/19B7E69F-3FAD-3EEC-BB19-49AD6050E01A/SFX/AutoCAD_2024_Brazilian_Portuguese_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = '648C615EEB5FFD04B151029F52E9DD1782849AED9B4E3322F0E238278AA7DF75'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/19B7E69F-3FAD-3EEC-BB19-49AD6050E01A/SFX/AutoCAD_2024_Brazilian_Portuguese_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = '29A75B9DF99B81FB0B2BDA65C2091042CAB50F6590E350BD6EF7022134A819FB'
 }
 
 elseif ($pp.'Russian') {
-$packageName = 'AutoCAD_2023_Russian_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/8C2B07F1-8A0B-34E9-B622-17451D0926FC/SFX/AutoCAD_2023_Russian_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = '2F0DC81FC858EEF50CB28DAF5A7F94FDB52988D76CD5ABCAF289E6DF304CAA8D'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/8C2B07F1-8A0B-34E9-B622-17451D0926FC/SFX/AutoCAD_2023_Russian_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = 'A8FE4FEFDC3A4BE8A60FD0D78FBF85860A13E2908067614CC0AA804853BD3A90'
+$packageName = 'AutoCAD_2024_Russian_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/995E0303-033E-3B35-B128-E01E5F4122DF/SFX/AutoCAD_2024_Russian_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = '78ACDAD4F4249A8E34399D4BA2D304D064E6B782C44C14D9DF964CBB6B0012D3'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/995E0303-033E-3B35-B128-E01E5F4122DF/SFX/AutoCAD_2024_Russian_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = 'DD97E3D6DB1A03A69CC4C1D853C8EEB1364BCDFE459A52890259F3B04E28A503'
 }
 
 elseif ($pp.'Spanish') {
-$packageName = 'AutoCAD_2023_Spanish_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/D69227B0-7A1E-3897-9349-31E4C72A8ADC/SFX/AutoCAD_2023_Spanish_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = 'C4FED09EADCD5DF398C2B6EE2F88028E706A90FDEEB04A5F06C8E605FC700E53'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/D69227B0-7A1E-3897-9349-31E4C72A8ADC/SFX/AutoCAD_2023_Spanish_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = '95C35F834D2853E25047B17C7E7D11B6EC83B7F3DBD57765B811E4D1A098B310'
+$packageName = 'AutoCAD_2024_Spanish_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/B0C7C531-7513-3604-A5E9-51EAE2517EFC/SFX/AutoCAD_2024_Spanish_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = '28A56110AD370089CC9F6210C2A0022EE6C0C3D4FED6F069A702EC9CC56E5ED7'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/B0C7C531-7513-3604-A5E9-51EAE2517EFC/SFX/AutoCAD_2024_Spanish_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = 'DB0D56192405BA09F6BAF290B025EF17F5923463DE1898F506E97835A13EA54C'
 }
 
 else {
-$packageName = 'AutoCAD_2023_English_Win_64bit_dlm'
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/73A78CE1-E03A-3415-826E-91A699E39B17/SFX/AutoCAD_2023_English_Win_64bit_dlm_001_002.sfx.exe'
-$checksum1 = '07B80B205D5E9ED3CB4A8908D20292485AEE3F4E29884FE3C1B42C97CD1B7751'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/73A78CE1-E03A-3415-826E-91A699E39B17/SFX/AutoCAD_2023_English_Win_64bit_dlm_002_002.sfx.exe'
-$checksum2 = '62D9761408E7E18588820A78159C35BF6FE28D2B84C690F32BC856A151D74428'
+$packageName = 'AutoCAD_2024_English_Win_64bit_dlm'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/CC46AD7F-5075-3702-B2BF-CFCC5AB8468B/SFX/AutoCAD_2024_English_Win_64bit_dlm_001_002.sfx.exe'
+$checksum1 = 'C881C55603BAD590126FC0FAE380D87F039140E290DE6DDDABF72722CF64BC8B'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/CC46AD7F-5075-3702-B2BF-CFCC5AB8468B/SFX/AutoCAD_2024_English_Win_64bit_dlm_002_002.sfx.exe'
+$checksum2 = 'AA15E50232B467C71BFD4B367C8A4574C5D21BADE83209FD12AFB6E04B399CB6'
 }
 
+#DOWNLOAD
 $temp = Join-Path $env:TEMP $packageName
 $part1 = $temp + '_001_002.sfx.exe'
 $part2 = $temp + '_002_002.sfx.exe'
@@ -143,6 +127,7 @@ $file = Join-Path $temp 'Setup.exe'
 Get-ChocolateyWebFile -PackageName 'AutoCAD Download Part 1' -FileFullPath $part1 -Url $url1 -Checksum $checksum1 -ChecksumType 'sha256'
 Get-ChocolateyWebFile -PackageName 'AutoCAD Download Part 2' -FileFullPath $part2 -Url $url2 -Checksum $checksum2 -ChecksumType 'sha256'
 
+#EXTRACT
 $packageArgsUnzip  = @{
   packageName    = 'AutoCAD Installation Files'
   fileType       = 'exe'
@@ -151,8 +136,9 @@ $packageArgsUnzip  = @{
   silentArgs     = "-suppresslaunch -d $env:TEMP"
   validExitCodes = @(0, 3010, 1641)
 }
-Install-ChocolateyPackage @packageArgsUnzip
+Install-ChocolateyInstallPackage @packageArgsUnzip
 
+#INSTALL
 $packageArgs  = @{
   packageName    = 'AutoCAD'
   fileType       = 'exe'
