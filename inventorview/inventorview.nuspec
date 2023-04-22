@@ -16,6 +16,9 @@
     <summary>Inventor View</summary>
     <description>Share native Autodesk Inventor software data with non-Autodesk Inventor users with this freely distributable viewer that delivers high-fidelity viewing and printing of parts, assemblies and drawings.
 
+#### Replaced by Inventor read-only mode (part of Inventor Pro, "choco install inventor")
+Inventor View 2023 will be the final release of the product. When Inventor 2020 was launched, Autodesk introduced Read-Only Mode as a replacement for Inventor View. This alternative provides customers with several additional review tools, improved performance, and a better installation experience. Although there are replacements for Inventor View, customers can continue to use Inventor View for files that are saved in Inventor 2023 and previous releases.
+
 #### System requirements for Autodesk Inventor View 2023
 Operating System: Windows 64 bit
 

@@ -1,4 +1,4 @@
-checksum -t sha256 -f inventor_view_***.exe
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #copy version from installation folder setup.xml
 #copy icon from installation folder\SetupRes\icons
 
@@ -24,4 +24,4 @@ choco upgrade inventorview -y -dv -s .
 
 #UNINSTALL
 choco uninstall inventorview -y
-choco push inventorview.2023.270158.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
