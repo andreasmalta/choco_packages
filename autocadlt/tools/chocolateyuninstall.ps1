@@ -21,7 +21,7 @@ Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVe
 
 #Remove Autodesk Identity Manager
 $AdskIdentityManager = 'C:\Program Files\Autodesk\AdskIdentityManager\uninstall.exe'
-if (Test-Path $AdskIdentityManager) { Uninstall-ChocolateyPackage -PackageName 'Autodesk Identity Manager' -FileType 'exe' -SilentArgs '--mode unattended' -File $uninstall }
+if (Test-Path $AdskIdentityManager) { Uninstall-ChocolateyPackage -PackageName 'Autodesk Identity Manager' -FileType 'exe' -SilentArgs '--mode unattended' -File $AdskIdentityManager }
 
 #Remove Autodesk Licensing
 $AdskLicensing = 'C:\Program Files (x86)\Common Files\Autodesk Shared\AdskLicensing\uninstall.exe'
