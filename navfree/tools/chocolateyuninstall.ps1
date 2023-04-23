@@ -7,7 +7,7 @@ Invoke-UninstallOld
 
 #Remove Autodesk Identity Manager
 $AdskIdentityManager = 'C:\Program Files\Autodesk\AdskIdentityManager\uninstall.exe'
-if (Test-Path $AdskIdentityManager) { Uninstall-ChocolateyPackage -PackageName 'Autodesk Identity Manager' -FileType 'exe' -SilentArgs '--mode unattended' -File $uninstall }
+if (Test-Path $AdskIdentityManager) { Uninstall-ChocolateyPackage -PackageName 'Autodesk Identity Manager' -FileType 'exe' -SilentArgs '--mode unattended' -File $AdskIdentityManager }
 
 #Remove Autodesk Installer
 Get-Process "AdskAccessCore*" -ErrorAction SilentlyContinue | Stop-Process -Force
