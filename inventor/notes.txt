@@ -1,0 +1,15 @@
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+#copy version from installation folder setup.xml
+#copy icon from installation folder\SetupRes\icons
+
+#INSTALL
+choco pack
+choco install inventor -y -dv -s .
+
+#UPGRADE
+choco install inventor -y
+choco upgrade inventor -y -dv -s .
+
+#UNINSTALL & PUSH
+choco uninstall inventor -y
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/

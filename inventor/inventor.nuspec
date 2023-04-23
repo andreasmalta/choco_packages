@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>inventor</id>
+    <version>2024.28.0.15300</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/inventor</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Inventor</title>
+    <authors>Autodesk</authors>
+    <projectUrl>https://www.autodesk.com/products/inventor/overview</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/inventor/icon.png</iconUrl>
+    <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
+    <docsUrl>https://help.autodesk.com/view/INVNTOR/2024/ENU/</docsUrl>
+    <tags>autodesk inventor ipt iam idw dwg ipn viewer</tags>
+    <summary>Inventor View</summary>
+    <description>Inventor® 3D CAD software provides professional-grade mechanical design, documentation, and product simulation tools.
+
+#### Included as part of the Inventor installation:
+Inventor Professional 2024: Try Inventor free for 30 days
+Inventor Read-only Mode: Allows you to access Inventor part (.ipt), assembly (.iam), drawing (.idw, dwg), and presentation (.ipn) files for viewing in the Inventor user interface without consuming a license.
+DWG TrueView 2024: View and convert 2D and 3D DWG files for free
+
+#### System requirements:
+Operating System: 64-bit Microsoft® Windows® 11 and Windows 10.</description>
+    <releaseNotes>https://help.autodesk.com/view/INVNTOR/2024/ENU/?guid=Inventor_ReleaseNotes_release_notes_html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
