@@ -1,24 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop';
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+
+#CHECK IF ALREADY INSTALLED
+$regkey = Get-ItemProperty -Path hklm:software\microsoft\windows\currentversion\policies\system -Name "EnableLUA"
+if($regkey.DisplayName -ne 'Inventor View 2023')
+{
+ set-itemproperty -Path hklm:software\microsoft\windows\currentversion\policies\system -Name "EnableLUA" -value 0
+}
+
 
 #UNINSTALL OLD VERSIONS
-$packageName = '*Inventor View*'
-$folderRoot = 'C:\Program Files\Autodesk'
-$validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
-Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
-                         'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*') `
-                 -ErrorAction:SilentlyContinue `
-| Where-Object   {$_.DisplayName -like $packageName} `
-| ForEach-Object {
-	$silentArgs = "$($_.PSChildName) /qn /norestart"
-	if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
-	Remove-Item $_.PsPath -Recurse -ErrorAction Ignore
-	}
-if (Test-Path $folderRoot) { Get-ChildItem $folderRoot -Recurse -Force -Directory -Include $packageName | Remove-Item -Recurse -Confirm:$false -Force }
-
-
-#REMOVE REBOOT REQUESTS
-$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
-if (Test-path $RegRebootRequired) { Remove-Item -Path $RegRebootRequired }
+. $toolsDir\helpers.ps1
+Invoke-UninstallOld
 
 
 #INSTALLATION SETTINGS
