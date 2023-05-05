@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>supportassist</id>
-    <version>3.13.0.236</version>
+    <version>3.14.0.91</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/supportassist</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Dell SupportAssist for home PCs</title>

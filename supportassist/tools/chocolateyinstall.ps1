@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $url = 'https://downloads.dell.com/serviceability/catalog/SupportAssistInstaller.exe'
-$checksum = 'C036334A0730C13EE11FD79C6A555162160E79F10B7A82704D4C3553DF458569'
+$checksum = '9718940E2B13ADD6E2019B23075F30FB36137568C3F54EE24624D7C86B6ABFC9'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
