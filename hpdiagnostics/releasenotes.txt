@@ -1,67 +1,67 @@
 TITLE:  HP PC Hardware Diagnostics Windows
-VERSION: 2.1.0.0
+VERSION: 2.2.0.0
 DESCRIPTION: 
 This package provides HP PC Hardware Diagnostics for supported computer models that are running a supported operating system. HP PC Hardware Diagnostics Windows allows HP customers to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
 
-PURPOSE: Critical
-SoftPaq NUMBER: sp144583
-EFFECTIVE DATE:  01/13/2023
+PURPOSE: Routine
+SoftPaq NUMBER: sp146683
+EFFECTIVE DATE:  04/14/2023
 CATEGORY:  Diagnostic
-SSM SUPPORTED:  Yes
+SSM SUPPORTED:  No
 DEVICES SUPPORTED: N/A
 PREREQUISITES: - You must be logged on as an administrator to install this update.
 - You must have a Microsoft Windows operating system.
 LANGUAGE(S): 
 English (US)
 Arabic
-Brazilian Portuguese
 Bulgarian
-Chinese (Prc. Simplified)
-Croatian
+Brazilian Portuguese
 Czech
 Danish
-Dutch
+German
+Greek
+Spanish
 Estonian
 Finnish
 French
-German
-Greek
 Hebrew
 Hong Kong
+Croatian
 Hungarian
 Italian
 Japanese
 Korean
-Latvian
 Lithuanian
+Latvian
+Dutch
 Norwegian
 Polish
 Portuguese
 Romanian
 Russian
-Serbian
 Slovenian
-Spanish
+Serbian
 Swedish
-Taiwan Chinese (Traditional)
 Thai
 Turkish
+Taiwan Chinese (Traditional)
+Chinese (Prc. Simplified)
+French Canadian
 English (UK)
+Latin America
  
 
-FIXES: 
-This is a bug fix release due to issues with the New UI on some platforms:
-
-- Various Bug Fixes:
-    1. Keyboard test F5 key not responding
-    2. Passed result after running system test crashes application
-    3. Application does not start:
-      3-1. Event Log service not running
-      3-2. 2.0.0.0 file could not be created
-    4. Localization missing after running device check
-    5. Error in drag and drop link
-    6. Missing text in side drawer foot area
-    7. Battery progress bar on extensive test 
+ENHANCEMENTS:
+- Added USB Port Test. 
+- Added Display Port Test.   
+- Product Image pic added on Home page. 
+- User Interface Improvement: 
+---- Customized Title Bar for Omen platforms 
+---- Implemented Dark mode capability 
+---- Implemented Victus UI theme
+---- Adjusted UI sizing.
+---- Preserved UI theme between runs.  
+- Various Bug Fixes
 HOW TO USE:
 1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
 

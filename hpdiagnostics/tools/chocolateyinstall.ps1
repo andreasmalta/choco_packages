@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url = 'https://ftp.ext.hp.com/pub/softpaq/sp144501-145000/sp144583.exe'
-$checksum = '951B6545E6A4B7A8863FB2BB90C043E1E14E03B17BB645E4A83E820CCF8637CB'
+$url = 'https://ftp.hp.com/pub/softpaq/sp146501-147000/sp146683.exe'
+$checksum = '70658EF3B5708ABB0F6D16A4093421B565BA32E2D7C7ECEB818B8CBA1BE6D7AE'
 
 #Uninstall old version before upgrade
 . $toolsDir\helpers.ps1
