@@ -1,4 +1,4 @@
-function Invoke-UninstallHPSA {
+function Invoke-Uninstall {
 $folderlong = 'C:\Program Files (x86)\Hewlett-Packard\HP Support Framework\UninstallHPSA.exe'
 if (Test-path $folderlong) { Uninstall-ChocolateyPackage -PackageName $env:ChocolateyPackageName -FileType 'exe' -SilentArgs '/s /v /qn' -File "$folderlong" }
 

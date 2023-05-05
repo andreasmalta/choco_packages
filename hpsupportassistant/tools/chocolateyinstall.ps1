@@ -2,10 +2,10 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 . $toolsDir\helpers.ps1
-Invoke-UninstallHPSA
+Invoke-Uninstall
 
-$url = 'https://ftp.hp.com/pub/softpaq/sp144501-145000/sp144692.exe'
-$checksum = 'E05417FE2655BCE2FC99E413E5897821B4153CB8426644AB463B41DD1C9E7920'
+$url = 'https://ftp.hp.com/pub/softpaq/sp146001-146500/sp146042.exe'
+$checksum = 'C8C0022D6513F83A48701317714BF2405419C54958E56D385567F7C878C2C6B4'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
