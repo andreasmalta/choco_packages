@@ -1,4 +1,4 @@
-function Invoke-UninstallOldAutodesk {
+function Invoke-UninstallOld {
 Stop-Process -Name "DesktopConnector*" -Force
 if($svc = get-service FileSystemMonitorService -ErrorAction SilentlyContinue) { Stop-Service $svc }
 $packageName = 'Autodesk Desktop Connector*'

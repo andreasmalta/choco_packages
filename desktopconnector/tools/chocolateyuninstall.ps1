@@ -2,7 +2,7 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 . $toolsDir\helpers.ps1
-Invoke-UninstallOldAutodesk
+Invoke-UninstallOld
 
 $packageName = 'Autodesk Single Sign On Component*'
 $FolderName = 'C:\Program Files\Autodesk\Autodesk AdSSO'
