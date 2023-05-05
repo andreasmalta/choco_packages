@@ -1,4 +1,4 @@
-#https://www.barco.com/en/clickshare/support/clickshare-desktop-app/drivers
+#https://www.barco.com/en/support/clickshare-app/drivers
 #Copy link address from "ClickShare Desktop App Windows MSI installer"
 #latest zip file version contained extra folder "R3306194_39_ApplicationSw", had to adjust filepath
 

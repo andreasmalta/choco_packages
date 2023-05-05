@@ -8,7 +8,7 @@ Invoke-UninstallOldClickShare
 $DownloadLink = Invoke-WebRequest "https://www.barco.com/bin/barco/tde/downloadUrl.json?fileNumber=R3306194&tdeType=3" | ConvertFrom-Json
 
 $url = $DownloadLink.downloadUrl
-$checksum = '382b07a2506154db3bf9a1d401a1797d216837537b0e23b61aee78a7df85c2ff'
+$checksum = '382B07A2506154DB3BF9A1D401A1797D216837537B0E23B61AEE78A7DF85C2FF'
 
 $packageArgsURL = @{
   packageName   = $env:ChocolateyPackageName
@@ -19,8 +19,8 @@ $packageArgsURL = @{
 }
 Install-ChocolateyZipPackage @packageArgsURL
 
-$file = Join-Path $env:TEMP 'R3306194_40_ApplicationSw\ClickShare_Installer.msi'
-#$file = Join-Path $env:TEMP 'ClickShare_Installer.msi'
+$file = Join-Path $env:TEMP 'ClickShare_Installer.msi'
+
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'msi'
