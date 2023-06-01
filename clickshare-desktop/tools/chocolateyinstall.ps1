@@ -8,7 +8,7 @@ Invoke-UninstallOldClickShare
 $DownloadLink = Invoke-WebRequest "https://www.barco.com/bin/barco/tde/downloadUrl.json?fileNumber=R3306194&tdeType=3" | ConvertFrom-Json
 
 $url = $DownloadLink.downloadUrl
-$checksum = '382B07A2506154DB3BF9A1D401A1797D216837537B0E23B61AEE78A7DF85C2FF'
+$checksum = '10D39BC3CC630A998389178C926F622E557001D26C839F3E6BC97F44276B38DE'
 
 $packageArgsURL = @{
   packageName   = $env:ChocolateyPackageName
