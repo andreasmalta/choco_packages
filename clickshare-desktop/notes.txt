@@ -1,5 +1,5 @@
-#https://www.barco.com/en/support/clickshare-app/drivers
-#Copy link address from "ClickShare Desktop App Windows MSI installer"
+#https://www.barco.com/bin/barco/tde/downloadUrl.json?fileNumber=R3306194&tdeType=3
+#use downloadUrl to download a copy for checksum
 
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
