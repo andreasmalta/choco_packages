@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>desktopconnector</id>
-    <version>16.2.1.2016</version>
+    <version>16.3.0.2035</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/desktopconnector</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Desktop Connector</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://help.autodesk.com/view/CONNECT/ENU/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/desktopconnector/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/CONNECT/ENU/?guid=CONNECT_User_s_Guide_for_Desktop_html</docsUrl>
+    <docsUrl>https://help.autodesk.com/view/CONNECT/ENU/</docsUrl>
     <tags>autodesk drive desktop connector</tags>
     <summary>Desktop Connector</summary>
     <description>Desktop Connector is a desktop service that integrates an Autodesk data management source (or data source) with your desktop folder and file structure for easy file management.
