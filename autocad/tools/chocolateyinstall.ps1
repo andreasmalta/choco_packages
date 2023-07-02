@@ -148,7 +148,7 @@ $packageArgsUnzip  = @{
   fileType       = 'exe'
   file           = $part1
   softwareName   = 'AutoCAD Installation Files*'
-  silentArgs     = "-suppresslaunch -d '$env:TEMP'"
+  silentArgs     = "-suppresslaunch -d `"$env:TEMP`""
   validExitCodes = @(0, 3010, 1641)
 }
 Install-ChocolateyPackage @packageArgsUnzip
