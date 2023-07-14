@@ -1,3 +1,4 @@
+#https://www.hp.com/us-en/solutions/cloud-computing/thin-client-software.html
 checksum -t sha256 -f HPThinUpdate-02.06.22-Win32.msi
 checksum -t sha256 -f HPThinUpdate-02.06.22-Win64.msi
 
