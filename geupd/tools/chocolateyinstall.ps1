@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$FAX = 'https://dl.develop.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=c0475df13b6c61eb24f0697cd477adf0&tx_kmdownloadcentersite_downloadproxy[documentId]=135984&tx_kmdownloadcentersite_downloadproxy[system]=Develop&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
-$FAX_checksum = '0E87B3D1F0690C3515E6B7EB30E77B52A86F389B8FC40E7DC7621BFAAFE4E444'
-$PCL = 'https://dl.develop.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=f701491af277bd93fefb3a70015a579b&tx_kmdownloadcentersite_downloadproxy[documentId]=135982&tx_kmdownloadcentersite_downloadproxy[system]=Develop&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum = '593D6416913314FF9AD217D8FFE67F2A54E635AAC7D3264DC9D5C16CFB2D8B2F'
-$PS = 'https://dl.develop.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=dae935107c6515c6999262b2e5681d59&tx_kmdownloadcentersite_downloadproxy[documentId]=135983&tx_kmdownloadcentersite_downloadproxy[system]=Develop&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
-$PS_checksum = '78D6166EE5838B1380503C8342AABCB2063B8DEB4EC87C66E9A01244FD87A6E2'
+$FAX = 'https://dl.develop.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=d3b0752a8cef634cae07374fd07e611b&tx_kmdownloadcentersite_downloadproxy[documentId]=138076&tx_kmdownloadcentersite_downloadproxy[system]=Develop&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$FAX_checksum = '582EA833424335E416B8590934143A5211B2ADDDCDC301AA0D00B1CFA2518A3E'
+$PCL = 'https://dl.develop.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=27864185c731a2343a77337917555614&tx_kmdownloadcentersite_downloadproxy[documentId]=138074&tx_kmdownloadcentersite_downloadproxy[system]=Develop&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$PCL_checksum = '4C563106ADA24765C0E5853800E7F5D5E61AE3711D9416246AA1E3A69456E9F1'
+$PS = 'https://dl.develop.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=b72bf61ca3c363d471c66a8a6c8fe99f&tx_kmdownloadcentersite_downloadproxy[documentId]=138075&tx_kmdownloadcentersite_downloadproxy[system]=Develop&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$PS_checksum = 'BB8C79EAA57A1427D1EEF600FED7B037634440502C13CC3E758E997C4E5AE4F2'
 
 function Invoke-packageArgsFAX {
 	$FAX_extract = Join-Path $env:TEMP 'extractFAX'

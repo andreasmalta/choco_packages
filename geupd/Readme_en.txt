@@ -1,15 +1,15 @@
 ==========================================================================================
 Generic Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-10/07/2022
+2023/3/24
 
-PCL  Version 3.9.303.0
-PS   Version 3.9.303.0
-FAX  Version 3.9.303.0
-Installer Version 3.2.22.0
-PCL  Setup Package Version 3.9.303.0
-PS   Setup Package Version 3.9.303.0
-FAX  Setup Package Version 3.9.303.0
+PCL  Version 3.9.403.0
+PS   Version 3.9.403.0
+FAX  Version 3.9.403.0
+Installer Version 3.2.24.0
+PCL  Setup Package Version 3.9.403.0
+PS   Setup Package Version 3.9.403.0
+FAX  Setup Package Version 3.9.403.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -237,15 +237,6 @@ Supported devices :
 //////////////////////////////////////////////////////////////////////////////////////////
 
 Supported OS :
-    Windows Server 2008 Standard *
-    Windows Server 2008 Enterprise *
-    Windows 7 Professional *
-    Windows 7 Enterprise *
-    Windows Server 2008 R2 Standard
-    Windows Server 2008 R2 Enterprise
-    Windows 8.1 *
-    Windows 8.1 Pro *
-    Windows 8.1 Enterprise *
     Windows Server 2012 Standard
     Windows Server 2012 Datacenter
     Windows Server 2012 Essentials
@@ -275,7 +266,7 @@ Supported OS :
 
 Support the following operation environments :
   <PCL driver>
-    Windows Server 2008 R2 / 2012 / 2012 R2 Cluster Server Service
+    Windows Server 2012 / 2012 R2 Cluster Server Service
     Citrix Virtual Apps and Desktops 7 2006 / 2003
     Terminal Services
     Remote Desktop
@@ -283,13 +274,13 @@ Support the following operation environments :
     Remote Desktop Easy Print
 
   <PS driver>
-    Windows Server 2008 R2 / 2012 / 2012 R2 Cluster Server Service
+    Windows Server 2012 / 2012 R2 Cluster Server Service
     Citrix Virtual Apps and Desktops 7 2006 / 2003
     Terminal Services
     Remote Desktop
 
   <FAX driver>
-    Windows Server 2008 R2 / 2012 / 2012 R2 Cluster Server Service
+    Windows Server 2012 / 2012 R2 Cluster Server Service
     Citrix Virtual Apps and Desktops 7 2006 / 2003
     Terminal Services
     Remote Desktop
@@ -303,19 +294,18 @@ to use the LDAP server in the Fax driver.
      - Microsoft(R) .NET Framework 2.0 (SP1 or later)
      - Microsoft(R) .NET Framework 3.0 (SP1 or later)
      - Microsoft(R) .NET Framework 3.5
-In Windows 7, Windows Server 2008 R2 necessary .NET Framework is installed.
 
 //////////////////////////////////////////////////////////////////////////////////////////
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/FAX Version 3.9.303.0
+  PCL/PS/FAX Version 3.9.403.0
 
 ==========================================================================================
-4-1. Support the following models.
+4-1. The following functions are add in this driver.
 ==========================================================================================
-  Generic 95BW-0i
-  Generic 85BW-0i
+  1.Added [Use UserPrincipalName] to the default/fixed value for [Administrator Customization] > 
+    [User Authentication] > [User Name]  
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -348,21 +338,9 @@ Please read the following notes before use.
            for [Port Name]
       3-3. After that, install the printer driver according to the Wizard.
 
- 4. When the driver installed in Windows Server 2008 is shared and installing 
-    the driver with which the number of bits differ from the additional driver, 
-    the message "Input the path to Windows Media" may be displayed.
-    ==>In the case, please install the printer driver in the way described below.
-      4-1. Please prepare the driver to add Windows Server 2008 and PC in which the OS 
-           with the same number of bits is installed, and assign
-           the drive (example: C drive) to which Windows is installed in the server
-           side as a network drive.
-      4-2. When the above-mentioned message comes out at the time of a driver addition,
-           Please select [Reference] button and specify the file in which the
-           above-mentioned network drive was required.
-
- 5. When you specify the path of the shared printer by [Manual Selection] of Installer, 
-    you can not find the printers from [Reference] button in Windows 7 and 
-    Windows Server 2008 R2 or later operating system.
+ 4. When you specify the path of the shared printer by [Manual Selection] of Installer, 
+    you can not find the printers from [Reference] button in Windows 10 and 
+    Windows Server 2012 or later operating system.
     ==>In this case, please enter the path of the shared printer directly. 
 
 ==========================================================================================
@@ -763,66 +741,28 @@ In such a case, please be careful of the setting method etc.
         Fax driver could not read the Phone Book file with long file or folder name 
         because of the OS's restriction.
 
-  12-3. PS Driver for Windows 7
+  12-3. PS Driver for Windows 10
         There will be a blank space in the window since the window size of 
         the Print Setting is bigger that the other drivers. This will have no effect
         on the print operation.
 
-  12-4. Using a WSD Port Connection in Windows 7 and Windows Server 2008 R2
+  12-4. Using a WSD Port Connection in Windows 10 and Windows Server 2012
         The Printer Driver must be installed in order to connect to the device using 
-        the WSD port in Windows 7 and Windows Server 2008 R2.
+        the WSD port in Windows 10 and Windows Server 2012.
 
-  12-5. About Watermark printing in Windows 8.1 
-        In some instances, the Watermark is not printed when the print is executed
-        from Microsoft Word 2010 or Microsoft Excel 2010.
-        - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-        - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
-
-  12-6. About Text on Tab printing in Windows 8.1
+  12-5. About Text on Tab printing in Windows 10
         In some instances, Text on Tab is not printed when the print is executed 
-        from Microsoft Word 2010 or Microsoft Excel 2010.
+        from Microsoft Word 2019 or Microsoft Excel 2019.
         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
         - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
 
-  12-7. About [Copy Security] printing in Windows 8.1
-        In some instances, [Copy Security] is not printed when the print is executed 
-        from Microsoft Word 2010 or Microsoft Excel 2010.
-        - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-        - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
+  12-6. In Windows 11, printing functions set in the driver may not be enabled 
+        when printing from the Microsoft Store application.
 
-  12-8. About [Excel Job Control] printing in Windows 8.1
-        In some instances, [Excel Job Control] is not printed when the print is executed 
-        from Microsoft Word 2010 or Microsoft Excel 2010.
-        - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-        - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
-
-  12-9. About [Remove White Background] printing in Windows 8.1
-        In some instances, [Remove White Background] is not printed when the print is executed 
-        from Microsoft Word 2010 or Microsoft Excel 2010.
-        - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-        - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
-
-  12-10. About [Per Page Setting] printing in Windows 8.1
-         In some instances, [Per Page Setting] is not printed when the print is executed 
-         from Microsoft Word 2010 or Microsoft Excel 2010.
-         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-         - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
-
-  12-11. About [Create Host Image] or [Create Shared Folder Image] printing in Windows 8.1
-         In some instances, [Create Host Image] or [Create Shared Folder Image] is not printed 
-         when the print is executed from Microsoft Word 2010 or Microsoft Excel 2010.
-         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-         - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
-
-  12-12. About [Print Host Image] or [Print Device Image] printing in Windows 8.1
-         In some instances, [Print Host Image] or [Print Device Image] is not printed when the print is executed 
-         from Microsoft Word 2010 or Microsoft Excel 2010.
-         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
-         - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
-
-  12-13. Restriction of Cover Sheet in Windows 8.1 x86
-         In some instances, the Cover Sheet is not printed when the print is
-         executed from Microsoft Word 2010 or Microsoft Excel 2010.
+        If this happens, change the following settings:
+        For PCL drivers: Set Device Properties -> Settings Tab -> EMF Spool to OFF.
+        For PS drivers: Set Device Properties -> Advanced Tab -> Enable advanced printing features to OFF.
+        Note: Both settings require administrator privileges for the computer.
 
  13. Others
   13-1. Screen Font
@@ -932,12 +872,18 @@ In such a case, please be careful of the setting method etc.
   24-1. About WebView2
         WebView2 Runtime must be installed for IdP authentication.
         ==>Depending on the operating system you are using, WebView2 Runtime will be installed as standard.
-        If WebView2 Runtime is not installed, it can be installed using one of the following methods:
+
+        If WebView2 Runtime is not installed, it can be installed using one of the following methods(*):
          - Click "WebView2 installation" in the driver installer.
            (The [Install WebView2] button will become available if WebView2 is not installed.)
-         - Download WebView2 Runtime during IdP authentication.
+         - Follow the message displayed during IdP authentication, access the download page and install 
+           the downloaded WebView2 runtime on your computer as an administrator.
            (A message guides to the download page if WebView2 Runtime is not installed.)
         If you cannot install WebView2 Runtime, contact the system administrator.
+
+        *If you install the WebView2 runtime as a user, it will be mistakenly recognized that the WebView2 
+         runtime is not installed and a message will display to guide you through installation.
+        *Both these methods require you to have administrator privileges for the computer.
 
   24-2. About browser settings
         If you do not install WebView2 Runtime, authentication will be executed with Internet Explorer.
@@ -950,6 +896,13 @@ In such a case, please be careful of the setting method etc.
 
         For details, please refer to the support manual.
  
+        *WebView2 Runtime must be installed in order to use this feature.
+
+         If WebView2 Runtime is not installed, 
+         the product can be launched in Internet Explorer on the client's OS. 
+         However, as Internet Explorer is no longer supported by Microsoft as of June 22, 2022, 
+         its functionality cannot be guaranteed.
+
  24-3. About WebView2 Runtime Cookies
         WebView2 Runtime cookies cannot be removed from the browser. 
         To remove the cookies, please delete the following files:
