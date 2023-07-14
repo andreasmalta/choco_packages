@@ -1,3 +1,4 @@
+#https://downloads.solarwinds.com/solarwinds/Release/FreeTool/SolarWinds-TFTP-Server.zip
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #copy TFTPServer-en.htm from "C:\Program Files (x86)\SolarWinds\TFTP Server\Help"
 
