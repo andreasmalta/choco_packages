@@ -1,3 +1,4 @@
+#https://www.support.xerox.com/en-us/product/global-printer-driver/downloads
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL

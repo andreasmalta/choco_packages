@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xeroxupd</id>
-    <version>5.887.3.0</version>
+    <version>5.951.9.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/xeroxupd</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Xerox Global Print Driver PCL/PS V3</title>
@@ -17,7 +17,7 @@
     <description>Adding the Xerox® Global Print Driver® to your workplace means less IT involvement and less hassle for end users.
 There’s no need to download individual printer drivers for every device in your office.
 The Global Print Driver is a truly universal printer driver that lets you print to virtually any printer or multifunction printer — even to those made by other manufacturers.</description>
-    <releaseNotes>https://www.support.xerox.com/en-us/product/global-printer-driver/content/150345</releaseNotes>
+    <releaseNotes>https://www.support.xerox.com/en-us/product/global-printer-driver/documentation</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
