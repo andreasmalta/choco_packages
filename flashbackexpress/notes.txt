@@ -1,12 +1,11 @@
-checksum -t sha256 -f bbfbex5.exe
+#https://files.bbsoftware.co.uk/bbfbex5.exe
+#https://files.flashbackrecorder.com/flashbackexpress6_setup.exe
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
 choco install flashbackexpress -y -dv -s .
 
-#UPGRADE
-(cannot test, old version not available for download)
-
 #UNINSTALL
 choco uninstall flashbackexpress -y
-choco push flashbackexpress.5.55.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
