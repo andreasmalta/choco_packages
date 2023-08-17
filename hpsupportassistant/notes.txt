@@ -1,3 +1,4 @@
+#https://support.hp.com/us-en/help/hp-support-assistant
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL

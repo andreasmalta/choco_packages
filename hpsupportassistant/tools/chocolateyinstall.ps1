@@ -4,8 +4,8 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . $toolsDir\helpers.ps1
 Invoke-Uninstall
 
-$url = 'https://ftp.hp.com/pub/softpaq/sp146001-146500/sp146042.exe'
-$checksum = 'C8C0022D6513F83A48701317714BF2405419C54958E56D385567F7C878C2C6B4'
+$url = 'https://ftp.hp.com/pub/softpaq/sp148501-149000/sp148716.exe'
+$checksum = 'C1D4FB3389910652B2C0AB066E69E4F277A5AF60FBFECCED02072675733E5739'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
