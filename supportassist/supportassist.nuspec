@@ -15,7 +15,7 @@
     <tags>dell support device driver update</tags>
     <summary>Dell SupportAssist for home PCs</summary>
     <description>Automated, proactive, and predictive support - SupportAssist is the smart technology, available on your PC that will keep it running like new by removing viruses, detecting issues, optimizing settings and telling you when you need to make updates.</description>
-    <releaseNotes>https://www.dell.com/support/home/en-us/product-support/product/dell-supportassist-pcs-tablets/docs</releaseNotes>
+    <releaseNotes>https://www.dell.com/support/manuals/en-us/dell-supportassist-pcs-tablets/sahome_rn/release-summary</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
