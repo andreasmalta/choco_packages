@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>clickshare-desktop</id>
-    <version>4.31.0.6</version>
+    <version>4.32.0.13</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/clickshare-desktop</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>ClickShare Desktop App</title>
