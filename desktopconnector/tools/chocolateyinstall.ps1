@@ -2,7 +2,7 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $url = "https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-" + $Env:ChocolateyPackageVersion + ".exe"
-$checksum = '48B76FDCDB2EB0DA4F82CC862E1955AED0C75F0FEA69BA86A00DED501F42993A'
+$checksum = '52B608AE2490A339C1BC126EE95837A3FE60DFEE27D1068C7E31597A71584255'
 
 . $toolsDir\helpers.ps1
 Invoke-UninstallOld
