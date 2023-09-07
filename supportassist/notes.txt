@@ -1,4 +1,4 @@
-#https://www.dell.com/en-us/shop/supportassistforpcs/cp/supportassistforpcs
+#https://downloads.dell.com/serviceability/catalog/SupportAssistx64-" + $Env:ChocolateyPackageVersion + ".msi
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL

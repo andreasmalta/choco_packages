@@ -1,15 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url = 'https://downloads.dell.com/serviceability/catalog/SupportAssistInstaller.exe'
-$checksum = '9718940E2B13ADD6E2019B23075F30FB36137568C3F54EE24624D7C86B6ABFC9'
+
+$url = "https://downloads.dell.com/serviceability/catalog/SupportAssistx64-" + $Env:ChocolateyPackageVersion + ".msi"
+$checksum = '2C3AA11080F1E90874A0F8DFE6ECEBB238B8D62F79B0D0A2A7757C750F53C49C'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  fileType      = 'exe'
+  fileType      = 'msi'
   url           = $url
   softwareName  = 'SupportAssist*'
   checksum      = $checksum
   checksumType  = 'sha256'
-  silentArgs    = "/S"
+  silentArgs     = "/qn /norestart"
   validExitCodes= @(0, 3010, 1641)
 }
 Install-ChocolateyPackage @packageArgs
