@@ -5,10 +5,8 @@ forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 choco pack
 choco install supportassist -y -dv -s .
 
-#UPGRADE
-choco install supportassist -y
-choco upgrade supportassist -y -dv -s .
-
 #UNINSTALL
 choco uninstall supportassist -y
 FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
+
+https://dl.dell.com/serviceability/catalog/
