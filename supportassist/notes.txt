@@ -1,4 +1,4 @@
-#https://downloads.dell.com/serviceability/catalog/SupportAssistx64-" + $Env:ChocolateyPackageVersion + ".msi
+#https://dl.dell.com/serviceability/catalog/
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
@@ -8,5 +8,3 @@ choco install supportassist -y -dv -s .
 #UNINSTALL
 choco uninstall supportassist -y
 FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
-
-https://dl.dell.com/serviceability/catalog/
