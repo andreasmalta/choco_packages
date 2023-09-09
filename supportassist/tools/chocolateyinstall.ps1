@@ -13,7 +13,7 @@ $packageArgs = @{
   checksum      = $checksum_msi
   checksumType  = 'sha256'
   silentArgs     = "/qn /norestart"
-  validExitCodes= @(0, 3010, 1641)
+  validExitCodes= @(0, 1603, 3010, 1641)
 }
 Install-ChocolateyPackage @packageArgs
 
@@ -25,6 +25,6 @@ $packageArgs = @{
   checksum      = $checksum_msp
   checksumType  = 'sha256'
   silentArgs     = "/qn /norestart"
-  validExitCodes= @(0, 3010, 1641)
+  validExitCodes= @(0, 1642, 3010, 1641)
 }
 Install-ChocolateyPackage @packageArgs
