@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$file_Zip = Join-Path $toolsDir 'axtraxng_27_7_1_19.7z'
+$file_Zip = Join-Path $toolsDir 'axtraxng_27_7_1_20.7z'
 
 #Unzip installation files in temp folder
 $packageArgsURL = @{

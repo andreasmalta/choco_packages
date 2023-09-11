@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>axtraxng</id>
-    <version>27.7.1.19</version>
+    <version>27.7.1.20</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/axtraxng</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>AxTraxNG</title>
