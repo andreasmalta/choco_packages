@@ -1,6 +1,5 @@
 #https://www.brightsign.biz/resources/software-downloads/
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
-#Update release notes link
 
 #INSTALL
 choco pack
