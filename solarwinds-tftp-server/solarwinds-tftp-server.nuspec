@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>solarwinds-tftp-server</id>
-    <version>11.2.1.60010</version>
+    <version>11.4.0.60017</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/solarwinds-tftp-server</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>SolarWinds TFTP Server</title>
