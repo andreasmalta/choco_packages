@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 
 $url = "https://www.brightsignnetwork.com/download/ba-connected-builds/ba-connected-prod/BA%20connected%20Setup%20" + $Env:ChocolateyPackageVersion + ".exe"
 $checksum = '10E35D76F5DC2609C9937D734C4448AEA874A1F794165AB42181526A29E01717'
