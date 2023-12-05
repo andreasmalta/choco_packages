@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $url_msi = "https://downloads.dell.com/serviceability/catalog/SupportAssistx64-" + $Env:ChocolateyPackageVersion + ".msi"
-$checksum_msi = '2C3AA11080F1E90874A0F8DFE6ECEBB238B8D62F79B0D0A2A7757C750F53C49C'
+$checksum_msi = '4864372EA076A17199E5F345EFC4BE7E073F263E83B68B32B3F4DC45F11E24E3'
 $url_msp = "https://downloads.dell.com/serviceability/catalog/SupportAssistx64-" + $Env:ChocolateyPackageVersion + ".msp"
-$checksum_msp = '024529C760808A73EAC86FAB587332C6689E4505CAD325F19932C9E998FC363A'
+$checksum_msp = '1133FA489B8292847A342A710A8FD0D4FC29775A6F438B65CE9BF1C94DABDB60'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
