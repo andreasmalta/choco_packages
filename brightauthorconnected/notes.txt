@@ -1,7 +1,7 @@
 #https://www.brightsign.biz/resources/software-downloads/
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
-PowerShell -File newversion.ps1 -ExecutionPolicy Bypass
+#PowerShell -File newversion.ps1 -ExecutionPolicy Bypass
 
 #INSTALL
 choco pack

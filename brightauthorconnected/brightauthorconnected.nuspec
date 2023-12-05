@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>brightauthorconnected</id>
-    <version>1.19.4</version>
+    <version>1.26.3</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/brightauthorconnected</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>BrightAuthor:connected</title>
     <authors>BrightSign</authors>
-    <projectUrl>https://www.brightsign.biz/digital-signage-products/software/brightauthorconnected</projectUrl>
+    <projectUrl>https://www.brightsign.biz/brightsign-players/software</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/brightauthorconnected/icon.png</iconUrl>
     <licenseUrl>https://www.brightsign.biz/legal/acceptable-use-policy</licenseUrl>
     <docsUrl>https://brightsign.atlassian.net/wiki/spaces/DOC/pages/378833066/BrightAuthor+connected</docsUrl>
