@@ -1,6 +1,5 @@
 #https://www.hp.com/us-en/solutions/cloud-computing/thin-client-software.html
-checksum -t sha256 -f HPThinUpdate-02.06.22-Win32.msi
-checksum -t sha256 -f HPThinUpdate-02.06.22-Win64.msi
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
@@ -13,4 +12,4 @@ choco upgrade thinupdate -y -dv -s .
 
 #UNINSTALL
 choco uninstall thinupdate -y
-choco push thinupdate.2.06.22.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
