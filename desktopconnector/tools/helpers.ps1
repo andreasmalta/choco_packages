@@ -13,5 +13,4 @@ Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVe
 	if($($_.PSChildName) -like '{*') { Uninstall-ChocolateyPackage -PackageName "$($_.DisplayName)" -FileType "msi" -SilentArgs "$($silentArgs)" -File '' -ValidExitCodes $validExitCodes }
 	Remove-Item $_.PsPath -Recurse -ErrorAction Ignore
 	}
-if (Test-Path $FolderName) { Remove-Item $FolderName -Recurse -Force }
 }
