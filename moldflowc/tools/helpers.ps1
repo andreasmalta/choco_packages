@@ -1,4 +1,12 @@
 function Invoke-UninstallOldMFC {
+
+#Close software if open
+Get-Process "mfresview*" -ErrorAction SilentlyContinue | Stop-Process -Force
+
+#Remove reboot requests that might stop un/installations
+$RegRebootRequired = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired"
+Remove-Item -Path $RegRebootRequired -ErrorAction SilentlyContinue
+
 $packageName = '*Moldflow Communicator*'
 $folderRoot = 'C:\Program Files\Autodesk'
 $validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)

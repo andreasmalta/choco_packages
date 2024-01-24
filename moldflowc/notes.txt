@@ -6,4 +6,4 @@ choco install moldflowc -y -dv -s .
 
 #UNINSTALL
 choco uninstall moldflowc -y
-choco push moldflowc.2023.0.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
