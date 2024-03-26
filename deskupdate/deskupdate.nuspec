@@ -15,7 +15,7 @@
     <tags>fujitsu driver desk update</tags>
     <summary>Fujitsu DeskUpdate (Setup)</summary>
     <description>DeskUpdate searches the Fujitsu database for new drivers, BIOS updates and system-specific software packages for your system. You can decide which of the identified packages should be locally installed or updated.</description>
-    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/deskupdate/ReleaseNotes.txt</releaseNotes>
+    <releaseNotes>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/deskupdate/ReleaseNotes.TXT</releaseNotes>
 	<dependencies>
       <dependency id="dotnetfx" version="4.5.2.0" />
     </dependencies>
