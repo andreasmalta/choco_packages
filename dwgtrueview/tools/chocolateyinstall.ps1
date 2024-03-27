@@ -1,5 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$downloadsPath = (New-Object -ComObject Shell.Application).Namespace('shell:Downloads').Self.Path
 
 #UNINSTALL OLD VERSIONS
 . $toolsDir\helpers.ps1
@@ -20,22 +21,25 @@ $file = Join-Path $env:TEMP 'DWGTrueView_2024_Japanese_64bit_dlm\setup.exe'
 }
 
 else {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/9C02048D-D0DB-3E06-B903-89BD24380AAD/SFX/DWGTrueView_2024_English_64bit_dlm.sfx.exe'
-$checksum = 'F6B52F8E01A2951773433D5B8A1491B21E77F8E157870594DB57FEDDCBA7C5BC'
-$file = Join-Path $env:TEMP 'DWGTrueView_2024_English_64bit_dlm\Setup.exe'
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage147973027416102.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2025_English_WIN64.exe%22&'
+$checksum = 'F4C8686E8A10E830E818B009E6F506A1D1313CCFC66663A14C497C33932229A9'
+$file = Join-Path $env:TEMP 'DWG TrueView 2025 - English - (EN)\Setup.exe'
 }
 
-$packageArgsUnzip = @{
+$packageArgsDownload = @{
   packageName    = 'DWG TrueView Installation Files'
   fileType       = 'exe'
   url            = $url
   softwareName   = 'DWG TrueView Installation Files*'
   checksum       = $checksum
   checksumType   = 'sha256'
-  silentArgs     = "-suppresslaunch -d $env:TEMP"
+  silentArgs     = "-q"
   validExitCodes = @(0, 3010, 1641)
 }
-Install-ChocolateyPackage @packageArgsUnzip
+Install-ChocolateyPackage @packageArgsDownload
+
+$downloads = Join-Path $downloadsPath 'Autodesk'
+Move-Item -Path $downloads -Destination $env:TEMP
 
 $packageArgs  = @{
   packageName    = 'DWG TrueView'
