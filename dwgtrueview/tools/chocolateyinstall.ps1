@@ -23,7 +23,7 @@ $file = Join-Path $env:TEMP 'DWGTrueView_2024_Japanese_64bit_dlm\setup.exe'
 else {
 $url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage147973027416102.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2025_English_WIN64.exe%22&'
 $checksum = 'F4C8686E8A10E830E818B009E6F506A1D1313CCFC66663A14C497C33932229A9'
-$file = Join-Path $env:TEMP 'DWG TrueView 2025 - English - (EN)\Setup.exe'
+$file = Join-Path $downloadsPath 'Autodesk\DWG TrueView 2025 - English - (EN)\Setup.exe'
 }
 
 $packageArgsDownload = @{
@@ -37,9 +37,6 @@ $packageArgsDownload = @{
   validExitCodes = @(0, 3010, 1641)
 }
 Install-ChocolateyPackage @packageArgsDownload
-
-$downloads = Join-Path $downloadsPath 'Autodesk'
-Move-Item -Path $downloads -Destination $env:TEMP
 
 $packageArgs  = @{
   packageName    = 'DWG TrueView'
