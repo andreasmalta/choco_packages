@@ -8,7 +8,7 @@
     <owners>aa.malta</owners>
     <title>DWG TrueView</title>
     <authors>Autodesk</authors>
-    <projectUrl>https://www.autodesk.com/products/dwg</projectUrl>
+    <projectUrl>https://www.autodesk.com/products/dwg-trueview/overview</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
     <docsUrl>https://knowledge.autodesk.com/support/dwg-trueview</docsUrl>
