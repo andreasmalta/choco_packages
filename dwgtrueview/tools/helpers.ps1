@@ -1,4 +1,4 @@
-function Invoke-UninstallOld {
+function Invoke-UninstallDWGTrueView {
 	
 #Close software if open
 Get-Process "dwgviewr*" -ErrorAction SilentlyContinue | Stop-Process -Force

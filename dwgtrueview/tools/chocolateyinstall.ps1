@@ -4,25 +4,25 @@ $downloadsPath = (New-Object -ComObject Shell.Application).Namespace('shell:Down
 
 #UNINSTALL OLD VERSIONS
 . $toolsDir\helpers.ps1
-Invoke-UninstallOld
+Invoke-UninstallDWGTrueView
 
 #EXTRACT AND INSTALL
 $pp = Get-PackageParameters
 if ($pp.'French') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/2D15294B-542A-393B-9197-37F3D33DEFF3/SFX/DWGTrueView_2024_French_64bit_dlm.sfx.exe'
-$checksum = '3E36ACDBD06EA7A348F57005546155B9B49538F6E821333D8157FE9958DE4A49'
-$file = Join-Path $env:TEMP 'DWGTrueView_2024_French_64bit_dlm\setup.exe'
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage301407108829295.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2025_French_WIN64.exe%22&'
+$checksum = 'B69C16C885792279587410CD9A657B3A8FA81D9CCEE94BFF7515611942B4B11F'
+$file = Join-Path $downloadsPath 'Autodesk\DWG TrueView 2025 - Français (French) - (FR)\Setup.exe'
 }
 
 elseif ($pp.'Japanese') {
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/ACD/9C18555B-A10A-36B3-9F02-4815156C448B/SFX/DWGTrueView_2024_Japanese_64bit_dlm.sfx.exe'
-$checksum = 'C3FA4C1639BD2748B0F16725434A0F0F00DDA62FBDDF54907FA24D85DB722F61'
-$file = Join-Path $env:TEMP 'DWGTrueView_2024_Japanese_64bit_dlm\setup.exe'
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage301460557392996.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2025_Japanese_WIN64.exe%22&'
+$checksum = '444BDE2C1E35AA5892FE758A77CA0B518AB0CD96CF01A01DE41655472B260F1D'
+$file = Join-Path $downloadsPath 'Autodesk\DWG TrueView 2025 - 日本語(Japanese) - (JA)\Setup.exe'
 }
 
 else {
 $url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage147973027416102.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2025_English_WIN64.exe%22&'
-$checksum = 'F4C8686E8A10E830E818B009E6F506A1D1313CCFC66663A14C497C33932229A9'
+$checksum = 'D9DCE8A2D3B8EDDA12D6555FAB53B7286E2BDF01E93261F8750376255B68CC14'
 $file = Join-Path $downloadsPath 'Autodesk\DWG TrueView 2025 - English - (EN)\Setup.exe'
 }
 

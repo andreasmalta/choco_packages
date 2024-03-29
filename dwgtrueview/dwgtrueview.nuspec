@@ -20,7 +20,7 @@
 Operating System: 64-bit Microsoft® Windows® 11 or Windows 10 version 1809 or above. 
 
 #### Package Parameters
-The following package parameters can be set (choose only one!):
+The following package parameters can be set:
 
  * `/French:` - Install French language version
  * `/Japanese:` - Install Japanese language version
