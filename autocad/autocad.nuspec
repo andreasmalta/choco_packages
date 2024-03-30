@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>autocad</id>
-    <version>2024.24.3.610</version>
+    <version>2025.24.3.610</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/autocad</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>AutoCAD</title>
@@ -11,12 +11,12 @@
     <projectUrl>https://www.autodesk.com/products/autocad/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/autocad/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/ACD/2024/ENU/</docsUrl>
+    <docsUrl>https://help.autodesk.com/view/ACD/2025/ENU/</docsUrl>
     <tags>autodesk autocad dwg cad drawing</tags>
     <summary>AutoCAD</summary>
     <description>AutoCAD is computer-aided design (CAD) software that is used for precise 2D and 3D drafting, design, and modeling with solids, surfaces, mesh objects, documentation features, and more. It includes features to automate tasks and increase productivity such as comparing drawings, counting, adding objects, and creating tables. It also comes with seven industry-specific toolsets for electrical design, plant design, architecture layout drawings, mechanical design, 3D mapping, adding scanned images, and converting raster images. AutoCAD enables users to create, edit, and annotate drawings via desktop, web, and mobile devices.
 
-#### System requirements for AutoCAD 2024
+#### System requirements for AutoCAD 2025
 Operating System: 64-bit Microsoft® Windows® 11 and Windows 10 version 1809 or above.
 
 #### Package Parameters
@@ -38,7 +38,7 @@ The following package parameters can be set (choose only one!):
 
 To pass parameters, use `--params "''"` (e.g. `choco install autocad --params="'/ChineseSimp'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.</description>
-    <releaseNotes>https://help.autodesk.com/view/ACD/2024/ENU/?guid=AUTOCAD_2024_RELEASE_NOTES</releaseNotes>
+    <releaseNotes>https://help.autodesk.com/view/ACD/2025/ENU/?guid=AUTOCAD_2025_RELEASE_NOTES</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

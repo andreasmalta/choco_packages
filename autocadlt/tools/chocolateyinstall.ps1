@@ -5,6 +5,50 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . $toolsDir\helpers.ps1
 Invoke-UninstallOld
 
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage412979011845822.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Czech_WIN64.exe%22&
+A28489C93F4EED3F1B04B75519BAA9B18F78F4126D8F9A6CE03E5E97606ED545
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415207093511714.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_English_WIN64.exe%22&
+45A88C9E11D227A278DF871A354F667FA8FFBB02B8422B64A901762A6DEB6975
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415267695417532.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_French_WIN64.exe%22&
+0F4BCD8B55D77493E87AF3ABA77E424A8DB6A5FDAD98DBBF91D2015D78D16446
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415236449468016.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_German_WIN64.exe%22&
+64673B143173145B5C8390947A795D15B0B285C67B724D6369428BAFEAF668D7
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415549223910672.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Hungarian_WIN64.exe%22&
+A7E95425DD0475BA57894EDAF527CDBCD70D638833E468D330CE353A09486BEF
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415784277134000.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Italian_WIN64.exe%22&
+ECBD1B15132D6AC8514E56B939DACBA848346468109D4495C1BBC01B2B316607
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415627557409269.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Japanese_WIN64.exe%22&
+69880332EB70FC2410D0F8397EACEE653AC4A8F3D50F603C910571F40E521A53
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415669233982200.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Korean_WIN64.exe%22&
+34806095D784647CBF50D4A70F275D7544DE4DEE8E7460FEA3E0669AD80BFD8A
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415918911731613.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Polish_WIN64.exe%22&
+F490F360146AC18E54627703117813D43C82E0233AB6AD75868BC3D18DD1EFE1
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415736928653045.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Portuguese_WIN64.exe%22&
+A8AF9F90CBF024F75C50B627AEF6D75DB67B750520D953010E930856D1EF3D5B
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415759362201302.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Russian_WIN64.exe%22&
+DFC7050C5690C4DA0F1884252ED0F32A0314E7BD1F715986957A32F546769FF0
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415989595934009.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Simplified_Chinese_WIN64.exe%22&
+414D4189FE7C38D183E7C93C2D59B06FC2A2ED51259E228E76FEA11CDC950349
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415809385681467.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Spanish_WIN64.exe%22&
+EDF5E03629FAD0F8B476F10C36D69417B4442F581082EEA42A938532208FB338
+
+https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage415838252210817.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_ACDLT_2025_Traditional_Chinese_WIN64.exe%22&
+C0C58D900832BE0180A64F459C8371F76A1FA61BD6E7B105F90A0A90A5380BE9
+
+
 #LANGUAGES AND INSTALL
 $pp = Get-PackageParameters
 if ($pp.'ChineseSimp') {

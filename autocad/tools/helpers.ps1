@@ -1,4 +1,4 @@
-function Invoke-UninstallOld {
+function Invoke-UninstallAutoCAD {
 
 #Close software if open
 Get-Process "acad*", "AcEventSync*", "AcQMod*" -ErrorAction SilentlyContinue | Stop-Process -Force
