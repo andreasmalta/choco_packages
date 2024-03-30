@@ -1,39 +1,104 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$downloadsPath = (New-Object -ComObject Shell.Application).Namespace('shell:Downloads').Self.Path
 
 #UNINSTALL OLD VERSIONS
 . $toolsDir\helpers.ps1
-Invoke-UninstallOld
+Invoke-UninstallInventor
 
-#DOWNLOAD
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/INVPROSA/0B739F57-E75B-3A3D-B2A3-BFB7B2346754/SFX/Inventor_Pro_2024_English_Win_64bit_Dlm_001_003.sfx.exe'
-$checksum1 = '8682FB60093D1A9B2366890B05CDF7DAA0B470018F9B93D87E260F1158366201'
-$part1 = $env:TEMP + '\Inventor_Pro_2024_English_Win_64bit_Dlm_001_003.sfx.exe'
-Get-ChocolateyWebFile -PackageName 'AutoCAD Download Part 1' -FileFullPath $part1 -Url $url1 -Checksum $checksum1 -ChecksumType 'sha256'
+#EXTRACT AND INSTALL
+$pp = Get-PackageParameters
 
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/INVPROSA/0B739F57-E75B-3A3D-B2A3-BFB7B2346754/SFX/Inventor_Pro_2024_English_Win_64bit_Dlm_002_003.sfx.exe'
-$checksum2 = 'D2AB77925B3B31A5F9E716558ED990EBE1F5D71AFE47EB465E02304D289EA342'
-$part2 = $env:TEMP + '\Inventor_Pro_2024_English_Win_64bit_Dlm_002_003.sfx.exe'
-Get-ChocolateyWebFile -PackageName 'AutoCAD Download Part 2' -FileFullPath $part2 -Url $url2 -Checksum $checksum2 -ChecksumType 'sha256'
+if ($pp.'ChineseSimp') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385696437542230.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Simplified_Chinese_WIN64.exe%22&'
+$checksum = '0CDF93B094E7B36E49982C67B60A7A5A4B4262236A931069D33E10DD347E6D63'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (ZH)\Setup.exe'
+}
 
-$url3 = 'https://efulfillment.autodesk.com/NetSWDLD/2024/INVPROSA/0B739F57-E75B-3A3D-B2A3-BFB7B2346754/SFX/Inventor_Pro_2024_English_Win_64bit_Dlm_003_003.sfx.exe'
-$checksum3 = '99CA5A64347666FC20A4B79965517E3887AFC8446E314FB8624D41CDAB7BF8C8'
-$part3 = $env:TEMP + '\Inventor_Pro_2024_English_Win_64bit_Dlm_003_003.sfx.exe'
-Get-ChocolateyWebFile -PackageName 'AutoCAD Download Part 3' -FileFullPath $part3 -Url $url3 -Checksum $checksum3 -ChecksumType 'sha256'
+elseif ($pp.'ChineseTrad') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385579577463003.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Traditional_Chinese_WIN64.exe%22&'
+$checksum = '2A2867E1DFBEF1589878B80E829BAF05F8F0ACE2EC6DE40257F8EDB60FEED6CE'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (ZH)\Setup.exe'
+}
 
-#EXTRACT
-$packageArgsUnzip  = @{
+elseif ($pp.'Czech') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385221052944295.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Czech_WIN64.exe%22&'
+$checksum = '4B5D8EE885DFFFA6E58E6F67AA7799E4DB678E5190A06C90DFE5E0FA3C7C608C'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (CS)\Setup.exe'
+}
+
+elseif ($pp.'French') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385412582400660.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_French_WIN64.exe%22&'
+$checksum = '6CFF7507E6A4EA6AEBA0D669B785DA304C9B8B6291FFF1BB5824DEE747E12B55'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (FR)\Setup.exe'
+}
+
+elseif ($pp.'German') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385410714722930.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_German_WIN64.exe%22&'
+$checksum = '4D6448E0AE72FDC1016BBAE85551D37959E3754C67D2DDB5C0369F858FF0D28E'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (DE)\Setup.exe'
+}
+
+elseif ($pp.'Italian') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385611031214626.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Italian_WIN64.exe%22&'
+$checksum = 'C3A6FBDEA23320B672EBC8640E046794EDCB5133BF6B6F8E353937B2177FCDF8'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (IT)\Setup.exe'
+}
+
+elseif ($pp.'Japanese') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385423275029503.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Japanese_WIN64.exe%22&'
+$checksum = '2D5A0D80430496287DE0F3CF1E1CDC8ACD2B079DAFD8E96E977CD22F1F047BBB'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (JA)\Setup.exe'
+}
+
+elseif ($pp.'Korean') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385447193465575.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Korean_WIN64.exe%22&'
+$checksum = 'A2DA42DA38FB4366DBBA0BBBF13CB6488F39DAF6328BA0C641006B7A2BA3FBDD'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (KO)\Setup.exe'
+}
+
+elseif ($pp.'Polish') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385447150630255.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Polish_WIN64.exe%22&'
+$checksum = '6E14129D61622EA9A0B28D6477D080DE8BA89909811FCF08765C8D50C9B7C12D'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (PL)\Setup.exe'
+}
+
+elseif ($pp.'Portuguese') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385501169826183.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Portuguese_WIN64.exe%22&'
+$checksum = '6970F1541A2C8EEA874CCBC2D3BD9E98997ECC4F07841F00575C62AD79CC4900'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (PT)\Setup.exe'
+}
+
+elseif ($pp.'Russian') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385496953211724.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Russian_WIN64.exe%22&'
+$checksum = 'CD8B3281A40D9610F64661FEAB301C96BB931D177DD1149A2469A1CB59F89FE2'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (RU)\Setup.exe'
+}
+
+elseif ($pp.'Spanish') {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385524285822504.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_Spanish_WIN64.exe%22&'
+$checksum = '50CABCBFCEC7538ACE182E46ADECABBF6FA3CA9D347D4B279C30824EB20ECD78'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (ES)\Setup.exe'
+}
+
+else {
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage385384228834525.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_INVPROSA_2025_English_WIN64.exe%22&'
+$checksum = 'FC3DEBCD476D84F3BB796B6265E9C2DC756C54DDA1B19B8A2D8DCE51BDE5F5B1'
+$file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (EN)\Setup.exe'
+}
+
+$packageArgsDownload = @{
   packageName    = 'Inventor Installation Files'
   fileType       = 'exe'
-  file           = $part1
+  url            = $url
   softwareName   = 'Inventor Installation Files*'
-  silentArgs     = "-suppresslaunch -d $env:TEMP"
+  checksum       = $checksum
+  checksumType   = 'sha256'
+  silentArgs     = "-q"
   validExitCodes = @(0, 3010, 1641)
 }
-Install-ChocolateyInstallPackage @packageArgsUnzip
+Install-ChocolateyPackage @packageArgsDownload
 
-#INSTALL
-$file = $env:TEMP + '\Inventor_Pro_2024_English_Win_64bit_Dlm\Setup.exe'
 $packageArgs  = @{
   packageName    = 'Inventor'
   fileType       = 'exe'

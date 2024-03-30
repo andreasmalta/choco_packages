@@ -1,4 +1,4 @@
-function Invoke-UninstallOld {
+function Invoke-UninstallInventor {
 
 #Close software if open
 Get-Process "Inventor*", "InvRO*", "dwgviewr*" -ErrorAction SilentlyContinue | Stop-Process -Force
