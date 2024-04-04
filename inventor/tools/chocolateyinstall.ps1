@@ -2,11 +2,7 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $downloadsPath = (New-Object -ComObject Shell.Application).Namespace('shell:Downloads').Self.Path
 
-#UNINSTALL OLD VERSIONS
-. $toolsDir\helpers.ps1
-Invoke-UninstallInventor
-
-#EXTRACT AND INSTALL
+#1 LANGUAGE SELECTION
 $pp = Get-PackageParameters
 
 if ($pp.'ChineseSimp') {
@@ -87,6 +83,7 @@ $checksum = 'FC3DEBCD476D84F3BB796B6265E9C2DC756C54DDA1B19B8A2D8DCE51BDE5F5B1'
 $file = Join-Path $downloadsPath 'Autodesk\Inventor Professional 2025 - (EN)\Setup.exe'
 }
 
+#2 DOWNLOAD
 $packageArgsDownload = @{
   packageName    = 'Inventor Installation Files'
   fileType       = 'exe'
@@ -99,6 +96,11 @@ $packageArgsDownload = @{
 }
 Install-ChocolateyPackage @packageArgsDownload
 
+#3 UNINSTALL OLD
+. $toolsDir\helpers.ps1
+Invoke-UninstallInventor
+
+#4 INSTALL
 $packageArgs  = @{
   packageName    = 'Inventor'
   fileType       = 'exe'
