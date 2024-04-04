@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dwgtrueview</id>
-    <version>2025.0.58.0</version>
+    <version>2025.0.58.1</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>DWG TrueView</title>

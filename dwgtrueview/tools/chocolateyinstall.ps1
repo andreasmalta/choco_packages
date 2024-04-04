@@ -2,11 +2,7 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $downloadsPath = (New-Object -ComObject Shell.Application).Namespace('shell:Downloads').Self.Path
 
-#UNINSTALL OLD VERSIONS
-. $toolsDir\helpers.ps1
-Invoke-UninstallDWGTrueView
-
-#EXTRACT AND INSTALL
+#1 LANGUAGE SELECTION
 $pp = Get-PackageParameters
 if ($pp.'French') {
 $url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage301407108829295.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2025_French_WIN64.exe%22&'
@@ -21,11 +17,12 @@ $file = Join-Path $downloadsPath 'Autodesk\DWG TrueView 2025 - 日本語(Japanes
 }
 
 else {
-$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage147973027416102.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2025_English_WIN64.exe%22&'
-$checksum = 'D9DCE8A2D3B8EDDA12D6555FAB53B7286E2BDF01E93261F8750376255B68CC14'
+$url = 'https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage811010659915909.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2025_English_WIN64.exe%22&'
+$checksum = '89FEE1F0F66ADB825B945850CDEA7FD4C02832852DF67578C28CE5F370B6A821'
 $file = Join-Path $downloadsPath 'Autodesk\DWG TrueView 2025 - English - (EN)\Setup.exe'
 }
 
+#2 DOWNLOAD
 $packageArgsDownload = @{
   packageName    = 'DWG TrueView Installation Files'
   fileType       = 'exe'
@@ -38,6 +35,11 @@ $packageArgsDownload = @{
 }
 Install-ChocolateyPackage @packageArgsDownload
 
+#3 UNINSTALL OLD
+. $toolsDir\helpers.ps1
+Invoke-UninstallDWGTrueView
+
+#4 INSTALL
 $packageArgs  = @{
   packageName    = 'DWG TrueView'
   fileType       = 'exe'
