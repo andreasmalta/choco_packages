@@ -1,8 +1,5 @@
-#Download "Create_Installer_***.exe, run to extract installation folder:
-#Open setup.xml and copy UPI2, replace in download link:
-#https://efulfillment.autodesk.com/NetSWDLD/{YEAR}/ACD/{UPI2}/SFX/DWGTrueView_{YEAR}_{Language}_64bit_dlm.sfx.exe
+#Copy version (buildnumber) from setup.xml
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
-#Copy also version (buildnumber) from above setup.xml
 
 #INSTALL
 choco pack
