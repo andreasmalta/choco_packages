@@ -14,3 +14,9 @@ choco upgrade dwgtrueview -y -dv -s .
 #UNINSTALL
 choco uninstall dwgtrueview -y
 FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
+
+
+
+https://community.chocolatey.org/packages/psexec
+psexec -i -s powershell
+C:\ProgramData\Autodesk\Downloads\DWG TrueView 2025 - English - (EN)

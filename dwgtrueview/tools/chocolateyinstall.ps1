@@ -5,18 +5,19 @@ $downloadsPath = (New-Object -ComObject Shell.Application).Namespace('shell:Down
 #1 LANGUAGE SELECTION
 $pp = Get-PackageParameters
 if ($pp.'French') {
-$url = 'https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/Autodesk_DWG_TrueView_2025_fr-FR_setup_webinstall.exe'
-$checksum = 'D7CB1D080408C55DB49A510345F6ABD409ECFA0C166284019E441EC35C6CD3CF'
+$url = 'Create_Installer_PLC0000037_2025_French_WIN64.exe'
+$checksum = '2B2BBA43913B7D637424F3CED974BFFA765D958D3767B50DDB8A0C086C082817'
 }
 
 elseif ($pp.'Japanese') {
-$url = 'https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/Autodesk_DWG_TrueView_2025_ja-JP_setup_webinstall.exe'
-$checksum = 'D328C2D5E63D483E9D4D5D0EF658124DBED51BD083B3F01A5FF5D56CC8947BF5'
+$url = 'Create_Installer_PLC0000037_2025_Japanese_WIN64.exe'
+$checksum = '7FFDFAA74F6901D19871F8695A5D566C9C24A474D6A4547D7E61B80475E2C65B'
 }
 
 else {
-$url = 'https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/dwgtrueview/Autodesk_DWG_TrueView_2025_en-US_setup_webinstall.exe'
-$checksum = '1145E637E55C6C7611FFCBA3CF080CB880B66EC7219E2334EDF9FF274610C2D7'
+$url = 'C:\temp\dwgtrueview\tools\Create_Installer_PLC0000037_2025_English_WIN64.exe'
+#$url = 'https://github.com/andreasmalta/choco_packages/blob/master/dwgtrueview/Autodesk_DWG_TrueView_2025_en-US_setup_webinstall.exe'
+$checksum = '95F44835389B272A7EEBC9FF494EE7DE776D12DF6FD8AE0520B9FAACB52E2358'
 }
 
 #2 UNINSTALL OLD
