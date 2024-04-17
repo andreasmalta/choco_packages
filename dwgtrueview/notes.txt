@@ -1,4 +1,5 @@
-#Copy version (buildnumber) from setup.xml
+#Download "Create_Installer_***.exe, run to extract installation folder.
+#Find setup.xml, use UPI2 to adjust download url, use buildnumber as version
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
@@ -14,9 +15,3 @@ choco upgrade dwgtrueview -y -dv -s .
 #UNINSTALL
 choco uninstall dwgtrueview -y
 FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
-
-
-
-https://community.chocolatey.org/packages/psexec
-psexec -i -s powershell
-C:\ProgramData\Autodesk\Downloads\DWG TrueView 2025 - English - (EN)
