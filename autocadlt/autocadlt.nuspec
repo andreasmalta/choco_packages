@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>autocadlt</id>
-    <version>2024.24.3.630</version>
+    <version>2025.0.58.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/autocadlt</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>AutoCAD LT</title>
@@ -11,13 +11,13 @@
     <projectUrl>https://www.autodesk.com/products/autocad-lt/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/autocadlt/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/ACDLT/2024/ENU/</docsUrl>
+    <docsUrl>https://help.autodesk.com/view/ACDLT/2025/ENU/</docsUrl>
     <tags>autodesk autocad dwg cad 2D drawing</tags>
     <summary>AutoCAD LT</summary>
     <description>AutoCAD LT is CAD software that is used for precise 2D drafting, design, and documentation. It includes features to automate tasks and increase productivity such as comparing drawings, counting, adding objects, and creating tables. AutoCAD LT enables users to create, edit, and annotate drawings via desktop, web, and mobile devices.
 
-#### System requirements for AutoCAD LT 2024
-Operating System: Microsoft® Windows® 11 or Windows 10 version 1809 or above.
+#### System requirements for AutoCAD LT 2025
+Operating System: 64-bit Microsoft® Windows® 11 or Windows 10 version 1809 or above.
 
 #### Package Parameters
 The following package parameters can be set (choose only one!):
@@ -38,7 +38,7 @@ The following package parameters can be set (choose only one!):
 
 To pass parameters, use `--params "''"` (e.g. `choco install autocadlt --params="'/French'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.</description>
-    <releaseNotes>https://help.autodesk.com/view/ACDLT/2024/ENU/?guid=AUTOCADLT_2024_RELEASE_NOTES</releaseNotes>
+    <releaseNotes>https://help.autodesk.com/view/ACDLT/2025/ENU/?guid=AUTOCADLT_2025_RELEASE_NOTES</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
