@@ -1,27 +1,22 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-#UNINSTALL OLD VERSIONS
+#1 DOWNLOAD
+$url1 = 'https://dds.autodesk.com/NetSWDLD/ODIS/prd/2025/NAVFREE/D3B0AE93-EFDC-396F-8A81-AAA853DF7637/SFX/Autodesk_Navisworks_Freedom_2025_Win_64bit_db_001_002.exe'
+$checksum1 = '4B8DB2FA87F0B6DAE7589DAEEFD5F24D85B3057FC5796BFA79B0D453AF429336'
+$file = $env:TEMP + '\Autodesk_Navisworks_Freedom_2025_Win_64bit_db_001_002.exe'
+Get-ChocolateyWebFile -PackageName 'EXE package' -FileFullPath $file -Url $url1 -Checksum $checksum1 -ChecksumType 'sha256'
+
+$url2 = 'https://dds.autodesk.com/NetSWDLD/ODIS/prd/2025/NAVFREE/D3B0AE93-EFDC-396F-8A81-AAA853DF7637/SFX/Autodesk_Navisworks_Freedom_2025_Win_64bit_db_002_002.7z'
+$checksum2 = 'CB56B76A93448F02D12FDFAC1957F597F32C5911ECDABB6B886902FF1D60BC07'
+$zip = $env:TEMP + '\Autodesk_Navisworks_Freedom_2025_Win_64bit_db_002_002.7z'
+Get-ChocolateyWebFile -PackageName 'ZIP package' -FileFullPath $zip -Url $url2 -Checksum $checksum2 -ChecksumType 'sha256'
+
+#2 UNINSTALL OLD VERSIONS
 . $toolsDir\helpers.ps1
 Invoke-UninstallOld
 
-#EXTRACT AND INSTALL
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/2024/NAVFREE/00C73B59-6FB8-32FF-B85F-F4CF5EBE4C3F/SFX/Autodesk_Navisworks_Freedom_2024_Win_64bit_dlm.sfx.exe'
-$checksum = '38932F5350F849D22C839DE6C00F4A1A975F7BC835A5190014C082162041834F'
-$file = Join-Path $env:TEMP 'Autodesk_Navisworks_Freedom_2024_Win_64bit_dlm\Setup.exe'
-
-$packageArgsUnzip = @{
-  packageName    = 'Navisworks Freedom Installation Files'
-  fileType       = 'exe'
-  url            = $url
-  softwareName   = 'Navisworks Freedom Installation Files*'
-  checksum       = $checksum
-  checksumType   = 'sha256'
-  silentArgs     = "-suppresslaunch -d $env:TEMP"
-  validExitCodes = @(0, 3010, 1641)
-}
-Install-ChocolateyPackage @packageArgsUnzip
-
+#3 INSTALL
 $packageArgs  = @{
   packageName    = 'Navisworks Freedom'
   fileType       = 'exe'
