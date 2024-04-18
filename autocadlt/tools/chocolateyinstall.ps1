@@ -4,21 +4,21 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 #1 LANGUAGE SELECTION
 $pp = Get-PackageParameters
 if ($pp.'ChineseSimp') {
-$url1 = 'https://efulfillment.autodesk.com'
-$checksum1 = 'xxxxx'
-$file = $env:TEMP + '\xxxx.exe'
-$url2 = 'https://efulfillment.autodesk.com'
-$checksum2 = 'xxxxx'
-$zip = $env:TEMP + '\xxxx.7z'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/52A709C6-73F2-35D7-A5F6-D219D5A1079E/SFX/AutoCAD_LT_2025_Simplified_Chinese_Win_64bit_db_001_002.exe'
+$checksum1 = 'BC521215F0169D780EDF7C2D9F3F70DF0D337AAC5B390EBE2F80C9C4E0AC09F1'
+$file = $env:TEMP + '\AutoCAD_LT_2025_Simplified_Chinese_Win_64bit_db_001_002.exe'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/52A709C6-73F2-35D7-A5F6-D219D5A1079E/SFX/AutoCAD_LT_2025_Simplified_Chinese_Win_64bit_db_002_002.7z'
+$checksum2 = 'BFC1C7903C612F3E6C20F718D56B1F31240CBF3CA92442DE984E26B42BE6E9E6'
+$zip = $env:TEMP + '\AutoCAD_LT_2025_Simplified_Chinese_Win_64bit_db_002_002.7z'
 }
 
 elseif ($pp.'ChineseTrad') {
-$url1 = 'https://efulfillment.autodesk.com'
-$checksum1 = 'xxxxx'
-$file = $env:TEMP + '\xxxx.exe'
-$url2 = 'https://efulfillment.autodesk.com'
-$checksum2 = 'xxxxx'
-$zip = $env:TEMP + '\xxxx.7z'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/CA6AA7E3-FE15-3F16-A82D-C7DB961FEE58/SFX/AutoCAD_LT_2025_Traditional_Chinese_Win_64bit_db_001_002.exe'
+$checksum1 = 'F141248DFD8597D1D07E10B47E6E71AF9BC9FF73E7598F70ADC211F423FF5019'
+$file = $env:TEMP + '\AutoCAD_LT_2025_Traditional_Chinese_Win_64bit_db_001_002.exe'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/CA6AA7E3-FE15-3F16-A82D-C7DB961FEE58/SFX/AutoCAD_LT_2025_Traditional_Chinese_Win_64bit_db_002_002.7z'
+$checksum2 = '12CB7802D836BE4E9C7F9224B240EC22678933FC4DC690D119BAF27DC95E5BE6'
+$zip = $env:TEMP + '\AutoCAD_LT_2025_Traditional_Chinese_Win_64bit_db_002_002.7z'
 }
 
 elseif ($pp.'Czech') {
@@ -76,48 +76,48 @@ $zip = $env:TEMP + '\AutoCAD_LT_2025_Japanese_Win_64bit_db_002_002.7z'
 }
 
 elseif ($pp.'Korean') {
-$url1 = 'https://efulfillment.autodesk.com'
-$checksum1 = 'xxxxx'
-$file = $env:TEMP + '\xxxx.exe'
-$url2 = 'https://efulfillment.autodesk.com'
-$checksum2 = 'xxxxx'
-$zip = $env:TEMP + '\xxxx.7z'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/DB6A0DA8-2768-314F-92DB-A40FAAD7036A/SFX/AutoCAD_LT_2025_Korean_Win_64bit_db_001_002.exe'
+$checksum1 = '1DC78D76B9B10AF3920D5DA4DE58B1F5313E9C34EF9ECA07B9F3E4CAB4078B55'
+$file = $env:TEMP + '\AutoCAD_LT_2025_Korean_Win_64bit_db_001_002.exe'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/DB6A0DA8-2768-314F-92DB-A40FAAD7036A/SFX/AutoCAD_LT_2025_Korean_Win_64bit_db_002_002.7z'
+$checksum2 = '1A0F78FAF24F4C656274F92AB5F6A5C00D30DE8B9AD887FFBF7270A23B8E354D'
+$zip = $env:TEMP + '\AutoCAD_LT_2025_Korean_Win_64bit_db_002_002.7z'
 }
 
 elseif ($pp.'Polish') {
-$url1 = 'https://efulfillment.autodesk.com'
-$checksum1 = 'xxxxx'
-$file = $env:TEMP + '\xxxx.exe'
-$url2 = 'https://efulfillment.autodesk.com'
-$checksum2 = 'xxxxx'
-$zip = $env:TEMP + '\xxxx.7z'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/2FA1F611-22BA-334D-BAAD-C1729A1CF28A/SFX/AutoCAD_LT_2025_Polish_Win_64bit_db_001_002.exe'
+$checksum1 = 'FDE66D25DBBC1EC9EDD3623B4C0F7CB2C60D22A6AEE62D9901090D1653C882BE'
+$file = $env:TEMP + '\AutoCAD_LT_2025_Polish_Win_64bit_db_001_002.exe'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/2FA1F611-22BA-334D-BAAD-C1729A1CF28A/SFX/AutoCAD_LT_2025_Polish_Win_64bit_db_002_002.7z'
+$checksum2 = 'D45DC88B1D77C3BF7405AEEEA4E938DB652612A023B61B4082E6A048AB882FBC'
+$zip = $env:TEMP + '\AutoCAD_LT_2025_Polish_Win_64bit_db_002_002.7z'
 }
 
 elseif ($pp.'Portuguese') {
-$url1 = 'https://efulfillment.autodesk.com'
-$checksum1 = 'xxxxx'
-$file = $env:TEMP + '\xxxx.exe'
-$url2 = 'https://efulfillment.autodesk.com'
-$checksum2 = 'xxxxx'
-$zip = $env:TEMP + '\xxxx.7z'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/336838AD-BE91-3FD2-9012-F829AD7CCCFD/SFX/AutoCAD_LT_2025_Brazilian_Portuguese_Win_64bit_db_001_002.exe'
+$checksum1 = 'FD1092DD6EB2A622BB61BB878269ED1E25E1E9E79C21919E17BD7B2ADB04B7F0'
+$file = $env:TEMP + '\AutoCAD_LT_2025_Brazilian_Portuguese_Win_64bit_db_001_002.exe'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/336838AD-BE91-3FD2-9012-F829AD7CCCFD/SFX/AutoCAD_LT_2025_Brazilian_Portuguese_Win_64bit_db_002_002.7z'
+$checksum2 = '7C06F5AC2D31919CDF222E49079FB725EC58F1D6730E965F0432098841DB84A7'
+$zip = $env:TEMP + '\AutoCAD_LT_2025_Brazilian_Portuguese_Win_64bit_db_002_002.7z'
 }
 
 elseif ($pp.'Russian') {
-$url1 = 'https://efulfillment.autodesk.com'
-$checksum1 = 'xxxxx'
-$file = $env:TEMP + '\xxxx.exe'
-$url2 = 'https://efulfillment.autodesk.com'
-$checksum2 = 'xxxxx'
-$zip = $env:TEMP + '\xxxx.7z'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/9975DC29-376C-32AD-B24B-334D8226EB51/SFX/AutoCAD_LT_2025_Russian_Win_64bit_db_001_002.exe'
+$checksum1 = '1E4AC16CEC561A7945FE5171FFA9A37DDC3037891BED4E6133F11BB31A7ED83B'
+$file = $env:TEMP + '\AutoCAD_LT_2025_Russian_Win_64bit_db_001_002.exe'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/9975DC29-376C-32AD-B24B-334D8226EB51/SFX/AutoCAD_LT_2025_Russian_Win_64bit_db_002_002.7z'
+$checksum2 = '8C1E6B5E336D171D58DA2D1345731EF95375F6D926A5F9ACF7474F30D26E3A9C'
+$zip = $env:TEMP + '\AutoCAD_LT_2025_Russian_Win_64bit_db_002_002.7z'
 }
 
 elseif ($pp.'Spanish') {
-$url1 = 'https://efulfillment.autodesk.com'
-$checksum1 = 'xxxxx'
-$file = $env:TEMP + '\xxxx.exe'
-$url2 = 'https://efulfillment.autodesk.com'
-$checksum2 = 'xxxxx'
-$zip = $env:TEMP + '\xxxx.7z'
+$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/63831215-9D21-3A39-BFBF-F8BA1A6DB083/SFX/AutoCAD_LT_2025_Spanish_Win_64bit_db_001_002.exe'
+$checksum1 = '0FEB917620F925E9ECB2E3C6175F7D9DFC15457C6D80EB9C6E70337CD6509E2E'
+$file = $env:TEMP + '\AutoCAD_LT_2025_Spanish_Win_64bit_db_001_002.exe'
+$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/63831215-9D21-3A39-BFBF-F8BA1A6DB083/SFX/AutoCAD_LT_2025_Spanish_Win_64bit_db_002_002.7z'
+$checksum2 = 'ED26071457368EB17B4DA7D2137175CA179326E67118A3E6374115ABE4EDA57A'
+$zip = $env:TEMP + '\AutoCAD_LT_2025_Spanish_Win_64bit_db_002_002.7z'
 }
 
 else {
