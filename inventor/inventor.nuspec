@@ -22,26 +22,7 @@ Inventor Read-only Mode: Allows you to access Inventor part (.ipt), assembly (.i
 DWG TrueView 2025: View and convert 2D and 3D DWG files for free
 
 #### System requirements:
-Operating System: 64-bit Microsoft® Windows® 11 and Windows 10.
-
-#### Package Parameters:
-The following package parameters can be set (choose only one!):
- * `/ChineseSimp:` - Install Simplified Chinese language version
- * `/ChineseTrad:` - Install Traditional Chinese language version
- * `/Czech:` - Install Czech language version
- * `/French:` - Install French language version
- * `/German:` - Install German language version
- * `/Italian:` - Install Italian language version
- * `/Japanese:` - Install Japanese language version
- * `/Korean:` - Install Korean language version
- * `/Polish:` - Install Polish language version
- * `/Portuguese:` - Install Portuguese language version
- * `/Russian:` - Install Russian language version
- * `/Spanish:` - Install Spanish language version
- * If no parameter is given the English language version will be installed.
-
-To pass parameters, use `--params "''"` (e.g. `choco install inventor --params="'/ChineseSimp'"`).
-To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.</description>
+Operating System: 64-bit Microsoft® Windows® 11 and Windows 10.</description>
     <releaseNotes>https://help.autodesk.com/view/INVNTOR/2025/ENU/?guid=Inventor_ReleaseNotes_release_notes_html</releaseNotes>
   </metadata>
   <files>
