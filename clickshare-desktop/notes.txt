@@ -1,4 +1,3 @@
-#https://www.barco.com/en/support/software/r3306194
 #https://www.barco.com/bin/barco/tde/downloadUrl.json?fileNumber=R3306194&tdeType=3
 #use downloadUrl to download a copy for checksum
 
