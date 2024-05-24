@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kinovea</id>
-    <version>0.9.5</version>
+    <version>2023.1.1</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kinovea</packageSourceUrl>
 	<owners>aa.malta</owners>
-    <title>Kinovea (x64)</title>
+    <title>Kinovea</title>
     <authors>Joan Charmant</authors>
     <projectUrl>http://www.kinovea.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/kinovea/icon.png</iconUrl>
@@ -14,11 +14,11 @@
     <docsUrl>https://www.kinovea.org/help/en/index.html</docsUrl>
     <tags>kinovea video player sport analysis</tags>
     <projectSourceUrl>https://github.com/Kinovea/Kinovea</projectSourceUrl>
-    <summary>Kinovea (x64)</summary>
+    <summary>Kinovea</summary>
     <description>Kinovea is a video annotation tool designed for sport analysis.
 It features utilities to capture, slow down, compare, annotate and measure motion in videos.
 Kinovea is completely free and open source.</description>
-    <releaseNotes>https://www.kinovea.org/setup/kinovea.0.9.5/Changelog.0.9.5.txt</releaseNotes>
+    <releaseNotes>https://www.kinovea.org/en/forum/index.php</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

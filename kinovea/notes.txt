@@ -1,13 +1,14 @@
-checksum -t sha256 -f Kinovea-0.9.5-x64.exe
+#https://www.kinovea.org/download.html
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL
 choco pack
 choco install kinovea -y -dv -s .
 
 #UPGRADE
-choco install kinovea -y --ignore-checksums
+choco install kinovea -y
 choco upgrade kinovea -y -dv -s .
 
 #UNINSTALL
 choco uninstall kinovea -y
-choco push kinovea.0.9.5.nupkg -s https://push.chocolatey.org/
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
