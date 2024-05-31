@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>brightauthor</id>
-    <version>5.0.1.9</version>
+    <version>5.0.2.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/brightauthor</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>BrightAuthor</title>
