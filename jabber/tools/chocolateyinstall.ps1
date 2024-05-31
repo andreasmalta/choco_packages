@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url = 'https://binaries.webex.com/jabberclientwindows/20231227052853/CiscoJabberSetup.msi'
-$checksum = '5CE8B28752645E72B9EE2587E97B21A332EC44A91E08142F51200F5223FCA060'
+$url = 'https://binaries.webex.com/jabberclientwindows/20240401022042/CiscoJabberSetup.msi'
+$checksum = 'F71C58883EFD66CFACEAD09637DF1F3A497D6FFA211B178FE491B1B550593BF9'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
