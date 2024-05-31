@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $url = 'https://downloads.solarwinds.com/solarwinds/Release/FreeTool/SolarWinds-TFTP-Server.zip'
-$checksum = 'CEB981EEF1FB099E880691390301EFBCCC881887FB42D671209B2C2D5059C63F'
+$checksum = 'DF4A829F652B7EB78A07041AC96CAFFAE5D559CACFFC2CA9E1B3E4A934D1D632'
 
 $packageArgsURL = @{
   packageName    = $env:ChocolateyPackageName
