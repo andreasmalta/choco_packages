@@ -1,10 +1,10 @@
 ==========================================================================================
 Generic Universal V4 PCL
 Printer Software Document
-10/08/2022
+09/04/2022
 
-PCL  Version 2.1.0.1
-Printer Installer Version 2.0.0.0
+PCL  Version 2.3.0.0
+Printer Installer Version 2.0.0.2
 
 Copyright (C) 2016 KONICA MINOLTA, INC.
 
@@ -174,32 +174,33 @@ Supported devices :
     C332-0i
     65C-0i/55C-0i/45C-0i
     30BW-6i/26BW-6i/24BW-6i/22BW-6i
-    BW 502-0i
+    BW 502-0i 
     BW 500-0i
     BW 402-0i
     BW 400-0i
     28C-7i/25C-7i/22C-7i
     28C-6i/26C-6i/25C-6i/22C-6i
     70C-0i
+    75BW-0i
     65BW-0i/55BW-0i/45BW-0i/36BW-0i/30BW-0i
     BW475-0i/BW405-0i
     BW470-0i
     95BW-0i/85BW-0i
+    C405-1i/C335-1i
+    C400-1i/C330-1i
+    C332-1i
+    BW475-1i/BW405-1i
+    BW470-1i
+    45C-1i/36C-1i/30C-1i/25C-1i
+    45BW-1i/36BW-1i/30BW-1i
+
+    * Windows Store Device App is not supported.
 
 //////////////////////////////////////////////////////////////////////////////////////////
 3. System requirements
 //////////////////////////////////////////////////////////////////////////////////////////
 
 Supported OS :
-    Windows 8.1 *
-    Windows 8.1 Pro *
-    Windows 8.1 Enterprise *
-    Windows Server 2012 Standard
-    Windows Server 2012 Datacenter
-    Windows Server 2012 Essentials
-    Windows Server 2012 R2 Standard
-    Windows Server 2012 R2 Datacenter
-    Windows Server 2012 R2 Essentials
     Windows 10 Home **
     Windows 10 Pro **
     Windows 10 Enterprise *
@@ -227,17 +228,20 @@ Supported OS :
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL Version 2.1.0.1
+  PCL Version 2.3.0.0
 
 ==========================================================================================
-4-1. Support the following models.
+4-1. The following functions are add in this driver.
 ==========================================================================================
-    95BW-0i/85BW-0i
-
-==========================================================================================
-4-2. The following issue is solved in this driver.
-==========================================================================================
- 1. 6in1 printing of image files from Explorer results in small output.(Windows10)
+  1.Added support models:
+    Generic 45C-1i
+    Generic 36C-1i
+    Generic 30C-1i
+    Generic 25C-1i
+    Generic 45BW-1i
+    Generic 36BW-1i
+    Generic 30BW-1i
+    Generic 75BW-0i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -247,7 +251,7 @@ Supported OS :
 
     a) When using the included Installer
        Run "Setup.exe" and install according to the instructions in the dialog to install.
-Å@Å@Å@Å¶In the case of ARM64 environment, execute "SetupARM64_Win11.exe" for Windows 11 and "SetupARM64_Win10.exe" for Windows 10.
+    * In the case of ARM64 environment, execute "SetupARM64_Win11.exe" for Windows 11 and "SetupARM64_Win10.exe" for Windows 10.
 
     b) When installing manually
        Use Windows Add Printer Wizard to install.
@@ -270,7 +274,7 @@ Supported OS :
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[V4UPDSetup_Generic_PCL_2.1.0.1]Folder
+[V4UPDSetup_Generic_PCL_2.3.0.0]Folder
  |- [Drivers]
   |- [x64]
   |- [x86]

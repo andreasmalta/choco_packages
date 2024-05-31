@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url = 'https://dl.develop.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=6b099422020e119567797cfe1939cb0a&tx_kmdownloadcentersite_downloadproxy[documentId]=136115&tx_kmdownloadcentersite_downloadproxy[system]=Develop&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
-$checksum = 'B1D370DC448B09BB3311CBBDEA9B312B9E5183E0BD73C98EB23C5F74392FE3F6'
+$url = 'https://dl.develop.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=1f8942880796fbe48ed330240f6578b8&tx_kmdownloadcentersite_downloadproxy[documentId]=141510&tx_kmdownloadcentersite_downloadproxy[system]=Develop&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$checksum = '5D72874F9E900C63E76FCED917838E252B656CC465858A02D9324478C2558A03'
 $extract = Join-Path $env:TEMP 'extractPCL'
 
 $packageArgs = @{
