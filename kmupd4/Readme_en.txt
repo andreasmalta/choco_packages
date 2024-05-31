@@ -1,10 +1,10 @@
 ﻿==========================================================================================
 KONICA MINOLTA Universal V4 PCL
 Printer Software Document
-10/08/2022
+11/27/2023
 
-PCL  Version 2.1.0.1
-Printer Installer Version 2.0.0.0
+PCL  Version 2.4.0.0
+Printer Installer Version 2.0.0.2
 
 Copyright (C) 2016 KONICA MINOLTA, INC.
 
@@ -150,7 +150,7 @@ Supported devices :
     KONICA MINOLTA C754(e)/C654(e)
     KONICA MINOLTA C554(e)/C454(e)/C364(e)/C284(e)/C224(e)
     KONICA MINOLTA C281/C221/C221s
-    KONICA MINOLTA 958/801/758
+    KONICA MINOLTA 958/808/758
     KONICA MINOLTA 558/458
     KONICA MINOLTA 367/287/227
     KONICA MINOLTA 754(e)/654(e)
@@ -186,22 +186,28 @@ Supported devices :
     KONICA MINOLTA 650i/550i/450i/360i/300i
     KONICA MINOLTA 4750i/4050i
     KONICA MINOLTA 4700i
-    KONICA MINOLTA 950i/850i
+    KONICA MINOLTA 950i/850i *
+    KONICA MINOLTA C4051i/C3351i *
+    KONICA MINOLTA C4001i/C3301i *
+    KONICA MINOLTA C3321i *
+    KONICA MINOLTA 4751i/4051i *
+    KONICA MINOLTA 4701i *
+    KONICA MINOLTA C451i/C361i/C301i/C251i *
+    KONICA MINOLTA 451i/361i/301i *
+    KONICA MINOLTA C751i *
+    KONICA MINOLTA C651i *
+    KONICA MINOLTA C551i *
+    KONICA MINOLTA 751i *
+    KONICA MINOLTA 651i *
+    KONICA MINOLTA 551i *
+
+    * Windows Store Device App is not supported.
 
 //////////////////////////////////////////////////////////////////////////////////////////
 3. System requirements
 //////////////////////////////////////////////////////////////////////////////////////////
 
 Supported OS :
-    Windows 8.1 *
-    Windows 8.1 Pro *
-    Windows 8.1 Enterprise *
-    Windows Server 2012 Standard
-    Windows Server 2012 Datacenter
-    Windows Server 2012 Essentials
-    Windows Server 2012 R2 Standard
-    Windows Server 2012 R2 Datacenter
-    Windows Server 2012 R2 Essentials
     Windows 10 Home **
     Windows 10 Pro **
     Windows 10 Enterprise *
@@ -229,18 +235,36 @@ Supported OS :
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL Version 2.1.0.1
+  PCL Version 2.4.0.0
 
 ==========================================================================================
-4-1. Support the following models.
+4-1. The following functions are add in this driver.
 ==========================================================================================
-    KONICA MINOLTA 950i/850i
-    ※Windows Store Device App Not supported
+  1.Added support models:
+    KONICA MINOLTA C751i *
+    KONICA MINOLTA C651i *
+    KONICA MINOLTA C551i *
+    KONICA MINOLTA 751i *
+    KONICA MINOLTA 651i *
+    KONICA MINOLTA 551i *
+    * Windows Store Device App is not supported.
 
-==========================================================================================
-4-2. The following issue is solved in this driver.
-==========================================================================================
- 1. 6in1 printing of image files from Explorer results in small output.(Windows10)
+2. Added FS-542 and PK-527 options to the following models:
+    KONICA MINOLTA C287i
+    KONICA MINOLTA C257i
+    KONICA MINOLTA C227i
+
+ 3. New paper tray added for the following model:
+    KONICA MINOLTA C4051i
+    KONICA MINOLTA C3351i
+    KONICA MINOLTA C4001i
+    KONICA MINOLTA C3301i
+    KONICA MINOLTA C3321i
+    KONICA MINOLTA 4751i
+    KONICA MINOLTA 4051i
+    KONICA MINOLTA 4701i
+
+ 4. GB18030-2022
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -250,7 +274,7 @@ Supported OS :
 
     a) When using the included Installer
        Run "Setup.exe" and install according to the instructions in the dialog to install.
-　　　※In the case of ARM64 environment, execute "SetupARM64_Win11.exe" for Windows 11 and "SetupARM64_Win10.exe" for Windows 10.
+       * In the case of ARM64 environment, execute "SetupARM64_Win11.exe" for Windows 11 and "SetupARM64_Win10.exe" for Windows 10.
 
     b) When installing manually
        Use Windows Add Printer Wizard to install.
@@ -273,7 +297,7 @@ Supported OS :
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[V4UPDSetup_Own_PCL_2.1.0.1]Folder
+[V4UPDSetup_Own_PCL_2.4.0.0]Folder
  |- [Drivers]
   |- [x64]
   |- [x86]
