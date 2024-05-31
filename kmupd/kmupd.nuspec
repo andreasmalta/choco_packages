@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kmupd</id>
-    <version>3.9.403.0</version>
+    <version>3.9.737.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kmupd</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>KONICA MINOLTA Universal Print Driver PCL/PS/FAX</title>

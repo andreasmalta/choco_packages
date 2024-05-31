@@ -1,15 +1,15 @@
 ==========================================================================================
 KONICA MINOLTA Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-2023/3/24
+2024/02/27
 
-PCL  Version 3.9.403.0
-PS   Version 3.9.403.0
-FAX  Version 3.9.403.0
-Installer Version 3.2.24.0
-PCL  Setup Package Version 3.9.403.0
-PS   Setup Package Version 3.9.403.0
-FAX  Setup Package Version 3.9.403.0
+PCL  Version 3.9.737.0
+PS   Version 3.9.737.0
+FAX  Version 3.9.737.0
+Installer Version 3.2.29.0
+PCL  Setup Package Version 3.9.737.0
+PS   Setup Package Version 3.9.737.0
+FAX  Setup Package Version 3.9.737.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -33,8 +33,7 @@ Readme File Contents
 7. How to check the version in a printer driver
 8. Attentions and Restrictions
 9. Apache License
-10. OpenSSL License
-11. NetSNMP License
+10. NetSNMP License
 
 //////////////////////////////////////////////////////////////////////////////////////////
 1. Software End User License Agreement
@@ -235,18 +234,34 @@ Supported devices :
     KONICA MINOLTA C226i
     KONICA MINOLTA 950i
     KONICA MINOLTA 850i
+    KONICA MINOLTA C451i
+    KONICA MINOLTA C361i
+    KONICA MINOLTA C301i
+    KONICA MINOLTA C251i
+    KONICA MINOLTA C4051i
+    KONICA MINOLTA C3351i
+    KONICA MINOLTA C3321i
+    KONICA MINOLTA C4001i
+    KONICA MINOLTA C3301i
+    KONICA MINOLTA C651i
+    KONICA MINOLTA C551i
+    KONICA MINOLTA 651i
+    KONICA MINOLTA 551i
+    KONICA MINOLTA 451i
+    KONICA MINOLTA 361i
+    KONICA MINOLTA 301i
+    KONICA MINOLTA C751i
+    KONICA MINOLTA 751i
+    KONICA MINOLTA 4751i
+    KONICA MINOLTA 4051i
+    KONICA MINOLTA 4701i
+    Server Less Ubiquitous Print
 
 //////////////////////////////////////////////////////////////////////////////////////////
 3. System requirements
 //////////////////////////////////////////////////////////////////////////////////////////
 
 Supported OS :
-    Windows Server 2012 Standard
-    Windows Server 2012 Datacenter
-    Windows Server 2012 Essentials
-    Windows Server 2012 R2 Standard
-    Windows Server 2012 R2 Datacenter
-    Windows Server 2012 R2 Essentials
     Windows 10 Home*
     Windows 10 Pro *
     Windows 10 Enterprise *
@@ -270,7 +285,6 @@ Supported OS :
 
 Support the following operation environments :
   <PCL driver>
-    Windows Server 2012 / 2012 R2 Cluster Server Service
     Citrix Virtual Apps and Desktops 7 2006 / 2003
     Terminal Services
     Remote Desktop
@@ -278,13 +292,11 @@ Support the following operation environments :
     Remote Desktop Easy Print
 
   <PS driver>
-    Windows Server 2012 / 2012 R2 Cluster Server Service
     Citrix Virtual Apps and Desktops 7 2006 / 2003
     Terminal Services
     Remote Desktop
 
   <FAX driver>
-    Windows Server 2012 / 2012 R2 Cluster Server Service
     Citrix Virtual Apps and Desktops 7 2006 / 2003
     Terminal Services
     Remote Desktop
@@ -303,13 +315,58 @@ to use the LDAP server in the Fax driver.
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/FAX Version 3.9.403.0
+  PCL/PS/FAX Version 3.9.737.0
 
 ==========================================================================================
 4-1. The following functions are add in this driver.
 ==========================================================================================
-  1.Added [Use UserPrincipalName] to the default/fixed value for [Administrator Customization] > 
-    [User Authentication] > [User Name]  
+ 1. Added support models:
+    KONICA MINOLTA C651i
+    KONICA MINOLTA C551i
+    KONICA MINOLTA 651i
+    KONICA MINOLTA 551i
+    KONICA MINOLTA C751i
+    KONICA MINOLTA 751i
+
+ 2. Added FS-542 and PK-527 options to the following models (PS/PCL driver):
+    KONICA MINOLTA C287i
+    KONICA MINOLTA C257i
+    KONICA MINOLTA C227i
+
+ 3. Added 1200dpi (Text/Shape) function to [Quality] tab -> [Resolution]
+
+ 4. New paper tray added for the following model:
+    KONICA MINOLTA C4051i
+    KONICA MINOLTA C3351i
+    KONICA MINOLTA C4001i
+    KONICA MINOLTA C3301i
+    KONICA MINOLTA C3321i
+    KONICA MINOLTA 4751i
+    KONICA MINOLTA 4051i
+    KONICA MINOLTA 4701i
+
+ 5. GB18030-2022
+
+ 6. Change to default settings
+    Changed from [Baseline] to [KONICA MINOLTA A3 Common].
+
+ 7. Added [Select multiple destinations] function to [Configure] tab -> [Device Option] 
+    (FAX driver)
+
+==========================================================================================
+4-2. Other
+==========================================================================================
+ 1. Removed FS-536 and PK-520 options to the following models (PCL and PS drivers):
+    KONICA MINOLTA C360i
+    KONICA MINOLTA C300i
+    KONICA MINOLTA C250i
+    KONICA MINOLTA 650i
+    KONICA MINOLTA 550i
+    KONICA MINOLTA 450i
+    KONICA MINOLTA 360i
+    KONICA MINOLTA 300i
+    KONICA MINOLTA 651i
+    KONICA MINOLTA 551i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -344,7 +401,7 @@ Please read the following notes before use.
 
  4. When you specify the path of the shared printer by [Manual Selection] of Installer, 
     you can not find the printers from [Reference] button in Windows 10 and 
-    Windows Server 2012 or later operating system.
+    Windows Server 2016 or later operating system.
     ==>In this case, please enter the path of the shared printer directly. 
 
 ==========================================================================================
@@ -717,17 +774,14 @@ In such a case, please be careful of the setting method etc.
 
  10. Two-way Communication
   10-1. Acquire Device Information
-       When you installed the printer driver to a client computer by Point and Print,
-       you can not use [Configure]-[Acquire Device Information] in the printer property.
-       ==>Please set the composition of Device Options manually or acquire the option
-          information on the server.
+        When you installed the printer driver to a client computer by Point and Print,
+        you can not use [Configure]-[Acquire Device Information] in the printer property.
+        ==>Please set the composition of Device Options manually or acquire the option
+           information on the server.
 
   10-2. About Two-way communication of Printer Driver and MFP
-       This printer driver is able to acquire MFP's information via the network 
-       communication.
-       Please update more than Internet Explorer 6.0 (Service pack 1) to take full
-       advantage of this printer driver.
-       ==>MFP's information may not be acquired depending on the Internet Explorer version.
+        This printer driver is able to acquire MFP's information via the network 
+        communication.
 
  11. Custom Size
   11-1. Paper Width
@@ -749,23 +803,15 @@ In such a case, please be careful of the setting method etc.
         the Print Setting is bigger that the other drivers. This will have no effect
         on the print operation.
 
-  12-4. Using a WSD Port Connection in Windows 10 and Windows Server 2012
+  12-4. Using a WSD Port Connection in Windows 10 and Windows Server 2016
         The Printer Driver must be installed in order to connect to the device using 
-        the WSD port in Windows 10 and Windows Server 2012.
+        the WSD port in Windows 10 and Windows Server 2016.
 
   12-5. About Text on Tab printing in Windows 10
         In some instances, Text on Tab is not printed when the print is executed 
         from Microsoft Word 2019 or Microsoft Excel 2019.
         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
         - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
-
-  12-6. In Windows 11, printing functions set in the driver may not be enabled 
-        when printing from the Microsoft Store application.
-
-        If this happens, change the following settings:
-        For PCL drivers: Set Device Properties -> Settings Tab -> EMF Spool to OFF.
-        For PS drivers: Set Device Properties -> Advanced Tab -> Enable advanced printing features to OFF.
-        Note: Both settings require administrator privileges for the computer.
 
  13. Others
   13-1. Screen Font
@@ -888,25 +934,7 @@ In such a case, please be careful of the setting method etc.
          runtime is not installed and a message will display to guide you through installation.
         *Both these methods require you to have administrator privileges for the computer.
 
-  24-2. About browser settings
-        If you do not install WebView2 Runtime, authentication will be executed with Internet Explorer.
-        You then need to make the following settings:
-         - Add the authentication site to the "Trusted sites" of Internet Explorer
-         - Change "Let Internet Explorer open sites in Microsoft Edge" to "Never" in Microsoft Edge
-         - Open "Compatibility View settings" in the Internet Explorer and disable 
-           "Display internet sites in Compatibility View".
-           ==>For sites that require a compatibility view, enable the setting individually.
-
-        For details, please refer to the support manual.
-
-        *WebView2 Runtime must be installed in order to use this feature.
-
-         If WebView2 Runtime is not installed, 
-         the product can be launched in Internet Explorer on the client's OS.
-         However, as Internet Explorer is no longer supported by Microsoft as of June 22, 2022, 
-         its functionality cannot be guaranteed.
-
- 24-3. About WebView2 Runtime Cookies
+  24-2. About WebView2 Runtime Cookies
         WebView2 Runtime cookies cannot be removed from the browser. 
         To remove the cookies, please delete the following files:
          C:\Users\<User Name>\AppData\Local\KONICA MINOLTA\IdPAuthenticate\EBWebView\Default
@@ -970,6 +998,12 @@ In such a case, please be careful of the setting method etc.
     - 750i
     - 650i/550i/450i/360i/300i
     - 950i/850i
+    - C751i
+    - C651i/C551i
+    - C451i/C361i/C301i/C251i
+    - 751i
+    - 651i/551i
+    - 451i/361i/301i
     Please set [Length] to a value higher than 431.9mm / 17.002 inches in the 
     Banner Printing [Custom Size Settings] dialog box on the following models:
     - WPH
@@ -991,9 +1025,14 @@ In such a case, please be careful of the setting method etc.
     - C4050i/C3350i
     - C4000i/C3300i
     - C3320i
+    - C4051i/C3351i
+    - C4001i/C3301i
+    - C3321i
     - 306i/266i/246i/226i
     - 4750i/4050i
     - 4700i
+    - 4751i/4051i
+    - 4701i
     - C3850/C3350/C3850FS
     - 4750/4050
     - C3100P
@@ -1063,10 +1102,9 @@ In such a case, please be careful of the setting method etc.
        in each sheets with the [Entire workbook] checkbox ON, it may not be printed 
        as you specified.
 
-  1-3. Duplex Print in Microsoft Word 2007 or Microsoft Word 2010
-       When a document with odd number sheet is printed in duplex mode from
-       Microsoft Word 2007 or Microsoft Word 2010, white paper which is not included 
-       in original may be printed and counted.
+  1-3. Duplex Print in Microsoft Word
+       When a document with odd number sheet is printed in duplex mode from Microsoft Word, 
+       white paper which is not included in original may be printed and counted.
 
   1-4. Custom Size printing in Microsoft Word
        When paper size is specified as "Custom Size", it may be printed in invert.
@@ -1140,6 +1178,8 @@ In such a case, please be careful of the setting method etc.
        printer drivers have been installed, depending on the application limitation.
        ==>In this case, change the printer driver name with 
           which selection will be changed, to less than 29 characters.
+       *Microsoft no longer supports Internet Explorer as of June 22, 2022.
+        Internet Explorer operations can no longer be guaranteed after this date.
 
  6. Excel
   6-1. Check the print settings before printing when you print from Excel after 
@@ -1163,7 +1203,7 @@ In such a case, please be careful of the setting method etc.
        Because of this, when the topside of this image is printed during the overlay
        print with white background,the bottom of the image (Original or Overlay) cannot
        be printed by combination of the following driver.
-       - PowerPoint2007 later  ->  PS/PCL driver
+       - PowerPoint  ->  PS/PCL driver
 
 //////////////////////////////////////////////////////////////////////////////////////////
 9. Apache License
@@ -1355,135 +1395,7 @@ In such a case, please be careful of the setting method etc.
       of your accepting any such warranty or additional liability.
 
 //////////////////////////////////////////////////////////////////////////////////////////
-10. OpenSSL License
-//////////////////////////////////////////////////////////////////////////////////////////
-
-  LICENSE ISSUES
-  ==============
-
-  The OpenSSL toolkit stays under a double license, i.e. both the conditions of
-  the OpenSSL License and the original SSLeay license apply to the toolkit.
-  See below for the actual license texts.
-
-  OpenSSL License
-  ---------------
-
-/* ====================================================================
- * Copyright (c) 1998-2017 The OpenSSL Project.  All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer. 
- *
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in
- *    the documentation and/or other materials provided with the
- *    distribution.
- *
- * 3. All advertising materials mentioning features or use of this
- *    software must display the following acknowledgment:
- *    "This product includes software developed by the OpenSSL Project
- *    for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
- *
- * 4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to
- *    endorse or promote products derived from this software without
- *    prior written permission. For written permission, please contact
- *    openssl-core@openssl.org.
- *
- * 5. Products derived from this software may not be called "OpenSSL"
- *    nor may "OpenSSL" appear in their names without prior written
- *    permission of the OpenSSL Project.
- *
- * 6. Redistributions of any form whatsoever must retain the following
- *    acknowledgment:
- *    "This product includes software developed by the OpenSSL Project
- *    for use in the OpenSSL Toolkit (http://www.openssl.org/)"
- *
- * THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY
- * EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
- * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE OpenSSL PROJECT OR
- * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
- * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
- * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
- * ====================================================================
- *
- * This product includes cryptographic software written by Eric Young
- * (eay@cryptsoft.com).  This product includes software written by Tim
- * Hudson (tjh@cryptsoft.com).
- *
- */
-
- Original SSLeay License
- -----------------------
-
-/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
- * All rights reserved.
- *
- * This package is an SSL implementation written
- * by Eric Young (eay@cryptsoft.com).
- * The implementation was written so as to conform with Netscapes SSL.
- * 
- * This library is free for commercial and non-commercial use as long as
- * the following conditions are aheared to.  The following conditions
- * apply to all code found in this distribution, be it the RC4, RSA,
- * lhash, DES, etc., code; not just the SSL code.  The SSL documentation
- * included with this distribution is covered by the same copyright terms
- * except that the holder is Tim Hudson (tjh@cryptsoft.com).
- * 
- * Copyright remains Eric Young's, and as such any Copyright notices in
- * the code are not to be removed.
- * If this package is used in a product, Eric Young should be given attribution
- * as the author of the parts of the library used.
- * This can be in the form of a textual message at program startup or
- * in documentation (online or textual) provided with the package.
- * 
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- * 1. Redistributions of source code must retain the copyright
- *    notice, this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *    "This product includes cryptographic software written by
- *     Eric Young (eay@cryptsoft.com)"
- *    The word 'cryptographic' can be left out if the rouines from the library
- *    being used are not cryptographic related :-).
- * 4. If you include any Windows specific code (or a derivative thereof) from 
- *    the apps directory (application code) you must include an acknowledgement:
- *    "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"
- * 
- * THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- * 
- * The licence and distribution terms for any publically available version or
- * derivative of this code cannot be changed.  i.e. this code cannot simply be
- * copied and put under another distribution licence
- * [including the GNU Public Licence.]
- */
-
-//////////////////////////////////////////////////////////////////////////////////////////
-11. NetSNMP License
+10. NetSNMP License
 //////////////////////////////////////////////////////////////////////////////////////////
 Various copyrights apply to this package, listed in various separate
 parts below.  Please make sure that you read all the parts.

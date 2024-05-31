@@ -1,11 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop';
-
-$FAX = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=883e6ab2c292b75712fa4dd189f7a2e5&tx_kmdownloadcentersite_downloadproxy[documentId]=138073&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
-$FAX_checksum = 'F8C47C120378AFB3121EBCBE8046074A144F163976B319560BE23CA6EC0B8375'
-$PCL = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=f4e4bc735dd341c02806c14e4f6f3e90&tx_kmdownloadcentersite_downloadproxy[documentId]=138071&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
-$PCL_checksum = '7E07EBB2FF59267DE47A0FF56AEDA151F615E33F366D524469D9E72608097744'
-$PS = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=f038cf72d565a97a4f5b254b08d2c592&tx_kmdownloadcentersite_downloadproxy[documentId]=138072&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
-$PS_checksum = '0F94C9749ED34B9D5DDC26D90A3D445328978BF32874281CCF9496955B4ADFAD'
+$FAX = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=9cbe995d1c4768ae404b63bdd9294057&tx_kmdownloadcentersite_downloadproxy[documentId]=141879&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$FAX_checksum = 'A2F3D718FE1ECA44DD7D333E80E12DB34001F7410904C22F7FE894D9989D37D1'
+$PCL = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=753f6860c3379fcf5134fb3a84d57838&tx_kmdownloadcentersite_downloadproxy[documentId]=141877&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$PCL_checksum = 'D830A4374D9AA8C8D1CF953461D99C8FA193FB9BF9D695F34FFF7701E1414AAE'
+$PS = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=3de2685765602b9613201faa0ad14926&tx_kmdownloadcentersite_downloadproxy[documentId]=141878&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$PS_checksum = 'F0A0C84A070ABA440EFC2BD6A8A1E03959D4BED7BFF4535827F0B0891CF5EDB9'
 
 function Invoke-packageArgsFAX {
 	$FAX_extract = Join-Path $env:TEMP 'extractFAX'
