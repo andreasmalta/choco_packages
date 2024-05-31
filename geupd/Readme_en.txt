@@ -1,15 +1,15 @@
 ==========================================================================================
 Generic Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-2023/3/24
+2024/02/27
 
-PCL  Version 3.9.403.0
-PS   Version 3.9.403.0
-FAX  Version 3.9.403.0
-Installer Version 3.2.24.0
-PCL  Setup Package Version 3.9.403.0
-PS   Setup Package Version 3.9.403.0
-FAX  Setup Package Version 3.9.403.0
+PCL  Version 3.9.737.0
+PS   Version 3.9.737.0
+FAX  Version 3.9.737.0
+Installer Version 3.2.29.0
+PCL  Setup Package Version 3.9.737.0
+PS   Setup Package Version 3.9.737.0
+FAX  Setup Package Version 3.9.737.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -33,8 +33,7 @@ Readme File Contents
 7. How to check the version in a printer driver
 8. Attentions and Restrictions
 9. Apache License
-10. OpenSSL License
-11. NetSNMP License
+10. NetSNMP License
 
 //////////////////////////////////////////////////////////////////////////////////////////
 1. Software End User License Agreement
@@ -152,18 +151,18 @@ This is required to print with Generic Multi Function Printer from your PC.
 Supported devices :
     Baseline
     Generic A3 common
-    Generic A4 common
-    Generic 50BW-2/50BW-2/36BW-2
+    Generic 50BW-2/42BW-2/36BW-2
     Generic 75BW-2/60BW-2
     Generic 36BW-3/28BW-3/22BW-3
-    Generic 50C-2/50C-3/45C-3
-    Generic 36C-1/28C-1/28C-1
-    Color MF30-1/LP30-2
-    Generic 75BW-2/60BW-2
+    Generic 50C-2/50C-3/45C-3/45C-4/45C-5
+    Generic 36C-1/28C-1/22C-1
+    Color MF30-1/MF24-2/LP30-2
+    Generic 75BW-2/60BW-2(Sol-ROM)
     Generic 42BW-4/36BW-4/28BW-4/22BW-4
-    Generic 65BW-3/60BW-3/55BW-3
-    Generic 42BW-4/36BW-4
+    Generic 65BW-3/60BW-3/55BW-3/50BW-3
+    BW MF42-1/BW MF36-1
     Generic 60C-6(e)/60C-7(e)
+    Generic 19BW-3/21BW-3/23BW-3
     Generic 55C-6(e)/45C-6(e)/36C-6(e)/28C-6(e)/22C-6(e)
     Generic 75BW-5(e)/65BW-5(e)
     BW LP4700-1/BW LP4000-1/BW LP3300-1/BW LP330P-2
@@ -218,7 +217,7 @@ Supported devices :
     Generic 36BW-0i
     Generic 30BW-0i
     Generic 70C-0i
-    Generic BW75-0i
+    Generic 75BW-0i
     Generic BW475-0i
     Generic BW405-0i
     Generic BW470-0i
@@ -231,18 +230,34 @@ Supported devices :
     Generic 22C-6i
     Generic 95BW-0i
     Generic 85BW-0i
+    Generic 45C-1i
+    Generic 36C-1i
+    Generic 30C-1i
+    Generic 25C-1i
+    Generic C405-1i
+    Generic C335-1i
+    Generic C332-1i
+    Generic C400-1i
+    Generic C330-1i
+    Generic 65C-1i
+    Generic 55C-1i
+    Generic 65BW-1i
+    Generic 55BW-1i
+    Generic 45BW-1i
+    Generic 36BW-1i
+    Generic 30BW-1i
+    Generic 70C-1i
+    Generic 75BW-1i
+    Generic BW475-1i
+    Generic BW405-1i
+    Generic BW470-1i
+    Generic Server Less Ubiquitous Print
 
 //////////////////////////////////////////////////////////////////////////////////////////
 3. System requirements
 //////////////////////////////////////////////////////////////////////////////////////////
 
 Supported OS :
-    Windows Server 2012 Standard
-    Windows Server 2012 Datacenter
-    Windows Server 2012 Essentials
-    Windows Server 2012 R2 Standard
-    Windows Server 2012 R2 Datacenter
-    Windows Server 2012 R2 Essentials
     Windows 10 Home*
     Windows 10 Pro *
     Windows 10 Enterprise *
@@ -266,7 +281,6 @@ Supported OS :
 
 Support the following operation environments :
   <PCL driver>
-    Windows Server 2012 / 2012 R2 Cluster Server Service
     Citrix Virtual Apps and Desktops 7 2006 / 2003
     Terminal Services
     Remote Desktop
@@ -274,13 +288,11 @@ Support the following operation environments :
     Remote Desktop Easy Print
 
   <PS driver>
-    Windows Server 2012 / 2012 R2 Cluster Server Service
     Citrix Virtual Apps and Desktops 7 2006 / 2003
     Terminal Services
     Remote Desktop
 
   <FAX driver>
-    Windows Server 2012 / 2012 R2 Cluster Server Service
     Citrix Virtual Apps and Desktops 7 2006 / 2003
     Terminal Services
     Remote Desktop
@@ -299,13 +311,58 @@ to use the LDAP server in the Fax driver.
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/FAX Version 3.9.403.0
+  PCL/PS/FAX Version 3.9.737.0
 
 ==========================================================================================
 4-1. The following functions are add in this driver.
 ==========================================================================================
-  1.Added [Use UserPrincipalName] to the default/fixed value for [Administrator Customization] > 
-    [User Authentication] > [User Name]  
+ 1. Added support models:
+    Generic 65C-1i
+    Generic 55C-1i
+    Generic 65BW-1i
+    Generic 55BW-1i
+    Generic 70C-1i
+    Generic 75BW-1i
+
+ 2. Added FS-542 and PK-527 options to the following models (PS/PCL driver):
+    Generic 28C-7i
+    Generic 25C-7i
+    Generic 22C-7i
+
+ 3. Added 1200dpi (Text/Shape) function to [Quality] tab -> [Resolution]
+
+ 4. New paper tray added for the following model:
+    Generic C405-1i
+    Generic C335-1i
+    Generic C400-1i
+    Generic C330-1i
+    Generic C332-1i
+    Generic BW475-1i
+    Generic BW405-1i
+    Generic BW470-1i
+
+ 5. GB18030-2022
+
+ 6. Change to default settings
+    Changed from [Baseline] to [Generic A3 common].
+
+ 7. Added [Select multiple destinations] function to [Configure] tab -> [Device Option] 
+    (FAX driver)
+
+==========================================================================================
+4-2. Other
+==========================================================================================
+ 1. Removed FS-536 and PK-520 options to the following models (PCL and PS drivers):
+    Generic 36C-0i
+    Generic 30C-0i
+    Generic 25C-0i
+    Generic 65BW-0i
+    Generic 55BW-0i
+    Generic 45BW-0i
+    Generic 36BW-0i
+    Generic 30BW-0i
+    Generic 65BW-1i
+    Generic 55BW-1i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -340,7 +397,7 @@ Please read the following notes before use.
 
  4. When you specify the path of the shared printer by [Manual Selection] of Installer, 
     you can not find the printers from [Reference] button in Windows 10 and 
-    Windows Server 2012 or later operating system.
+    Windows Server 2016 or later operating system.
     ==>In this case, please enter the path of the shared printer directly. 
 
 ==========================================================================================
@@ -714,17 +771,14 @@ In such a case, please be careful of the setting method etc.
 
  10. Two-way Communication
   10-1. Acquire Device Information
-       When you installed the printer driver to a client computer by Point and Print,
-       you can not use [Configure]-[Acquire Device Information] in the printer property.
-       ==>Please set the composition of Device Options manually or acquire the option
-          information on the server.
+        When you installed the printer driver to a client computer by Point and Print,
+        you can not use [Configure]-[Acquire Device Information] in the printer property.
+        ==>Please set the composition of Device Options manually or acquire the option
+           information on the server.
 
   10-2. About Two-way communication of Printer Driver and MFP
-       This printer driver is able to acquire MFP's information via the network 
-       communication.
-       Please update more than Internet Explorer 6.0 (Service pack 1) to take full
-       advantage of this printer driver.
-       ==>MFP's information may not be acquired depending on the Internet Explorer version.
+        This printer driver is able to acquire MFP's information via the network 
+        communication.
 
  11. Custom Size
   11-1. Paper Width
@@ -746,23 +800,15 @@ In such a case, please be careful of the setting method etc.
         the Print Setting is bigger that the other drivers. This will have no effect
         on the print operation.
 
-  12-4. Using a WSD Port Connection in Windows 10 and Windows Server 2012
+  12-4. Using a WSD Port Connection in Windows 10 and Windows Server 2016
         The Printer Driver must be installed in order to connect to the device using 
-        the WSD port in Windows 10 and Windows Server 2012.
+        the WSD port in Windows 10 and Windows Server 2016.
 
   12-5. About Text on Tab printing in Windows 10
         In some instances, Text on Tab is not printed when the print is executed 
         from Microsoft Word 2019 or Microsoft Excel 2019.
         - Printer Property -> [Settings]Tab - [EMF Spool] -> ON
         - Printer Property -> [Advanced]Tab - [Enable advanced printing features] -> ON
-
-  12-6. In Windows 11, printing functions set in the driver may not be enabled 
-        when printing from the Microsoft Store application.
-
-        If this happens, change the following settings:
-        For PCL drivers: Set Device Properties -> Settings Tab -> EMF Spool to OFF.
-        For PS drivers: Set Device Properties -> Advanced Tab -> Enable advanced printing features to OFF.
-        Note: Both settings require administrator privileges for the computer.
 
  13. Others
   13-1. Screen Font
@@ -885,25 +931,7 @@ In such a case, please be careful of the setting method etc.
          runtime is not installed and a message will display to guide you through installation.
         *Both these methods require you to have administrator privileges for the computer.
 
-  24-2. About browser settings
-        If you do not install WebView2 Runtime, authentication will be executed with Internet Explorer.
-        You then need to make the following settings:
-         - Add the authentication site to the "Trusted sites" of Internet Explorer
-         - Change "Let Internet Explorer open sites in Microsoft Edge" to "Never" in Microsoft Edge
-         - Open "Compatibility View settings" in the Internet Explorer and disable 
-           "Display internet sites in Compatibility View".
-           ==>For sites that require a compatibility view, enable the setting individually.
-
-        For details, please refer to the support manual.
- 
-        *WebView2 Runtime must be installed in order to use this feature.
-
-         If WebView2 Runtime is not installed, 
-         the product can be launched in Internet Explorer on the client's OS. 
-         However, as Internet Explorer is no longer supported by Microsoft as of June 22, 2022, 
-         its functionality cannot be guaranteed.
-
- 24-3. About WebView2 Runtime Cookies
+  24-2. About WebView2 Runtime Cookies
         WebView2 Runtime cookies cannot be removed from the browser. 
         To remove the cookies, please delete the following files:
          C:\Users\<User Name>\AppData\Local\KONICA MINOLTA\IdPAuthenticate\EBWebView\Default
@@ -967,6 +995,12 @@ In such a case, please be careful of the setting method etc.
     - 75BW-0i
     - 65BW-0i/55BW-0i/45BW-0i/36BW-0i/30BW-0i
     - 95BW-0i/85BW-0i
+    - 70C-1i
+    - 65C-1i/55C-1i
+    - 45C-1i/36C-1i/30C-1i/25C-1i
+    - 75BW-1i
+    - 65BW-1i/55BW-1i
+    - 45BW-1i/36BW-1i/30BW-1i
     Please set [Length] to a value higher than 431.9mm / 17.002 inches in the 
     Banner Printing [Custom Size Settings] dialog box on the following models:
     - 26C-7/22C-7
@@ -986,9 +1020,14 @@ In such a case, please be careful of the setting method etc.
     - C405-0i/C335-0i
     - C400-0i/C330-0i
     - C332-0i
+    - C405-1i/C335-1i
+    - C400-1i/C330-1i
+    - C332-1i
     - 30BW-6i/26BW-6i/24BW-6i/22BW-6i
     - BW475-0i/BW405-0i
     - BW470-0i
+    - BW475-1i/BW405-1i
+    - BW470-1i
     - C MF385-1/C MF335-1/C MF385-1FS
     - BW MF475-1/BW MF405-1
     - C MF310P-1
@@ -1053,10 +1092,9 @@ In such a case, please be careful of the setting method etc.
        in each sheets with the [Entire workbook] checkbox ON, it may not be printed 
        as you specified.
 
-  1-3. Duplex Print in Microsoft Word 2007 or Microsoft Word 2010
-       When a document with odd number sheet is printed in duplex mode from
-       Microsoft Word 2007 or Microsoft Word 2010, white paper which is not included 
-       in original may be printed and counted.
+  1-3. Duplex Print in Microsoft Word
+       When a document with odd number sheet is printed in duplex mode from Microsoft Word, 
+       white paper which is not included in original may be printed and counted.
 
   1-4. Custom Size printing in Microsoft Word
        When paper size is specified as "Custom Size", it may be printed in invert.
@@ -1130,6 +1168,8 @@ In such a case, please be careful of the setting method etc.
        printer drivers have been installed, depending on the application limitation.
        ==>In this case, change the printer driver name with 
           which selection will be changed, to less than 29 characters.
+       *Microsoft no longer supports Internet Explorer as of June 22, 2022.
+        Internet Explorer operations can no longer be guaranteed after this date.
 
  6. Excel
   6-1. Check the print settings before printing when you print from Excel after 
@@ -1153,7 +1193,7 @@ In such a case, please be careful of the setting method etc.
        Because of this, when the topside of this image is printed during the overlay
        print with white background,the bottom of the image (Original or Overlay) cannot
        be printed by combination of the following driver.
-       - PowerPoint2007 later  ->  PS/PCL driver
+       - PowerPoint  ->  PS/PCL driver
 
 //////////////////////////////////////////////////////////////////////////////////////////
 9. Apache License
@@ -1345,135 +1385,7 @@ In such a case, please be careful of the setting method etc.
       of your accepting any such warranty or additional liability.
 
 //////////////////////////////////////////////////////////////////////////////////////////
-10. OpenSSL License
-//////////////////////////////////////////////////////////////////////////////////////////
-
-  LICENSE ISSUES
-  ==============
-
-  The OpenSSL toolkit stays under a double license, i.e. both the conditions of
-  the OpenSSL License and the original SSLeay license apply to the toolkit.
-  See below for the actual license texts.
-
-  OpenSSL License
-  ---------------
-
-/* ====================================================================
- * Copyright (c) 1998-2017 The OpenSSL Project.  All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer. 
- *
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in
- *    the documentation and/or other materials provided with the
- *    distribution.
- *
- * 3. All advertising materials mentioning features or use of this
- *    software must display the following acknowledgment:
- *    "This product includes software developed by the OpenSSL Project
- *    for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
- *
- * 4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to
- *    endorse or promote products derived from this software without
- *    prior written permission. For written permission, please contact
- *    openssl-core@openssl.org.
- *
- * 5. Products derived from this software may not be called "OpenSSL"
- *    nor may "OpenSSL" appear in their names without prior written
- *    permission of the OpenSSL Project.
- *
- * 6. Redistributions of any form whatsoever must retain the following
- *    acknowledgment:
- *    "This product includes software developed by the OpenSSL Project
- *    for use in the OpenSSL Toolkit (http://www.openssl.org/)"
- *
- * THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY
- * EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
- * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE OpenSSL PROJECT OR
- * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
- * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
- * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
- * ====================================================================
- *
- * This product includes cryptographic software written by Eric Young
- * (eay@cryptsoft.com).  This product includes software written by Tim
- * Hudson (tjh@cryptsoft.com).
- *
- */
-
- Original SSLeay License
- -----------------------
-
-/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
- * All rights reserved.
- *
- * This package is an SSL implementation written
- * by Eric Young (eay@cryptsoft.com).
- * The implementation was written so as to conform with Netscapes SSL.
- * 
- * This library is free for commercial and non-commercial use as long as
- * the following conditions are aheared to.  The following conditions
- * apply to all code found in this distribution, be it the RC4, RSA,
- * lhash, DES, etc., code; not just the SSL code.  The SSL documentation
- * included with this distribution is covered by the same copyright terms
- * except that the holder is Tim Hudson (tjh@cryptsoft.com).
- * 
- * Copyright remains Eric Young's, and as such any Copyright notices in
- * the code are not to be removed.
- * If this package is used in a product, Eric Young should be given attribution
- * as the author of the parts of the library used.
- * This can be in the form of a textual message at program startup or
- * in documentation (online or textual) provided with the package.
- * 
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- * 1. Redistributions of source code must retain the copyright
- *    notice, this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *    "This product includes cryptographic software written by
- *     Eric Young (eay@cryptsoft.com)"
- *    The word 'cryptographic' can be left out if the rouines from the library
- *    being used are not cryptographic related :-).
- * 4. If you include any Windows specific code (or a derivative thereof) from 
- *    the apps directory (application code) you must include an acknowledgement:
- *    "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"
- * 
- * THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- * 
- * The licence and distribution terms for any publically available version or
- * derivative of this code cannot be changed.  i.e. this code cannot simply be
- * copied and put under another distribution licence
- * [including the GNU Public Licence.]
- */
-
-//////////////////////////////////////////////////////////////////////////////////////////
-11. NetSNMP License
+10. NetSNMP License
 //////////////////////////////////////////////////////////////////////////////////////////
 Various copyrights apply to this package, listed in various separate
 parts below.  Please make sure that you read all the parts.
