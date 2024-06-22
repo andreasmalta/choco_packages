@@ -19,6 +19,9 @@
 It features utilities to capture, slow down, compare, annotate and measure motion in videos.
 Kinovea is completely free and open source.</description>
     <releaseNotes>https://www.kinovea.org/en/forum/index.php</releaseNotes>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.8.0.20220524" />
+	</dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
