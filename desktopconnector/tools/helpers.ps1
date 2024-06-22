@@ -1,7 +1,7 @@
 function Invoke-UninstallOld {
 Stop-Process -Name "DesktopConnector*" -Force
 if($svc = get-service FileSystemMonitorService -ErrorAction SilentlyContinue) { Stop-Service $svc }
-$packageName = 'Autodesk Desktop Connector*'
+$packageName = 'Autodesk Desktop Connector 16?*'
 $FolderName = 'C:\Program Files\Autodesk\Desktop Connector\'
 $validExitCodes = @(0, 3010, 1603, 1605, 1614, 1641)
 Get-ItemProperty -Path @('HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
