@@ -5,6 +5,7 @@ forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #INSTALL
 choco pack
 choco install clickshare-desktop -y -dv -s .
+choco install clickshare-desktop -y -dv -s . --params="'/ExtendedDesktop'"
 
 #UNINSTALL
 choco uninstall clickshare-desktop -y

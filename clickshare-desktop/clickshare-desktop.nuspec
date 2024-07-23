@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>clickshare-desktop</id>
-    <version>4.38.0.8</version>
+    <version>4.39.0.8</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/clickshare-desktop</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>ClickShare Desktop App</title>
@@ -14,7 +14,12 @@
     <docsUrl>https://www.barco.com/en/support/clickshare-app/documentation</docsUrl>
     <tags>barco clickshare desktop app</tags>
     <summary>ClickShare Desktop App</summary>
-    <description>App to wirelessly connect, conference and share content</description>
+    <description>App to wirelessly connect, conference and share content
+	
+#### Package Parameters
+ * `/ExtendedDesktop:` - Install with Extended Desktop Driver
+To pass parameters, use `--params "''"` (e.g. `choco install autocad --params="'/ExtendedDesktop'"`).
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.</description>
     <releaseNotes>https://www.barco.com/en/support/software/R3306194</releaseNotes>
   </metadata>
   <files>
