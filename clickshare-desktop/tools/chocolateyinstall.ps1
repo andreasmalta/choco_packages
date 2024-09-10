@@ -4,7 +4,7 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Get download link
 $DownloadLink = Invoke-WebRequest "https://www.barco.com/bin/barco/tde/downloadUrl.json?fileNumber=R3306194&tdeType=3" | ConvertFrom-Json
 $url = $DownloadLink.downloadUrl
-$checksum = '877397182F5304DC3E6C3FCF3ED468BE55C9AD61E97ECEAE16F0D99FE2E2F14B'
+$checksum = '89249CB3283CE2FA97C755573BF8A6169A70A45F0A3F97ACDA4B9977EAB49804'
 
 # Check Package Parameters
 $pp = Get-PackageParameters
