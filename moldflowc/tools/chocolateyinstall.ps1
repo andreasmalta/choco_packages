@@ -1,31 +1,30 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-#ADJUST FOR LATEST VERSION
-$url = 'https://download.autodesk.com/us/moldflow/2024/autodesk_moldflow_communicator_2024_en-us_windows_002_002.7z'
-$checksum = '99320CEF9E397C621D01D7893DF11FB70E6CB76247B2B17CA5787FC710820382'
+#1 DOWNLOAD & EXTRACT
+$url = 'https://download.autodesk.com/global/moldflow_communicator/autodesk_moldflow_communicator_2025_en-us_windows_002_002.7z'
+$checksum = '136336AE29AEFC9CFB4031BFC94FC21FF301C6788F722B19557B2E35874EDA18'
 $temppackage = Join-Path $env:TEMP $env:ChocolateyPackageName
-$install = Join-Path $temppackage $env:ChocolateyPackageVersion
-$file = Join-Path $install 'setup.exe'
-
-#REMOVE OLD VERSIONS
-. $toolsDir\helpers.ps1
-Invoke-UninstallOldMFC
-
-#EXTRACT & INSTALL
+$tempversion = Join-Path $temppackage $env:ChocolateyPackageVersion
 $packageArgsUnzip = @{
   packageName    = 'MFC Installation Files'
   url            = $url
   checksum       = $checksum
   checksumType   = 'sha256'
-  unziplocation  = $install
+  unziplocation  = $tempversion
 }
 Install-ChocolateyZipPackage @packageArgsUnzip
 
+#2 UNINSTALL OLD
+. $toolsDir\helpers.ps1
+Invoke-UninstallOldMFC
+
+#3 INSTALL
+$setup = Join-Path $tempversion 'setup.exe'
 $packageArgs  = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = $file
+  file           = $setup
   silentArgs     = '-q'
   validExitCodes = @(0, 3010, 1641)
 }
