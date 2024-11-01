@@ -1,8 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url = "https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-" + $Env:ChocolateyPackageVersion + ".exe"
-$checksum = '8DBA9030A752DD16733B9B318017D828D3A7215A6052562163FB2E43D3B5BDF7'
+#$url = "https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-" + $Env:ChocolateyPackageVersion + ".exe"
+$url = "https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64.exe"
+$checksum = 'A2DF2A0AAABAEF6C97CF7A78D716460CF0396009110864BA53E5C8F387F7523A'
 
 . $toolsDir\helpers.ps1
 Invoke-Uninstall15
