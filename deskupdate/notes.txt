@@ -10,10 +10,6 @@ choco pack
 choco install dotnetfx -y
 choco install deskupdate -y -dv -s .
 
-#UPGRADE
-choco install deskupdate -y
-choco upgrade deskupdate -y -dv -s .
-
 #UNINSTALL
 choco uninstall deskupdate -y
 FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
