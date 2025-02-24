@@ -1,6 +1,6 @@
-#https://www.barco.com/bin/barco/tde/downloadUrl.json?fileNumber=R3306194&tdeType=3
-#use downloadUrl to download a copy for checksum
+#Download from https://www.barco.com/en/support/software/r3306194
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+#Copy download to clickshare-desktop\tools
 
 #INSTALL
 choco pack
