@@ -1,0 +1,778 @@
+﻿From: https://www.barco.com/en/support/docs/TDE9858
+
+1
+BARCO END USER LICENSE AGREEMENT
+These license terms are an agreement between You and Barco with regards to the Barco Software
+and/or Barco Connected Services used subject to the relevant Product Specific Terms. Additional
+services may be subject to additional terms. Updated software versions may be subject to new or
+additional terms; in which case those different terms apply prospectively and do not alter Your or
+Barco’s rights relating to pre-updated software.
+Please read this document carefully before opening, downloading, installing, or using the Barco
+Technology. If You accept these terms on behalf of an entity (e.g., your employer or customer), You
+represent and warrant that You are duly empowered by such entity to act on its behalf.
+BY USING THE BARCO TECHNOLOGY, YOU AGREE TO UNCONDITIONALLY ACCEPT THE BARCO
+TECHNOLOGY AND AGREE TO COMPLY WITH THESE TERMS.
+1. Definitions
+“Affiliate” means any corporation or other entity directly or indirectly, controlling, controlled by or
+under common control with such corporation or entity. “Control” shall mean (i) the ownership or
+control, directly or indirectly, of fifty percent (50%) or more of the equity capital or the shares or
+voting rights in the corporation or other entity in question or (ii) the control of the composition of
+the board of directors of the corporation or other entity in question.
+“Barco” means Barco NV (company number 0473.191.041) with company address at
+Beneluxpark 21, 8500 Kortrijk, Belgium, or its designated Affiliate licensing to you the proprietary
+software which is the subject matter of this Agreement.
+“Barco Partner” means a Barco authorized reseller, distributor, integrator or other intermediary
+authorized by Barco to sell Barco Technology
+“Barco Technology” means, as relevant, the Barco Software application used by You and/or the Barco
+Connected Service used in respect of the Software.
+“Connected Service” means such part of the Barco Software and Documentation provided to You
+under this EULA and Product Specific Terms, that is provided and/or accessed from a cloud service
+provider.
+“Data Processing Annex” means the annex referenced in article 13.1. applicable in respect of the
+relevant Connected Service and personal data processed thereunder.
+“Documentation” means all technical, reference and installation manuals, user guides, published
+performance specifications and other written documentation provided by Barco generally to its
+licensees with respect to the Barco Technology, along with any modifications and updates thereto,
+excluding third party content (if applicable), content related to future functionality or communication
+exchanged between Barco and the user.
+“DRM” means Barco’s digital rights management platform used to provide access to and access
+conditions of the Software.
+“EULA” means this Barco End User License Agreement and its annexes, incorporating the terms of
+the relevant Product Specific Terms, and Data Processing Annex and any modifications thereof as
+set out herein.
+“Product Specific Terms” means the additional product related terms applicable pursuant to
+article 2.6 hereof, specifically in respect of the to the Barco Technology made available to You.
+“Software” means the computer software identified in Product Specific Terms, released in object code
+only, which is being licensed hereunder.
+2
+“Term” means the period set out in article 12.1 hereof, as well as any agreed renewal term.
+“User Data” means electronic data, text, documents, pictures, videos, or other materials You upload
+to generate and/or store within the Barco Technology.
+“You” means the entity on behalf of which these terms are accepted, and any of its representatives
+having access to the Barco Technology.
+2. License Scope and Exclusions
+2.1 License Scope. Subject to Your compliance with all license terms and payment of applicable
+fees, Barco grants You a limited, non-exclusive, non-assignable, non-transferable, non-sublicensable license to use the Barco Technology exclusively in accordance with the Permitted
+Use and conditions and parameters set forth herein (“Usage Rights”)
+2.2 Permitted Use: You agree to use the Barco Technology solely as permitted under this EULA,
+by applicable laws and in a matter consistent with its design and Documentation. You agree to
+use the Barco Technology solely in the territory or region where you obtained the Barco
+Technology from Barco or a Barco Partner, or as otherwise stated in the Documentation.
+2.3 One copy on one single computing device: Unless broader usage rights are granted under
+Product Specific Terms, the license under this EULA is restricted to one (1) copy of the Barco
+Technology on one single computing device. If You deactivate or uninstall the Software from
+the computer device on which it was originally installed, this will automatically terminate this
+EULA unless otherwise and specifically approved by Barco. You agree not to use the Barco
+Technology in association with other hardware or software that allows to pool connections,
+reroute information or in any other way enables to breach or circumvent the license restrictions
+by enabling the deployment and use of the Software by more than the authorized number of
+devices and users (e.g., multiplexing) or otherwise attempts to reduce the number of licenses
+required. The Barco Technology may include various applications and components, may
+support multiple platforms and languages, and may be provided on multiple media or in
+multiple copies. Nonetheless, the Barco Technology is designed and provided to You for use as
+a single product on devices as permitted herein. You agree not to unbundle the component
+parts of the Barco Technology for use on different computer devices.
+2.4 One single user: The use of the Barco Technology is restricted to persons within Your
+organization, or any third-party representatives authorized by You, provided You will remain
+responsible for those third parties operating under your responsibility and control with regards
+to their compliance to the terms of this EULA (“Authorized User”). Unless broader usage rights
+are granted under Product Specific Terms, the license under this EULA applies to one (1) single
+Authorized User. Installation on a computing device that may be concurrently accessed by
+more than one user shall not constitute a permitted use and a separate license will be required
+for each user connecting at the same time to a computing device on which the Barco
+Technology is deployed. You agree not to use or permit the Barco Technology to be used to
+perform services for third parties, whether on a service bureau or time-sharing basis or
+otherwise, without the prior written authorization of Barco.
+2.5 No modifications: You shall not make error corrections to or otherwise modify or adapt the
+Barco Technology or create derivative works based upon the Barco Technology or permit third
+parties to do the same. You agree not to (attempt to) reverse engineer or decompile, decrypt,
+disassemble or otherwise reduce the Barco Technology to human-readable form, except as
+permitted under applicable law or to the extent Barco is legally required to permit such specific
+activity pursuant to any applicable Open-Source license.
+2.6 Product Specific Terms. The “Product Specific Terms” set out the applicable license type, and
+Your rights in time, deployment, and usage, and terms different or additional to the terms and
+conditions contained in this EULA that apply to certain, specific Software and/or hardware
+products or product groups, or to specific uses to which the Software may be put. The Product
+Specific Terms are provided as part of the Documentation (as may be set forth on a separate,
+online site for each set of the Product Specific Terms), are accepted (including by electronic
+acceptance on-line) upon first and continued use of the Software, and are herewith integrated
+in this EULA by reference. If there is a conflict between the terms of this EULA, on the one
+3
+hand, and the Product Specific Terms, on the other hand, then the Product Specific Terms will
+prevail in regard to the applicable Barco product, product group or specific use.
+2.7 Connected Services. Should your Usage Rights pertain to Barco Connected Services, You will
+not intentionally (a) interfere with other customers’ access to, or use of, the Connected
+Service, or with its security; (b) facilitate the attack or disruption of the Connected Service,
+including a denial of service attack, unauthorized access, penetration testing, crawling, or
+distribution of malware (including viruses, trojan horses, worms, time bombs, spyware,
+adware, and cancelbots); (c) cause an unusual spike or increase in Your use of the Connected
+Service that negatively impacts the Connected Service’s operation; or (d) submit any
+information that is not contemplated in the applicable Documentation.
+2.8 Evolving Technology. Barco may: (a) enhance or refine Barco Technology licensed hereunder,
+although in doing so, Barco will not materially reduce the core functionality of that Barco
+Technology, except as contemplated in this Section; and (b) perform scheduled maintenance
+of the infrastructure and software used to provide the Barco Technology, during which time
+You may experience some disruption to that Barco Technology. Whenever reasonably
+practicable, Barco or Your Barco Partner will provide You with advance notice of such
+maintenance. You acknowledge that, from time to time, Barco may need to perform emergency
+maintenance without providing You advance notice, during which time Barco may temporarily
+suspend Your access to, and use of, the Barco Technology.
+Barco may end the life of Barco Technology, including component functionality (“EOL”), by
+providing written notice on www.barco.com.
+2.9 Open Source Software: The Barco Technology may include certain open source components
+that are subject to open source licenses (“Open Source Software”), in which case, the
+embedded Open Source Software is owned by a third party. The Open-Source Software is not
+subject to the terms and conditions of this EULA. Instead, each item of Open-Source Software
+is licensed under its applicable license terms which accompanies such Open-Source Software.
+Nothing in this EULA limits Your rights under, nor grants You rights that supersede, the terms
+and conditions of any applicable license terms for the Open-Source Software. Any fees charged
+by Barco in connection with the Barco Technology, do not apply to the Open-Source Software
+for which fees may not be charged under the applicable license terms. A list of the third-party
+components released under an Open-Source license and related license terms, is available in
+the Documentation, the Software’s README files, through the “My Barco” section of the Barco
+website or through other (online) means.
+2.10 Demo Use. If Barco grants You Usage Rights in the applicable Barco Technology on a trial,
+evaluation, or other free-of-charge basis (“Demo Software and Services”), You may only use
+the Demo Software and Services on a temporary basis for the period limited by the license key
+or specified by Barco or Your Barco Partner in writing. If there is no period identified, such use
+is limited to 30 days after the Demo Software and Services are made available to You. If You
+fail to stop using and/or return the Demo Software and Services or the equipment on which it
+is authorized for use by the end of the trial period, You may be invoiced for its list price and
+agree to pay such invoice. Barco, in its discretion, may stop providing the Demo Software and
+Services at any time, at which point You will no longer have access to any related data,
+information, and files and must immediately cease using the Barco Software or Connected
+Service. The Demo Software and Services may not have been subject to Barco’s usual testing
+and quality assurance processes and may contain bugs, errors, or other issues. Except where
+explicitly agreed to in writing by Barco, You will not put Demo Software and Services into
+production use. Barco provides Demo Software and Services “AS-IS” without support or any
+express or implied warranty or indemnity for any problems or issues, and Barco will not have
+any liability relating to your use of the Demo Software and Services.
+2.11 Noncompliance: Any noncompliance to the above defined license scope and Permitted Use will
+automatically and at Barco’s option (i) terminate Barco's obligation to provide warranty,
+updates, any level of support and or (ii) may terminate your access to a Barco Technology in
+accordance with clause 9.1. or until such noncompliance is remediated.
+4
+3. Your infrastructure
+3.1 Your Infrastructure. You remain responsible to procure and maintain hardware, operating
+system, network, and other infrastructure (the “Infrastructure”) required to operate the Barco
+Technology and to keep such Infrastructure functioning and virus-free. You acknowledge that
+the Barco Technology is a complex computer software application, and that the performance
+thereof may vary depending on hardware platform, software interactions and configuration.
+You acknowledge that the Barco Technology is not designed and produced specifically to meet
+Your requirements and expectations and the selection of the Barco Technology by You is
+entirely Your own choice and decision.
+Barco ensures the processing unit, as connected to the customer’s internal network, is
+equipped with the industry standard protection against penetration and hacking, as offered by
+the supplier of the operating system. No additional preventive measures (e.g. firewalls, antivirus) are provided by default and security is limited to the default operating system’s
+applications against external threats.
+You remain responsible to protect your Infrastructure against hacking, abuse or public
+exposure of Your data, and the data of any of Your users, due to vulnerabilities outside Barco’s
+network, Barco’s products, or otherwise beyond Barco’s control.
+3.2 Account Access. you will keep all account information up to date, and use reasonable means
+to protect your account information, including login credentials and passwords. You will inform
+Barco promptly in case of suspected or known unauthorized usage of your account.
+4. Fees
+4.1 Fees for Your use of Barco Technology are set out in the order confirmation issued by Barco or
+Your Barco Partner, and the relevant Product Specific Terms. If You use Barco Technology
+beyond the limits set out in your order Confirmation (“Overage”), Barco or Your Barco Partner
+may invoice You, and You agree to pay, for such Overage under the then current terms and
+conditions.
+5. Access to code
+5.1 Code required to ensure interoperability. To the extent required by law, and at Your written
+request, Barco shall provide You with the interface information needed to achieve
+interoperability between the Barco Technology and another independently created programs
+used by You , on payment of Barco’s applicable fee (if any). You shall observe strict obligations
+of confidentiality with respect to such information and shall use such information in compliance
+with terms and conditions which Barco makes applicable.
+5.2 Source Code Access (Open Source). To the extent required under third party (open source)
+license terms, and for a period of 36 months following Your initial acceptance of this EULA,
+Barco shall provide access to the source code controlled by a third party (open source) license,
+via email or download link. If the relevant license terms require so, You may require Barco
+(attn. its legal department, at the address stated above) to obtain such code on tangible
+medium against payment of the cost of media, shipping, and handling. If the relevant license
+terms permit user modifications, any such user modification will terminate Barco's obligation
+to provide warranty, updates, or any level of support on the Software and may terminate Your
+access to a Barco Connected Service.
+6. Ownership. Intellectual Property Rights
+6.1 Ownership. Any Barco Technology is licensed, not sold to You, on a non-exclusive basis for use
+only under the terms of this EULA, and Barco and its suppliers reserve all rights not expressly
+granted to You. You shall not lease, rent, sell, make available, monetize, or otherwise transfer
+or grant a security or other interest in the Barco Technology or its Documentation. You may
+own the carrier on which the Barco Technology is provided, but the Barco Technology is owned
+and copyrighted by Barco or by third party suppliers.
+6.2 Trademarks / Copyright. Any brand and product names mentioned in relation to the Barco
+Technology may be trademarks, registered trademarks, or copyrights of their respective (third
+party) holders. Copyright on the Barco Technology components belongs to the respective initial
+copyright holder or each additional contributor and/or their respective assignee(s), as may be
+identified in the Barco Technology Documentation, source code, README file, or otherwise.
+5
+You shall not remove or obscure or otherwise alter any trademark, copyright or other
+proprietary notices, legends or logos placed on or contained within the Barco Technology.
+6.3 Third Party Materials. The Barco Technology may contain or require the use of certain third
+party technology (whether proprietary or open source software), identified by Barco in the
+Documentation, readme file, third-party click-accept, on www.barco.com or through other
+(online) means (the “Identified Components”). Identified Components may be subject to
+additional and/or different terms and you agree that the Identified Components are licensed
+under the terms, disclaimers, and warranties of their respective licenses which in the
+forthcoming case shall override the provisions of this EULA.
+6.4 Feedback. You grant Barco a right to freely use and disclose any feedback or suggestions that
+you provide to us regarding the Barco Technology (the “Feedback”). You acknowledge that we
+may use any Feedback, including any ideas contained in Feedback, for any purpose,
+commercial or otherwise, without acknowledgment or compensation to You, including to
+develop, copy, publish, modify, or improve the Barco Technology in our sole discretion.
+6.5 User Data. Barco will access, process, and use User Data in connection with Your use of the
+Barco Technology. You will remain the owner of such User Data and remain solely responsible
+such the User Data.
+You grant Barco and its Affiliates a non-exclusive, worldwide, royalty-free license to use, copy,
+transmit, sub-license, index, store, and display User Data: (i) to the extent necessary to
+perform its obligations (including, but not limited to, developing, modifying, improving,
+supporting, customizing, and operating the Barco Technology) or enforce its rights under this
+Agreement; or (ii) where required or authorized by law.
+6.6 Functional Information. Via the Barco Technology, Barco may gather technical information
+about (i) the functioning and the functionality of the products which are connected, and/or (ii)
+as provided by You or generated by Your use of the Barco Technology (“Functional
+Information”). Barco and its service providers may process and use such Functional
+Information for analytics purposes, for developing and improving products and services,
+offering products and services to your organization, all based on the legitimate interest of
+Barco of evaluating the market, assessing, and improving its products and conducting research
+and development. All knowhow, inventions and works derived by Barco from the Functional
+Information will be exclusively owned by Barco.
+7. Support
+7.1 Principle. Except as included in Product Specific Terms and/or to the extent you have entered
+into a separate maintenance and support agreement and paid applicable maintenance and
+support fees, Barco is under no obligation to provide support and maintenance in respect of
+the Barco Technology. Any unauthorized use of the Barco Technology, as specified in this EULA
+and any maintenance and support agreement, may release Barco from providing such support
+and maintenance.
+7.2 Support policy. Maintenance releases, updates or upgrades can be obtained under the terms
+of a separate maintenance and support agreement which is being offered to you. Such
+agreements, together with the support included in Product Specific Terms, state Barco’s sole
+liability and your sole remedy in respect of the support and maintenance of the Software. You
+agree to install any maintenance releases provided to you to address bugs or security issues
+in the Software. Barco will keep you informed as of when earlier versions of the Software are
+no longer serviced.
+7.3 Remote connectivity. Barco may require, as a material condition to provide maintenance or
+support, that the Software remains remotely connected with Barco over a network.
+8. Warranty
+8.1 EXCEPT FOR THE LIMITED WARRANTY THAT MAY APPLY AS PER THE PRODUCT SPECIFIC
+TERMS, YOU UNDERSTAND THAT THE BARCO TECHNOLOGY IS BEING PROVIDED TO YOU "AS
+IS". BARCO DOES NOT MAKE, NOR INTENDS TO MAKE ANY WARRANTIES OR
+REPRESENTATIONS, EXPRESS OR IMPLIED AND SPECIFICALLY DISCLAIMS ALL IMPLIED
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF INTELLECTUAL PROPERTY RIGHTS AND DOES NOT WARRANT THAT THE
+6
+BARCO TECHNOLOGY WILL BE FREE FROM ERRORS OR THAT YOU WILL BE ABLE TO OPERATE
+THE SOFTWARE WITHOUT INTERRUPTIONS OR THAT SUCH ERRORS WILL BE CORRECTED BY
+BARCO. EXCEPT FOR ANY MAINTENANCE AND SUPPORT OBLIGATIONS SEPARATELY AGREED,
+YOU ARE SOLELY RESPONSIBLE FOR ALL COSTS AND EXPENSES ASSOCIATED WITH
+RECTIFICATION, REPAIR OR DAMAGE CAUSED BY SUCH ERRORS. IN THE FORTHCOMING
+CASE, THE WARRANTY DISCLAIMER FOUND IN APPLICABLE OPEN SOURCE LICENSES SHALL
+OVERRIDE THE PROVISIONS OF THIS LICENSE AGREEMENT.
+9. Compliance and Enforcement
+9.1 Enforcement. You acknowledge and allow Barco’s usage of a DRM Tool to control and monitor
+usage and access and manage the Usage Rights granted You. Should Barco discover or suspect
+a breach of any of the terms of the EULA, it shall have the option, with or without notice, (i)
+to cause you to procure such additional licenses required as per the actual usage; (ii) to reduce
+the Barco Technology’s functionality until such breach is remedied; or (iii) to terminate the
+EULA as set out herein, without prejudice to any other remedies available at law, under
+contract or in equity. Barco explicitly disclaims any liability for losses, damages or costs
+resulting from or linked its actions as described above.
+9.2 Reporting and Audit. In addition to good practice record-keeping obligations, you agree to
+report the use of the Barco Technology and relating billing metrics in the DRM or otherwise as
+agreed. You grant to Barco and its designated auditors the right to verify your deployment and
+use of the Barco Technology and your compliance with this EULA. In the event such audit
+reveals non-compliance with Your payment obligations hereunder, such as but not limited to
+Overage, You shall promptly pay to Barco the appropriate license fees plus the reasonable cost
+of conducting the audit.
+9.3 Indemnification. You hereby agree to indemnify, defend and hold harmless Barco and Barco’s
+Affiliates from and against any and all actions, proceedings, liability, loss, damages, fees and
+costs (including attorney fees), and other expenses incurred or suffered by Barco arising out
+of or in connection with Your execution of this EULA.
+9.4 Barco Indemnification. Barco will defend any third party claim against You in relation to Your
+rightful usage of Your Usage Rights, for third party infringement of patent, copyright, or
+registered trademark (“IP Claim”). Barco will indemnify you against the final judgement
+entered by a court of competent jurisdiction or any final settlements arising out of an IP Claim;
+provided that You (i) promptly notify Barco in writing of the IP Claim upon becoming aware of
+such Claim, (ii) fully cooperation with Barco in the defence of the IP Claim, (iii) grant Barco
+the right to exclusively control the defence and settlement of the IP Claim, and any subsequent
+appeal.
+10. Limitation of Liability
+10.1 To the maximum extent permitted by law, Barco shall have no liability for any damages, losses
+or claims You, or any third party may suffer as a result of Your use of the Barco Technology.
+In jurisdictions where Barco’s liability cannot be excluded, Barco’s liability for direct damages
+shall be limited to the license fees actually paid for the Barco Technology during the twelve
+months preceding the claim (or an amount of 250,00 EUR if no fee would be paid) in the
+aggregate.
+10.2 To the maximum extent permitted by law, in no event will Barco be liable for any indirect,
+special, punitive, incidental or consequential loss or damages of any kind which may arise out
+of or in connection with the software, this EULA or the performance or purported performance
+of or failure in the performance of Barco’s obligations under this EULA or for any economic
+loss, loss of business, contracts, data, goodwill, profits, turnover, revenue, reputation or any
+loss arising from work stoppage, computer failure or malfunction of the Barco Technology and
+any and all other commercial damages or losses which may arise in respect of use of the Barco
+Technology, even if Barco has been advised of the possibility of their occurrence.
+11. Confidentiality
+11.1 Confidential Information. You will be receiving information which is proprietary and confidential
+to Barco during the procurement and Term of this EULA. “Confidential Information” shall
+include (i) the underlying logic, source code and concepts of the Barco Technology or other
+7
+trade secrets (the access to which is strictly limited as expressly set out herein), (ii) any
+information designated as confidential by Barco or which has the necessary quality of
+confidence about it and (iii) any license key provided by Barco to you hereunder.
+11.2 Trade Secrets. You acknowledge that the Barco Technology embodies valuable trade secrets
+of Barco and its third-party licensors and agree not to disclose, provide, or otherwise make
+available such trade secrets contained within the Software and Documentation in any form to
+any third party without the prior written consent of Barco. You shall implement all reasonable
+security measures to protect such trade secrets.
+11.3 Non-Disclosure. You agree not to divulge any Confidential Information to any person without
+Barco's prior written consent, provided that this article 11 shall not extend to information which
+was rightfully in your possession prior to the commencement of this EULA, which is already
+public knowledge or becomes so at a future date (otherwise than as a result of a breach of this
+article 11), to the extent it is required to be disclosed by law or which is trivial or obvious. You
+agree not to use any Confidential Information except for the Permitted Use. The foregoing
+obligations as to confidentiality shall survive the Term of this EULA.
+12. Term and Termination
+12.1 Term. The duration of this EULA will be from the date of Your acceptance (as set forth above)
+of the Barco Technology (whereby you acknowledge that use of the Barco Technology implies
+acceptance), until You de-activate the Barco Technology (by uninstalling, discontinuing usage
+of the firmware, or otherwise) or, automatically, upon the expiration of the limited time period
+set out in the Product Specific Terms, whichever comes first.
+Usage Rights in Barco Technology acquired on a subscription basis will automatically renew for
+the renewal period indicated on the order You or Your Barco Partner placed with
+Barco (“Renewal Term”) unless: (a) You notify us or Your Barco Partner in writing at least 45
+days before the end of Your then-current Usage Term of Your intention not to renew; or (b)
+You or Your Barco Partner elect not to auto-renew at the time of the initial order placed with
+Barco. Upon renewal, licenses fees may be subject to change. The new fees will apply for the
+upcoming Renewal Term unless You or the Barco Partner promptly notify Barco in writing,
+before the renewal date, that You do not accept the fee changes. In that case, Your subscription
+will terminate at the end of the current Usage Term.
+12.2 Termination. Upon termination or expiration of this EULA at any time, You agree to destroy all
+copies of the Barco Technology then in Your possession and to destroy all Documentation and
+associated materials, or to return the same to Barco or to the Barco Partner that sold or
+provided these to you. Barco may terminate this EULA, immediately or in accordance with
+article 9 hereof, by informing You at any time if any user is in breach of any of the EULA's
+terms.
+12.3 Consequences of Termination. All rights associated with the use of the Barco Technology and
+the acquisition of updates and upgrades immediately cease once the EULA is terminated or
+expires. Termination or expiry of Your license will not entitle You to any retroactive refund of
+current or past payments.
+13. Other relevant terms
+13.1 Personal Data. The data of individuals permitted to use the relevant Connected Service is
+treated in accordance with the specific product related section in Barco’s Product Privacy
+Statement available at Barco’s website. Personal data included in a Barco Connected Service
+shall be processed in accordance with the Data Processing Agreement integrated in this EULA.
+Whether or not Barco assumes the role of processor of personal data, You remain solely
+responsible for complying with all applicable data protection laws and for implementing and
+maintaining privacy protection and security measures (especially for components that You
+provide or control). Barco disclaims any liability for any data not provided by Barco, or any use
+of the Barco Technology outside the Permitted Use as per this EULA.
+14. Final Clauses
+14.1 Entire Agreement. This EULA, together with the documents referenced herein, is the only
+understanding and agreement between You and Barco for Your use of the Barco Technology.
+This EULA supersedes all other communications, understandings, or agreements we had prior
+8
+to this EULA (except for any continuing confidentiality agreement). You acknowledge that the
+copy of this EULA, digitally signed upon first use, shall have the same legal value as a hard
+copy signed by the parties.
+14.2 Notices. Notices are delivered through the DRM and alternatively or additionally to the parties’
+last known address.
+14.3 Severability. This EULA shall not be altered, amended, or varied, except by written agreement
+signed by its parties. If any provision of this EULA is determined to be illegal, void or
+unenforceable, or if any court of competent jurisdiction in any final decision so determines,
+this EULA shall continue in full force save that such provision shall be deemed to be deleted
+with effect from the date of such decision, or such earlier date, and shall be replaced by a
+provision which is acceptable by law and which embodies the intention of this EULA a close as
+possible.
+14.4 Export. You acknowledge and agree to comply with all applicable international and national
+laws that apply to the Barco Technology, including the U.S. Export Administration Regulations,
+as well as end-user, end-use, and destination restrictions issued by the U.S. or other
+governments.
+14.5 Survival. The provisions of articles 4, 5, 6, 7, 8, 9, 10, 11, 13 and 14 will survive the
+termination of this EULA, howsoever caused, but this will not imply or create any continued
+right to use the Software after termination of this EULA.
+14.6 Assignment. You are not allowed to assign, transfer or sublicense this Agreement in part or in
+full to any third party without Barco’s consent. Barco can assign all or any of Barco's
+obligations hereunder to a third party and/or any of Barco's Affiliates.
+14.7 Law and Jurisdiction. The construction, validity and performance of this EULA shall be governed
+in all respects by the laws of Belgium, without recourse to its conflict of law principles. All
+disputes arising in any way out of or affecting this EULA shall be subject to the exclusive
+jurisdiction of the courts of Gent, division Kortrijk (Belgium), without prejudice to enforcement
+of any judgment or order thereof in any other jurisdiction. The United Nations Convention on
+Contracts for the International Sale of Goods (the "Convention") shall not apply to this EULA,
+however, if the Convention is deemed by a court of competent jurisdiction to apply to this
+EULA, Barco shall not be liable for any claimed non-conformance of the Barco Software under
+Article 35(2) of the Convention.
+9
+Product Specific Terms
+THE PRODUCT SPECIFIC TERMS CONTAIN ADDITIONAL TERMS AND CONDITIONS FOR THE
+SOFTWARE AND CLOUD SERVICES PROVIDED BY BARCO AND LICENSED UNDER THE END
+USER LICENSE AGREEMENT (“EULA”) BETWEEN YOU AND BARCO (COLLECTIVELY, THE
+“EULA”).
+ONLY THOSE TERMS RELATED TO THE SPECIFIC SOFTWARE OR CLOUD SERVICES YOU
+OPERATE APPLY TO YOU. EXCEPT AS OTHERWISE SET FORTH IN THIS ANNEX, CAPITALIZED
+TERMS WILL HAVE THE MEANINGS AS IN THE EULA. TO THE EXTENT THAT THERE IS A
+CONFLICT BETWEEN THE EULA AND THE PRODUCT SPECIFIC TERMS, THE PRODUCT
+SPECIFIC TERMS WILL TAKE PRECEDENCE.
+BY DOWNLOADING, INSTALLING, OR USING THE SOFTWARE OR CONNECTED SERVICE YOU
+AGREE TO COMPLY WITH THE PRODUCT SPECIFIC TERMS.
+10
+Data Processing Annex
+For Connected Services
+This Data Processing Agreement (“DPA”) applies in respect of the Connected Service (if any) You
+operate under this EULA.
+WHEREAS subject to the terms and conditions of this EULA and any Product Specific Terms, users
+are entitled to use identified products and/or services provided by or connected with Barco over the
+cloud (the ”Connected Services”) pursuant to the license entitlement granted by Barco to the entity
+(“End User”) permitting You to access the Connected Services;
+WHEREAS in rendering the Connected Services, Barco (acting as Data Processor) may from time to
+time be provided with, or have access to information of individuals who are permitted to use the
+Connected Services and this information may qualify as personal data within the meaning of the
+GDPR;
+WHEREAS End User (acting as Data Controller) engages Barco as a commissioned processor acting
+on behalf of End User as stipulated in art. 28 GDPR;
+WHEREAS European data protection laws require data controllers in EU/EEA countries to provide
+adequate protection for transfers of personal data to non-EU/EEA countries and such protection can
+be achieved by requiring processors to enter into the Standard Contractual Clauses for the Transfer
+of Personal Data to Processors Established in Third Countries (“EC Standard Contractual Clauses”)
+pursuant to Commission Decision 2010/87/EU of 5 February 2010 as set out in appendix III;
+WHEREAS this DPA contains the terms and conditions applicable to the processing of such personal
+data by Data Processor as a commissioned data processor of Data Controller with the aim to ensure
+that the Parties comply with the Applicable Data Protection Laws.
+1. Definitions
+For the purpose of this DPA, the terminology and definitions as used in the GDPR shall apply. In
+addition to that,
+“Affiliate” means any of Affiliate(s) of End User which (a) is subject to the data protection laws and
+regulations of the EEA , and (b) is permitted to use the Connected Services.
+“Applicable Data Processor law” means the Data Protection Laws that are applicable to Barco as
+the Data Processor.
+“Applicable Data Protection Law” means the Data Protection Laws applicable to the Data
+Controller.
+“Barco” means Barco NV, with registered office at President Kennedypark 35, 8500 Kortrijk Belgium
+and its subsidiaries.
+“Data Controller” is a reference to End User.
+“Data Importer” means the Data Processor or Sub-Processor that is located in a Third Country.
+“Data Exporter” means the Data Controller if (a) (i) the Data Controller is located in the EEA or (ii)
+is located outside of the EEA and is subject to GDPR, and (b) Data Controller transfers personal data
+to a Data Importer.
+“Data Processor” is a reference to Barco.
+“Data Protection Law” means the GDPR and the laws and regulations containing rules for the
+protection of Data Subjects with regard to the Processing, including without limitation security
+requirements for and the free movement of Personal Data, implementing or completing the GDPR.
+“EC Standard Contractual Clauses” means the European Union standard contractual clauses for
+international transfers from the European Economic Area to third countries, for the time being the
+clauses attached hereto as Appendix III by reference pursuant to the European Commission’s
+decision (EU) 2021/914 of 4 June 2021 or any subsequent version issued pursuant to article 46(2)
+GDRP.
+“EEA” means all member states of the European Union (excluding the United Kingdom), Norway,
+Iceland, Liechtenstein and, for the purposes of this DPA, Switzerland.
+“Employee” means any employee, agent, contractor, work-for-hire or any other person working
+under the direct authority of Barco. However, “Employees” do not include “Sub-Processors”.
+“End User” is the person or entity on whose behalf this Exhibit DPA is accepted.
+“End User Data” means Personal Data for which End User is the Data Controller under Applicable
+Data Protection law, which are being shared with Barco in the provision of the Connected Services.
+11
+“GDPR” means regulation 2016/679 of the European Parliament and the Council of 27 April 2016
+on the protection of natural persons with regard to the processing of personal data and on the free
+movement of such data.
+“Non-Adequate Country” means a country that is deemed not to provide an adequate level of
+protection of Personal Data within the meaning of the articles 44-45 GDPR.
+“Sub-Processor” means any Processor engaged by Barco that Processes End User Data.
+“Third Country” means those countries that are not member states of the EU or the EEA (as defined
+herein).
+“Third Party” means any party other than Barco, Sub-Processor or End User.
+2. Instructions
+2.1 To the extent Barco Processes End User Data required for the provision of the Connected Services
+it shall act as a Data Processor on behalf of End User, being the Data Controller.
+2.2 End User is obliged to ensure that any instruction given to Barco is in compliance with Applicable
+Data Protection Law.
+2.3 In the provision of the Connected Services, Barco shall Process the End User Data only on
+documented instructions from Data Controller unless Barco is required to Process End User Data by
+Union or by a Member State law to which Barco is subject; in such case, Barco shall inform the End
+User of that legal requirement before Processing, unless that law prohibits such information -.
+2.4 The Agreement and this DPA are Data Controller's complete and final instructions to Barco with
+regard to the Processing.
+2.5 Appendix I to this DPA sets out certain information regarding the Processing of the End User Data
+as required by article 28 of the GDPR (and possibly, equivalent requirements of other Data Protection
+Laws).
+2.6 If Barco believes that an instruction of Data Controller infringes the Applicable Data Processor
+Law, Barco shall promptly inform Data Controller.
+2.7 Any further instructions that go beyond the instructions contained in this DPA or the Agreement
+must be within the subject matter of this DPA and the Agreement. If the implementation of such
+further instructions results in costs for Barco, Barco shall inform Data Controller about an estimation
+and reasoning of such costs before implementing the instruction. Data Controller shall give further
+instructions generally in writing, unless the urgency or other specific circumstances require another
+form. Instructions in another form shall be promptly confirmed in writing by Data Controller.
+3. Applicable law
+3.1 When performing this DPA, Data Controller shall comply with the Applicable Data Protection Law
+and Barco shall comply with the Applicable Data Processor Law.
+3.2 Each party shall deal with reasonable requests for assistance of the other party (including of End
+User) to ensure that the Processing complies with Applicable Data Protection Law.
+4. Obligations of Data Controller
+4.1 Data Controller warrants that Data Controller Personal Data is lawfully obtained from Data
+Subject and is lawfully provided to Barco under the Applicable Data Protection Law.
+4.2. Data Controller further warrants that
+i) it provides Barco with Personal Data that is up-to-date and relevant for the Processing
+activities;
+ii) it has provided Data Subject all necessary and relevant information with regard to the
+Processing of the Personal Data as required under the Applicable Data Protection Law; and
+iii) the End User Data does not infringe any third-party rights.
+4.3. Data Controller agrees that it remains the contact point for Data Subject and that it will inform
+Data Subject about this. Should a Data Subject contact Barco with regard to correction or deletion
+of its Personal Data, Barco will use commercially reasonable efforts to forward such requests to End
+User.
+5. Obligations of Barco
+5.1 Security. Barco shall implement appropriate technical, physical and organisational security
+measures as specified in Appendix II taking into account the state of the art, the costs of
+implementation and the nature, scope, context and purposes of Processing as well as the risk of
+varying likelihood and severity for the rights and freedoms of natural persons to ensure a level of
+security appropriate to the risk and to protect End User Data against accidental or unlawful
+destruction or accidental loss, alteration, unauthorised disclosure or access, and against all other
+forms of unlawful Processing including, but not limited to, unnecessary collection or further
+Processing.
+5.2 Non-disclosure and confidentiality. Barco shall keep End User Data confidential and shall not
+disclose End User Data in any way to any Employee or Third Party without the prior approval of Data
+12
+Controller, except where, (i) subject to this Section, the Disclosure is required for the performance
+of the Processing, or (ii) subject to Section 8.1 ii), where End User Data need to be disclosed to a
+competent public authority to comply with a legal obligation or as required for audit purposes. Barco
+shall provide the Employees access to End User Data only to the extent necessary to perform the
+Processing. Barco shall ensure that any Employee it authorizes to have access to End User Data
+Processed on behalf of End User has committed himself to confidentiality or is under an appropriate
+obligation of confidentiality.
+6. Sub-Processors
+6.1 Data Controller agrees that Barco may use Sub-Processors to fulfill its contractual obligations
+under this DPA or to provide certain services on its behalf, such as providing support services or
+hosting services. The Sub-Processors that are currently engaged by Barco to carry out Processing
+activities on End User Data on behalf of End User are mentioned in Barco’s product privacy statement
+on https://www.barco.com/nl/about-barco/legal/privacy-policy/product-privacy-statement.
+6.2 Barco shall inform the Data Controller of any intended changes concerning the addition or
+replacement of Sub-Processors via Barco’s usual email notification process. Data Controller shall not
+unreasonably object to such changes.
+6.3 Where Barco subcontracts (part of) the Processing of End User Data on behalf of End User, it
+shall do so only by way of a written agreement with the Sub-Processor which imposes the same or
+essentially the same data protection obligations on the Sub-Processor as are imposed onto Barco
+under this DPA. Barco remains liable for the Sub-Processor’s breach of its data protection obligations
+under such written agreement.
+7. Audit and compliance
+7.1 Barco shall, upon reasonable notice (no less than two (2) months) and not more than once every
+two years (unless there is a Personal Data Breach), allow its procedure and documentation to be
+inspected or audited by Data Controller (or the auditor of its choice, excluding any Barco competitor)
+during business hours in order to ascertain compliance with the obligations set forth in this DPA, in
+which case Barco shall make the processing systems, facilities and supporting documentation
+relevant to the Processing of End User Data available for an audit by End User. For the avoidance of
+doubt, the scope of such audit shall be limited to documents and records allowing the verification of
+Barco’s compliance with the obligations set forth in this DPA and shall not include financial documents
+or records of Barco or any documents or records concerning other customers of Barco.
+8. Notifications of Disclosures and Personal Data Breaches
+8.1 Barco shall use reasonable efforts to inform Data Controller as soon as reasonably possible if:
+i) it receives an inquiry, a subpoena or a request for inspection or audit from a competent
+public authority relating to the Processing, except where Barco is otherwise prohibited by law
+from making such disclosure;
+ii) it intends to disclose Personal Data to any competent public authority; or
+iii) it becomes aware of a Personal Data Breach.
+8.2 In the event of a Personal Data Breach, Barco shall take reasonable remedial measures to
+preserve the confidentiality of the End User Data. Furthermore, Barco shall provide Data Controller
+the information reasonably requested by End User regarding the Personal Data Breach. This
+information will at least contain the following elements:
+i) a description of the nature of the Personal Data Breach, including the number and categories
+of Data Subject and personal data records affected;
+ii) a description of the likely consequences of the Personal Data Breach; and
+iii) a description how Barco proposes to address the Personal Data Breach, including any
+mitigation efforts.
+8.3 Data Controller agrees that an Unsuccessful Security Incident will not be subject to this Section 8.
+An “Unsuccessful Security Incident” is one that results in unauthorised access to End User Data or
+to any of Barco’s or Sub-Processor’s equipment or facilities storing End User Data, and may include,
+without limitation, pings and other broadcast attacks on firewalls or edge servers, port scans,
+unsuccessful log-on attempts, denial of service attacks, packet sniffing (or other unauthorised access
+to traffic data where it can be reasonably concluded that such access did not result in access beyond
+headers) or similar incidents where it can be reasonably concluded that such access did not result in
+an actual destruction, loss, alteration or unauthorised disclosure of Personal Data.
+8.4. Barco’s obligation to report or respond to a Personal Data Breach under this Section 8 is not and
+will not be construed as an acknowledgement by Barco and any of Barco’s subprocessors of any fault
+or liability of Barco with respect to the alleged Personal Data Breach.
+13
+9. Cooperation and assistance duty
+9.1 Barco will reasonably assist Data Controller in the fulfilment of its obligation to respond to
+requests from Data Subjects, provided that (i) Data Controller has instructed Barco to do so by way
+of a written instruction and (ii) Data Controller reimburses Barco for the costs arising from this
+assistance.
+9.2 Barco shall promptly inform Data Controller of any complaints, requests or enquiries received
+from a Data Subject, including but not limited to requests to rectify or erase End User Data or to
+object to the Processing of End User Data. Barco shall not respond directly to any complaints,
+requests or enquiries received from Data Subject without Data Controller’s prior written instruction,
+except where required by law.
+9.4 Upon written request of Data Controller, and subject to the provisions of clause 7.1., Barco shall
+make available to Data Controller all information necessary to demonstrate compliance with the
+Applicable Data Protection Law.
+9.5 Upon written request of Data Controller, Barco shall, taking into account the nature of the
+Processing and the information at its disposal, assist Data Controller in ensuring compliance with the
+obligations regarding security of the Processing, notification of Personal Data Breaches and
+mandatory data protection impact assessments (articles 32-36 GDPR).
+9.6 Barco shall cooperate with the supervisory authorities in the performance of their duties.
+10. Return and destruction of Personal Data
+Upon termination of the provision of the Connected Services, Barco shall – at a reasonable fee - , at
+the option of Data Controller expressed in writing, return and/or delete the End User Data and copies
+thereof to Data Controller, except to the extent applicable law provides otherwise. In that case, Barco
+shall no longer Process the End User Data, except to the extent required by applicable law.
+11. Affiliates
+11.1 The parties acknowledge and agree that, by using the Connected Services, the End User enters
+into the DPA for its own account and, as applicable, in the name and on behalf of its or their Affiliates.
+End User and each Affiliate agree to be bound by the obligations under this DPA. All access to and
+use of the Connected Services by Affiliates must comply with the terms and conditions of the DPA
+and any violation of the terms and conditions of this DPA by an Affiliate shall be deemed a violation
+by End User.
+11.2 End User shall remain responsible for coordinating all communication with Barco under this DPA
+and be entitled to make and receive any communication in relation to this DPA on behalf of End User
+and any relevant Affiliates.
+12. Liability
+12.1 Barco indemnifies Data Controller for all claims, losses or damages incurred by Data Controller
+and arising directly out of a breach by Barco of this DPA and/or the Applicable Data Processing Law
+provisions directed to Barco, unless Barco proves that it is not responsible for the event giving rise
+to the liability.
+12.2 Data Controller indemnifies Barco and holds Barco harmless against all claims, losses or
+damages incurred by Barco and arising directly out of a breach of this DPA and/or the Applicable
+Data Protection Law by End User.
+12.3 Each party’s liability will be limited to foreseeable, direct and personal damage suffered,
+excluding indirect, incidental, special or consequential damage and regulatory fines, even if advised
+of the possibility thereof. Indirect Damage shall mean damage or loss that do not directly and
+immediately result from an event giving rise to the liability, including but not limited to loss of
+earnings, business interruption, increase of personnel cost, failure to realize anticipated savings or
+benefits.
+12.4 In any event and to the extent permitted by law, Barco’s aggregated maximum liability under
+this DPA will be limited to the amounts received for the provision of the Connected Services in the
+twelve months preceding the incident giving rise to liability.
+13. Data transfer
+13.1 Barco shall not transfer End User Data to any Non-Adequate Country outside the EEA or make
+any End User Data accessible from any such Non-Adequate Country without adequate protection.
+13.2 Any transfer of Personal Data to a Non-Adequate Country shall be governed by the terms of the
+EC Standard Contractual Clauses (Appendix III) or other model clauses that have been approved by
+the EU commission or another competent public authority in accordance with the Applicable Data
+Processing Law. Barco shall conclude these clauses on behalf of Data Controller. The Appendices of
+these clauses will contain the same or essentially the same information as this DPA. Barco and Data
+Controller shall work together to apply for and obtain any permit, authorization or consent that may
+be required under Applicable Data Processing Law in respect of the implementation of this Section.
+14
+14. Termination of the DPA
+This DPA shall continue in force until the termination or expiration of the Agreement (the
+“Termination Date”).
+15. Entire Agreement
+This Exhibit DPA is an integrating part of the Agreement. If there is a conflict between the Agreement
+and this DPA, the terms of this DPA will control.
+16. Annexes
+The following Annexes are attached hereto and made a part hereof:
+Appendix I: Details of processing
+Appendix II: Technical and organizational measures
+Appendix III: EC Standard Contractual Clauses
+15
+Appendix I
+Details of Processing
+This Appendix 1 includes certain details of the Processing of End User Data as required by Article
+28(3) GDPR. More specific details per Barco product are included in the product specific sections of
+Barco’s product privacy statement.
+Subject matter and duration of the Processing of End User Data
+The subject matter of the Processing of the End User Data is set out in Barco’s product privacy
+statement on www.barco.com and this DPA.
+End User Data will be Processed for the duration of the provision of Connected Services for the benefit
+of the End User.
+End User Data can be Processed outside the EEA by Barco Affiliates and/or Sub-Processors as
+indicated in Barco’s Product Privacy Statement.
+The nature and purpose of the Processing of End User Data
+Barco is managing the hosting environment on behalf of the Data Controller to enable the provision
+of the Connected Services
+The types of End User Data to be Processed is set out in Barco’s product privacy statement
+(product-privacy-statement)
+The categories of Data Subjects to whom the End User Data relates
+• End User’s employees (including End User’s agents, advisors, freelancers and consultants)
+and End User’s representatives (who are natural persons)
+• Customers of the End User, its employees and representatives
+• Customers of the End User’s customers, its employees and representatives
+• Users of the Barco Product authorized by the End User to use the products
+16
+Appendix II
+Technical and organisational measures
+1. The pseudonymisation and encryption of personal data; (art. 32, par. 1, lit. a,
+GDPR)
+a. based on a risk assessment (and if required an additional DPIA) Barco will ensure a
+level of security appropriate to the risk, including inter alia as appropriate:
+i. Pseudonymization
+ii. Encryption, conform Cryptographic Controls policy
+2. Ensure the ongoing confidentiality, integrity, availability and resilience of
+processing systems and services; (art. 32, par. 1, lit. b, GDPR)
+a. Barco is verified under ISO/IEC 27001:2013 covering the business processes,
+infrastructure and tools related to software development, sales, deployment, and
+support of our ClickShare wireless collaboration product line in our Kortrijk, Noida
+and Taipei locations. https://www.barco.com/en/about-barco/legal/certificates
+b. Security and privacy by design
+c. Compliance with the security policies in place at Barco, covering
+i. Information Security Top Policy
+ii. Code of Digital Conduct
+iii. Acceptable Use
+iv. Logical Access Control
+v. Third Party Security
+vi. Backup and Recovery
+vii. Password
+viii. Info Sec Incident Management
+ix. Anti Malware
+x. Network Protection
+xi. Cryptographic Controls
+xii. IT Operations
+xiii. Cloud Security
+xiv. Secure SDLC
+xv. Disposal and Destruction
+xvi. Physical Environmental Security
+xvii. Secure Remote Support Policy
+3. The ability to restore the availability and access to personal data in a timely
+manner in the event of a physical or technical incident; (art. 32, par. 1, lit. c,
+GDPR)
+Compliance with the security policies in place at Barco, covering
+i. Backup and Recovery
+ii. IT Operations
+4. Process for regular testing, assessing and evaluating the effectiveness of
+technical and organizational measures for ensuring the security of the data
+processing (art. 32, par. 1, lit. d, GDPR)
+a. Product Security Incident Response teams (psirt): https://www.barco.com/psirt
+b. Barco Security Organization operates in three lines of defense, covering operations,
+governance and internal audit.
+c. Regular evaluations by independent third parties (e.g. penetration testing, audit,
+…)
+d. Integration of automated security scanning tools during the development process
+(Secure SDLC) and operations
+17
+Appendix III
+EC Standard Contractual Clauses
+The 2021 Standard Contractual Clauses1 are incorporated into the DPA by reference, and will apply
+in the following manner:
+Module Two (Controller to Processor) will apply where End User is a controller of Personal Data and
+Barco is a processor of Personal Data.
+For this Module:
+i) Clause 7 will not apply;
+ii) in Clause 9(a), Option 2 will apply, and the time period for prior notice of Sub-Processor
+changes will be as set forth in Section 6 of the DPA;
+iii) in Clause 11(a), the optional language will not apply;
+iv) in Clause 17, Option 1 will apply, and the Standard Contractual Clauses will be governed by
+the laws of Belgium;
+v) in Clause 18(b), disputes will be resolved by the courts of Belgium;
+vi) Annex I.A (List of parties)
+The End User (as defined under Section 1 of the DPA) acts as data exporter and Barco (as
+defined under Section 1 of the DPA), on behalf of Barco’s (Sub-)Processors located in a Third
+Country, acts as data importer for the construction of these 2021 Standard Contractual
+Clauses. Further contact details are part of the DPA and Appendix I.
+vii) Annex I.B (Description of Transfer)
+The Parties agree that Appendix I to the DPA (as well as Section of DPA in respect of transfers
+to (sub-processors) describe the transfer as required under the 2021 Standard Contractual
+Clauses.
+viii)Annex I.C (Competent Supervisory Authority)
+The competent supervisory authority is the supervisory authority that has primary
+jurisdiction over the data exporter.
+ix) Annex II (Technical and Organizational Measures – Security of the Data)
+Described in Appendix II to the DPA
+x) Annex III (List of Sub-processors)
+The Data Controller has authorised the use of the sub-processors mentioned in Barco’s
+product privacy statement (product-privacy-statement)
+YOU HEREBY ACKNOWLEDGE TO HAVE READ, UNDERSTOOD AND ACCEPTED TO
+BE BOUND BY ALL THE TERMS AND CONDITIONS OF THIS END USER LICENCE
+AGREEMENT AS INDICATED ABOVE
+1 Annex to the Commission Implementing Decision (EU) 2021/914 of 4 June 2021 on standard contractual clauses for the transfer of personal
+data to third countries pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council, or any subsequent version
+issued pursuant to article 46(2) GDRP
+
+<Insert License Here>
