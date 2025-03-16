@@ -1,3 +1,4 @@
+#https://www.konicaminolta.eu/eu-en/digital-workplace/printing-devices/bizhub-c257i#specifications-and-downloads
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
 #INSTALL

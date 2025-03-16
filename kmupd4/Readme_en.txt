@@ -1,9 +1,9 @@
 ﻿==========================================================================================
 KONICA MINOLTA Universal V4 PCL
 Printer Software Document
-11/27/2023
+12/27/2024
 
-PCL  Version 2.4.0.0
+PCL  Version 2.4.0.1
 Printer Installer Version 2.0.0.2
 
 Copyright (C) 2016 KONICA MINOLTA, INC.
@@ -235,37 +235,6 @@ Supported OS :
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL Version 2.4.0.0
-
-==========================================================================================
-4-1. The following functions are add in this driver.
-==========================================================================================
-  1.Added support models:
-    KONICA MINOLTA C751i *
-    KONICA MINOLTA C651i *
-    KONICA MINOLTA C551i *
-    KONICA MINOLTA 751i *
-    KONICA MINOLTA 651i *
-    KONICA MINOLTA 551i *
-    * Windows Store Device App is not supported.
-
-2. Added FS-542 and PK-527 options to the following models:
-    KONICA MINOLTA C287i
-    KONICA MINOLTA C257i
-    KONICA MINOLTA C227i
-
- 3. New paper tray added for the following model:
-    KONICA MINOLTA C4051i
-    KONICA MINOLTA C3351i
-    KONICA MINOLTA C4001i
-    KONICA MINOLTA C3301i
-    KONICA MINOLTA C3321i
-    KONICA MINOLTA 4751i
-    KONICA MINOLTA 4051i
-    KONICA MINOLTA 4701i
-
- 4. GB18030-2022
-
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -297,7 +266,7 @@ Supported OS :
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[V4UPDSetup_Own_PCL_2.4.0.0]Folder
+[V4UPDSetup_Own_PCL_2.4.0.1]Folder
  |- [Drivers]
   |- [x64]
   |- [x86]
