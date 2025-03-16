@@ -1,4 +1,4 @@
-#https://www.konicaminolta.eu/eu-en/hardware/printing-devices/bizhub-750i#specifications
+#https://www.konicaminolta.eu/eu-en/digital-workplace/printing-devices/bizhub-c257i#specifications-and-downloads
 #Copy txt content of into Readme_en
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 

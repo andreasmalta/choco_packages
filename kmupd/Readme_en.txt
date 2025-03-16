@@ -1,15 +1,15 @@
 ==========================================================================================
 KONICA MINOLTA Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-2024/02/27
+2025/02/10
 
-PCL  Version 3.9.737.0
-PS   Version 3.9.737.0
-FAX  Version 3.9.737.0
-Installer Version 3.2.29.0
-PCL  Setup Package Version 3.9.737.0
-PS   Setup Package Version 3.9.737.0
-FAX  Setup Package Version 3.9.737.0
+PCL  Version 3.9.820.0
+PS   Version 3.9.821.0
+FAX  Version 3.9.820.0
+Installer Version 3.2.30.0
+PCL  Setup Package Version 3.9.820.0
+PS   Setup Package Version 3.9.821.0
+FAX  Setup Package Version 3.9.820.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -285,19 +285,19 @@ Supported OS :
 
 Support the following operation environments :
   <PCL driver>
-    Citrix Virtual Apps and Desktops 7 2006 / 2003
+    Citrix Virtual Apps and Desktops 7 2305 / 2303
     Terminal Services
     Remote Desktop
     Terminal Services Easy Print
     Remote Desktop Easy Print
 
   <PS driver>
-    Citrix Virtual Apps and Desktops 7 2006 / 2003
+    Citrix Virtual Apps and Desktops 7 2305 / 2303
     Terminal Services
     Remote Desktop
 
   <FAX driver>
-    Citrix Virtual Apps and Desktops 7 2006 / 2003
+    Citrix Virtual Apps and Desktops 7 2305 / 2303
     Terminal Services
     Remote Desktop
     Terminal Services Easy Print
@@ -315,58 +315,15 @@ to use the LDAP server in the Fax driver.
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/FAX Version 3.9.737.0
-
 ==========================================================================================
 4-1. The following functions are add in this driver.
 ==========================================================================================
- 1. Added support models:
-    KONICA MINOLTA C651i
-    KONICA MINOLTA C551i
-    KONICA MINOLTA 651i
-    KONICA MINOLTA 551i
-    KONICA MINOLTA C751i
-    KONICA MINOLTA 751i
-
- 2. Added FS-542 and PK-527 options to the following models (PS/PCL driver):
-    KONICA MINOLTA C287i
-    KONICA MINOLTA C257i
-    KONICA MINOLTA C227i
-
- 3. Added 1200dpi (Text/Shape) function to [Quality] tab -> [Resolution]
-
- 4. New paper tray added for the following model:
-    KONICA MINOLTA C4051i
-    KONICA MINOLTA C3351i
-    KONICA MINOLTA C4001i
-    KONICA MINOLTA C3301i
-    KONICA MINOLTA C3321i
-    KONICA MINOLTA 4751i
-    KONICA MINOLTA 4051i
-    KONICA MINOLTA 4701i
-
- 5. GB18030-2022
-
- 6. Change to default settings
-    Changed from [Baseline] to [KONICA MINOLTA A3 Common].
-
- 7. Added [Select multiple destinations] function to [Configure] tab -> [Device Option] 
-    (FAX driver)
-
-==========================================================================================
-4-2. Other
-==========================================================================================
- 1. Removed FS-536 and PK-520 options to the following models (PCL and PS drivers):
+ 1. Added FS-536 and PK-520 options to the following models (PS/PCL driver):
     KONICA MINOLTA C360i
     KONICA MINOLTA C300i
     KONICA MINOLTA C250i
-    KONICA MINOLTA 650i
-    KONICA MINOLTA 550i
-    KONICA MINOLTA 450i
     KONICA MINOLTA 360i
     KONICA MINOLTA 300i
-    KONICA MINOLTA 651i
-    KONICA MINOLTA 551i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
