@@ -1,9 +1,9 @@
 ==========================================================================================
 Generic Universal V4 PCL
 Printer Software Document
-09/04/2022
+2/19/2024
 
-PCL  Version 2.3.0.0
+PCL  Version 2.4.0.0
 Printer Installer Version 2.0.0.2
 
 Copyright (C) 2016 KONICA MINOLTA, INC.
@@ -193,6 +193,10 @@ Supported devices :
     BW470-1i
     45C-1i/36C-1i/30C-1i/25C-1i
     45BW-1i/36BW-1i/30BW-1i
+    70C-1i
+    65C-1i/55C-1i
+    75BW-1i
+    65BW-1i/55BW-1i
 
     * Windows Store Device App is not supported.
 
@@ -228,20 +232,35 @@ Supported OS :
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL Version 2.3.0.0
+  PCL Version 2.4.0.0
 
 ==========================================================================================
 4-1. The following functions are add in this driver.
 ==========================================================================================
-  1.Added support models:
-    Generic 45C-1i
-    Generic 36C-1i
-    Generic 30C-1i
-    Generic 25C-1i
-    Generic 45BW-1i
-    Generic 36BW-1i
-    Generic 30BW-1i
-    Generic 75BW-0i
+ 1. Added support models:
+    Generic 70C-1i
+    Generic 65C-1i
+    Generic 55C-1i
+    Generic 75BW-1i
+    Generic 65BW-1i
+    Generic 55BW-1i
+
+ 2. Added Inner Finisher1 and Punch Kit4 options to the following models:
+    Generic 28C-7i
+    Generic 25C-7i
+    Generic 22C-7i
+
+ 3. New paper tray added for the following model:
+    Generic C405-1i
+    Generic C335-1i
+    Generic C400-1i
+    Generic C330-1i
+    Generic C332-1i
+    Generic BW475-1i
+    Generic BW405-1i
+    Generic BW470-1i
+
+ 4. GB18030-2022
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -274,7 +293,7 @@ Supported OS :
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[V4UPDSetup_Generic_PCL_2.3.0.0]Folder
+[V4UPDSetup_Generic_PCL_2.4.0.0]Folder
  |- [Drivers]
   |- [x64]
   |- [x86]
