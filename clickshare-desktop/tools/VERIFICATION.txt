@@ -3,4 +3,4 @@ Verification is intended to assist the Chocolatey moderators and community in ve
  
 1. The original software is available on the following page: https://www.barco.com/en/support/software/r3306194
 2. Download the ClickShare Chocolatey nupkg, Extract to a temporary folder, and open the Tools folder.
-3. Run checksum on the R3306194_57_ApplicationSw.zip, it should match the SHA256 checksum from the download page.
+3. Run checksum on the R3306194_xx_ApplicationSw.zip, it should match the SHA256 checksum from the download page.
