@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dwgtrueview</id>
-    <version>2025.0.58.3</version>
+    <version>2026.25.1.60</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/dwgtrueview</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>DWG TrueView</title>
@@ -16,8 +16,8 @@
     <summary>DWG TrueView</summary>
     <description>View and convert 2D and 3D DWG files for free.
 
-#### System requirements for Autodesk® DWG TrueView™ 2025
-Operating System: 64-bit Microsoft® Windows® 11 or Windows 10 version 1809 or above. 
+#### System requirements for Autodesk® DWG TrueView™ 2026
+Operating System: 64-bit Microsoft® Windows® 11 or Windows® 10. 
 
 #### Package Parameters
 The following package parameters can be set:
@@ -28,7 +28,7 @@ The following package parameters can be set:
 
 To pass parameters, use `--params "''"` (e.g. `choco install dwgtrueview --params="'/French'"`).
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.</description>
-    <releaseNotes>https://help.autodesk.com/view/TRUEVIEW/2025/ENU/?guid=DWG_TRUEVIEW_RELEASE_NOTES</releaseNotes>
+    <releaseNotes>https://help.autodesk.com/view/TRUEVIEW/2026/ENU/?guid=DWG_TRUEVIEW_RELEASE_NOTES</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
