@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>autocadlt</id>
-    <version>2025.0.58.0</version>
+    <version>2026.0.0.1</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/autocadlt</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>AutoCAD LT</title>
@@ -11,34 +11,14 @@
     <projectUrl>https://www.autodesk.com/products/autocad-lt/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/autocadlt/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/ACDLT/2025/ENU/</docsUrl>
+    <docsUrl>https://help.autodesk.com/view/ACDLT/2026/ENU/</docsUrl>
     <tags>autodesk autocad dwg cad 2D drawing</tags>
     <summary>AutoCAD LT</summary>
     <description>AutoCAD LT is CAD software that is used for precise 2D drafting, design, and documentation. It includes features to automate tasks and increase productivity such as comparing drawings, counting, adding objects, and creating tables. AutoCAD LT enables users to create, edit, and annotate drawings via desktop, web, and mobile devices.
 
-#### System requirements for AutoCAD LT 2025
-Operating System: 64-bit Microsoft® Windows® 11 or Windows 10 version 1809 or above.
-
-#### Package Parameters
-The following package parameters can be set (choose only one!):
- * `/ChineseSimp:` - Install Simplified Chinese language version
- * `/ChineseTrad:` - Install Traditional Chinese language version
- * `/Czech:` - Install Czech language version
- * `/French:` - Install French language version
- * `/German:` - Install German language version
- * `/Hungarian:` - Install Hungarian language version
- * `/Italian:` - Install Italian language version
- * `/Japanese:` - Install Japanese language version
- * `/Korean:` - Install Korean language version
- * `/Polish:` - Install Polish language version
- * `/Portuguese:` - Install Brazilian Portuguese language version
- * `/Russian:` - Install Russian language version
- * `/Spanish:` - Install Spanish language version
- * If no parameter is given the English language version will be installed.
-
-To pass parameters, use `--params "''"` (e.g. `choco install autocadlt --params="'/French'"`).
-To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.</description>
-    <releaseNotes>https://help.autodesk.com/view/ACDLT/2025/ENU/?guid=AUTOCADLT_2025_RELEASE_NOTES</releaseNotes>
+#### System requirements for AutoCAD LT 2026
+Operating System: 64-bit Microsoft® Windows® 11 or Windows 10 version.</description>
+    <releaseNotes>https://help.autodesk.com/view/ACDLT/2026/ENU/?guid=AUTOCADLT_2026_RELEASE_NOTES</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

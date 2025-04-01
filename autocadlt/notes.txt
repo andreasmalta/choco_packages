@@ -5,19 +5,6 @@ forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #INSTALL
 choco pack
 choco install autocadlt -y -dv -s .
-choco install autocadlt -y -dv -s . --params="'/ChineseSimp'"
-choco install autocadlt -y -dv -s . --params="'/ChineseTrad'"
-choco install autocadlt -y -dv -s . --params="'/Czech'"
-choco install autocadlt -y -dv -s . --params="'/French'"
-choco install autocadlt -y -dv -s . --params="'/German'"
-choco install autocadlt -y -dv -s . --params="'/Hungarian'"
-choco install autocadlt -y -dv -s . --params="'/Italian'"
-choco install autocadlt -y -dv -s . --params="'/Japanese'"
-choco install autocadlt -y -dv -s . --params="'/Korean'"
-choco install autocadlt -y -dv -s . --params="'/Polish'"
-choco install autocadlt -y -dv -s . --params="'/Portuguese'"
-choco install autocadlt -y -dv -s . --params="'/Russian'"
-choco install autocadlt -y -dv -s . --params="'/Spanish'"
 
 #UPGRADE
 choco install autocadlt -y
