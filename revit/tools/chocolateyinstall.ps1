@@ -27,8 +27,8 @@ $packageArgs  = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 #4 WAIT UNTIL INSTALLED
-Write-Host "Waiting for Autodesk Installer to finish, trying again in 30 seconds..."
-Start-Sleep 30
+Write-Host "Waiting for Autodesk Installer to finish..."
+Start-Sleep 120
 while ($true) {
     # (re)try
     $processCHK = Get-Process | Where {$_.ProcessName -Like 'Installer'}
