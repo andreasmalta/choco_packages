@@ -1,0 +1,14 @@
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+#copy version number from unzip folder setup.xml
+
+#INSTALL
+choco pack
+choco install revit -y -dv -s .
+
+#UPGRADE
+choco install revit -y
+choco upgrade revit -y -dv -s .
+
+#UNINSTALL
+choco uninstall revit -y
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
