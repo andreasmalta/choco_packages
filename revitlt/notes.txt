@@ -1,0 +1,14 @@
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+#copy version number from unzip folder setup.xml
+
+#INSTALL
+choco pack
+choco install revitlt -y -dv -s .
+
+#UPGRADE
+choco install revitlt -y
+choco upgrade revitlt -y -dv -s .
+
+#UNINSTALL
+choco uninstall revitlt -y
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
