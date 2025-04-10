@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>revitlt</id>
+    <version>2026.0.4.409</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/revitlt</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Revit LT</title>
+    <authors>Autodesk</authors>
+    <projectUrl>https://www.autodesk.com/products/revit-lt/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/revitlt/icon.png</iconUrl>
+    <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
+    <docsUrl>https://help.autodesk.com/view/RVTLT/2026/ENU/</docsUrl>
+    <tags>autodesk revit modeling DWG DXF</tags>
+    <summary>Revit LT</summary>
+    <description>Revit LT is used to design, document, visualize, and deliver architecture and engineering projects for individuals and teams working in CAD and BIM.
+
+#### Included:
+Viewer Mode: Revit LT Viewer 2026 is intended for reviewing models and printing views and sheets without the need for a software license or subscription.
+
+#### System requirements:
+64-bit Microsoft® Windows 10 v1809 or later or Windows 11.</description>
+    <releaseNotes>https://help.autodesk.com/view/RVTLT/2026/ENU/?guid=RevitLTReleaseNotes_2026release_html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
