@@ -1,20 +1,9 @@
-cd C:\temp
-choco new designreview packageversion="2017.05.24" maintainername="aa.malta" installertype="'exe'" file="'http://download.autodesk.com/us/support/files/designreview/2018/EXE/enu/SetupDesignReview.exe'"
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 
-checksum -t sha256 -f C:\Users\andreas.andersson\GitHub\chocolatey-test-environment\packages\SetupDesignReview.exe
-5258D6F5C26FE59A245A2540ADD6E49CC80025EEA48289F3ED30424EB83F3325
-
-checksum -t sha256 -f C:\ProgramData\chocolatey\lib\designreview\tools\setup\x86\ADR\SetupDesignReview.msi
-A54C237AAAC1570965AC61FAB480658A413955CD2151EAE02759D1F35A1CDAE1
-
-cd designreview
+#INSTALL
 choco pack
-choco install designreview -s .
-choco uninstall designreview
+choco install designreview -y -dv -s .
 
-choco push designreview.2017.05.24.nupkg -s https://push.chocolatey.org/
-
-https://knowledge.autodesk.com/sites/default/files/file_downloads/ADR-2018-Hotfix-1.msp
-msiexec /p ADR-2018-Hotfix-1.msp /qn
-
-Autodesk Design Review 14.0.0.177
+#UNINSTALL
+choco uninstall designreview -y
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
