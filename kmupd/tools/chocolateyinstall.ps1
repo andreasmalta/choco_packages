@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
-$FAX = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=c71c7f13dd8fd9a6278186e8cd1b449d&tx_kmdownloadcentersite_downloadproxy[documentId]=144420&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$FAX = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadproxy_downloadproxy[fileId]=c71c7f13dd8fd9a6278186e8cd1b449d&tx_kmdownloadproxy_downloadproxy[documentId]=144420&tx_kmdownloadproxy_downloadproxy[system]=KonicaMinolta&tx_kmdownloadproxy_downloadproxy[language]=EN&type=1558521685'
 $FAX_checksum = '9A37A04B54C2FD263192E15DF10031B7B5549AA6AE53C5A79873F83579FB1FDC'
-$PCL = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=1378842ff55e4a44ed8520d46cb64657&tx_kmdownloadcentersite_downloadproxy[documentId]=144418&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$PCL = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadproxy_downloadproxy[fileId]=1378842ff55e4a44ed8520d46cb64657&tx_kmdownloadproxy_downloadproxy[documentId]=144418&tx_kmdownloadproxy_downloadproxy[system]=KonicaMinolta&tx_kmdownloadproxy_downloadproxy[language]=EN&type=1558521685'
 $PCL_checksum = '4EAA772EBBFF9CF5C3DF9C944275879E21C44264C0B45518D13F61361930C4B2'
-$PS = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=3c9fe2e4fdfe6de5be1285a15c345a06&tx_kmdownloadcentersite_downloadproxy[documentId]=144419&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
+$PS = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadproxy_downloadproxy[fileId]=3c9fe2e4fdfe6de5be1285a15c345a06&tx_kmdownloadproxy_downloadproxy[documentId]=144419&tx_kmdownloadproxy_downloadproxy[system]=KonicaMinolta&tx_kmdownloadproxy_downloadproxy[language]=EN&type=1558521685'
 $PS_checksum = '8E82B8C7E7C3A35B08B1E47CA242DCB19396D65AFC2417AB475BB806EFE9F541'
 
 function Invoke-packageArgsFAX {
