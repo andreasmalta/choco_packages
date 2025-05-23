@@ -1,15 +1,15 @@
 ==========================================================================================
 Generic Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-2024/02/27
+2025/02/18
 
-PCL  Version 3.9.737.0
-PS   Version 3.9.737.0
-FAX  Version 3.9.737.0
-Installer Version 3.2.29.0
-PCL  Setup Package Version 3.9.737.0
-PS   Setup Package Version 3.9.737.0
-FAX  Setup Package Version 3.9.737.0
+PCL  Version 3.9.1007.0
+PS   Version 3.9.1007.0
+FAX  Version 3.9.1007.0
+Installer Version 3.2.30.0
+PCL  Setup Package Version 3.9.1007.0
+PS   Setup Package Version 3.9.1007.0
+FAX  Setup Package Version 3.9.1007.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -251,6 +251,7 @@ Supported devices :
     Generic BW475-1i
     Generic BW405-1i
     Generic BW470-1i
+    Generic C475-1i
     Generic Server Less Ubiquitous Print
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -281,19 +282,19 @@ Supported OS :
 
 Support the following operation environments :
   <PCL driver>
-    Citrix Virtual Apps and Desktops 7 2006 / 2003
+    Citrix Virtual Apps and Desktops 7 2402 LTSR / 2311
     Terminal Services
     Remote Desktop
     Terminal Services Easy Print
     Remote Desktop Easy Print
 
   <PS driver>
-    Citrix Virtual Apps and Desktops 7 2006 / 2003
+    Citrix Virtual Apps and Desktops 7 2402 LTSR / 2311
     Terminal Services
     Remote Desktop
 
   <FAX driver>
-    Citrix Virtual Apps and Desktops 7 2006 / 2003
+    Citrix Virtual Apps and Desktops 7 2402 LTSR / 2311
     Terminal Services
     Remote Desktop
     Terminal Services Easy Print
@@ -311,58 +312,13 @@ to use the LDAP server in the Fax driver.
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
 
-  PCL/PS/FAX Version 3.9.737.0
-
 ==========================================================================================
 4-1. The following functions are add in this driver.
 ==========================================================================================
- 1. Added support models:
-    Generic 65C-1i
-    Generic 55C-1i
-    Generic 65BW-1i
-    Generic 55BW-1i
-    Generic 70C-1i
-    Generic 75BW-1i
-
- 2. Added FS-542 and PK-527 options to the following models (PS/PCL driver):
-    Generic 28C-7i
-    Generic 25C-7i
-    Generic 22C-7i
-
- 3. Added 1200dpi (Text/Shape) function to [Quality] tab -> [Resolution]
-
- 4. New paper tray added for the following model:
-    Generic C405-1i
-    Generic C335-1i
-    Generic C400-1i
-    Generic C330-1i
-    Generic C332-1i
-    Generic BW475-1i
-    Generic BW405-1i
-    Generic BW470-1i
-
- 5. GB18030-2022
-
- 6. Change to default settings
-    Changed from [Baseline] to [Generic A3 common].
-
- 7. Added [Select multiple destinations] function to [Configure] tab -> [Device Option] 
-    (FAX driver)
-
-==========================================================================================
-4-2. Other
-==========================================================================================
- 1. Removed FS-536 and PK-520 options to the following models (PCL and PS drivers):
-    Generic 36C-0i
-    Generic 30C-0i
-    Generic 25C-0i
-    Generic 65BW-0i
-    Generic 55BW-0i
-    Generic 45BW-0i
-    Generic 36BW-0i
-    Generic 30BW-0i
-    Generic 65BW-1i
-    Generic 55BW-1i
+ 1. Added Inner Finisher1 and Punch Kit4 options to the following models (PS/PCL driver):
+    Generic 36BW-8
+    Generic 28BW-8
+    Generic 22BW-8
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -861,10 +817,34 @@ In such a case, please be careful of the setting method etc.
     Workaround: Perform printing using the application after acquiring the Device Information 
     from <Devices and Printers>.
 
- 16. The Universal Print Driver does not work normally if EasyPrint setting in 
-    MS Terminal Services Environment is disabled.
+ 16. Printer Redirection in Remote Desktop
+    The following OS restrictions (16-1, 16-2) apply regardless of whether
+    [Use Remote Desktop Easy Print printer driver first] is set to [Enabled] or [Disabled].
 
-    Workaround: Enable EasyPrint setting.
+    If you want to print high-resolution originals via a printing server or
+    if you want to use the [Printer Properties] function,
+    we recommend using the Point and Print printing service instead of redirecting the printer.
+
+  16-1. Printing from a redirected printer with [Use Remote Desktop Easy Print printer driver first]
+        enabled may cause the following to occur.
+        - Font typefaces with thin lines in the design (e.g., Mincho, sans-serif) and
+          small sized characters may be missed.
+
+          This is a limitation of Microsoft® Windows®.
+          This problem can be avoided by doing one or more of the following:
+          - Increasing print resolution (from 600 dpi to 1200 dpi).
+          - Changing the font to a typeface that has thicker line segments in the design (e.g., Gothic).
+
+  16-2. Printing from a redirect printer with [Use Remote Desktop Easy Print printer driver first]
+        set to [Disabled] may cause the following problems:
+        - Unable to use functions in the "Configure" and "Settings" tabs.
+          - Unable to change [Device Options] settings such as [Output Unit] or [Hole-punch].
+          - Unable to change the model in [Change Model] and [Dynamic Mode].
+        - Previous settings cannot be saved and functions cannot be transferred.
+
+          This is a limitation of Microsoft® Windows®.
+          This problem can be avoided by doing the following:
+          - Enable [Use Remote Desktop Easy Print printer driver first] on the access point.
 
  17. About display of favorite setting
     In case of model does not support watermark function, watermark function is displayed
@@ -1038,6 +1018,7 @@ In such a case, please be careful of the setting method etc.
     - BW MF402-1/BW MF332-1
     - Color MF30-1/LP30-2
     - BW MF25e-1
+    - C475-1i
 
  4. Printing Custom Size Documents
   4-1. When printing the document which length and width is the same (i.e. "square"
