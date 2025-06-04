@@ -2,8 +2,9 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 #1 URL
-$url = "https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-" + $Env:ChocolateyPackageVersion + ".exe"
-$checksum = '6623CC89FB81FEDD2401AE8D485A62AF058CC1DADB99E9252995D8A5ACBE91D0'
+#$url = "https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-" + $Env:ChocolateyPackageVersion + ".exe"
+$url = "https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64.exe"
+$checksum = '1BDD365C4D63ACE4638D83557BFE90CA46301E78CF98541947793080475EFAA4'
 
 #2 UNINSTALL 15
 . $toolsDir\helpers.ps1
