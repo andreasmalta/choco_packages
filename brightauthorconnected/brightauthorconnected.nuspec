@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>brightauthorconnected</id>
-    <version>1.59.0</version>
+    <version>1.63.2</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/brightauthorconnected</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>BrightAuthor:connected</title>
