@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $url = 'https://downloads.solarwinds.com/solarwinds/Release/FreeTool/SolarWinds-TFTP-Server.zip'
-$checksum = 'B5313D56A828052EF50BFBB0237689243D66AFE7E37836CC9B4584DC5714FDBD'
+$checksum = '256BD92DB5C06FFA9A303546BFDCB4542A6B1ACD46E77DEA3879693147C4387F'
 
 $packageArgsURL = @{
   packageName    = $env:ChocolateyPackageName
@@ -12,7 +12,7 @@ $packageArgsURL = @{
 }
 Install-ChocolateyZipPackage @packageArgsURL
 
-$setup = Join-Path $env:TEMP 'SolarWinds-TFTP-Server.msi'
+$setup = Join-Path $env:TEMP 'TFTPInstaller.msi'
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
