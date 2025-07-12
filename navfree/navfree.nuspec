@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>navfree</id>
-    <version>2025.22.0.141123</version>
+    <version>2026.23.0.143276</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/navfree</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Navisworks Freedom</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://www.autodesk.com/products/navisworks/3d-viewers</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/navfree/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/NAVFREE/2025/ENU/</docsUrl>
+    <docsUrl>https://help.autodesk.com/view/NAVFREE/2026/ENU/</docsUrl>
     <tags>autodesk nwd 3d dwf design viewer autocad revit</tags>
     <summary>Navisworks Freedom</summary>
     <description>Get the whole-project view using Navisworks solutions. Combine design data created in AutoCAD, Revit, and other applications with models created by other design tools. Then, view these files with Navisworks Freedom viewer software. NWD files viewed with Navisworks Freedom give stakeholders equal access to explore and experience whole projects.
@@ -19,7 +19,7 @@
 
 #### System requirements for Autodesk Navisworks Freedom
 Operating System: 64-bit Microsoft® Windows® 11 and Windows 10</description>
-    <releaseNotes>https://help.autodesk.com/view/NAVFREE/2025/ENU/?guid=Navisworks_2025_release_notes</releaseNotes>
+    <releaseNotes>https://help.autodesk.com/view/NAVFREE/2026/ENU/?guid=Navisworks_2026_release_notes</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

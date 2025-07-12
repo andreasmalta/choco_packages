@@ -5,10 +5,6 @@ forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 choco pack
 choco install navfree -y -dv -s .
 
-#UPGRADE
-choco install navfree -y
-choco upgrade navfree -y -dv -s .
-
 #UNINSTALL
 choco uninstall navfree -y
 FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
