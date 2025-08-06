@@ -1,6 +1,6 @@
 #Download from https://www.barco.com/en/support/software/r3306194
 #Copy download to clickshare-desktop\tools
-#Update LICENSE.txt from https://www.barco.com/en/support/docs/TDE9858
+#Check updates to LICENSE.txt from https://www.barco.com/en/support/docs/TDE9858
 #Update file_Zip name in chocolateyinstall.ps1
 
 #INSTALL
