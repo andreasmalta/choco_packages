@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadcentersite_downloadproxy[fileId]=a7b3df29e2d2863c88c0f006d3d64db6&tx_kmdownloadcentersite_downloadproxy[documentId]=144405&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685'
-$checksum = '2A52C2E152A88C995E64022D26F499733121981FF58DDCE065B762B1EF01BC4D'
+$url = 'https://dl.konicaminolta.eu/en/?tx_kmdownloadproxy_downloadproxy[fileId]=22bd63a26b3f15bed9ce8e36d531b842&tx_kmdownloadproxy_downloadproxy[documentId]=145283&tx_kmdownloadproxy_downloadproxy[system]=KonicaMinolta&tx_kmdownloadproxy_downloadproxy[language]=EN&type=1558521685'
+$checksum = '60C54B99660FDADEF924024B595D4612534AF35F9399BBCE483999B9FD61E8B9'
 $extract = Join-Path $env:TEMP 'extractPCL'
 
 $packageArgs = @{

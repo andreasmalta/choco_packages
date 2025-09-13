@@ -1,10 +1,10 @@
 ﻿==========================================================================================
 KONICA MINOLTA Universal V4 PCL
 Printer Software Document
-12/27/2024
+07/02/2025
 
-PCL  Version 2.4.0.1
-Printer Installer Version 2.0.0.2
+PCL  Version 2.8.0.2
+Printer Installer Version 2.0.0.3
 
 Copyright (C) 2016 KONICA MINOLTA, INC.
 
@@ -200,6 +200,11 @@ Supported devices :
     KONICA MINOLTA 751i *
     KONICA MINOLTA 651i *
     KONICA MINOLTA 551i *
+    KONICA MINOLTA C4751i *
+    KONICA MINOLTA 5021i *
+    KONICA MINOLTA 5001i *
+    KONICA MINOLTA 4221i *
+    KONICA MINOLTA 4201i *
 
     * Windows Store Device App is not supported.
 
@@ -226,6 +231,10 @@ Supported OS :
     Windows Server 2022 Datacenter
     Windows Server 2022 Datacenter:Azure Edition
     Windows Server 2022 Essentials
+    Windows Server 2025 Standard
+    Windows Server 2025 Datacenter
+    Windows Server 2025 Datacenter:Azure Edition
+    Windows Server 2025 Essentials
 
     * 32-bit (x86) and 64-bit (x64) editions of Windows are supported.
     ** 32-bit (x86), 64-bit (x64) and ARM64-bit editions of Windows are supported.
@@ -234,6 +243,19 @@ Supported OS :
 //////////////////////////////////////////////////////////////////////////////////////////
 4. Changes to this printer driver from an earlier version
 //////////////////////////////////////////////////////////////////////////////////////////
+
+==========================================================================================
+4-1. The following issues are solved in this driver.
+==========================================================================================
+  1. Delete the following output tray to the KONICA MINOLTA 950i/850i models
+     - When you use [FS-539] or [FS-540] option, removed [Finish] tab -> [Output Tray] -> [Tray3]
+     - When you use [FS-540 + JS-602] option, removed [Finish] tab -> [Output Tray] -> [Tray4]
+
+  2. Added FS-542 and PK-527 options to the following models:
+     KONICA MINOLTA C450i
+     KONICA MINOLTA C360i
+     KONICA MINOLTA C300i
+     KONICA MINOLTA C250i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -266,7 +288,7 @@ Supported OS :
 6. File Composition
 //////////////////////////////////////////////////////////////////////////////////////////
 
-[V4UPDSetup_Own_PCL_2.4.0.1]Folder
+[V4UPDSetup_Own_PCL_2.8.0.2]Folder
  |- [Drivers]
   |- [x64]
   |- [x86]
@@ -370,7 +392,7 @@ In such a case, please be careful of the setting method etc.
       If you operating system update to Windows 11 (ARM64), the device information acquisition may fail.
 
       B) If you accidentally install the V4 Universal Printer Driver PCL driver for Windows 10 (ARM64) 
-　　 in the Windows 11 (ARM64) environment It may fail to acquire device information.
+      in the Windows 11 (ARM64) environment It may fail to acquire device information.
 
       Workaround: Follow the procedure in "5-1) Install" to install or update the V4 Universal Printer Driver PCL driver for Windows 11 (ARM64). 
 
@@ -568,137 +590,9 @@ In such a case, please be careful of the setting method etc.
       of your accepting any such warranty or additional liability.
 
 
-//////////////////////////////////////////////////////////////////////////////////////////
-9-2. OpenSSL License
-//////////////////////////////////////////////////////////////////////////////////////////
-
-  LICENSE ISSUES
-  ==============
-
-  The OpenSSL toolkit stays under a double license, i.e. both the conditions of
-  the OpenSSL License and the original SSLeay license apply to the toolkit.
-  See below for the actual license texts.
-
-  OpenSSL License
-  ---------------
-
-/* ====================================================================
- * Copyright (c) 1998-2017 The OpenSSL Project.  All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *
- * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer. 
- *
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in
- *    the documentation and/or other materials provided with the
- *    distribution.
- *
- * 3. All advertising materials mentioning features or use of this
- *    software must display the following acknowledgment:
- *    "This product includes software developed by the OpenSSL Project
- *    for use in the OpenSSL Toolkit. (http://www.openssl.org/)"
- *
- * 4. The names "OpenSSL Toolkit" and "OpenSSL Project" must not be used to
- *    endorse or promote products derived from this software without
- *    prior written permission. For written permission, please contact
- *    openssl-core@openssl.org.
- *
- * 5. Products derived from this software may not be called "OpenSSL"
- *    nor may "OpenSSL" appear in their names without prior written
- *    permission of the OpenSSL Project.
- *
- * 6. Redistributions of any form whatsoever must retain the following
- *    acknowledgment:
- *    "This product includes software developed by the OpenSSL Project
- *    for use in the OpenSSL Toolkit (http://www.openssl.org/)"
- *
- * THIS SOFTWARE IS PROVIDED BY THE OpenSSL PROJECT ``AS IS'' AND ANY
- * EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
- * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE OpenSSL PROJECT OR
- * ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
- * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
- * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
- * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
- * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
- * ====================================================================
- *
- * This product includes cryptographic software written by Eric Young
- * (eay@cryptsoft.com).  This product includes software written by Tim
- * Hudson (tjh@cryptsoft.com).
- *
- */
-
- Original SSLeay License
- -----------------------
-
-/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
- * All rights reserved.
- *
- * This package is an SSL implementation written
- * by Eric Young (eay@cryptsoft.com).
- * The implementation was written so as to conform with Netscapes SSL.
- * 
- * This library is free for commercial and non-commercial use as long as
- * the following conditions are aheared to.  The following conditions
- * apply to all code found in this distribution, be it the RC4, RSA,
- * lhash, DES, etc., code; not just the SSL code.  The SSL documentation
- * included with this distribution is covered by the same copyright terms
- * except that the holder is Tim Hudson (tjh@cryptsoft.com).
- * 
- * Copyright remains Eric Young's, and as such any Copyright notices in
- * the code are not to be removed.
- * If this package is used in a product, Eric Young should be given attribution
- * as the author of the parts of the library used.
- * This can be in the form of a textual message at program startup or
- * in documentation (online or textual) provided with the package.
- * 
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- * 1. Redistributions of source code must retain the copyright
- *    notice, this list of conditions and the following disclaimer.
- * 2. Redistributions in binary form must reproduce the above copyright
- *    notice, this list of conditions and the following disclaimer in the
- *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *    "This product includes cryptographic software written by
- *     Eric Young (eay@cryptsoft.com)"
- *    The word 'cryptographic' can be left out if the rouines from the library
- *    being used are not cryptographic related :-).
- * 4. If you include any Windows specific code (or a derivative thereof) from 
- *    the apps directory (application code) you must include an acknowledgement:
- *    "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"
- * 
- * THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND
- * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
- * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
- * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- * 
- * The licence and distribution terms for any publically available version or
- * derivative of this code cannot be changed.  i.e. this code cannot simply be
- * copied and put under another distribution licence
- * [including the GNU Public Licence.]
- */
-
 
 //////////////////////////////////////////////////////////////////////////////////////////
-9-3. NetSNMP License
+9-2. NetSNMP License
 //////////////////////////////////////////////////////////////////////////////////////////
 Various copyrights apply to this package, listed in various separate
 parts below.  Please make sure that you read all the parts.
@@ -708,10 +602,10 @@ parts below.  Please make sure that you read all the parts.
 
        Copyright 1989, 1991, 1992 by Carnegie Mellon University
 
-		  Derivative Work - 1996, 1998-2000
+          Derivative Work - 1996, 1998-2000
 Copyright 1996, 1998-2000 The Regents of the University of California
 
-			 All Rights Reserved
+             All Rights Reserved
 
 Permission to use, copy, modify and distribute this software and its
 documentation for any purpose and without fee is hereby granted,
@@ -997,7 +891,7 @@ DAMAGE.
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
-9-4. MIT License
+9-3. MIT License
 //////////////////////////////////////////////////////////////////////////////////////////
 
   Copyright (c) 2007 James Newton-King
@@ -1068,7 +962,7 @@ DAMAGE.
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
-9-5. zlib License
+9-4. zlib License
 //////////////////////////////////////////////////////////////////////////////////////////
 
   zlib.h -- interface of the 'zlib' general purpose compression library
@@ -1101,7 +995,7 @@ DAMAGE.
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
-9-6. The FreeType Project LICENSE
+9-5. The FreeType Project LICENSE
 //////////////////////////////////////////////////////////////////////////////////////////
 
 

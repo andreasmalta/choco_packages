@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kmupd4</id>
-    <version>2.4.0.1</version>
+    <version>2.8.0.2</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kmupd4</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>KONICA MINOLTA Universal V4 PCL</title>
