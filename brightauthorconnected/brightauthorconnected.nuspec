@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>brightauthorconnected</id>
-    <version>1.67.0</version>
+    <version>1.67.3</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/brightauthorconnected</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>BrightAuthor:connected</title>
@@ -10,12 +10,12 @@
     <projectUrl>https://www.brightsign.biz/brightsign-players/software/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/brightauthorconnected/icon.png</iconUrl>
     <licenseUrl>https://www.brightsign.biz/legal/acceptable-use-policy/</licenseUrl>
-    <docsUrl>https://brightsign.atlassian.net/wiki/spaces/DOC/pages/378833066/BrightAuthor+connected</docsUrl>
+    <docsUrl>https://docs.brightsign.biz/user-guides/brightauthorconnected</docsUrl>
     <tags>brightsign brightauthor connected brightwall signage</tags>
     <summary>BrightAuthor:connected</summary>
     <description>BrightSign's free authoring software allows you to easily create, publish and manage digital signage presentations that run flawlessly on BrightSign players. It offers an enhanced and unified BrightSign experience with a common user interface, workflow and feature set available for PC, Mac and a Chrome web browser.
 Securely connect to BSN.cloud enabled players to take advantage of new real time player controls as well as robust network and content management tools. With BrightAuthor:connected you can experience a fully connected interface to BSN.cloud and BrightSign players at all levels.</description>
-    <releaseNotes>https://brightsign.atlassian.net/wiki/spaces/DOC/pages/1593475073/BrightAuthor+connected+1.1x.x</releaseNotes>
+    <releaseNotes>https://docs.brightsign.biz/releases/latest</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
