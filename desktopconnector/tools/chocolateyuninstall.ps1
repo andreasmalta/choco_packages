@@ -1,8 +1,4 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-
-. $toolsDir\helpers.ps1
-Invoke-Uninstall15
 
 #Uninstall
 Stop-Process -Name "DesktopConnector*" -Force
