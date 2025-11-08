@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kinovea</id>
-    <version>2024.1.1</version>
+    <version>2025.1.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/kinovea</packageSourceUrl>
 	<owners>aa.malta</owners>
     <title>Kinovea</title>
@@ -18,7 +18,7 @@
     <description>Kinovea is a video annotation tool designed for sport analysis.
 It features utilities to capture, slow down, compare, annotate and measure motion in videos.
 Kinovea is completely free and open source.</description>
-    <releaseNotes>https://www.kinovea.org/en/forum/index.php</releaseNotes>
+    <releaseNotes>https://www.kinovea.org/download/releases/2025.1.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

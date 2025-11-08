@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url = 'https://www.kinovea.org/setup/kinovea.2024.1/2024.1.1/Kinovea-2024.1.1.exe'
-$checksum = 'AEE87CEEED0A54643E7851C308907D97583AF359E9624B06B8CAB75BFEB51E3D'
+$url = 'https://www.kinovea.org/setup/kinovea.2025.1/2025.1.0/Kinovea-2025.1.0.exe'
+$checksum = '71EAEED5F2E4E997EFC4B7A10D988BC2EF4FEAF9418118EA8552CAE05D8D3872'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
