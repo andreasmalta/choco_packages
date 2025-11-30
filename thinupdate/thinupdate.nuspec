@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>thinupdate</id>
-    <version>2.7.15</version>
+    <version>2.7.46</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/thinupdate</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>HP Recovery Image and Software Download Tool (HP ThinUpdate 2 64-bit)</title>
     <authors>HP</authors>
-    <projectUrl>https://support.hp.com/us-en/document/c05480006</projectUrl>
+    <projectUrl>https://www.hp.com/us-en/solutions/cloud-computing/thin-client-software.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/thinupdate/icon.png</iconUrl>
     <licenseUrl>https://support.hp.com/us-en/document/ish_4416646-4390016-16</licenseUrl>
-    <docsUrl>http://h10032.www1.hp.com/ctg/Manual/c05211374</docsUrl>
+    <docsUrl>https://h10032.www1.hp.com/ctg/Manual/c05211374.pdf</docsUrl>
     <tags>hp thin client images usb update</tags>
     <summary>HP Recovery Image and Software Download Tool (ThinUpdate)</summary>
     <description>The HP ThinUpdate app allows you to download system images and software add-ons from HP, capture HP thin client images, create ISO files, and create bootable USB drives for image deployment.</description>
-    <releaseNotes>https://ftp.hp.com/pub/tcimages/EasyUpdate/AddOns/Win64/HPThinUpdate-02.07.15-Win64.txt</releaseNotes>
+    <releaseNotes>https://support.hp.com/us-en/document/ish_10602584-10602629-16</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
