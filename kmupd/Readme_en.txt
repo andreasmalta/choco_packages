@@ -1,15 +1,15 @@
 ==========================================================================================
 KONICA MINOLTA Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-2025/02/10
+2025/07/02
 
-PCL  Version 3.9.820.0
-PS   Version 3.9.821.0
-FAX  Version 3.9.820.0
+PCL  Version 3.9.1203.0
+PS   Version 3.9.1204.0
+FAX  Version 3.9.1203.0
 Installer Version 3.2.30.0
-PCL  Setup Package Version 3.9.820.0
-PS   Setup Package Version 3.9.821.0
-FAX  Setup Package Version 3.9.820.0
+PCL  Setup Package Version 3.9.1203.0
+PS   Setup Package Version 3.9.1204.0
+FAX  Setup Package Version 3.9.1203.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -255,6 +255,11 @@ Supported devices :
     KONICA MINOLTA 4751i
     KONICA MINOLTA 4051i
     KONICA MINOLTA 4701i
+    KONICA MINOLTA C4751i
+    KONICA MINOLTA 5021i
+    KONICA MINOLTA 5001i
+    KONICA MINOLTA 4221i
+    KONICA MINOLTA 4201i
     Server Less Ubiquitous Print
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -280,24 +285,28 @@ Supported OS :
     Windows Server 2022 Datacenter
     Windows Server 2022 Datacenter:Azure Edition
     Windows Server 2022 Essentials
+    Windows Server 2025 Standard
+    Windows Server 2025 Datacenter
+    Windows Server 2025 Datacenter:Azure Edition
+    Windows Server 2025 Essentials
 
     * 32-bit (x86) and 64-bit (x64) editions of Windows are supported.
 
 Support the following operation environments :
   <PCL driver>
-    Citrix Virtual Apps and Desktops 7 2305 / 2303
+    Citrix Virtual Apps and Desktops 7 2402 LTSR / 2311
     Terminal Services
     Remote Desktop
     Terminal Services Easy Print
     Remote Desktop Easy Print
 
   <PS driver>
-    Citrix Virtual Apps and Desktops 7 2305 / 2303
+    Citrix Virtual Apps and Desktops 7 2402 LTSR / 2311
     Terminal Services
     Remote Desktop
 
   <FAX driver>
-    Citrix Virtual Apps and Desktops 7 2305 / 2303
+    Citrix Virtual Apps and Desktops 7 2402 LTSR / 2311
     Terminal Services
     Remote Desktop
     Terminal Services Easy Print
@@ -316,14 +325,17 @@ to use the LDAP server in the Fax driver.
 //////////////////////////////////////////////////////////////////////////////////////////
 
 ==========================================================================================
-4-1. The following functions are add in this driver.
+4-1. The following issues are solved in this driver.
 ==========================================================================================
- 1. Added FS-536 and PK-520 options to the following models (PS/PCL driver):
+ 1. Delete the following output tray to the KONICA MINOLTA 950i/850i models (PCL/PS drivers)
+     - When you use [FS-539] or [FS-540] option, removed [Finish] tab -> [Output Tray] -> [Tray3]
+     - When you use [FS-540 + JS-602] option, removed [Finish] tab -> [Output Tray] -> [Tray4]
+
+ 2. Added FS-542 and PK-527 options to the following models (PS/PCL driver):
+    KONICA MINOLTA C450i
     KONICA MINOLTA C360i
     KONICA MINOLTA C300i
     KONICA MINOLTA C250i
-    KONICA MINOLTA 360i
-    KONICA MINOLTA 300i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -538,9 +550,9 @@ uninstalled manually.
  8. Select [Remove driver and driver package] on [Remove Driver And Package] screen 
     and click [OK].
 
- 9. When you are prompted to confirm the deletion again, click [Delete].
+ 9. When you are prompted to confirm the deletion, click [Yes].
 
- 10. When you are prompted to confirm the deletion, click [Yes].
+ 10. When you are prompted to confirm the deletion again, click [Delete].
 
  11. Close the [Print Server Properties] dialog box, and then restart the computer.
 
@@ -821,10 +833,34 @@ In such a case, please be careful of the setting method etc.
     Workaround: Perform printing using the application after acquiring the Device Information 
     from <Devices and Printers>.
 
- 16. The Universal Print Driver does not work normally if EasyPrint setting in 
-    MS Terminal Services Environment is disabled.
+ 16. Printer Redirection in Remote Desktop
+    The following OS restrictions (16-1, 16-2) apply regardless of whether
+    [Use Remote Desktop Easy Print printer driver first] is set to [Enabled] or [Disabled].
 
-    Workaround: Enable EasyPrint setting.
+    If you want to print high-resolution originals via a printing server or
+    if you want to use the [Printer Properties] function,
+    we recommend using the Point and Print printing service instead of redirecting the printer.
+
+  16-1. Printing from a redirected printer with [Use Remote Desktop Easy Print printer driver first]
+        enabled may cause the following to occur.
+        - Font typefaces with thin lines in the design (e.g., Mincho, sans-serif) and
+          small sized characters may be missed.
+
+          This is a limitation of Microsoft® Windows®.
+          This problem can be avoided by doing one or more of the following:
+          - Increasing print resolution (from 600 dpi to 1200 dpi).
+          - Changing the font to a typeface that has thicker line segments in the design (e.g., Gothic).
+
+  16-2. Printing from a redirect printer with [Use Remote Desktop Easy Print printer driver first]
+        set to [Disabled] may cause the following problems:
+        - Unable to use functions in the "Configure" and "Settings" tabs.
+          - Unable to change [Device Options] settings such as [Output Unit] or [Hole-punch].
+          - Unable to change the model in [Change Model] and [Dynamic Mode].
+        - Previous settings cannot be saved and functions cannot be transferred.
+
+          This is a limitation of Microsoft® Windows®.
+          This problem can be avoided by doing the following:
+          - Enable [Use Remote Desktop Easy Print printer driver first] on the access point.
 
  17. About display of favorite setting
     In case of model does not support watermark function, watermark function is displayed
@@ -836,7 +872,8 @@ In such a case, please be careful of the setting method etc.
     (PS driver)
       - KONICA MINOLTA bizhub 4700P/4000P/3300P/3301P/4020/3320/
                               4702P/4402P/3602P/4422/3622/
-                              5020i/5000i/4020i/4000i
+                              5020i/5000i/4020i/4000i/
+                              5021i/5001i/4221i/4201i
 
     Workaround: Use PCL6 driver
 
@@ -1005,6 +1042,9 @@ In such a case, please be careful of the setting method etc.
     - 20P
     - 195/215/235
     - 25e
+    - C4751i
+    - 5020i/5000i/4020i/4000i
+    - 5021i/5001i/4221i/4201i
 
  4. Printing Custom Size Documents
   4-1. When printing the document which length and width is the same (i.e. "square"
