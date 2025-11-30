@@ -1,3 +1,4 @@
+#https://support.hp.com/us-en/help/hp-pc-hardware-diagnostics
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #copy text during gui installation to releasenotes.txt
 

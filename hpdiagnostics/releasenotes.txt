@@ -1,11 +1,11 @@
-TITLE:  HP PC Hardware Diagnostics Windows
-VERSION: 2.2.0.0
+TITLE:  HP PC Hardware Diagnostics Windows (Win10/11 64-bit)
+VERSION: 2.9.0.0
 DESCRIPTION: 
 This package provides HP PC Hardware Diagnostics for supported computer models that are running a supported operating system. HP PC Hardware Diagnostics Windows allows HP customers to run diagnostic tests to determine if the computer hardware is functioning properly. The tool runs within the Windows operating system in order to diagnose hardware failures.
 
 PURPOSE: Routine
-SoftPaq NUMBER: sp146683
-EFFECTIVE DATE:  04/14/2023
+SoftPaq NUMBER: sp165686
+EFFECTIVE DATE:  11/04/2025
 CATEGORY:  Diagnostic
 SSM SUPPORTED:  No
 DEVICES SUPPORTED: N/A
@@ -13,58 +13,20 @@ PREREQUISITES: - You must be logged on as an administrator to install this updat
 - You must have a Microsoft Windows operating system.
 LANGUAGE(S): 
 English (US)
-Arabic
-Bulgarian
-Brazilian Portuguese
-Czech
-Danish
-German
-Greek
-Spanish
-Estonian
-Finnish
-French
-Hebrew
-Hong Kong
-Croatian
-Hungarian
-Italian
-Japanese
-Korean
-Lithuanian
-Latvian
-Dutch
-Norwegian
-Polish
-Portuguese
-Romanian
-Russian
-Slovenian
-Serbian
-Swedish
-Thai
-Turkish
-Taiwan Chinese (Traditional)
-Chinese (Prc. Simplified)
-French Canadian
-English (UK)
-Latin America
  
 
 ENHANCEMENTS:
-- Added USB Port Test. 
-- Added Display Port Test.   
-- Product Image pic added on Home page. 
-- User Interface Improvement: 
----- Customized Title Bar for Omen platforms 
----- Implemented Dark mode capability 
----- Implemented Victus UI theme
----- Adjusted UI sizing.
----- Preserved UI theme between runs.  
-- Various Bug Fixes
+- Driver update check prior to running test.
+- Added Support for new AMD NPU.
+- Updated Drive Self-Test to correct capacity reporting
+- Adjusted offerings from certain test pages and created a new related products entry point. 
+- Enable CPU Thermal tool for repair centres.
+- Updated storage and network Tests using HP Application Driver Component when applicable
+- User Interface improvement to select test(s) from component page.
+- Various Bug fixes.
 HOW TO USE:
 1. Download the file by clicking the Download or Obtain Software button and saving the file to a folder on your hard drive (make a note of the folder where the downloaded file is saved).
 
 2. Double-click the downloaded file and follow the on-screen instructions.
 
-Copyright (c) 2023 HP Development Company, L.P.
+Copyright (c) 2025 HP Development Company, L.P.
