@@ -1,15 +1,15 @@
 ==========================================================================================
 Generic Universal Printer Driver PCL/PS/FAX
 Printer Software Document
-2025/02/18
+2025/07/02
 
-PCL  Version 3.9.1007.0
-PS   Version 3.9.1007.0
-FAX  Version 3.9.1007.0
+PCL  Version 3.9.1203.0
+PS   Version 3.9.1204.0
+FAX  Version 3.9.1203.0
 Installer Version 3.2.30.0
-PCL  Setup Package Version 3.9.1007.0
-PS   Setup Package Version 3.9.1007.0
-FAX  Setup Package Version 3.9.1007.0
+PCL  Setup Package Version 3.9.1203.0
+PS   Setup Package Version 3.9.1204.0
+FAX  Setup Package Version 3.9.1203.0
 
 Copyright (C) 2003 KONICA MINOLTA, INC.
 
@@ -252,6 +252,10 @@ Supported devices :
     Generic BW405-1i
     Generic BW470-1i
     Generic C475-1i
+    Generic BW 502-1i
+    Generic BW 500-1i
+    Generic BW 422-1i
+    Generic BW 420-1i
     Generic Server Less Ubiquitous Print
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -277,6 +281,10 @@ Supported OS :
     Windows Server 2022 Datacenter
     Windows Server 2022 Datacenter:Azure Edition
     Windows Server 2022 Essentials
+    Windows Server 2025 Standard
+    Windows Server 2025 Datacenter
+    Windows Server 2025 Datacenter:Azure Edition
+    Windows Server 2025 Essentials
 
     * 32-bit (x86) and 64-bit (x64) editions of Windows are supported.
 
@@ -313,12 +321,17 @@ to use the LDAP server in the Fax driver.
 //////////////////////////////////////////////////////////////////////////////////////////
 
 ==========================================================================================
-4-1. The following functions are add in this driver.
+4-1. The following issues are solved in this driver.
 ==========================================================================================
- 1. Added Inner Finisher1 and Punch Kit4 options to the following models (PS/PCL driver):
-    Generic 36BW-8
-    Generic 28BW-8
-    Generic 22BW-8
+ 1. Delete the following output tray to the Generic 95BW-0i/85BW-0i models (PCL/PS drivers)
+     - When you use [Floor Type Finisher1] or [Floor Type Finisher2] option, removed [Finish] tab -> [Output Tray] -> [Tray3]
+     - When you use [Finisher+Additional Tray] option, removed [Finish] tab -> [Output Tray] -> [Tray4]
+
+ 2. Added Inner Finisher1 and Punch Kit4 options to the following models (PS/PCL driver):
+    Generic 45C-0i
+    Generic 36C-0i
+    Generic 30C-0i
+    Generic 25C-0i
 
 //////////////////////////////////////////////////////////////////////////////////////////
 5. How to install/uninstall
@@ -534,9 +547,9 @@ uninstalled manually.
  8. Select [Remove driver and driver package] on [Remove Driver And Package] screen 
     and click [OK].
 
- 9. When you are prompted to confirm the deletion again, click [Delete].
+ 9. When you are prompted to confirm the deletion, click [Yes].
 
- 10. When you are prompted to confirm the deletion, click [Yes].
+ 10. When you are prompted to confirm the deletion again, click [Delete].
 
  11. Close the [Print Server Properties] dialog box, and then restart the computer.
 
@@ -855,8 +868,9 @@ In such a case, please be careful of the setting method etc.
     The following models has a defect of about 2 mm in some case. 
     (PS driver)
       - BW LP470P-3/BW LP440P-3/BW LP360P-3/BW MF442-3/BW MF362-3/
-        BW LP4700-1/BW LP4000-1/BW LP3300-1/BW LP330P-2/BW MF402-1/BW MF332-1
-        BW 502-0i/BW 500-0i/BW 402-0i/BW 400-0i
+        BW LP4700-1/BW LP4000-1/BW LP3300-1/BW LP330P-2/BW MF402-1/BW MF332-1/
+        BW 502-0i/BW 500-0i/BW 402-0i/BW 400-0i/
+        BW 502-1i/BW 500-1i/BW 422-1i/BW 420-1i
 
     Workaround: Use PCL6 driver
 
@@ -1019,6 +1033,8 @@ In such a case, please be careful of the setting method etc.
     - Color MF30-1/LP30-2
     - BW MF25e-1
     - C475-1i
+    - BW 502-0i/BW 500-0i/BW 402-0i/BW 400-0i
+    - BW 502-1i/BW 500-1i/BW 422-1i/BW 420-1i
 
  4. Printing Custom Size Documents
   4-1. When printing the document which length and width is the same (i.e. "square"
