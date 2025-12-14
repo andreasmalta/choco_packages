@@ -3,7 +3,7 @@
 #1 URL
 #$url = "https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64.exe"
 $url = "https://up.autodesk.com/2017/CDX/AB4AADCC-F890-4B4F-A7A6-B0FBD2386796/DesktopConnector-x64-" + $Env:ChocolateyPackageVersion + ".exe"
-$checksum = '42F12B61C290F22B65B2104711EC52DE256296E5547DB63E74FD930332A58B85'
+$checksum = '30690B313257A4C19B6E82F54E99C468D351D93041287383043A33384777884A'
 
 #2 INSTALL
 $packageArgs = @{
@@ -20,7 +20,7 @@ Install-ChocolateyPackage @packageArgs
 
 #3 WAIT UNTIL INSTALLED
 Write-Host "Waiting for Autodesk Installer to finish..."
-Start-Sleep 120
+Start-Sleep 300
 while ($true) {
     # (re)try
     $processCHK = Get-Process | Where {$_.ProcessName -Like 'Installer'}

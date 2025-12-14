@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>desktopconnector</id>
-    <version>17.0.1.3021</version>
+    <version>17.0.2.3336</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/desktopconnector</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Desktop Connector</title>
