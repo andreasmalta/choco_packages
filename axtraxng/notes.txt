@@ -1,4 +1,4 @@
-#https://axtraxng.com/
+#https://axtraxng.com/axtraxng.html
 #extract zip and exe with 7zip, open exe folder
 #delete exe, ini, dll, "Add on" folder, "AxTime" folder
 #add remaining subfolders to 7z archive (ultra compression level)
