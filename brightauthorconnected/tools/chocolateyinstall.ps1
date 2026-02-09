@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop';
 
-$url = 'https://downloads.bsn.cloud/BA%20connected%20Setup%201.72.1.exe'
-$checksum = 'E85A82FC27B602363C6C74F72BEE9C90BEE4BB59705BAF967CDA42FFCE04031F'
+$url = 'https://downloads.bsn.cloud/BA%20connected%20Setup%201.76.0.exe'
+$checksum = 'FBF89B9F7EFE427DA284655665BC90C32FA633151190ADF5762232CE19FC095D'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
