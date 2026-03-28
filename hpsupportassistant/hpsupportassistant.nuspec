@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hpsupportassistant</id>
-    <version>9.50.34.0</version>
+    <version>9.51.14.0</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/hpsupportassistant</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>HP Support Assistant</title>
@@ -11,13 +11,13 @@
     <projectUrl>https://support.hp.com/us-en/help/hp-support-assistant</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/hpsupportassistant/icon.png</iconUrl>
     <licenseUrl>https://support.hp.com/us-en/document/c00581401</licenseUrl>
-    <docsUrl>http://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</docsUrl>
+    <docsUrl>https://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</docsUrl>
     <tags>hp device driver update</tags>
     <summary>HP Support Assistant</summary>
     <description>Easy access to support resources and tools for HP printers and PCs.
 This package will install the Windows App that will be updated through the Microsoft Store, requires Windows 10 RS4 or higher.
 If you received an incompatible operating system message during HP Support Assistant installation, please download and install the Legacy version.</description>
-    <releaseNotes>http://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</releaseNotes>
+    <releaseNotes>https://h10032.www1.hp.com/ctg/Manual/c06593496.pdf</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
