@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>thinupdate</id>
-    <version>2.7.46</version>
+    <version>2.7.49</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/thinupdate</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>HP Recovery Image and Software Download Tool (HP ThinUpdate 2 64-bit)</title>
