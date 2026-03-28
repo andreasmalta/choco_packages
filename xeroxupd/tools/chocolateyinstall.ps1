@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$PCL64 = 'https://download.support.xerox.com/pub/drivers/GLOBALPRINTDRIVER/drivers/win10x64/ar/UNIV_5.1055.3.0_PCL6_x64.zip'
-$PCL64_checksum = '35E97C13575EFF320FAAE0A717B801E155CFF01EF8E7D49A1F4D6719275FF0A9'
-$PCL86 = 'https://download.support.xerox.com/pub/drivers/GLOBALPRINTDRIVER/drivers/win10/ar/UNIV_5.1055.3.0_PCL6_x86.zip'
-$PCL86_checksum = '32E0A42BBAAB7951495887AC005D407B1E993C250919FEED563479B4BB5B1A37'
-$PS64 = 'https://download.support.xerox.com/pub/drivers/VLC8000W/drivers/win10x64/ar/UNIV_5.1055.3.0_PS_x64.zip'
-$PS64_checksum = 'E1702443AD67F52CC8B5BD76B142053B4BB96A8EE70AE08ADD3EAEB0E84E7E20'
-$PS86 = 'https://download.support.xerox.com/pub/drivers/VLC8000W/drivers/win10/ar/UNIV_5.1055.3.0_PS_x86.zip'
-$PS86_checksum = '1025E646868883E0FF0DF29F6870D108CB9F5BCF5399E8BB8C69BA6C38CD62A8'
+$PCL64 = 'https://download.support.xerox.com/pub/drivers/GLOBALPRINTDRIVER/drivers/win10x64/ar/UNIV_5.1076.3.0_PCL6_x64.zip'
+$PCL64_checksum = '8516A55AAD5C5406CF5DA5DE998897FCB7CFD5D99724C221AFA519F5317F7F68'
+$PCL86 = 'https://download.support.xerox.com/pub/drivers/GLOBALPRINTDRIVER/drivers/win10/ar/UNIV_5.1076.3.0_PCL6_x86.zip'
+$PCL86_checksum = '1B9D94F5E69AC93E75D2E1C384389958E18317334BBA39CE78B8B19819B1D04B'
+$PS64 = 'https://download.support.xerox.com/pub/drivers/VLC8000W/drivers/win10x64/ar/UNIV_5.1076.3.0_PS_x64.zip'
+$PS64_checksum = '90D79E7E1E6908469C9340180161FA2C072FAAB7E86788A774541D08B855E2C3'
+$PS86 = 'https://download.support.xerox.com/pub/drivers/VLC8000W/drivers/win10/ar/UNIV_5.1076.3.0_PS_x86.zip'
+$PS86_checksum = '646D6428385E906A120D9A772AD251E1A6C9A959FB11E583CE5BB7DBA9A11C2F'
 $extract = Join-Path $env:TEMP 'extract'
 
 $packageArgsPCL = @{
