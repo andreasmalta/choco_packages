@@ -2,8 +2,8 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 #1 DOWNLOAD & EXTRACT
-$url = 'https://download.autodesk.com/global/moldflow_communicator/mfc_2026_fcs_multilingual_win_64bit_db_002_002.7z'
-$checksum = '7F1110EE26B4297CFDD86FF995AC945F7F58108B534F27A2F4E5B83BF73BF41F'
+$url = 'https://download.autodesk.com/global/moldflow_communicator/mfc_2027_fcs_multilingual_win_64bit_db_002_002.7z'
+$checksum = '35681119E8823B46720A01D8FF7C3D87E5FE8EAC9CDBED5D2051A8769CD3C0DB'
 $temppackage = Join-Path $env:TEMP $env:ChocolateyPackageName
 $tempversion = Join-Path $temppackage $env:ChocolateyPackageVersion
 $packageArgsUnzip = @{
