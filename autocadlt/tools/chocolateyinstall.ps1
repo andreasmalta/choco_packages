@@ -2,8 +2,8 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 #1 DOWNLOAD & EXTRACT
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ACDLT/09E544DA-5EFC-3B5B-9E50-689C464B492B/SFX/ACDLT_2026_english_us_win_db_002_002.7z'
-$checksum = 'F728CED60DA133876A3311FAA240384590A2EF144C4C0CD9553FD5C7ED143A93'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ACDLT/16D82284-5250-31A0-8CC0-08AD80F42024/SFX/ACDLT_2027_english_us_win_db_002_002.7z'
+$checksum = '0F9AA52C18C17A4F81188734DA47F9ED75836FC1673FB4B00FF684DDCD013458'
 $tempversion = Join-Path $env:TEMP (Join-Path $env:ChocolateyPackageName $env:ChocolateyPackageVersion)
 $packageArgsUnzip = @{
   packageName    = 'ACDLT Installation Files'
