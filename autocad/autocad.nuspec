@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>autocad</id>
-    <version>2026.25.1.60</version>
+    <version>2027.25.1.60</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/autocad</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>AutoCAD</title>
@@ -11,14 +11,14 @@
     <projectUrl>https://www.autodesk.com/products/autocad/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/autocad/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/ACD/2026/ENU/</docsUrl>
+    <docsUrl>https://help.autodesk.com/view/ACD/2027/ENU/</docsUrl>
     <tags>autodesk autocad dwg cad drawing</tags>
     <summary>AutoCAD</summary>
-    <description>AutoCAD is computer-aided design (CAD) software that is used for precise 2D and 3D drafting, design, and modeling with solids, surfaces, mesh objects, documentation features, and more. It includes features to automate tasks and increase productivity such as comparing drawings, counting, adding objects, and creating tables. It also comes with seven industry-specific toolsets for electrical design, plant design, architecture layout drawings, mechanical design, 3D mapping, adding scanned images, and converting raster images. AutoCAD enables users to create, edit, and annotate drawings via desktop, web, and mobile devices.
+    <description>AutoCAD is computer-aided design (CAD) software that is used for precise 2D and 3D drafting, design, and modeling with solids, surfaces, mesh objects, documentation features, and more. It includes features to automate tasks and increase productivity such as comparing drawings, counting, adding objects, and creating tables. It also comes with seven industry-specific toolsets for electrical design, plant design, architecture layout drawings, MEP (mechanical, electrical, plumbing) layouts, mechanical design, 3D mapping, adding scanned images and converting raster images. AutoCAD enables users to create, edit, and annotate drawings via desktop, web, and mobile devices.
 
-#### System requirements for AutoCAD 2026
-Operating System: 64-bit Microsoft® Windows® 11 and Windows 10.</description>
-    <releaseNotes>https://help.autodesk.com/view/ACD/2026/ENU/?guid=AUTOCAD_2026_RELEASE_NOTES</releaseNotes>
+#### System requirements for AutoCAD 2027
+Operating System: 64-bit Microsoft® Windows® 11.</description>
+    <releaseNotes>https://help.autodesk.com/view/ACD/2027/ENU/?guid=AUTOCAD_2027_RELEASE_NOTES</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -2,8 +2,8 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 #1 DOWNLOAD & EXTRACT
-$url = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ACD/E55B46A2-B58D-3ABE-B345-8368D1AB33AA/SFX/ACD_2026_english_us_win_db_002_002.7z'
-$checksum = '308D561E16A724335D47689EF065FD2C4224215FF168E7A4F21305888D7989BB'
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ACD/8658A469-1448-38DD-8981-8BED78BCCF9D/SFX/ACD_2027_english_us_win_db_002_002.7z'
+$checksum = '0D494F132B91B4837E72CAEBDFACD015CD9256D1A90AF8AAEF2A8CC6751EB59B'
 $tempversion = Join-Path $env:TEMP (Join-Path $env:ChocolateyPackageName $env:ChocolateyPackageVersion)
 $packageArgsUnzip = @{
   packageName    = 'ACD Installation Files'

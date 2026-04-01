@@ -1,4 +1,4 @@
-#download using Autodesk Assistant on https://autodesk.com
+#download using https://forums.autodesk.com/t5/installation-licensing-forum/2027-product-download-links/td-p/14055738
 forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
 #copy version number from unzip folder setup.xml
 
