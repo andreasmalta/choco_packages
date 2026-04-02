@@ -2,9 +2,9 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 #1 DOWNLOAD
-$url = 'https://dds.autodesk.com/NetSWDLD/ODIS/prd/2026/NAVFREE/BE06C262-73A9-3C2F-8982-C105E1EE9A34/SFX/Autodesk_Navisworks_Freedom_2026_Win_64bit_db.sfx.exe'
-$checksum = '64E6987FB20244AC945378092075363E67FB7684161FFE1D20ED9E4420657A47'
-$file = $env:TEMP + '\Autodesk_Navisworks_Freedom_2026_Win_64bit_db.sfx.exe'
+$url = 'https://dds.autodesk.com/NetSWDLD/ODIS/prd/2027/NAVFREE/52AC45A2-3099-370C-8394-8B347967768B/SFX/Autodesk_Navisworks_Freedom_2027_Win_64bit_db.sfx.exe'
+$checksum = '76BAFE8532E888ABE2DB69BA1C1A9DC2C2EAD9265767AD8425546E33568A7E22'
+$file = $env:TEMP + '\Autodesk_Navisworks_Freedom_2027_Win_64bit_db.sfx.exe'
 Get-ChocolateyWebFile -PackageName 'EXE package' -FileFullPath $file -Url $url -Checksum $checksum -ChecksumType 'sha256'
 
 #2 UNINSTALL OLD VERSIONS
