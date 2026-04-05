@@ -29,3 +29,20 @@ $packageArgs  = @{
   validExitCodes = @(0, 3010, 1641)
 }
 Install-ChocolateyInstallPackage @packageArgs
+
+#4 WAIT UNTIL INSTALLED
+Write-Host "Waiting for Autodesk Installer to finish..."
+Start-Sleep 120
+while ($true) {
+    # (re)try
+    $processCHK = Get-Process | Where {$_.ProcessName -Like 'Installer'}
+    if ($processCHK -eq $null)
+    {
+        Write-Host "Autodesk Installer ready!"
+		# exit the loop
+        break;
+    }
+    # wait
+    Write-Host "Waiting for Autodesk Installer to finish, trying again in 30 seconds..."
+    Start-Sleep 30
+}
