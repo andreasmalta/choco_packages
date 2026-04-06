@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>inventor</id>
-    <version>2026.30.0.17500</version>
+    <version>2027.31.0.19200</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/inventor</packageSourceUrl>
     <owners>aa.malta</owners>
     <title>Inventor</title>
@@ -11,19 +11,19 @@
     <projectUrl>https://www.autodesk.com/products/inventor/overview</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/inventor/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
-    <docsUrl>https://help.autodesk.com/view/INVNTOR/2026/ENU/</docsUrl>
+    <docsUrl>https://help.autodesk.com/view/INVNTOR/2027/ENU/</docsUrl>
     <tags>autodesk inventor ipt iam idw dwg ipn viewer</tags>
-    <summary>Inventor View</summary>
-    <description>Inventor® 3D CAD software provides professional-grade mechanical design, documentation, and product simulation tools.
+    <summary>Inventor</summary>
+    <description>Autodesk Inventor software provides engineers with a complete set of powerful mechanical design solutions for 3D modeling, simulation, visualization, and documentation. With Inventor software, engineers can create a virtual representation of the final product to validate the form, fit, and function before it’s built. It includes powerful modeling tools, multi-CAD translation capabilities, and native DWG drawings to help you reduce development costs, make great products, and get your products to market faster.
 
 #### Included as part of the Inventor installation:
 Inventor Professional: Try Inventor free for 30 days
 Inventor Read-only Mode: Allows you to access Inventor part (.ipt), assembly (.iam), drawing (.idw, dwg), and presentation (.ipn) files for viewing in the Inventor user interface without consuming a license.
-DWG TrueView: View and convert 2D and 3D DWG files for free
+DWG TrueView: Allows you to open and view 2D and 3D DWG files for free, or convert them to work with older versions of AutoCAD software.
 
 #### System requirements:
-Operating System: 64-bit Microsoft® Windows® 11 and Windows 10.</description>
-    <releaseNotes>https://help.autodesk.com/view/INVNTOR/2026/ENU/?guid=Inventor_ReleaseNotes_release_notes_html</releaseNotes>
+Operating System: 64-bit Microsoft® Windows® 11 and Windows® 10.</description>
+    <releaseNotes>https://help.autodesk.com/view/INVNTOR/2027/ENU/?guid=Inventor_ReleaseNotes_release_notes_html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
