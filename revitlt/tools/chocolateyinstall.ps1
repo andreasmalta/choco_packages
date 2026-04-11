@@ -1,25 +1,29 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-#1 DOWNLOAD
-$url1 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/RVTLT/1C329069-94F8-36BA-B5C2-8328925E9347/SFX/RVTLT_2026_NA_win_db_001_002.exe'
-$checksum1 = '0AA8BD846F63144648591D5799FC999CA5872284059F4E44AFDD322727AB3FD7'
-$file = $env:TEMP + '\RVTLT_2026_NA_win_db_001_002.exe'
-$url2 = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/RVTLT/1C329069-94F8-36BA-B5C2-8328925E9347/SFX/RVTLT_2026_NA_win_db_002_002.7z'
-$checksum2 = 'CB8D1C28F5AA836F471483C2FEA54A814D7D83B39089228831956B40229D7043'
-$zip = $env:TEMP + '\RVTLT_2026_NA_win_db_002_002.7z'
-Get-ChocolateyWebFile -PackageName 'EXE package' -FileFullPath $file -Url $url1 -Checksum $checksum1 -ChecksumType 'sha256'
-Get-ChocolateyWebFile -PackageName 'ZIP package' -FileFullPath $zip -Url $url2 -Checksum $checksum2 -ChecksumType 'sha256'
+#1 DOWNLOAD & EXTRACT
+$url = 'https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/RVTLT/94BF3D5E-F8D4-30BB-B5D7-B1C6FCD04204/SFX/RVTLT_2027_NA_win_db_002_002.7z'
+$checksum = '613928A872C12D742A46CAEB27AE4CB9F5188D23BDFC7D992699792C15456259'
+$tempversion = Join-Path $env:TEMP (Join-Path $env:ChocolateyPackageName $env:ChocolateyPackageVersion)
+$packageArgsUnzip = @{
+  packageName    = 'Revit LT Installation Files'
+  url            = $url
+  checksum       = $checksum
+  checksumType   = 'sha256'
+  unziplocation  = $tempversion
+}
+Install-ChocolateyZipPackage @packageArgsUnzip
 
 #2 UNINSTALL OLD
 . $toolsDir\helpers.ps1
-Invoke-UninstallOLD
+Invoke-UninstallOld
 
 #3 INSTALL
+$setup = Join-Path $tempversion 'setup.exe'
 $packageArgs  = @{
   packageName    = 'Revit LT'
   fileType       = 'exe'
-  file           = $file
+  file           = $setup
   softwareName   = 'Revit LT*'
   silentArgs     = '-q'
   validExitCodes = @(0, 3010, 1641)

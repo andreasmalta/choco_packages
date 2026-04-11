@@ -1,4 +1,4 @@
-function Invoke-UninstallOLD {
+function Invoke-UninstallOld {
 
 #Close software if open
 Get-Process "revit*" -ErrorAction SilentlyContinue | Stop-Process -Force
