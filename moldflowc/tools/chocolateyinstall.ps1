@@ -17,7 +17,7 @@ Install-ChocolateyZipPackage @packageArgsUnzip
 
 #2 UNINSTALL OLD
 . $toolsDir\helpers.ps1
-Invoke-UninstallOldMFC
+Invoke-UninstallOld
 
 #3 INSTALL
 $setup = Join-Path $tempversion 'setup.exe'

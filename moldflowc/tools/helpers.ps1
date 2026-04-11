@@ -1,4 +1,4 @@
-function Invoke-UninstallOldMFC {
+function Invoke-UninstallOld {
 
 #Close software if open
 Get-Process "mfresview*" -ErrorAction SilentlyContinue | Stop-Process -Force
