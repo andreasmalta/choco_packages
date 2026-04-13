@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>civ3d</id>
+    <version>2027.13.9.628</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/civ3d</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>Civil 3D</title>
+    <authors>Autodesk</authors>
+    <projectUrl>https://www.autodesk.com/products/civil-3d/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/civ3d/icon.png</iconUrl>
+    <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
+    <docsUrl>https://help.autodesk.com/view/CIV3D/2027/ENU/</docsUrl>
+    <tags>autodesk civil 3D</tags>
+    <summary>Civil 3D</summary>
+    <description>Civil 3D is used to plan, design, and deliver land development, water, and transportation projects.
+
+#### Operating System requirements:
+64-bit Microsoft® Windows® 11.</description>
+    <releaseNotes>https://help.autodesk.com/view/CIV3D/2027/ENU/?guid=civil_3d_release_notes_2027</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
