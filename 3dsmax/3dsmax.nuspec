@@ -5,14 +5,14 @@
     <id>3dsmax</id>
     <version>2027.29.0.3590</version>
     <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/3dsmax</packageSourceUrl>
-    <owners>aa.malta</owners>
+    <owners>Ahuge, aa.malta</owners>
     <title>3ds Max</title>
     <authors>Autodesk</authors>
     <projectUrl>https://www.autodesk.com/products/3ds-max/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/3dsmax/icon.png</iconUrl>
     <licenseUrl>https://www.autodesk.com/company/terms-of-use/en/general-terms</licenseUrl>
     <docsUrl>https://help.autodesk.com/view/3DSMAX/2027/ENU/</docsUrl>
-    <tags>autodesk 3D modeling animation</tags>
+    <tags>autodesk 3dsmax vfx 3D modeling animation</tags>
     <summary>3ds Max</summary>
     <description>3ds Max is a versatile 3D tool used by top entertainment and design visualization studios. It stands out for its powerful hard-surface modeling tools, artist-friendly animation suitable for all skill levels, and open, expandable workflows through a wide range of plug-ins.
 
