@@ -1,0 +1,10 @@
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+#copy version number from unzip folder setup.xml
+
+#INSTALL
+choco pack
+choco install recap -y -dv -s .
+
+#UNINSTALL
+choco uninstall recap -y
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
