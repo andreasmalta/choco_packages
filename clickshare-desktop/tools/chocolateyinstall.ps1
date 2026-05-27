@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$file_Zip = Join-Path $toolsDir 'R3306194_64_ApplicationSw.zip'
+$file_Zip = Join-Path $toolsDir 'R3306194_65_ApplicationSw.zip'
 
 #Unzip
 $packageArgsURL = @{
