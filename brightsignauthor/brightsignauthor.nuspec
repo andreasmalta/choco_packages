@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>brightsignauthor</id>
+    <version>1.85.0</version>
+    <packageSourceUrl>https://github.com/andreasmalta/choco_packages/tree/master/brightsignauthor</packageSourceUrl>
+    <owners>aa.malta</owners>
+    <title>BrightSign Author</title>
+    <authors>BrightSign</authors>
+    <projectUrl>https://www.brightsign.biz/brightsign-players/software/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/andreasmalta/choco_packages@master/brightsignauthor/icon.png</iconUrl>
+    <licenseUrl>https://www.brightsign.biz/legal/acceptable-use-policy/</licenseUrl>
+    <docsUrl>https://docs.brightsign.biz/user-guides/brightsign-author-brightauthorconnected</docsUrl>
+    <tags>brightsign brightauthor connected brightwall signage</tags>
+    <summary>BrightSign Author</summary>
+    <description>Create simple or complex presentations using all of BrightSign’s features with an intuitive, streamlined interface.</description>
+    <releaseNotes>https://docs.brightsign.biz/releases/latest</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

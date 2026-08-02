@@ -1,0 +1,14 @@
+#https://www.brightsign.biz/resources/software-downloads/
+forfiles /c "cmd /c echo @file&checksum -t sha256 @file"
+
+#INSTALL
+choco pack
+choco install brightsignauthor -y -dv -s .
+
+#UPGRADE
+choco install brightsignauthor -y
+choco upgrade brightsignauthor -y -dv -s .
+
+#UNINSTALL
+choco uninstall brightsignauthor -y
+FOR %f in (*.nupkg) DO choco push %f -s https://push.chocolatey.org/
