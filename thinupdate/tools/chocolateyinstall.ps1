@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url = 'https://ftp.hp.com/pub/tcimages/EasyUpdate/Images/ThinUpdateRelease/2_7_52/HPThinUpdate-2.7.52-Win64.msi'
-$checksum = 'EF656F4A844D2680E9C191E9267040425421D6265EEB55D047868F61A3CD22C6'
+$url = 'https://ftp.hp.com/pub/tcimages/EasyUpdate/Images/ThinUpdateRelease/2_8_1/HPThinUpdate-2.8.1-Win64.msi'
+$checksum = '8BD47037C2FF58BE5AA99CD6C80DCA0D3D632B3BE03C5618DCA61ED1993881CD'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
